@@ -1,0 +1,23 @@
+== Conformance
+This standard defines 4 conformance classes.
+
+Requirements for standardization targets are considered:
+
+*	Requirement Quality Common [http://www.opengis.net/spec/geospatial-user-feedback/1.0/req/quality-common] has a single conformance class, Quality Common: [http://www.opengis.net/spec/geospatial-user-feedback/1.0/conf/quality-common]. This conformance class targets clients and services implementing quality or user feedback models.
+
+*	Requirement Feedback-item [http://www.opengis.net/spec/geospatial-user-feedback/1.0/req/feedback-item] has a single conformance class, Feedback-item: [http://www.opengis.net/spec/geospatial-user-feedback/1.0/conf/ feedback-item]. This conformance class targets clients and services implementing user feedback models.
+
+*	Requirement Feedback-summary [http://www.opengis.net/spec/geospatial-user-feedback/1.0/req/feedback-summary] has a single conformance class, Feedback-summary: [http://www.opengis.net/spec/ geospatial-user-feedback /1.0/conf/ feedback-summary]. This conformance class targets clients and services implementing user feedback models.
+
+*	Requirement Feedback-collection [http://www.opengis.net/spec/geospatial-user-feedback/1.0/req/feedback-collection] has a single conformance class, Feedback-collection: [http://www.opengis.net/spec/geospatial-user-feedback/1.0/conf/ feedback-collection]. This conformance class targets clients and services implementing user feedback models.
+
+Conformance with this standard shall be checked using all the relevant tests specified in Annex A (normative) of this document. The framework, concepts, and methodology for testing, and the criteria to be achieved to claim conformance are specified in the OGC Compliance Testing Policies and Procedures and the OGC Compliance Testing web site footnote:[www.opengeospatial.org/cite].
+
+In order to conform to this OGC™ interface standard, a software implementation shall choose to implement:
+
+//* Any one of the conformance levels specified in Annex A (normative).
+//* Any one of the Distributed Computing Platform profiles specified in Annexes TBD through TBD (normative).
+
+a)	Any encoding extension associated to this standard. Initially an XML encoding following the ISO19139 encoding rules will also be provided in a separated standard document (OGC 15-098). A JSON-LD encoding is also foreseen.
+
+All requirements-classes and conformance-classes described in this document are owned by the standard(s) identified.

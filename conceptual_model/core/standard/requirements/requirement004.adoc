@@ -1,0 +1,22 @@
+[[req_core_process-execute-input-inline-object]]
+[requirement]
+====
+[%metadata]
+*Req 4*::	/req/feedback-summary/summary-model:
+[.component,class=conditions]
+--
+The class UFS_FeedbackSummary that follows the UML model in Figure 5 with the properties specified in Table 21 _shall_ be used when a grouping of feedback items is needed. +
+Dependency: /req/feedback-item
+
+--
+
+[.component,class=part]
+--
+//The server SHALL support process input values encoded as qualified values.
+--
+
+[.component,class=part]
+--
+//The value of the `value` key SHALL be an _object_ instance.
+--
+====

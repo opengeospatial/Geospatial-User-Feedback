@@ -1,0 +1,13 @@
+[[ats_example1]]
+[conformance_class_example1]
+====
+[%metadata]
+label:: http://www.opengis.net/spec/geospatial-user-feedback/1.0/conf/feedback-summary
+subject:: Requirements Class "Feedback summary"
+classification:: Target Type:Web API
+====
+
+==== Feedback summary
+
+include::./ATS_test_summary_model.adoc[]
+

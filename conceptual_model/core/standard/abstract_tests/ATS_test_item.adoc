@@ -1,0 +1,23 @@
+[[ats_core_http]]
+[abstract_test]
+====
+[%metadata]
+label:: /conf/feedback-item/item
+subject:: /req/feedback-item/item
+test-purpose:: The class GUF_FeedbackItem that follows the UML model in Figure 3 and Figure 4 with the properties specified in Table 6, and other tables referenced in Table 6, shall be used when describing feedback items relating to geospatial resources. +
+Dependency: /req/quality-common
+
+
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+Validate the requirements of feedback items
+--
+
+[.component,class=step]
+--
+Test passes if feedback item instances point to the GUF_FeedbackItem data type and follow the data model specified in Table 6 and its dependencies.
+--
+=====
+====

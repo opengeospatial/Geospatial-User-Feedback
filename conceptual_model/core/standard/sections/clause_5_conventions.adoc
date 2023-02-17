@@ -1,0 +1,78 @@
+== Conventions
+
+=== *5.1	Data dictionary tables*
+
+//This sections provides details and examples for any conventions used in the document. Examples of conventions are symbols, abbreviations, use of XML schema, or special notes regarding how to read the document.
+
+//=== Identifiers
+//The normative provisions in this standard are denoted by the URI
+
+//`http://www.opengis.net/spec/{standard}/{m.n}`
+
+//All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.
+
+The data dictionary for this standard is specified in a series of tables. The contents of the columns in these tables are described in Table 1.
+
+[.text-center]
+*Table 1 — Contents of data dictionary tables*
+
+|===
+|*Column title* | *Column contents* 
+|Names 
+(left column) |The name is the UML model attribute or association role name. +
+The name capitalization rules used are specified in Subclause 11.6.2 of [OGC 06-121r9]. Some names in the tables may appear to contain spaces, but no names contain spaces.
+|Definition 
+(second column) | Specifies the definition of this parameter (omitting unnecessary words such as “a”, “the”, and “is”). If the parameter value is the identifier of something, not a description or definition, the definition of this parameter should read something like “Identifier of ...”.
+| Data type and value (third column) or Data type 
+(if are no second items are included in rows of table)
+| Normally contains two items: +
+The first item is often the data type used for this parameter, using data types appropriate in a UML model, in which this parameter is a named attribute of a UML class. Alternately, the first item can identify the data structure (or class) referenced by this association, and references a separate table used to specify the contents of that class (or data structure). +
+The optional second item in the third column of each table should indicate the source of values for this parameter, the alternative values, or other value information, unless the values are quite clear from other listed information.
+|Multiplicity and use (right or fourth column)
+or Multiplicity (if are no second items are included in rows of table) 
+|Normally contains two items: +
+The first item specifies the multiplicity and optionality of this parameter in this data structure, either “One (mandatory)”, “One or more (mandatory)”, “Zero or one (optional)”, or “Zero or more (optional)”. +
+The second item in the right column of each table specify how any multiplicity other than “One (mandatory)” is used. If that parameter is optional, under what condition(s) shall that parameter be included or not included?  If that parameter can be repeated, for what is that parameter repeated? 
+|===
+
+When the data type used in the third column of such a table, is an enumeration or code list in which all the values are listed, together with the meaning of each value. When this information is extensive, these values and meanings are specified in a separate table that is referenced in the third column of the table row.
+
+The data type of many parameters, in the third table column, is specified as “Character String type, not empty”.
+
+The contents of these data dictionary tables are normative, including any table footnotes.
+
+=== *5.2	UML Notations*
+
+Unified Modeling Language (UML) static structure diagrams appearing in this standard are used as described in Sub clause 5.2 of OGC Web Service Common [OGC 06-121r9]. Further, the following conventions hold:
+
+*	UML elements in white color come from ISO 19115-1:2014 or ISO 19157:2013.
+*   UML element names with prefix QCM (Quality Common Metadata) are those defined in the http://www.opengis.net/spec/geospatial-user-feedback/1.0/req/quality-common requirements class of this Standard.
+*	UML element names with prefix GUF (Geospatial User Feedback) are those defined in the http://www.opengis.net/spec/geospatial-user-feedback/1.0/req/feedback-item requirements class of this Standard.
+*	UML element names with prefix UFS (User Feedback Summary) are those defined in the http://www.opengis.net/spec/geospatial-user-feedback/1.0/req/feedback-summary requirements class of this Standard.
+*	UML element names with prefix UFC (User Feedback Collection) are those defined in the http://www.opengis.net/spec/geospatial-user-feedback/1.0/req/feedback-collection requirements class of this Standard.
+
+=== *5.3 Core and Extension Breakdown*
+
+The Geospatial User Feedback standard follows the modular specification design pattern as described in OGC 08-131r3. The contributors to this standard decided that the requirements would be split into a core (quality common and geospatial user feedback item) and extensions for summary statistics and geospatial user feedback collections. In addition, other standards in the GUF series will potentially provide specific encodings of the data model provided in this document. For example, the OGC OGC Geospatial User Feedback Standard [OGC 15-098] XML Encoding Extension is initially provided. Other encodings may be specified in the future (such as a JSON-LD encoding based on parts of schema.org).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

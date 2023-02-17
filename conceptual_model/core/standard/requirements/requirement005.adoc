@@ -1,0 +1,22 @@
+[[req_core_process-execute-input-inline-object]]
+[requirement]
+====
+[%metadata]
+*Req 5*:: /req/feedback-collection/response:
+[.component,class=conditions]
+--
+The class UFC_FeedbackResponse that follows the UML model in Figure 6 with the properties specified in Table 28 _shall_ be used when a grouping of feedback items is needed as a response to a feedback catalogue request. +
+Dependencies: /req/feedback-summary/
+
+--
+
+[.component,class=part]
+--
+//The server SHALL support process input values encoded as qualified values.
+--
+
+[.component,class=part]
+--
+//The value of the `value` key SHALL be an _object_ instance.
+--
+====

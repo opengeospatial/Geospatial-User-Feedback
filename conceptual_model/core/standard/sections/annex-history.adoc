@@ -1,0 +1,10 @@
+[appendix]
+== Revision History
+
+[width="90%",options="header"]
+|===
+|Date |Release |Author |Paragraph modified |Description
+|2015-06-13 |0.1 |Joan Maso |All |First version
+|2015-08-25 |0.2 |Lucy Bastin |All |Careful revision
+|2015-08-31 |0.3 |Simon Thum |All |Provided imput and minor edits
+|===

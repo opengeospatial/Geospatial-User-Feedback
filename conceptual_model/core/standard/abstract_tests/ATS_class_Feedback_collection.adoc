@@ -1,0 +1,20 @@
+[[ats_example1]]
+[conformance_class_example1]
+====
+[%metadata]
+label:: http://www.opengis.net/spec/geospatial-user-feedback/1.0/conf/feedback-collection
+subject:: Requirements Class "Feedback collection"
+classification:: Target Type:Web API
+====
+
+==== Feedback collection response
+
+include::./ATS_test_response.adoc[]
+
+==== Feedback collection
+
+include::./ATS_test_collection.adoc[]
+
+==== Feedback collection response pagination
+
+include::./ATS_test_pagination.adoc[]

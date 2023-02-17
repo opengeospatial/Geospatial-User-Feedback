@@ -1,0 +1,23 @@
+[[ats_core_http]]
+[abstract_test]
+====
+[%metadata]
+label:: /conf/feedback-summary/summary-model
+subject:: /req/feedback-summary/summary-model
+test-purpose:: The class UFS_FeedbackSummary that follows the UML model in Figure 5 with the properties specified in Table 21 shall be used when a grouping of feedback items is needed. +
+Dependency: /req/feedback-item
+
+
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+Validate the requirements of feedback summary
+--
+
+[.component,class=step]
+--
+Test passes if feedback summary instances point to the UFS_FeedbackSummary data type and follow the data model specified in Table 21 and its dependencies.
+--
+=====
+====

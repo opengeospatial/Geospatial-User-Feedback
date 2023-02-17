@@ -1,0 +1,27 @@
+[appendix]
+== Conformance Class Abstract Test Suite (Normative)
+
+A GUF implementation of this standard must satisfy the following system characteristics to be conformant with this specification.
+
+//[NOTE]
+//Ensure that there is a conformance class for each requirements class and a test for each requirement (identified by requirement name and number)
+
+=== *Conformance class: Quality Common*
+
+include::../abstract_tests/ATS_class_Quality_Common.adoc[]
+
+=== *Conformance class: User Feedback-item*
+
+include::../abstract_tests/ATS_class_User_Feedback_Item.adoc[]
+
+=== *Conformance class: Feedback-summary*
+
+include::../abstract_tests/ATS_class_Feedback_summary.adoc[]
+
+=== *Conformance class: Feedback-collection*
+
+include::../abstract_tests/ATS_class_Feedback_collection.adoc[]
+
+
+
+

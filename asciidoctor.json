@@ -3,7 +3,7 @@
                 "OGC_doc_number": "23-017",
                 "urn":"http://www.opengis.net/doc/IS/guf-conceptual/2.0",
                 "title":"OGC® Geospatial User Feedback Standard: Conceptual Model v2.0",
-                "path":"core/standard/23-017.adoc",
+                "path":"conceptual_model/core/standard/23-017.adoc",
                 "options": ["--trace"],
                 "a":[
                         "data-uri",

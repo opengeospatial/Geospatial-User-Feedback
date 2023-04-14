@@ -4,7 +4,8 @@ This is the repo to reactivate work on the GUF.SWG on the following 3 items. Our
 
 ## GUF conceptual model corregenda or v2
 
-Some bug fixes are pending as well as some improvements in the model, in particular the ones about knowledge sharing
+Some bug fixes are pending as well as some improvements in the model, in particular the ones about knowledge sharing.
+The draft specification is available in [HTML](http://docs.ogc.org/DRAFTS/23-017.html) and [PDF](http://docs.ogc.org/DRAFTS/23-017.pdf).
 
 ## OGC API GUF
 

@@ -1,0 +1,14 @@
+[obligation=informative]
+== *Geospatial User Feedback XML encoding*
+
+The encoding rules for creating a XML encoding from a UML model documented in ISO 19139 were used to elaborate the XML schemas described here. These encoding rules are coded in the ShapeChange application. ShapeChange was used to automatically transform the UML model coming from the OGC 15-097 Geospatial User Feedback Conceptual Model into the XML schemas that are complementing this standard. Since the conversion is automatic, this document will not provide tables describing the semantics of each element and the reader should refer to the conceptual model for details.
+
+This encoding is intended for applications where the use of producer’s metadata encoded in 19115-1:2014 is common. This way it we pave the terrain for extending the current ISO19115-1:2014 metadata editors and catalogues to support this model. It also aims for an easy integration of the producer metadata and the user feedback in client applications.
+
+
+////
+=== Clauses not containing normative material sub-clause 1
+
+Paragraph
+
+=== Clauses not containing normative material sub-clause 2

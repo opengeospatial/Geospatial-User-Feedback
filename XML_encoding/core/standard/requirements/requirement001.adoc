@@ -1,0 +1,9 @@
+[requirement,type="general",id="/req/req-class-a/req-name-1",label="/req/req-class-a/req-name-1",obligation="requirement"]
+====
+
+*Req 1*:: /req/quality-common/mime-type: 
+[.component,class=part] 
+An XML encoding of a geospatial user feedback _shall adopt the XML MIME type of application/xml
+
+
+====

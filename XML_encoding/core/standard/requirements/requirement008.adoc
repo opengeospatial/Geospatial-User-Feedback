@@ -1,0 +1,13 @@
+[requirement,type="general",id="/req/req-class-a/req-name-1",label="/req/req-class-a/req-name-1",obligation="requirement"]
+====
+//[%metadata]
+*Req 8*:: 	/req/feedback-summary/ufs-schema:
+[.component,class=conditions]
+--
+An XML Encoding of a geospatial user feedback collection shall use UFC_FeedbackCollection and shall validate using the geospatial user feedback collection schema ufc.xsd +
+Dependencies: /req/feedback-collection +
+http://www.opengis.net/spec/geospatial-user-feedback/1.0/req/feedback-collection
+
+
+--
+====

@@ -1,0 +1,12 @@
+[requirement,type="general",id="/req/req-class-a/req-name-1",label="/req/req-class-a/req-name-1",obligation="requirement"]
+====
+//[%metadata]
+*Req 4*:: /req/quality-common/iso-schema:
+[.component,class=conditions]
+--
+An XML encoding of a geospatial user feedback _shall_ validate using the schemas ISO19115-3 and ISO19157-2 provided at: http://standards.iso.org/iso/19115/-3 and http://standards.iso.org/iso/19157/-2 respectively +
+Dependencies: ISO 19115-3 and ISO 19157-2
+
+--
+====
+

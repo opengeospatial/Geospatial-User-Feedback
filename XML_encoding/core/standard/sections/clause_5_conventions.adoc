@@ -15,9 +15,8 @@ The following namespaces are used in this document. The prefix abbreviations use
 | cit | http://standards.iso.org/iso/19115/-3/cit/1.0" | ISO 19115-1 Citation |
 | mdq | http://standards.iso.org/iso/19157/-2/mdq/1.0 | ISO 19157 Quality |
 | lan | http://standards.iso.org/iso/19115/-3/lan/1.0 | ISO 19115-3 Language |
-| qcm | http://www.opengis.net/guf/1.0/common | Quality common |
-| guf | http://www.opengis.net/guf/1.0/core | User feedback core |
-| ufc | http://www.opengis.net/guf/1.0/collection | User feedback collection |
-| ufs | http://www.opengis.net/guf/1.0/summary | User feedback summary |
-|  |  |  |
+| qcm | http://www.opengis.net/guf/2.0/common | Quality common |
+| guf | http://www.opengis.net/guf/2.0/core | User feedback core |
+| ufc | http://www.opengis.net/guf/2.0/collection | User feedback collection |
+| ufs | http://www.opengis.net/guf/2.0/summary | User feedback summary  |
 |===

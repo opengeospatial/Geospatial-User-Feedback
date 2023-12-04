@@ -1,0 +1,54 @@
+[[Clause_Substantive]]
+== Description of substantive changes
+
+//=== <short name for the change>
+//<details of the change>
+
+=== ED-01: New attributes in QCM_Publication Class.
+
+The QCM_Publication Class (Table 2 of the documentation) extends CI_Citation and is dedicated to describing a publication element. To enhance this description and better capture "knowledge," two new attributes have been added in this new version: "highlights" and "keywords."
+
+The cardinality of these two new attributes is "zero or more." As they are optional attributes, no compatibility issues are expected with previous versions.
+
+=== ED-04: Changing cardinality in QCM_DiscoveredIssue attribute.
+
+QCM_DiscoveredIssue describes an issue on the actual resource the publication is about. QCM_DiscoveredIssue contains a fixedResource attribute to describe a new version of the target resource where the known problem is no longer present.
+
+The fixedResource attribute has changed its cardinality to "zero or more," maintaining its optionality but accepting more than one value. This means that more than one fixed resource, if they exist, can be documented.
+
+As it's still an optional element, no compatibility problems are expected.
+
+=== ED-05: New QCM_ReproducibleUsage requirement added.
+
+GUF v.2.0 adds the possibility of describing the specific usage of a resource by a user. This is due to the addition of a new requirement "QCM_ReproducibleUsage" as an "MD_Usage" extension.
+
+=== ED-06: New class QCM_ReproducibleUsage.
+
+Adding the "QCM_ReproducibleUsage" requirement allows describing the MD_Usage extension class "QCM_ReproducibleUsage," which contains the following attributes to describe usage (Table 6 of the documentation):
+
+codeSnippet: A fragment of code or execution sentence necessary to reproduce this usage. codeSnippet is mandatory if codeSnippetLinkage is not documented.
+codeSnippetLinkage: URL to the code or execution sentence necessary to reproduce this usage. codeSnippetLinkage is mandatory if codeSnippet is not documented.
+codeMediaType: Format of the necessary code or execution sentence to reproduce this usage.
+platform: Platform to execute the code or execution sentence of this usage.
+version: Version of the platform to execute the code or execution sentence of this usage.
+schema: Schema of the code or execution sentence to reproduce this usage (only for declarative code: e.g., JSON).
+suggestedApplication: Specific suggested application to open the code or execution sentence of this usage.
+diagram: Descriptive diagram of this reproducible usage.
+diagramLinkage: URL Link of the descriptive diagram of this reproducible usage.
+diagramMediaType: Format of the descriptive diagram of this reproducible usage (Mime Type).
+
+=== ED-10: New attributes in GUF_UserInformation Data Type.
+
+Information about users now include a new optional element named "description" that allows to document a user short description or bio.
+
+
+=== ED-12: New "GUF_ApplicationDomain" Data Type added.
+
+In GUF v.1.0, the GUF_UserInformation Class had two attributes named "applicationDomain" (CharacterString [0..*]) and "expertiseLevel (GUF_RatingCode)." This configuration causes several application domains may be described, but only one expertise level can be defined, moreover without specifying to which of the application domains it corresponds.
+
+To fix this issue, in this new release, the original "expertiseLevel" attribute has been deprecated, and the "applicationDomain" attribute type is now GUF_ApplicationDomain Data Type and has a [1..*] cardinality. This data type allows documenting several "domains" (Character String) and the "expertiseLevel" (GUF_RatingCode) corresponding to each of them.
+
+Related to ED-15 substantial change.
+
+//If no substantive changes are present, use the phrase below.
+//There are no substantive changes in this release.

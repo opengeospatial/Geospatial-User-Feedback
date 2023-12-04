@@ -1,0 +1,56 @@
+[[Clause_Critical]]
+== Description of critical changes
+
+//=== <short name for the change>
+//<details of the change>
+
+=== ED-02: "problemDateTime" Element Data Type Changes
+
+In the documentation, Table 5 in section 7.1 describes the QCM_DiscoveredIssue Data Type, used to report issues found while using a certain resource.
+
+QCM_DiscoveredIssue contains an element named "problemDateTime" designed to define the date and time when the problem was detected by a user of that resource.
+
+In GUF v.1.0, "problemDateTime" was defined as a CI_Date element, requiring users to specify both a "date" and a "dateType." This could lead to inconsistencies with the "problemDateTime" element definition. As the "type of date" is included in the element name itself, no "dateType" is needed. Therefore, GUF v.2.0 updates the "problemDateTime" data type from "CI_Date" to "DateTime."
+
+=== ED-03: "expectedFixDate" Element Data Type Changes
+
+Similar to ED-03.
+
+In the documentation, Table 5 in section 7.1 describes the QCM_DiscoveredIssue Data Type, used to report issues found while using a certain resource.
+
+QCM_DiscoveredIssue contains an element named "expectedFixDate" designed to define the date when a solution is expected to be released by the provider in the form of a "fixedResource" or directly as a fix in the original target resource.
+
+In GUF v.1.0, "expectedFixDate" was defined as a CI_Date element, requiring users to specify both a "date" and a "dateType." This could lead to inconsistencies with the "expectedFixDate" element definition. As the "type of date" is included in the element name itself, no "dateType" is needed. Therefore, GUF v.2.0 updates the "expectedFixDate" data type from "CI_Date" to "Date."
+
+=== ED-08: GUF_FeedbackItem Data Type Element Name Update
+
+For clarity purposes, in the documentation, Table 7 in section 7.2 describing GUF_FeedbackItem data type, the GUF v.1.0 "additionalLineage" element name has been updated to "additionalLineageSteps" in the new release. This element is defined as "Additional lineage steps not included in the producer metadata," making the new element name more self-explanatory.
+
+=== ED-09: "userDetails" Element Data Type Changes
+
+GUF v.1.0 GUF_UserInformation Data Type included the element "userDetails" defined as a CI_Responsibility type element and also a "userRole" element defined as GUF_UserRoleCode.
+
+As CI_Responsibility Data Type contains an element named "role," inconsistencies with the role described in the "userRole" element may appear.
+
+To avoid this source of inconsistencies, GUF v.2.0 changes the "userDetails" element Data Type to CI_Party.
+
+=== ED-11: "applicationDomain" Data Type Changes
+
+In GUF v.1.0, the GUF_UserInformation Class had two attributes named "applicationDomain" (CharacterString [0..*]) and "expertiseLevel (GUF_RatingCode)." This configuration caused several application domains to be described, but only one expertise level could be defined, without specifying to which of the application domains it corresponds.
+
+To fix this issue, in this new release, the original "expertiseLevel" attribute has been deprecated, and the "applicationDomain" attribute type is now GUF_ApplicationDomain Data Type and has a [1..*] cardinality. This data type allows documenting several "domains" (Character String) and the "expertiseLevel" (GUF_RatingCode) corresponding to each of them.
+
+Related to ED-16 substantial change.
+
+=== ED-13: Updating Element Names in UFS_FeedbackSummary
+
+In GUF v.1.0 documentation, UFS_FeedbackSummary contained two elements named "minimumPossibleRating" and "maximumPossibleRating." The names of these elements suggest a scale of rating, but their description indicates that their content is the minimum and maximum rating received for a particular resource.
+
+To clarify the meaning of these elements, GUF v.2.0 overwrites "minimumPossibleRating" and "maximumPossibleRating" elements with "minimumRating" and "maximumRating" elements.
+
+=== ED-14: UFS_FeedbackSummary New "numberOfReproducibleUsageReports" Element
+
+GUF v.2.0 adds a new element "numberOfReproducibleUsageReports" to UFS_FeedbackSummary Data Type. This element is mandatory, and it documents the total number of populated reproducible usage reports for a particular resource.
+
+//If no critical changes are present, use the phrase below.
+//There are no critical changes in this release.

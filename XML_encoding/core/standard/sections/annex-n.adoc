@@ -4,7 +4,7 @@
 //[NOTE]
 //Place other Annex material in sequential annexes beginning with "B" and leave final two annexes for the Revision History and Bibliography
 
-In addition to this document, this standard includes several XML Schema Documents. These XML Schema Documents are available at http://schemas.opengis.net/guf/1.0.
+In addition to this document, this standard includes several XML Schema Documents. These XML Schema Documents are available at http://schemas.opengis.net/guf/2.0.
 
 These XML Schema Documents and examples combine the XML schema fragments listed in various subclauses of this document, eliminating duplications. These XML Schema Documents match the GUF UML packages described in the OGC 15-097 Geospatial User Feedback Conceptual Model and were derived from them using ShapeChange application, and are named:
 

@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/1.0" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0" xmlns:qcm="http://www.opengis.net/guf/1.0/common" targetNamespace="http://www.opengis.net/guf/1.0/common" elementFormDefault="qualified" version="1.0.0">
-
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/2.0" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:gcx="http://standards.iso.org/iso/19115/-3/gcx/1.0" xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0" xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0" xmlns:qcm="http://www.opengis.net/guf/2.0/common" targetNamespace="http://www.opengis.net/guf/2.0/common" elementFormDefault="qualified" version="2.0.0">
 	<annotation>
 		<documentation>Geospatial User Feedback (GUF) is an OGC standard.
 			Copyright (c) 2016 Open Geospatial Consortium.
 			To obtain additional rights of use, visit http://www.opengeospatial.org/legal/.
 		</documentation>
 	</annotation>
-	<!-- Version: 1.0.0 2022-05-26 Change ISO/TC 211 schema locations from http://standards.iso.org to https://schemas.isotc211.org -->
-
-	<import namespace="http://standards.iso.org/iso/19115/-3/cit/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/cit/1.0/citation.xsd"/>
+	<import namespace="http://standards.iso.org/iso/19115/-3/cit/2.0" schemaLocation="https://schemas.isotc211.org/19115/-3/cit/2.0/citation.xsd"/>
+	<import namespace="http://standards.iso.org/iso/19115/-3/gcx/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/gcx/1.0//gcx.xsd"/>
 	<import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/gco/1.0/gco.xsd"/>
 	<import namespace="http://standards.iso.org/iso/19115/-3/mcc/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/mcc/1.0/mcc.xsd"/>
+	<import namespace="http://standards.iso.org/iso/19115/-3/mri/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/mri/1.0/mri.xsd"/>
 	<import namespace="http://standards.iso.org/iso/19157/-2/mdq/1.0" schemaLocation="https://schemas.isotc211.org/19157/-2/mdq/1.0/mdq.xsd"/>
 	<!--XML Schema document created by ShapeChange - http://shapechange.net/-->
 	<element name="QCM_CitationMotivationCode" type="gco:CodeListValue_Type" substitutionGroup="gco:CharacterString"/>
@@ -31,15 +30,19 @@ problems with the dataset</documentation>
 		<complexContent>
 			<extension base="gco:AbstractObject_Type">
 				<sequence>
-					<element name="target" type="cit:CI_Citation_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="target" type="cit:CI_Citation_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Link to the actual resource the publication is about.</documentation>
+						</annotation>
+					</element>
 					<element name="knownProblem" type="gco:CharacterString_PropertyType">
 						<annotation>
 							<documentation>Known issue with the target</documentation>
 						</annotation>
 					</element>
-					<element name="problemDateTime" type="cit:CI_Date_PropertyType" minOccurs="0" maxOccurs="unbounded">
+					<element name="problemDateTime" type="gco:Date_PropertyType" minOccurs="0">
 						<annotation>
-							<documentation>Possible way to work around the problem</documentation>
+							<documentation>Date when the problem was detected</documentation>
 						</annotation>
 					</element>
 					<element name="workAround" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="unbounded">
@@ -52,12 +55,12 @@ problems with the dataset</documentation>
 							<documentation>A publication that exposes the issue and eventually suggest a solution</documentation>
 						</annotation>
 					</element>
-					<element name="expectedFixDate" type="cit:CI_Date_PropertyType" minOccurs="0">
+					<element name="expectedFixDate" type="gco:Date_PropertyType" minOccurs="0">
 						<annotation>
 							<documentation>Date when a solution is expected to be released by the provider in the form of a fixedResource or directly as a fix in the original target resource.</documentation>
 						</annotation>
 					</element>
-					<element name="fixedResource" type="cit:CI_Citation_PropertyType" minOccurs="0">
+					<element name="fixedResource" type="cit:CI_Citation_PropertyType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
 							<documentation>A new version of the target resource with the knownProblem is no longer present.</documentation>
 						</annotation>
@@ -93,9 +96,19 @@ problems with the dataset</documentation>
 							<documentation>Abstract of the publication. The inclusion of an abstract in CI_Citation was also observed by the ISO19157 that defines a StandAloneQualityReport that has a summary and a CI_Citation as parameters</documentation>
 						</annotation>
 					</element>
+					<element name="highlights" type="gco:CharacterString_PropertyType" minOccurs="0">
+						<annotation>
+							<documentation>Highlights of the publication</documentation>
+						</annotation>
+					</element>
+					<element name="keywords" type="mri:MD_Keywords_PropertyType" minOccurs="0">
+						<annotation>
+							<documentation>Keywords of the publication</documentation>
+						</annotation>
+					</element>
 					<element name="motivation" type="qcm:QCM_CitationMotivationCode_PropertyType" minOccurs="0">
 						<annotation>
-							<documentation>Motivation of providing the citation. Why the citation is provided in relation to the parent class or the target</documentation>
+							<documentation>Purpose of the citation. Why the citation is provided in relation to the parent class or the target</documentation>
 						</annotation>
 					</element>
 					<element name="relatedResource" type="cit:CI_Citation_PropertyType" minOccurs="0" maxOccurs="unbounded">
@@ -129,6 +142,74 @@ problems with the dataset</documentation>
 		<sequence minOccurs="0">
 			<element ref="qcm:QCM_PublicationCategoryCode"/>
 		</sequence>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<element name="QCM_ReproducibleUsage" type="qcm:QCM_ReproducibleUsage_Type" substitutionGroup="mri:MD_Usage"/>
+	<complexType name="QCM_ReproducibleUsage_Type">
+		<complexContent>
+			<extension base="mri:MD_Usage_Type">
+				<sequence>
+					<element name="codeSnippet" type="gco:CharacterString_PropertyType" minOccurs="0">
+						<annotation>
+							<documentation>A fragment of code or execution sentence necessary to reproduce this usage. codeSnippet is mandatory if codeSnippetLinkage is not documented</documentation>
+						</annotation>
+					</element>
+					<element name="codeSnippetLinkage" type="cit:CI_OnlineResource_PropertyType" minOccurs="0">
+						<annotation>
+							<documentation>URL to the code or execution sentence necessary to reproduce this usage. codeSnippetLinkage is mandatory if codeSnippet is not documented</documentation>
+						</annotation>
+					</element>
+					<!-- no need of full CI_OnlineResource as other elements woudl we redundant with properties here -->
+					<element name="codeMediaType" type="gcx:MimeFileType_PropertyType" minOccurs="0">
+						<annotation>
+							<documentation>Format of the necessary code or execution sentence to reproduce this usage</documentation>
+						</annotation>
+					</element>
+					<element name="platform" type="gco:CharacterString_PropertyType" minOccurs="0">
+						<annotation>
+							<documentation>Platform to execute the code or execution sentence of this usage</documentation>
+						</annotation>
+					</element>
+					<element name="version" type="gco:CharacterString_PropertyType" minOccurs="0">
+						<annotation>
+							<documentation>Version of the platform to execute the code or execution sentence of this usage</documentation>
+						</annotation>
+					</element>
+					<element name="schema" type="gco:CharacterString_PropertyType" minOccurs="0">
+						<annotation>
+							<documentation>Schema of the code or execution sentence to reproduce this usage (only for declarative code: e.g JSON)</documentation>
+						</annotation>
+					</element>
+					<element name="suggestedApplication" type="gco:CharacterString_PropertyType" minOccurs="0">
+						<annotation>
+							<documentation>Specific suggested application to open the code or execution sentence of this usage</documentation>
+						</annotation>
+					</element>
+					<element name="diagram" type="gco:CharacterString_PropertyType" minOccurs="0">
+						<annotation>
+							<documentation>Descriptive diagram of this reproducible usage. Usually a single diagram description is provided (text or URL)</documentation>
+						</annotation>
+					</element>
+					<element name="diagramLinkage" type="cit:CI_OnlineResource_PropertyType" minOccurs="0">
+						<annotation>
+							<documentation>URL Link of the descriptive diagram of this reproducible usage. Usually a single diagram description is provided (text or URL)</documentation>
+						</annotation>
+					</element>
+					<!-- no need of full CI_OnlineResource as other elements woudl we redundant with properties here -->
+					<element name="diagramMediaType" type="gcx:MimeFileType_PropertyType" minOccurs="0">
+						<annotation>
+							<documentation>Format of the descriptive diagram of this reproducible usage</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="QCM_ReproducibleUsage_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="qcm:QCM_ReproducibleUsage"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
 		<attribute ref="gco:nilReason"/>
 	</complexType>
 </schema>

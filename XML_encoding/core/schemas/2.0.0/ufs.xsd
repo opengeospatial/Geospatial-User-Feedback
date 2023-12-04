@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/1.0" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0" xmlns:guf="http://www.opengis.net/guf/1.0/core" xmlns:ufs="http://www.opengis.net/guf/1.0/summary" targetNamespace="http://www.opengis.net/guf/1.0/summary" elementFormDefault="qualified" version="1.0.0">
-
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/2.0" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0" xmlns:guf="http://www.opengis.net/guf/2.0/core" xmlns:ufs="http://www.opengis.net/guf/2.0/summary" targetNamespace="http://www.opengis.net/guf/2.0/summary" elementFormDefault="qualified" version="2.0.0">
 	<annotation>
 		<documentation>Geospatial User Feedback (GUF) is an OGC standard.
 			Copyright (c) 2016 Open Geospatial Consortium.
@@ -8,19 +7,25 @@
 		</documentation>
 	</annotation>
 	<!-- Version: 1.0.0 2022-05-26 Change ISO/TC 211 schema locations from http://standards.iso.org to https://schemas.isotc211.org -->
-
-	<import namespace="http://standards.iso.org/iso/19115/-3/cit/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/cit/1.0/citation.xsd"/>
+	<import namespace="http://standards.iso.org/iso/19115/-3/cit/2.0" schemaLocation="https://schemas.isotc211.org/19115/-3/cit/2.0/citation.xsd"/>
 	<import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/gco/1.0/gco.xsd"/>
 	<import namespace="http://standards.iso.org/iso/19115/-3/mri/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/mri/1.0/identification.xsd"/>
-	<import namespace="http://www.opengis.net/guf/1.0/core" schemaLocation="http://schemas.opengis.net/guf/1.0/guf.xsd"/>
-
+	<import namespace="http://www.opengis.net/guf/2.0/core" schemaLocation="https://schemas.opengis.net/guf/2.0/guf.xsd"/>
 	<element name="UFS_ExpertiseLevelCount" type="ufs:UFS_ExpertiseLevelCount_Type" substitutionGroup="gco:AbstractObject"/>
 	<complexType name="UFS_ExpertiseLevelCount_Type">
 		<complexContent>
 			<extension base="gco:AbstractObject_Type">
 				<sequence>
-					<element name="expertiseLevel" type="guf:GUF_RatingCode_PropertyType"/>
-					<element name="count" type="gco:Integer_PropertyType"/>
+					<element name="expertiseLevel" type="guf:GUF_RatingCode_PropertyType">
+						<annotation>
+							<documentation>A possible value of expertise level</documentation>
+						</annotation>
+					</element>
+					<element name="count" type="gco:Integer_PropertyType">
+						<annotation>
+							<documentation>Number of feedback items that were populated by this expertiseLevel code</documentation>
+						</annotation>
+					</element>
 				</sequence>
 			</extension>
 		</complexContent>
@@ -37,29 +42,126 @@
 		<complexContent>
 			<extension base="gco:AbstractObject_Type">
 				<sequence>
-					<element name="target" type="cit:CI_Citation_PropertyType" minOccurs="0"/>
-					<element name="numberOfFeedbackItems" type="gco:Integer_PropertyType"/>
-					<element name="latestItemDate" type="cit:CI_Date_PropertyType" minOccurs="0"/>
-					<element name="numberOfPrimaryTargets" type="gco:Integer_PropertyType" minOccurs="0"/>
-					<element name="numberOfSecondaryTargets" type="gco:Integer_PropertyType" minOccurs="0"/>
-					<element name="numberOfSupplementaryTargets" type="gco:Integer_PropertyType" minOccurs="0"/>
-					<element name="averageUserExpertiseLevel" type="gco:Real_PropertyType" minOccurs="0"/>
-					<element name="minimumPossibleRating" type="gco:Real_PropertyType"/>
-					<element name="maximumPossibleRating" type="gco:Real_PropertyType"/>
-					<element name="averageRating" type="gco:Real_PropertyType"/>
-					<element name="numberOfRatings" type="gco:Integer_PropertyType"/>
-					<element name="numberOfUserComments" type="gco:Integer_PropertyType"/>
-					<element name="numberOfUsageReports" type="gco:Integer_PropertyType"/>
-					<element name="numberOfCitations" type="gco:Integer_PropertyType"/>
-					<element name="numberOfAdditionalQualities" type="gco:Integer_PropertyType"/>
-					<element name="numberOfAdditionalLineages" type="gco:Integer_PropertyType"/>
-					<element name="numberOfSignificantEvents" type="gco:Integer_PropertyType"/>
-					<element name="feedbackItemsByExpertiseLevelCount" type="ufs:UFS_ExpertiseLevelCount_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
-					<element name="userByRoleCount" type="ufs:UFS_UserRoleCount_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
-					<element name="byKeywordCount" type="ufs:UFS_KeywordCount_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
-					<element name="byRatingCount" type="ufs:UFS_RatingCount_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
-					<element name="ratingByExpertiseLevelCount" type="ufs:UFS_RatingExpertiseLevelCount_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
-					<element name="byTagCount" type="ufs:UFS_TagCount_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="target" type="cit:CI_Citation_PropertyType" minOccurs="0">
+						<annotation>
+							<documentation>Common geospatial resource the summary is about</documentation>
+						</annotation>
+					</element>
+					<element name="numberOfFeedbackItems" type="gco:Integer_PropertyType">
+						<annotation>
+							<documentation>Number of Feedback items this summary is about</documentation>
+						</annotation>
+					</element>
+					<element name="latestItemDate" type="cit:CI_Date_PropertyType" minOccurs="0">
+						<annotation>
+							<documentation>The date of the last item</documentation>
+						</annotation>
+					</element>
+					<element name="numberOfPrimaryTargets" type="gco:Integer_PropertyType" minOccurs="0">
+						<annotation>
+							<documentation>Total number of primary targets</documentation>
+						</annotation>
+					</element>
+					<element name="numberOfSecondaryTargets" type="gco:Integer_PropertyType" minOccurs="0">
+						<annotation>
+							<documentation>Total number of secondary targets</documentation>
+						</annotation>
+					</element>
+					<element name="numberOfSupplementaryTargets" type="gco:Integer_PropertyType" minOccurs="0">
+						<annotation>
+							<documentation>Total number of supplementary targets</documentation>
+						</annotation>
+					</element>
+					<element name="averageUserExpertiseLevel" type="gco:Real_PropertyType" minOccurs="0">
+						<annotation>
+							<documentation>Average usage expertise level</documentation>
+						</annotation>
+					</element>
+					<element name="minimumRating" type="gco:Real_PropertyType">
+						<annotation>
+							<documentation>Minimum rating received. Numeric value</documentation>
+						</annotation>
+					</element>
+					<element name="maximumRating" type="gco:Real_PropertyType">
+						<annotation>
+							<documentation>Maximum rating received. Numeric value</documentation>
+						</annotation>
+					</element>
+					<element name="averageRating" type="gco:Real_PropertyType">
+						<annotation>
+							<documentation>Average rating</documentation>
+						</annotation>
+					</element>
+					<element name="numberOfRatings" type="gco:Integer_PropertyType">
+						<annotation>
+							<documentation>Number of feedback items with a valid rating</documentation>
+						</annotation>
+					</element>
+					<element name="numberOfUserComments" type="gco:Integer_PropertyType">
+						<annotation>
+							<documentation>Number of feedback items with a valid comment</documentation>
+						</annotation>
+					</element>
+					<element name="numberOfUsageReports" type="gco:Integer_PropertyType">
+						<annotation>
+							<documentation>Number of populated usage reports</documentation>
+						</annotation>
+					</element>
+					<element name="numberOfReproducibleUsageReports" type="gco:Integer_PropertyType">
+						<annotation>
+							<documentation>Number of populated reproducible usage reports</documentation>
+						</annotation>
+					</element>
+					<element name="numberOfCitations" type="gco:Integer_PropertyType">
+						<annotation>
+							<documentation>Number of populated citations</documentation>
+						</annotation>
+					</element>
+					<element name="numberOfAdditionalQualities" type="gco:Integer_PropertyType">
+						<annotation>
+							<documentation>Number of populated quality elements</documentation>
+						</annotation>
+					</element>
+					<element name="numberOfAdditionalLineages" type="gco:Integer_PropertyType">
+						<annotation>
+							<documentation>Number of feedback items with a valid reported lineage</documentation>
+						</annotation>
+					</element>
+					<element name="numberOfSignificantEvents" type="gco:Integer_PropertyType">
+						<annotation>
+							<documentation>Number of populated significat events</documentation>
+						</annotation>
+					</element>
+					<element name="feedbackItemsByExpertiseLevelCount" type="ufs:UFS_ExpertiseLevelCount_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Number of feedback items by each level of expertise</documentation>
+						</annotation>
+					</element>
+					<element name="userByRoleCount" type="ufs:UFS_UserRoleCount_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Number of feedback items for each user role</documentation>
+						</annotation>
+					</element>
+					<element name="byKeywordCount" type="ufs:UFS_KeywordCount_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Number of feedback items for each keyword</documentation>
+						</annotation>
+					</element>
+					<element name="byRatingCount" type="ufs:UFS_RatingCount_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Number of feedback items for each rating value</documentation>
+						</annotation>
+					</element>
+					<element name="ratingByExpertiseLevelCount" type="ufs:UFS_RatingExpertiseLevelCount_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Number of feedback items for each rating and level of expertise</documentation>
+						</annotation>
+					</element>
+					<element name="byTagCount" type="ufs:UFS_TagCount_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Number of feedback items for each tag</documentation>
+						</annotation>
+					</element>
 				</sequence>
 			</extension>
 		</complexContent>
@@ -76,8 +178,16 @@
 		<complexContent>
 			<extension base="gco:AbstractObject_Type">
 				<sequence>
-					<element name="keyword" type="mri:MD_Keywords_PropertyType"/>
-					<element name="count" type="gco:Integer_PropertyType"/>
+					<element name="keyword" type="mri:MD_Keywords_PropertyType">
+						<annotation>
+							<documentation>A possible value of expertise level</documentation>
+						</annotation>
+					</element>
+					<element name="count" type="gco:Integer_PropertyType">
+						<annotation>
+							<documentation>Number of feedback items that were populated with this keyword</documentation>
+						</annotation>
+					</element>
 				</sequence>
 			</extension>
 		</complexContent>
@@ -94,8 +204,16 @@
 		<complexContent>
 			<extension base="gco:AbstractObject_Type">
 				<sequence>
-					<element name="rating" type="guf:GUF_RatingCode_PropertyType"/>
-					<element name="count" type="gco:Integer_PropertyType"/>
+					<element name="rating" type="guf:GUF_RatingCode_PropertyType">
+						<annotation>
+							<documentation>A possible value of expertise level</documentation>
+						</annotation>
+					</element>
+					<element name="count" type="gco:Integer_PropertyType">
+						<annotation>
+							<documentation>Number of feedback items that were populated with this rating code</documentation>
+						</annotation>
+					</element>
 				</sequence>
 			</extension>
 		</complexContent>
@@ -112,9 +230,21 @@
 		<complexContent>
 			<extension base="gco:AbstractObject_Type">
 				<sequence>
-					<element name="rating" type="guf:GUF_RatingCode_PropertyType"/>
-					<element name="expertiseLevel" type="guf:GUF_RatingCode_PropertyType"/>
-					<element name="count" type="gco:Integer_PropertyType"/>
+					<element name="rating" type="guf:GUF_RatingCode_PropertyType">
+						<annotation>
+							<documentation>A possible value of rating</documentation>
+						</annotation>
+					</element>
+					<element name="expertiseLevel" type="guf:GUF_RatingCode_PropertyType">
+						<annotation>
+							<documentation>A possible value of expertise level</documentation>
+						</annotation>
+					</element>
+					<element name="count" type="gco:Integer_PropertyType">
+						<annotation>
+							<documentation>Number of feedback items that were populated with this rating-expertiseLevel code pair</documentation>
+						</annotation>
+					</element>
 				</sequence>
 			</extension>
 		</complexContent>
@@ -131,8 +261,16 @@
 		<complexContent>
 			<extension base="gco:AbstractObject_Type">
 				<sequence>
-					<element name="tag" type="gco:CharacterString_PropertyType"/>
-					<element name="count" type="gco:Integer_PropertyType"/>
+					<element name="tag" type="gco:CharacterString_PropertyType">
+						<annotation>
+							<documentation>A possible value of expertise level</documentation>
+						</annotation>
+					</element>
+					<element name="count" type="gco:Integer_PropertyType">
+						<annotation>
+							<documentation>Number of feedback items that were populated with this tag value</documentation>
+						</annotation>
+					</element>
 				</sequence>
 			</extension>
 		</complexContent>
@@ -149,8 +287,16 @@
 		<complexContent>
 			<extension base="gco:AbstractObject_Type">
 				<sequence>
-					<element name="userRole" type="guf:GUF_UserRoleCode_PropertyType"/>
-					<element name="count" type="gco:Integer_PropertyType"/>
+					<element name="userRole" type="guf:GUF_UserRoleCode_PropertyType">
+						<annotation>
+							<documentation>A possible value of expertise level</documentation>
+						</annotation>
+					</element>
+					<element name="count" type="gco:Integer_PropertyType">
+						<annotation>
+							<documentation>Number of times that a feedback items was populated by a user acting with this userRole code</documentation>
+						</annotation>
+					</element>
 				</sequence>
 			</extension>
 		</complexContent>

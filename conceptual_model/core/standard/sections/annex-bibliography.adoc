@@ -2,21 +2,18 @@
 [[Bibliography]]
 == Bibliography
 
-[NOTE]
-.Example Bibliography (Delete this note).
-===============================================
-The TC has approved Springer LNCS as the official document citation type.
+[1] OGC 06-121r9:2010, OGC Web Service Common Implementation Specification
 
-Springer LNCS is widely used in technical and computer science journals and other publications
+[2] ISO 24619:2011, Language resource management -- Persistent identification and sustainable access
 
-* For citations in the text please use square brackets and consecutive numbers: [1], [2], [3]
+[3] ISO 19157:2013, Geographic information -- Data quality
 
-– Actual References:
+[4] ISO 19115-1:2014, Geographic information -- Metadata -- Part 1: Fundamentals
 
-[n] Journal: Author Surname, A.: Title. Publication Title. Volume number, Issue number, Pages Used (Year Published)
+[5] ISO 9000:2005,  Quality management systems -- Fundamentals and vocabulary
 
-[n] Web: Author Surname, A.: Title, http://Website-Url
+[6] OGC 08-131r3:2009, OGC Specification Model –- A Standard for Modular Specification
 
-===============================================
+[7] OGC 15-098:2016, OGC Geospatial User Feedback Standard: Conceptual Model v.1.0
 
-* [[[OGC2015,OGCTB12]]], _OGC: OGC Testbed 12 Annex B: Architecture_ (2015).
+[8] OGC 23-061:$$, OGC Geospatial User Feedback Standard: XML Implementation v.2.0

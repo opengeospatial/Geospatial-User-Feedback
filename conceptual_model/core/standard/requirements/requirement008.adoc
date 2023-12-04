@@ -1,0 +1,23 @@
+[[req_core_process-execute-input-inline-object]]
+[requirement]
+====
+[%metadata]
+*Req 8*:: /req/feedback-collection/pagination:
+[.component,class=conditions]
+--
+The class UFC_ResponsePagination that follows the UML model in Figure 6 with the properties specified in Table 32 _shall_ be used when pagination of a catalogue response is needed. +
+Dependencies: /req/feedback-summary/
+
+
+--
+
+[.component,class=part]
+--
+//The server SHALL support process input values encoded as qualified values.
+--
+
+[.component,class=part]
+--
+//The value of the `value` key SHALL be an _object_ instance.
+--
+====

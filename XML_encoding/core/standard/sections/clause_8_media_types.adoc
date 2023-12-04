@@ -1,3 +1,5 @@
+:source-highlighter: highlight.js
+
 == 8.	*Geospatial User feedback model. Extensions*
 
 This section describes two requirements classes that are considered extensions of the XML encoding core: the User Feedback Summary and the User Feedback Collection.
@@ -12,7 +14,7 @@ The ufs.xsd schema has been derived automatically from the OGC 15-097 UML model.
 
 The following code shows a xml encoding example for UFS_FeedbackSummary
 
-[source]
+[source,xml]
 <UFS_FeedbackSummary
 				xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0"
 				xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0" 

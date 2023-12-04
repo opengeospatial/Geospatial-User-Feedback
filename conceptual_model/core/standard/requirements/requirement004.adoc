@@ -2,12 +2,11 @@
 [requirement]
 ====
 [%metadata]
-*Req 4*::	/req/feedback-summary/summary-model:
+*Req 4*:: /req/feedback-item/item:
 [.component,class=conditions]
 --
-The class UFS_FeedbackSummary that follows the UML model in Figure 5 with the properties specified in Table 21 _shall_ be used when a grouping of feedback items is needed. +
-Dependency: /req/feedback-item
-
+The class GUF_FeedbackItem that follows the UML model in Figure 3 and Figure 4 with the properties specified in Table 7, and other tables referenced in Table 7, _shall_ be used when describing feedback items relating to geospatial resources. +
+Dependency: /req/quality-common
 --
 
 [.component,class=part]

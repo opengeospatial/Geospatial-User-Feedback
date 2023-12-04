@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ufc:UFC_FeedbackCollection 
-				xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0"
-				xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0" 
-				xmlns:gex="http://standards.iso.org/iso/19115/-3/gex/1.0" 
-				xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0" 
-				xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/1.0" 
-				xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" 
-				xmlns:qcm="http://www.opengis.net/guf/1.0/common" 
-				xmlns:guf="http://www.opengis.net/guf/1.0/core" 
-				xmlns:ufc="http://www.opengis.net/guf/1.0/collection" 
-				xmlns:ufs="http://www.opengis.net/guf/1.0/summary" 
-				xmlns:pqm="http://www.geoviqua.org/gvq/1.0" 
-				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" 
-				xsi:schemaLocation="http://www.opengis.net/guf/1.0/collection ../ufc.xsd http://www.geoviqua.org/gvq/1.0 ../pqm.xsd">
+	xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" 
+	xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0" 
+	xmlns:gex="http://standards.iso.org/iso/19115/-3/gex/1.0" 
+	xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0" 
+	xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/2.0" 
+	xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" 
+	xmlns:qcm="http://www.opengis.net/guf/2.0/common" 
+	xmlns:guf="http://www.opengis.net/guf/2.0/core" 
+	xmlns:ufc="http://www.opengis.net/guf/2.0/collection" 
+	xmlns:ufs="http://www.opengis.net/guf/2.0/summary" 
+	xmlns:pqm="http://www.geoviqua.org/gvq/1.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:xlink="http://www.w3.org/1999/xlink" 
+	xsi:schemaLocation="http://www.opengis.net/guf/2.0/collection https://schemas.opengis.net/guf/2.0/ufc.xsd http://www.geoviqua.org/gvq/1.0 https://schemas.opengis.net/guf/2.0/pqm.xsd">
 	<ufc:target>
 		<cit:CI_Citation>
-			<cit:title></cit:title>
+			<cit:title/>
 			<cit:identifier>
 				<mcc:MD_Identifier>
 					<!--Why are we using a id instead of a guf:GUF_FeedbackTarget, that allow for <guf:scope> ?-->
@@ -47,11 +48,13 @@
 			</guf:contactRole>
 			<guf:dateInfo>
 				<cit:CI_Date>
-					<cit:date><gco:DateTime>2006-03-01T00:00:00Z</gco:DateTime></cit:date>
+					<cit:date>
+						<gco:DateTime>2006-03-01T00:00:00Z</gco:DateTime>
+					</cit:date>
 					<cit:dateType>
 						<cit:CI_DateTypeCode codeList="http://wis.wmo.int/2008/catalogues/draft_version_1-1/WMO_Codelists_ver1_1.xml#CI_DateTypeCode" codeListValue="creation"/>
 					</cit:dateType>
-				</cit:CI_Date>				
+				</cit:CI_Date>
 			</guf:dateInfo>
 			<guf:citation>
 				<cit:CI_Citation>
@@ -83,22 +86,22 @@
 			<guf:contact>
 				<guf:GUF_UserInformation>
 					<guf:userDetails>
-						<cit:CI_Responsibility>
-							<cit:role>
-								<cit:CI_RoleCode codeList="http://wis.wmo.int/2008/catalogues/draft_version_1-1/WMO_Codelists_ver1_1.xml#CI_RoleCode" codeListValue="user"/>
-							</cit:role>
-							<cit:party>
-								<cit:CI_Individual>
-									<cit:name>
-										<gco:CharacterString>Henrique M. Pereira</gco:CharacterString>
-									</cit:name>
-								</cit:CI_Individual>
-							</cit:party>
-						</cit:CI_Responsibility>
+						<cit:CI_Individual>
+							<cit:name>
+								<gco:CharacterString>Henrique M. Pereira</gco:CharacterString>
+							</cit:name>
+						</cit:CI_Individual>
 					</guf:userDetails>
-					<guf:expertiseLevel>
-						<guf:GUF_RatingCode codeListValue="5" codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#GUF_RatingCode"></guf:GUF_RatingCode>
-					</guf:expertiseLevel>
+					<guf:applicationDomain>
+						<guf:GUF_ApplicationDomain>
+							<guf:domain>
+								<cit:CI_RoleCode codeListValue="user" codeList="http://wis.wmo.int/2008/catalogues/draft_version_1-1/WMO_Codelists_ver1_1.xml#CI_RoleCode"/>
+							</guf:domain>
+							<guf:expertiseLevel>
+								<guf:GUF_RatingCode codeListValue="5" codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#GUF_RatingCode"/>
+							</guf:expertiseLevel>
+						</guf:GUF_ApplicationDomain>
+					</guf:applicationDomain>
 				</guf:GUF_UserInformation>
 			</guf:contact>
 			<guf:userComment>
@@ -116,7 +119,7 @@ classification  systems  (including  different  definitions  of forest)  and  di
 				<guf:GUF_FeedbackTarget>
 					<guf:resourceRef xlink:href="http://www-gvm.jrc.it/glc2000">
 						<cit:CI_Citation>
-							<cit:title></cit:title>
+							<cit:title/>
 							<cit:identifier>
 								<mcc:MD_Identifier>
 									<mcc:code>
@@ -137,7 +140,7 @@ classification  systems  (including  different  definitions  of forest)  and  di
 						</mcc:MD_Scope>
 					</guf:scope>
 					<guf:role>
-						<guf:GUF_TargetRoleCode codeListValue="primary" codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#GUF_TargetRoleCode"></guf:GUF_TargetRoleCode>
+						<guf:GUF_TargetRoleCode codeListValue="primary" codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#GUF_TargetRoleCode"/>
 					</guf:role>
 				</guf:GUF_FeedbackTarget>
 			</guf:target>
@@ -152,7 +155,7 @@ classification  systems  (including  different  definitions  of forest)  and  di
 						</mcc:MD_Scope>
 					</guf:scope>
 					<guf:role>
-						<guf:GUF_TargetRoleCode codeListValue="primary" codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#GUF_TargetRoleCode"></guf:GUF_TargetRoleCode>
+						<guf:GUF_TargetRoleCode codeListValue="primary" codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#GUF_TargetRoleCode"/>
 					</guf:role>
 				</guf:GUF_FeedbackTarget>
 			</guf:target>
@@ -176,7 +179,7 @@ classification  systems  (including  different  definitions  of forest)  and  di
 			<guf:dateInfo>
 				<cit:CI_Date>
 					<cit:date>
-						<gco:DateTime>2006-01-01T00:00:00Z</gco:DateTime>						
+						<gco:DateTime>2006-01-01T00:00:00Z</gco:DateTime>
 					</cit:date>
 					<cit:dateType>
 						<cit:CI_DateTypeCode codeList="http://wis.wmo.int/2008/catalogues/draft_version_1-1/WMO_Codelists_ver1_1.xml#CI_DateTypeCode" codeListValue="creation"/>
@@ -211,23 +214,34 @@ classification  systems  (including  different  definitions  of forest)  and  di
 				</cit:CI_Citation>
 			</guf:citation>
 			<guf:additionalQuality>
-				<mdq:DQ_DataQuality><mdq:scope><mcc:MD_Scope>
-					<mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode"  codeListValue="dataset"/></mcc:level>
-				</mcc:MD_Scope></mdq:scope>
-				<mdq:report><mdq:DQ_DomainConsistency>
-					<mdq:result>
-						<mdq:DQ_DescriptiveResult>
-							<mdq:statement><gco:CharacterString>14% of the area of the GLCC, GLC2000, and MODIS land cover maps, reclassified to the SIMPLE legend disagree in the all three land cover maps. Areas where all maps disagree or only two maps agree seem to be associated with mainly transitional ecozones with mixtures of the three main components trees, shrubs and grasses  such  as  tropical  savannas  including  the  Sahel, Mediterranean Europe, and tundra.</gco:CharacterString></mdq:statement>
-						</mdq:DQ_DescriptiveResult>
-					</mdq:result>
-				</mdq:DQ_DomainConsistency></mdq:report>
+				<mdq:DQ_DataQuality>
+					<mdq:scope>
+						<mcc:MD_Scope>
+							<mcc:level>
+								<mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode" codeListValue="dataset"/>
+							</mcc:level>
+						</mcc:MD_Scope>
+					</mdq:scope>
+					<mdq:report>
+						<mdq:DQ_DomainConsistency>
+							<mdq:result>
+								<mdq:DQ_DescriptiveResult>
+									<mdq:statement>
+										<gco:CharacterString>14% of the area of the GLCC, GLC2000, and MODIS land cover maps, reclassified to the SIMPLE legend disagree in the all three land cover maps. Areas where all maps disagree or only two maps agree seem to be associated with mainly transitional ecozones with mixtures of the three main components trees, shrubs and grasses  such  as  tropical  savannas  including  the  Sahel, Mediterranean Europe, and tundra.</gco:CharacterString>
+									</mdq:statement>
+								</mdq:DQ_DescriptiveResult>
+							</mdq:result>
+						</mdq:DQ_DomainConsistency>
+					</mdq:report>
 				</mdq:DQ_DataQuality>
 			</guf:additionalQuality>
 			<guf:usage>
 				<guf:GUF_UsageReport>
 					<guf:usageDescription>
 						<mri:MD_Usage>
-							<mri:specificUsage><gco:CharacterString>GLCC, GLC2000 and MODIS land cover products comparison</gco:CharacterString></mri:specificUsage>
+							<mri:specificUsage>
+								<gco:CharacterString>GLCC, GLC2000 and MODIS land cover products comparison</gco:CharacterString>
+							</mri:specificUsage>
 						</mri:MD_Usage>
 					</guf:usageDescription>
 					<guf:discoveredIssue>
@@ -243,22 +257,22 @@ classes or a lack of information about leaf type and phenology.</gco:CharacterSt
 			<guf:contact>
 				<guf:GUF_UserInformation>
 					<guf:userDetails>
-						<cit:CI_Responsibility>
-							<cit:role>
-								<cit:CI_RoleCode codeList="http://wis.wmo.int/2008/catalogues/draft_version_1-1/WMO_Codelists_ver1_1.xml#CI_RoleCode" codeListValue="user"/>
-							</cit:role>
-							<cit:party>
-								<cit:CI_Individual>
-									<cit:name>
-										<gco:CharacterString>Martin Jung</gco:CharacterString>
-									</cit:name>
-								</cit:CI_Individual>
-							</cit:party>
-						</cit:CI_Responsibility>
+						<cit:CI_Individual>
+							<cit:name>
+								<gco:CharacterString>Martin Jung</gco:CharacterString>
+							</cit:name>
+						</cit:CI_Individual>
 					</guf:userDetails>
-					<guf:expertiseLevel>
-						<guf:GUF_RatingCode codeListValue="5" codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#GUF_RatingCode"></guf:GUF_RatingCode>
-					</guf:expertiseLevel>
+					<guf:applicationDomain>
+						<guf:GUF_ApplicationDomain>
+							<guf:domain>
+								<cit:CI_RoleCode codeListValue="user" codeList="http://wis.wmo.int/2008/catalogues/draft_version_1-1/WMO_Codelists_ver1_1.xml#CI_RoleCode"/>
+							</guf:domain>
+							<guf:expertiseLevel>
+								<guf:GUF_RatingCode codeListValue="5" codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#GUF_RatingCode"/>
+							</guf:expertiseLevel>
+						</guf:GUF_ApplicationDomain>
+					</guf:applicationDomain>
 				</guf:GUF_UserInformation>
 			</guf:contact>
 			<guf:userComment>
@@ -280,8 +294,8 @@ from the use of LCCS and its regional bottom-up approach, its global map lacks s
 				<guf:GUF_FeedbackTarget>
 					<guf:resourceRef xlink:href="http://www-gvm.jrc.it/glc2000">
 						<cit:CI_Citation>
-							<cit:title></cit:title>
-							<cit:identifier>				
+							<cit:title/>
+							<cit:identifier>
 								<mcc:MD_Identifier>
 									<mcc:code>
 										<gco:CharacterString>GLC2000</gco:CharacterString>
@@ -301,7 +315,7 @@ from the use of LCCS and its regional bottom-up approach, its global map lacks s
 						</mcc:MD_Scope>
 					</guf:scope>
 					<guf:role>
-						<guf:GUF_TargetRoleCode codeListValue="primary" codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#GUF_TargetRoleCode"></guf:GUF_TargetRoleCode>
+						<guf:GUF_TargetRoleCode codeListValue="primary" codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#GUF_TargetRoleCode"/>
 					</guf:role>
 				</guf:GUF_FeedbackTarget>
 			</guf:target>
@@ -309,7 +323,7 @@ from the use of LCCS and its regional bottom-up approach, its global map lacks s
 				<guf:GUF_FeedbackTarget>
 					<guf:resourceRef xlink:href="http://edcdaac.usgs.gov/glcc/globdoc2_0.asp">
 						<cit:CI_Citation>
-							<cit:title></cit:title>
+							<cit:title/>
 							<cit:identifier>
 								<mcc:MD_Identifier>
 									<mcc:code>
@@ -327,7 +341,7 @@ from the use of LCCS and its regional bottom-up approach, its global map lacks s
 						</mcc:MD_Scope>
 					</guf:scope>
 					<guf:role>
-						<guf:GUF_TargetRoleCode codeListValue="primary" codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#GUF_TargetRoleCode"></guf:GUF_TargetRoleCode>
+						<guf:GUF_TargetRoleCode codeListValue="primary" codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#GUF_TargetRoleCode"/>
 					</guf:role>
 				</guf:GUF_FeedbackTarget>
 			</guf:target>
@@ -335,7 +349,7 @@ from the use of LCCS and its regional bottom-up approach, its global map lacks s
 				<guf:GUF_FeedbackTarget>
 					<guf:resourceRef>
 						<cit:CI_Citation>
-							<cit:title></cit:title>
+							<cit:title/>
 							<cit:identifier>
 								<mcc:MD_Identifier>
 									<mcc:code>
@@ -353,7 +367,7 @@ from the use of LCCS and its regional bottom-up approach, its global map lacks s
 						</mcc:MD_Scope>
 					</guf:scope>
 					<guf:role>
-						<guf:GUF_TargetRoleCode codeListValue="primary" codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#GUF_TargetRoleCode"></guf:GUF_TargetRoleCode>
+						<guf:GUF_TargetRoleCode codeListValue="primary" codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#GUF_TargetRoleCode"/>
 					</guf:role>
 				</guf:GUF_FeedbackTarget>
 			</guf:target>
@@ -382,7 +396,7 @@ from the use of LCCS and its regional bottom-up approach, its global map lacks s
 					<cit:dateType>
 						<cit:CI_DateTypeCode codeList="http://wis.wmo.int/2008/catalogues/draft_version_1-1/WMO_Codelists_ver1_1.xml#CI_DateTypeCode" codeListValue="creation"/>
 					</cit:dateType>
-				</cit:CI_Date>				
+				</cit:CI_Date>
 			</guf:dateInfo>
 			<guf:citation>
 				<cit:CI_Citation>
@@ -413,14 +427,20 @@ from the use of LCCS and its regional bottom-up approach, its global map lacks s
 			</guf:citation>
 			<guf:additionalQuality>
 				<mdq:DQ_DataQuality>
-					<mdq:scope><mcc:MD_Scope>
-						<mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode"  codeListValue="dataset"/></mcc:level>
-					</mcc:MD_Scope></mdq:scope>
+					<mdq:scope>
+						<mcc:MD_Scope>
+							<mcc:level>
+								<mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode" codeListValue="dataset"/>
+							</mcc:level>
+						</mcc:MD_Scope>
+					</mdq:scope>
 					<mdq:report>
 						<mdq:DQ_NonQuantitativeAttributeCorrectness>
 							<mdq:result>
 								<mdq:DQ_DescriptiveResult>
-									<mdq:statement><gco:CharacterString>The total areas under cropland based on GLC-2000, GlobCover and  MODIS v.5  are  1621  Mha,  1589  Mha and  1311  Mha, respectively while the corresponding figures for forest cover are 3876 Mha, 4029 Mha and 4241 Mha. The overall accuracy for the cropland/cultivated/cultivated and managed  class for the GLC-2000 (classes 16–18) is 76%, MODIS v.5 (class 14 and 16) is 77% while GlobCover 2005 (class 11, 14, 20 and 30) decreases to 57.6%.  Similarly, for the aggregated forest classes, the GLC-2000 (classes 1–9) has an accuracy of 81%, for MODIS v.5 (classes 1–5) it is 80%, and for GlobCover 2005 (classes 40–120) it drops to 60%. Areas of high disagreement are visible across North America, Russia  and  across  the  tropical   world. Large  cropland disagreements are evident in China, North America and many countries in Africa.  </gco:CharacterString></mdq:statement>
+									<mdq:statement>
+										<gco:CharacterString>The total areas under cropland based on GLC-2000, GlobCover and  MODIS v.5  are  1621  Mha,  1589  Mha and  1311  Mha, respectively while the corresponding figures for forest cover are 3876 Mha, 4029 Mha and 4241 Mha. The overall accuracy for the cropland/cultivated/cultivated and managed  class for the GLC-2000 (classes 16–18) is 76%, MODIS v.5 (class 14 and 16) is 77% while GlobCover 2005 (class 11, 14, 20 and 30) decreases to 57.6%.  Similarly, for the aggregated forest classes, the GLC-2000 (classes 1–9) has an accuracy of 81%, for MODIS v.5 (classes 1–5) it is 80%, and for GlobCover 2005 (classes 40–120) it drops to 60%. Areas of high disagreement are visible across North America, Russia  and  across  the  tropical   world. Large  cropland disagreements are evident in China, North America and many countries in Africa.  </gco:CharacterString>
+									</mdq:statement>
 								</mdq:DQ_DescriptiveResult>
 							</mdq:result>
 						</mdq:DQ_NonQuantitativeAttributeCorrectness>
@@ -431,7 +451,9 @@ from the use of LCCS and its regional bottom-up approach, its global map lacks s
 				<guf:GUF_UsageReport>
 					<guf:usageDescription>
 						<mri:MD_Usage>
-							<mri:specificUsage><gco:CharacterString>GlobCover, GLC2000 and MODIS land cover products for change detection</gco:CharacterString></mri:specificUsage>
+							<mri:specificUsage>
+								<gco:CharacterString>GlobCover, GLC2000 and MODIS land cover products for change detection</gco:CharacterString>
+							</mri:specificUsage>
 						</mri:MD_Usage>
 					</guf:usageDescription>
 					<guf:discoveredIssue>
@@ -449,22 +471,20 @@ from the use of LCCS and its regional bottom-up approach, its global map lacks s
 			<guf:contact>
 				<guf:GUF_UserInformation>
 					<guf:userDetails>
-						<cit:CI_Responsibility>
-							<cit:role>
-								<cit:CI_RoleCode codeList="http://wis.wmo.int/2008/catalogues/draft_version_1-1/WMO_Codelists_ver1_1.xml#CI_RoleCode" codeListValue="user"/>
-							</cit:role>
-							<cit:party>
-								<cit:CI_Individual>
-									<cit:name>
-										<gco:CharacterString>Steffen Fritz</gco:CharacterString>
-									</cit:name>
-								</cit:CI_Individual>
-							</cit:party>
-						</cit:CI_Responsibility>
-					</guf:userDetails>
-					<guf:expertiseLevel>
-						<guf:GUF_RatingCode codeListValue="5" codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#GUF_RatingCode"></guf:GUF_RatingCode>
-					</guf:expertiseLevel>
+				<cit:CI_Individual>
+					<cit:name>
+						<gco:CharacterString>Steffen Fritz</gco:CharacterString>					
+					</cit:name>
+				</cit:CI_Individual>
+			</guf:userDetails>
+			<guf:applicationDomain>
+				<guf:GUF_ApplicationDomain>
+					<guf:domain>
+						<cit:CI_RoleCode codeListValue="user" codeList="http://wis.wmo.int/2008/catalogues/draft_version_1-1/WMO_Codelists_ver1_1.xml#CI_RoleCode"></cit:CI_RoleCode>
+					</guf:domain>
+					<guf:expertiseLevel><guf:GUF_RatingCode codeListValue="5" codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#GUF_RatingCode"></guf:GUF_RatingCode></guf:expertiseLevel>
+				</guf:GUF_ApplicationDomain>			
+			</guf:applicationDomain>
 				</guf:GUF_UserInformation>
 			</guf:contact>
 			<guf:userComment>
@@ -478,7 +498,7 @@ from the use of LCCS and its regional bottom-up approach, its global map lacks s
 				<guf:GUF_FeedbackTarget>
 					<guf:resourceRef xlink:href="http://www-gvm.jrc.it/glc2000">
 						<cit:CI_Citation>
-							<cit:title></cit:title>
+							<cit:title/>
 							<cit:identifier>
 								<mcc:MD_Identifier>
 									<mcc:code>
@@ -499,7 +519,7 @@ from the use of LCCS and its regional bottom-up approach, its global map lacks s
 						</mcc:MD_Scope>
 					</guf:scope>
 					<guf:role>
-						<guf:GUF_TargetRoleCode codeListValue="primary" codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#GUF_TargetRoleCode"></guf:GUF_TargetRoleCode>
+						<guf:GUF_TargetRoleCode codeListValue="primary" codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#GUF_TargetRoleCode"/>
 					</guf:role>
 				</guf:GUF_FeedbackTarget>
 			</guf:target>
@@ -507,7 +527,7 @@ from the use of LCCS and its regional bottom-up approach, its global map lacks s
 				<guf:GUF_FeedbackTarget>
 					<guf:resourceRef>
 						<cit:CI_Citation>
-							<cit:title></cit:title>
+							<cit:title/>
 							<cit:identifier>
 								<mcc:MD_Identifier>
 									<mcc:code>
@@ -525,7 +545,7 @@ from the use of LCCS and its regional bottom-up approach, its global map lacks s
 						</mcc:MD_Scope>
 					</guf:scope>
 					<guf:role>
-						<guf:GUF_TargetRoleCode codeListValue="primary" codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#GUF_TargetRoleCode"></guf:GUF_TargetRoleCode>
+						<guf:GUF_TargetRoleCode codeListValue="primary" codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#GUF_TargetRoleCode"/>
 					</guf:role>
 				</guf:GUF_FeedbackTarget>
 			</guf:target>
@@ -533,7 +553,7 @@ from the use of LCCS and its regional bottom-up approach, its global map lacks s
 				<guf:GUF_FeedbackTarget>
 					<guf:resourceRef>
 						<cit:CI_Citation>
-							<cit:title></cit:title>
+							<cit:title/>
 							<cit:identifier>
 								<mcc:MD_Identifier>
 									<mcc:code>
@@ -551,7 +571,7 @@ from the use of LCCS and its regional bottom-up approach, its global map lacks s
 						</mcc:MD_Scope>
 					</guf:scope>
 					<guf:role>
-						<guf:GUF_TargetRoleCode codeListValue="primary" codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#GUF_TargetRoleCode"></guf:GUF_TargetRoleCode>
+						<guf:GUF_TargetRoleCode codeListValue="primary" codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#GUF_TargetRoleCode"/>
 					</guf:role>
 				</guf:GUF_FeedbackTarget>
 			</guf:target>
@@ -580,7 +600,7 @@ from the use of LCCS and its regional bottom-up approach, its global map lacks s
 					<cit:dateType>
 						<cit:CI_DateTypeCode codeList="http://wis.wmo.int/2008/catalogues/draft_version_1-1/WMO_Codelists_ver1_1.xml#CI_DateTypeCode" codeListValue="creation"/>
 					</cit:dateType>
-				</cit:CI_Date>				
+				</cit:CI_Date>
 			</guf:dateInfo>
 			<guf:citation>
 				<cit:CI_Citation>
@@ -611,30 +631,66 @@ from the use of LCCS and its regional bottom-up approach, its global map lacks s
 			</guf:citation>
 			<guf:additionalQuality>
 				<mdq:DQ_DataQuality>
-					<mdq:scope><mcc:MD_Scope>
-						<mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode"  codeListValue="dataset"/></mcc:level>
-						<mcc:extent><gex:EX_Extent><gex:geographicElement><gex:EX_GeographicDescription>
-							<gex:geographicIdentifier><mcc:MD_Identifier>
-								<mcc:code><gco:CharacterString>Canada</gco:CharacterString></mcc:code>
-							</mcc:MD_Identifier></gex:geographicIdentifier>
-						</gex:EX_GeographicDescription></gex:geographicElement></gex:EX_Extent></mcc:extent>
-					</mcc:MD_Scope></mdq:scope>
+					<mdq:scope>
+						<mcc:MD_Scope>
+							<mcc:level>
+								<mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode" codeListValue="dataset"/>
+							</mcc:level>
+							<mcc:extent>
+								<gex:EX_Extent>
+									<gex:geographicElement>
+										<gex:EX_GeographicDescription>
+											<gex:geographicIdentifier>
+												<mcc:MD_Identifier>
+													<mcc:code>
+														<gco:CharacterString>Canada</gco:CharacterString>
+													</mcc:code>
+												</mcc:MD_Identifier>
+											</gex:geographicIdentifier>
+										</gex:EX_GeographicDescription>
+									</gex:geographicElement>
+								</gex:EX_Extent>
+							</mcc:extent>
+						</mcc:MD_Scope>
+					</mdq:scope>
 					<mdq:report>
 						<mdq:DQ_NonQuantitativeAttributeCorrectness>
-							<mdq:evaluationMethod><pqm:GVQ_FullInspection><pqm:referenceDataset><mri:MD_AssociatedResource>
-							<mri:name>
-								<cit:CI_Citation>
-								<cit:title><gco:CharacterString>30 m Circa 2000 Land Cover from agricultural regions of Canada</gco:CharacterString></cit:title>
-								<cit:identifier><mcc:MD_Identifier>
-									<mcc:code><gco:CharacterString>CIRCA2000</gco:CharacterString></mcc:code>
-								</mcc:MD_Identifier></cit:identifier></cit:CI_Citation></mri:name>
-								<mri:associationType><mri:DS_AssociationTypeCode codeListValue="reference" codeList="">reference dataset</mri:DS_AssociationTypeCode></mri:associationType>								
-								</mri:MD_AssociatedResource></pqm:referenceDataset></pqm:GVQ_FullInspection></mdq:evaluationMethod>
+							<mdq:evaluationMethod>
+								<pqm:GVQ_FullInspection>
+									<pqm:referenceDataset>
+										<mri:MD_AssociatedResource>
+											<mri:name>
+												<cit:CI_Citation>
+													<cit:title>
+														<gco:CharacterString>30 m Circa 2000 Land Cover from agricultural regions of Canada</gco:CharacterString>
+													</cit:title>
+													<cit:identifier>
+														<mcc:MD_Identifier>
+															<mcc:code>
+																<gco:CharacterString>CIRCA2000</gco:CharacterString>
+															</mcc:code>
+														</mcc:MD_Identifier>
+													</cit:identifier>
+												</cit:CI_Citation>
+											</mri:name>
+											<mri:associationType>
+												<mri:DS_AssociationTypeCode codeListValue="reference" codeList="">reference dataset</mri:DS_AssociationTypeCode>
+											</mri:associationType>
+										</mri:MD_AssociatedResource>
+									</pqm:referenceDataset>
+								</pqm:GVQ_FullInspection>
+							</mdq:evaluationMethod>
 							<mdq:result>
 								<mdq:DQ_QuantitativeResult>
-									<mdq:value><gco:Record><gco:Decimal>0.492</gco:Decimal></gco:Record></mdq:value>
+									<mdq:value>
+										<gco:Record>
+											<gco:Decimal>0.492</gco:Decimal>
+										</gco:Record>
+									</mdq:value>
 									<mdq:valueUnit/>
-									<mdq:valueRecordType><gco:RecordType xlink:href="http://qualityml.geoviqua.org/1.0/metrics/KappaCoefficient">Kappa coefficient</gco:RecordType></mdq:valueRecordType>
+									<mdq:valueRecordType>
+										<gco:RecordType xlink:href="http://qualityml.geoviqua.org/1.0/metrics/KappaCoefficient">Kappa coefficient</gco:RecordType>
+									</mdq:valueRecordType>
 								</mdq:DQ_QuantitativeResult>
 							</mdq:result>
 						</mdq:DQ_NonQuantitativeAttributeCorrectness>
@@ -644,29 +700,27 @@ from the use of LCCS and its regional bottom-up approach, its global map lacks s
 			<guf:contact>
 				<guf:GUF_UserInformation>
 					<guf:userDetails>
-						<cit:CI_Responsibility>
-							<cit:role>
-								<cit:CI_RoleCode codeList="http://wis.wmo.int/2008/catalogues/draft_version_1-1/WMO_Codelists_ver1_1.xml#CI_RoleCode" codeListValue="user"/>
-							</cit:role>
-							<cit:party>
-								<cit:CI_Individual>
-									<cit:name>
-										<gco:CharacterString>Alemu Gonsamo</gco:CharacterString>
-									</cit:name>
-								</cit:CI_Individual>
-							</cit:party>
-						</cit:CI_Responsibility>
-					</guf:userDetails>
-					<guf:expertiseLevel>
-						<guf:GUF_RatingCode codeListValue="5" codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#GUF_RatingCode"></guf:GUF_RatingCode>
-					</guf:expertiseLevel>
+					<cit:CI_Individual>
+					<cit:name>
+						<gco:CharacterString>Alemu Gonsamo</gco:CharacterString>					
+					</cit:name>
+				</cit:CI_Individual>
+			</guf:userDetails>
+			<guf:applicationDomain>
+				<guf:GUF_ApplicationDomain>
+					<guf:domain>
+						<cit:CI_RoleCode codeListValue="user" codeList="http://wis.wmo.int/2008/catalogues/draft_version_1-1/WMO_Codelists_ver1_1.xml#CI_RoleCode"></cit:CI_RoleCode>
+					</guf:domain>
+					<guf:expertiseLevel><guf:GUF_RatingCode codeListValue="5" codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#GUF_RatingCode"></guf:GUF_RatingCode></guf:expertiseLevel>
+				</guf:GUF_ApplicationDomain>			
+			</guf:applicationDomain>
 				</guf:GUF_UserInformation>
 			</guf:contact>
 			<guf:target>
 				<guf:GUF_FeedbackTarget>
 					<guf:resourceRef xlink:href="http://www-gvm.jrc.it/glc2000">
 						<cit:CI_Citation>
-							<cit:title></cit:title>
+							<cit:title/>
 							<cit:identifier>
 								<mcc:MD_Identifier>
 									<mcc:code>
@@ -687,7 +741,7 @@ from the use of LCCS and its regional bottom-up approach, its global map lacks s
 						</mcc:MD_Scope>
 					</guf:scope>
 					<guf:role>
-						<guf:GUF_TargetRoleCode codeListValue="primary" codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#GUF_TargetRoleCode"></guf:GUF_TargetRoleCode>
+						<guf:GUF_TargetRoleCode codeListValue="primary" codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#GUF_TargetRoleCode"/>
 					</guf:role>
 				</guf:GUF_FeedbackTarget>
 			</guf:target>
@@ -695,7 +749,7 @@ from the use of LCCS and its regional bottom-up approach, its global map lacks s
 				<guf:GUF_FeedbackTarget>
 					<guf:resourceRef>
 						<cit:CI_Citation>
-							<cit:title></cit:title>
+							<cit:title/>
 							<cit:identifier>
 								<mcc:MD_Identifier>
 									<mcc:code>
@@ -713,7 +767,7 @@ from the use of LCCS and its regional bottom-up approach, its global map lacks s
 						</mcc:MD_Scope>
 					</guf:scope>
 					<guf:role>
-						<guf:GUF_TargetRoleCode codeListValue="secondary" codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#GUF_TargetRoleCode"></guf:GUF_TargetRoleCode>
+						<guf:GUF_TargetRoleCode codeListValue="secondary" codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#GUF_TargetRoleCode"/>
 					</guf:role>
 				</guf:GUF_FeedbackTarget>
 			</guf:target>
@@ -721,23 +775,52 @@ from the use of LCCS and its regional bottom-up approach, its global map lacks s
 	</ufc:item>
 	<ufc:pagination>
 		<ufc:UFC_ResponsePagination>
-			<ufc:numberOfFeedbackItems><gco:Integer>4</gco:Integer></ufc:numberOfFeedbackItems>
-			<ufc:count><gco:Integer>4</gco:Integer></ufc:count>
+			<ufc:numberOfFeedbackItems>
+				<gco:Integer>4</gco:Integer>
+			</ufc:numberOfFeedbackItems>
+			<ufc:count>
+				<gco:Integer>4</gco:Integer>
+			</ufc:count>
 		</ufc:UFC_ResponsePagination>
 	</ufc:pagination>
 	<ufc:summary>
 		<ufs:UFS_FeedbackSummary>
-			<ufs:numberOfFeedbackItems><gco:Integer>4</gco:Integer></ufs:numberOfFeedbackItems>
-			<ufs:minimumPossibleRating><gco:Real>1.0</gco:Real></ufs:minimumPossibleRating>
-			<ufs:maximumPossibleRating><gco:Real>5.0</gco:Real></ufs:maximumPossibleRating>
-			<ufs:averageRating><gco:Real>5.0</gco:Real></ufs:averageRating>
-			<ufs:numberOfRatings><gco:Integer>0</gco:Integer></ufs:numberOfRatings>
-			<ufs:numberOfUserComments><gco:Integer>3</gco:Integer></ufs:numberOfUserComments>
-			<ufs:numberOfUsageReports><gco:Integer>2</gco:Integer></ufs:numberOfUsageReports>
-			<ufs:numberOfCitations><gco:Integer>4</gco:Integer></ufs:numberOfCitations>
-			<ufs:numberOfAdditionalQualities><gco:Integer>3</gco:Integer></ufs:numberOfAdditionalQualities>
-			<ufs:numberOfAdditionalLineages><gco:Integer>0</gco:Integer></ufs:numberOfAdditionalLineages>
-			<ufs:numberOfSignificantEvents><gco:Integer>0</gco:Integer></ufs:numberOfSignificantEvents>
+			<ufs:numberOfFeedbackItems>
+				<gco:Integer>4</gco:Integer>
+			</ufs:numberOfFeedbackItems>
+			<ufs:minimumRating>
+				<gco:Real>1.0</gco:Real>
+			</ufs:minimumRating>
+			<ufs:maximumRating>
+				<gco:Real>5.0</gco:Real>
+			</ufs:maximumRating>
+			<ufs:averageRating>
+				<gco:Real>5.0</gco:Real>
+			</ufs:averageRating>
+			<ufs:numberOfRatings>
+				<gco:Integer>0</gco:Integer>
+			</ufs:numberOfRatings>
+			<ufs:numberOfUserComments>
+				<gco:Integer>3</gco:Integer>
+			</ufs:numberOfUserComments>
+			<ufs:numberOfUsageReports>
+				<gco:Integer>2</gco:Integer>
+			</ufs:numberOfUsageReports>
+			<ufs:numberOfReproducibleUsageReports>
+				<gco:Integer>3</gco:Integer>
+			</ufs:numberOfReproducibleUsageReports>
+			<ufs:numberOfCitations>
+				<gco:Integer>4</gco:Integer>
+			</ufs:numberOfCitations>
+			<ufs:numberOfAdditionalQualities>
+				<gco:Integer>3</gco:Integer>
+			</ufs:numberOfAdditionalQualities>
+			<ufs:numberOfAdditionalLineages>
+				<gco:Integer>0</gco:Integer>
+			</ufs:numberOfAdditionalLineages>
+			<ufs:numberOfSignificantEvents>
+				<gco:Integer>0</gco:Integer>
+			</ufs:numberOfSignificantEvents>
 		</ufs:UFS_FeedbackSummary>
 	</ufc:summary>
 </ufc:UFC_FeedbackCollection>

@@ -1,0 +1,12 @@
+[bibliography]
+[[Bibliography]]
+== Bibliography
+
+[NOTE]
+.Example Bibliography (Delete this note).
+===============================================
+List any non-normative references present in these Release Notes, but do not provide a list of new references from the revised standard.
+
+===============================================
+
+[1] OGC 06-121r9:2010, OGC Web Service Common Implementation Specification

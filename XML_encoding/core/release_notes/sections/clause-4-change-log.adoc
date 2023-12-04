@@ -1,0 +1,57 @@
+[[change-log]]
+== Change Log
+
+=== KEY
+
+* Source:
+** Change Request
+** GitHub Issue
+** Other
+
+* Identifier: Change Request number or issue number and pull request/commit in GitHub
+//if an OGC Change Request, format as follows: URL[Change Request number]
+//if a GitHub issue, format as follows: URL[issue number], URL[pull request or commit short identifier]
+
+* Type:
+** A=Administrative
+** S=Substantive
+** C=Critical
+
+See <<Clause_Critical>> for more information on critical changes and
+<<Clause_Substantive>> for more information on substantive changes.
+
+* Section: Section number in the updated document
+* Description: Brief text describing the change
+* Purpose: the reason for the change:
+** Clarity
+** Consistency
+** Interoperability
+** Perfunctory
+** Readability
+** Usability
+
+
+=== Change table
+[[table_change_log]]
+.Change Log
+[cols="1a,1a,1a,2a,6a,2a",options="header"]
+|=======================================================================
+|Source      |Identifier     |Type                 |Section |Description |Purpose
+| Editor| ED-01|S |qcm.xsd | New attributes "highlights" and "keywords" for QCM_Publication class. | Completeness.
+| Editor| ED-02|C |qcm.xsd | Updated Data Type for "problemDateTime" element from "CI_Date" to "DateTime". | Consistency.
+| Editor| ED-03|C |qcm.xsd | Updated Data Type for "expectedFixDate" element from "CI_Date" to "Date". | Consistency.
+| Editor| ED-04|S |qcm.xsd | "fixedResource" attribute cardinality updated from "zero or one (optional)" to "zero or more (optional)".  | Completeness.
+| Editor| ED-05|S |qcm.xsd | New requirement added. "QCM_ReproducibleUsage" as "MD_Usage" extension. | Consistency.
+| Editor| ED-06|S |qcm.xsd | "QCM_ReproducibleUsage" class description. | Completeness.
+| Editor| ED-07|A |guf.xsd | "itemIsReplyTo" attribute cardinality "Zero or more (Optional)" added. | Completeness.
+| Editor| ED-08|C |guf.xsd | Updated "additionalLineage" attribute name to "additionalLineageSteps".  | Clarity.
+| Editor| ED-09|C |guf.xsd | "userDetails" attribute Data Type changed from "CI_Responsibility" to "CI_Party".  | Consistency.
+| Editor| ED-10|S |guf.xsd | New "description" optional attribute added. | Clarity
+| Editor| ED-11|C |guf.xsd | "applicationDomain" attribute Data Type changed from "CharacterString" to "GUF_ApplicationDomain". Cardinality changed from "Zero or more (optional)" to "One or more (mandatory)". GUF v.1.0 "expertiseLevel" attribute deprecated| Consistency.
+| Editor| ED-12|S |guf.xsd | New "GUF_ApplicationDomain" Data Type added. | Completeness.
+| Editor| ED-13|C |ufs.xsd | "minimumRating" and "maximumRating" attributes overwrite GUF v.1.0 "minimumPossibleRating" and "maximumPossibleRating".| Clarity.
+| Editor| ED-14|C |ufs.xsd | "numberOfReproducibleUsageReports" attribute added to document the total number of populated reproducible usage reports.| Completeness.
+| Editor| ED-15|A |All *.xsd | Element descriptions added or reviewed to match the conceptual model | Completeness. Consistency.
+| Editor| ED-16|A | Documentation | Examples added or updated to be consistent with schemas | Consistency.
+
+|=======================================================================

@@ -2,11 +2,11 @@
 [requirement]
 ====
 [%metadata]
-*Req 5*:: /req/feedback-collection/response:
+*Req 5*::	/req/feedback-summary/summary-model:
 [.component,class=conditions]
 --
-The class UFC_FeedbackResponse that follows the UML model in Figure 6 with the properties specified in Table 28 _shall_ be used when a grouping of feedback items is needed as a response to a feedback catalogue request. +
-Dependencies: /req/feedback-summary/
+The class UFS_FeedbackSummary that follows the UML model in Figure 5 with the properties specified in Table 23 _shall_ be used when a grouping of feedback items is needed. +
+Dependency: /req/feedback-item
 
 --
 

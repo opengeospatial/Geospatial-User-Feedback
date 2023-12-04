@@ -20,6 +20,9 @@ Springer LNCS is widely used in technical and computer science journals and othe
 
 ===============================================
 ////
+
+$$ change style here and in text, review missing references in the text and here
+
 * [[[OGC2015,OGCTB12]]], _OGC: OGC Testbed 12 Annex B: Architecture_ (2015).
 
 * OGC 08-131r3 The Specification Model — A Standard for Modular. +

@@ -2,12 +2,11 @@
 [requirement]
 ====
 [%metadata]
-*Req 7*:: /req/feedback-collection/pagination:
+*Req 7*:: /req/feedback-collection/collection:
 [.component,class=conditions]
 --
-The class UFC_ResponsePagination that follows the UML model in Figure 6 with the properties specified in Table 30 _shall_ be used when pagination of a catalogue response is needed. +
+The class UFC_FeedbackCollection that follows the UML model in Figure 6 with the properties specified in Table 31 _shall_ be used when a grouping of feedback items is needed. +
 Dependencies: /req/feedback-summary/
-
 
 --
 

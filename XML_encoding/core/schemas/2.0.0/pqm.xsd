@@ -1,15 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/1.0" xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/1.0" xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0" xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0" xmlns:mrl="http://standards.iso.org/iso/19115/-3/mrl/1.0" xmlns:dqc="http://standards.iso.org/iso/19157/-2/dqc/1.0" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:qcm="http://www.opengis.net/guf/1.0/common" xmlns:ufc="http://www.opengis.net/guf/1.0/collection" xmlns:pqm="http://www.geoviqua.org/gvq/1.0" targetNamespace="http://www.geoviqua.org/gvq/1.0" elementFormDefault="qualified" version="1.0.0">
-
+<schema 
+	xmlns="http://www.w3.org/2001/XMLSchema" 
+	xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/2.0" 
+	xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/1.0" 
+	xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0" 
+	xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0" 
+	xmlns:mrl="http://standards.iso.org/iso/19115/-3/mrl/1.0" 
+	xmlns:dqc="http://standards.iso.org/iso/19157/-2/dqc/1.0" 
+	xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" 
+	xmlns:gml="http://www.opengis.net/gml/3.2" 
+	xmlns:qcm="http://www.opengis.net/guf/2.0/common" 
+	xmlns:ufc="http://www.opengis.net/guf/2.0/collection" 
+	xmlns:pqm="http://www.geoviqua.org/gvq/1.0" 
+	targetNamespace="http://www.geoviqua.org/gvq/1.0" 
+	elementFormDefault="qualified" version="2.0.0">
 	<annotation>
 		<documentation>Geospatial User Feedback (GUF) is an OGC standard.
 			Copyright (c) 2016 Open Geospatial Consortium.
 			To obtain additional rights of use, visit http://www.opengeospatial.org/legal/.
 		</documentation>
 	</annotation>
-	<!-- Version: 1.0.0 2022-05-26 Change ISO/TC 211 schema locations from http://standards.iso.org to https://schemas.isotc211.org -->
-
-	<import namespace="http://standards.iso.org/iso/19115/-3/cit/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/cit/1.0/citation.xsd"/>
+	<import namespace="http://standards.iso.org/iso/19115/-3/cit/2.0" schemaLocation="https://schemas.isotc211.org/19115/-3/cit/2.0/citation.xsd"/>
 	<import namespace="http://standards.iso.org/iso/19115/-3/mdb/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/mdb/1.0/mdb.xsd"/>
 	<import namespace="http://standards.iso.org/iso/19157/-2/mdq/1.0" schemaLocation="https://schemas.isotc211.org/19157/-2/mdq/1.0/mdq.xsd"/>
 	<import namespace="http://standards.iso.org/iso/19115/-3/mri/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/mri/1.0/identification.xsd"/>
@@ -17,9 +28,8 @@
 	<import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/gco/1.0/gco.xsd"/>
 	<import namespace="http://standards.iso.org/iso/19157/-2/dqc/1.0" schemaLocation="https://schemas.isotc211.org/19157/-2/dqc/1.0/dqc.xsd"/>
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
-	<import namespace="http://www.opengis.net/guf/1.0/collection" schemaLocation="http://schemas.opengis.net/guf/1.0/ufc.xsd"/>
-	<import namespace="http://www.opengis.net/guf/1.0/common" schemaLocation="http://schemas.opengis.net/guf/1.0/qcm.xsd"/>
-
+	<import namespace="http://www.opengis.net/guf/2.0/collection" schemaLocation="https://schemas.opengis.net/guf/2.0/ufc.xsd"/>
+	<import namespace="http://www.opengis.net/guf/2.0/common" schemaLocation="https://schemas.opengis.net/guf/2.0/qcm.xsd"/>
 	<element name="GVQ_DataIdentification" type="pqm:GVQ_DataIdentification_Type" substitutionGroup="mri:MD_DataIdentification"/>
 	<complexType name="GVQ_DataIdentification_Type">
 		<complexContent>

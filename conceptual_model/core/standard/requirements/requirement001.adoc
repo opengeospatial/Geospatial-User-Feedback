@@ -5,7 +5,7 @@
 *Req 1*:: /req/quality-common/citation-of-publications:
 [.component,class=conditions]
 --
-The implementations of quality common _shall_ follow the UML model as shown in Figure 1 . This model extends ISO 19115-1:2014 CI_Citation with elements for publications and the specification of the purpose of a citation by adding the properties specified in Table 2, Table 3 and Table 4. +
+The implementations of quality common _shall_ follow the UML model as shown in Figure 1. This model extends ISO 19115-1:2014 CI_Citation with elements for publications and the specification of the purpose of a citation by adding the properties specified in Table 2, Table 3 and Table 4. +
 Dependency: ISO19115-1:2014 and ISO19157:2013 data models
 --
 

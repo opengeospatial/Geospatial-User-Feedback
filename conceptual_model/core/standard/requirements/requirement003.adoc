@@ -1,19 +1,23 @@
 [[req_core_process-execute-input-inline-object]]
+
+
 [requirement]
 ====
 [%metadata]
-*Req 3*:: /req/feedback-item/item:
+*Req 3*:: /req/quality-common/reproducible-usage:
 [.component,class=conditions]
 --
-The class GUF_FeedbackItem that follows the UML model in Figure 3 and Figure 4 with the properties specified in Table 6, and other tables referenced in Table 6, _shall_ be used when describing feedback items relating to geospatial resources. +
-Dependency: /req/quality-common
+{set:bgcolor:#D5F5E3}
+The GUF standard proposes the following extension to describe reproducible usage. +
+Dependency: ISO19115-1:2014
+
 --
 
 [.component,class=part]
 --
 //The server SHALL support process input values encoded as qualified values.
 --
-
+{set:bgcolor:#D5F5E3/}
 [.component,class=part]
 --
 //The value of the `value` key SHALL be an _object_ instance.

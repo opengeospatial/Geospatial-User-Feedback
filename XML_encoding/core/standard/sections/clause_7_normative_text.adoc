@@ -1,6 +1,8 @@
+:source-highlighter: highlight.js
+
 == *Geospatial User feedback model. Core*
 
-This section describes two requirements classes that are fundamental for encoding Geospatial User Feedback items in XML: the Quality Common and the User Feedback Item.
+This section describes three requirements classes that are fundamental for encoding Geospatial User Feedback items in XML: the Quality Common, the User Feedback Item and the User Feedback Summary.
 
 
 === *7.1	Requirements Class Quality Common*
@@ -24,56 +26,261 @@ The qcm.xsd schema has been derived automatically from the OGC 15-097 UML model.
 
 The following code shows a xml encoding example for QCM_Publication
 
-[source]
-<QCM_Publication 
-		xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/1.0" 
-		xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" 	
-		xmlns="http://www.opengis.net/guf/1.0/common" 
-		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-		xsi:schemaLocation="http://www.opengis.net/guf/1.0/common 
-	../qcm.xsd"> 
-	<cit:title> 
-		<gco:CharacterString>Exploiting synergies of global land cover products for carbon cycle modeling</gco:CharacterString> 
-	</cit:title> 
-	<cit:date> 
-		<cit:CI_Date> 
-			<cit:date> 
-				<gco:DateTime>2006-01-01T00:00:00Z</gco:DateTime> 
-			</cit:date> 
-			<cit:dateType> 
-				<cit:CI_DateTypeCode codeList="http://wis.wmo.int/2008/catalogues/draft_version_1-1/WMO_Codelists_ver1_1.xml#CI_DateTypeCode" codeListValue="creation"/> 
-			</cit:dateType> 
-		</cit:CI_Date> 
-	</cit:date> 
-	<cit:series> 
-		<cit:CI_Series> 
-			<cit:name> 
-				<gco:CharacterString>Remote Sensing of Environment</gco:CharacterString> 
-			</cit:name> 
-		</cit:CI_Series> 
-	</cit:series> 
-	<cit:otherCitationDetails> 
-		<gco:CharacterString>101 (2006) 534–553</gco:CharacterString> 
-	</cit:otherCitationDetails>  
-	<motivation><QCM_CitationMotivationCode codeListValue="descrive" codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#QCM_PublicationCategoryCode"></QCM_CitationMotivationCode></motivation> 
-	<category><QCM_PublicationCategoryCode codeListValue="journalArticle" codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#QCM_Publ+-------
-	icationCategoryCode"></QCM_PublicationCategoryCode></category> 
-</QCM_Publication> 
+[source,xml]
+----
+<qcm:QCM_Publication 
+	xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/2.0" 
+	xmlns:qcm="http://www.opengis.net/guf/2.0/common" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" 
+	xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" 
+	xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0" 
+	xsi:schemaLocation="http://www.opengis.net/guf/2.0/common https://schemas.opengis.net/guf/2.0/qcm.xsd">
+	<cit:title>
+		<gco:CharacterString>Earth observations for sustainable development goals monitoring based on essential variables and driver-pressure-state-impact-response indicators</gco:CharacterString>
+	</cit:title>
+	<cit:date>
+		<cit:CI_Date>
+			<cit:date>
+				<gco:DateTime>2020-01-01T00:00:00Z</gco:DateTime>
+			</cit:date>
+			<cit:dateType>
+				<cit:CI_DateTypeCode codeList="http://wis.wmo.int/2008/catalogues/draft_version_1-1/WMO_Codelists_ver1_1.xml#CI_DateTypeCode" codeListValue="creation"/>
+			</cit:dateType>
+		</cit:CI_Date>
+	</cit:date>
+	<cit:identifier>
+		<mcc:MD_Identifier>
+			<mcc:code>
+				<gco:CharacterString>10.1080/17538947.2019.1576787</gco:CharacterString>
+			</mcc:code>
+			<mcc:codeSpace>
+				<gco:CharacterString>https://doi.org/</gco:CharacterString>
+			</mcc:codeSpace>
+		</mcc:MD_Identifier>
+	</cit:identifier>
+	<cit:citedResponsibleParty>
+		<cit:CI_Responsibility>
+			<cit:role>
+				<cit:CI_RoleCode codeListValue="author" codeList="http://www.opengis.net/guf/2.0/resources/codeList.xml#CI_RoleCode"/>
+			</cit:role>
+			<cit:party>
+				<cit:CI_Individual>
+					<cit:name>
+						<gco:CharacterString>Joan Masó</gco:CharacterString>
+					</cit:name>
+					<cit:contactInfo>
+						<cit:CI_Contact>
+							<cit:address>
+								<cit:CI_Address>
+									<cit:electronicMailAddress>
+										<gco:CharacterString>joan.maso@uab.cat</gco:CharacterString>
+									</cit:electronicMailAddress>
+								</cit:CI_Address>
+							</cit:address>
+						</cit:CI_Contact>
+					</cit:contactInfo>
+				</cit:CI_Individual>
+			</cit:party>
+		</cit:CI_Responsibility>
+	</cit:citedResponsibleParty>
+	<cit:citedResponsibleParty>
+		<cit:CI_Responsibility>
+			<cit:role>
+				<cit:CI_RoleCode codeListValue="author" codeList="http://www.opengis.net/guf/2.0/resources/codeList.xml#CI_RoleCode"/>
+			</cit:role>
+			<cit:party>
+				<cit:CI_Individual>
+					<cit:name>
+						<gco:CharacterString>Ivette Serral</gco:CharacterString>
+					</cit:name>
+				</cit:CI_Individual>
+			</cit:party>
+		</cit:CI_Responsibility>
+	</cit:citedResponsibleParty>
+	<cit:citedResponsibleParty>
+		<cit:CI_Responsibility>
+			<cit:role>
+				<cit:CI_RoleCode codeListValue="author" codeList="http://www.opengis.net/guf/2.0/resources/codeList.xml#CI_RoleCode"/>
+			</cit:role>
+			<cit:party>
+				<cit:CI_Individual>
+					<cit:name>
+						<gco:CharacterString>Cristina Domingo-Marimon</gco:CharacterString>
+					</cit:name>
+				</cit:CI_Individual>
+			</cit:party>
+		</cit:CI_Responsibility>
+	</cit:citedResponsibleParty>
+	<cit:citedResponsibleParty>
+		<cit:CI_Responsibility>
+			<cit:role>
+				<cit:CI_RoleCode codeListValue="author" codeList="http://www.opengis.net/guf/2.0/resources/codeList.xml#CI_RoleCode"/>
+			</cit:role>
+			<cit:party>
+				<cit:CI_Individual>
+					<cit:name>
+						<gco:CharacterString>Alaitz Zabala</gco:CharacterString>
+					</cit:name>
+				</cit:CI_Individual>
+			</cit:party>
+		</cit:CI_Responsibility>
+	</cit:citedResponsibleParty>
+	<cit:presentationForm>
+		<cit:CI_PresentationFormCode codeListValue="documentDigital" codeList="http://www.opengis.net/guf/2.0/resources/codeList.xml#CI_RoleCode"/>
+	</cit:presentationForm>
+	<cit:series>
+		<cit:CI_Series>
+			<cit:name>
+				<gco:CharacterString>International Journal of Digital Earth </gco:CharacterString>
+			</cit:name>
+			<cit:issueIdentification>
+				<gco:CharacterString>Volume 13, number 2</gco:CharacterString>
+			</cit:issueIdentification>
+			<cit:page>
+				<gco:CharacterString>217-235</gco:CharacterString>
+			</cit:page>
+		</cit:CI_Series>
+	</cit:series>
+	<cit:otherCitationDetails>
+		<gco:CharacterString>2020, VOL. 13, NO. 2, 217–235</gco:CharacterString>
+	</cit:otherCitationDetails>
+	<cit:onlineResource>
+		<cit:CI_OnlineResource>
+			<cit:linkage>
+				<gco:CharacterString>https://www.tandfonline.com/doi/epdf/10.1080/17538947.2019.1576787</gco:CharacterString>
+			</cit:linkage>
+			<cit:description>
+				<gco:CharacterString>Paper information (and possible download)</gco:CharacterString>
+			</cit:description>
+			<cit:function>
+				<cit:CI_OnLineFunctionCode codeListValue="information" codeList="http://www.isotc211.org/2005/resources/Codelist/ML_gmxCodelists.xml#CI_OnLineFunctionCode">information
+				</cit:CI_OnLineFunctionCode>
+			</cit:function>
+		</cit:CI_OnlineResource>
+	</cit:onlineResource>
+	<qcm:abstract>
+		<gco:CharacterString>
+	In recent years, researchers of different communities have increased their efforts in formalizing a set of measurements regularly collected for analysing changes in Drivers, States, Impacts and Responses of a given discipline. In some cases, different actors have converged in a minimum set of Essential Variables (EVs), such as for Climate, Biodiversity or Oceans. The definition of such EVs is an ongoing evolution and in extension (e.g. EVs for water) although some communities have not even started (e.g. agriculture and energy). This paper characterizes the Earth Observation (EO) networks and creates a graph representation of their relations. Secondly, this graph is enriched with the EVs produced by each network creating a knowledge base. Finally, an effort has been done to identify links between EVs and Sustainable Development Goals (SDG) indicators in a way that they indirectly connect the EO. An analysis to detect gaps in EO variables due to a lack of observational networks is performed. Several suggestions for improving SDG indicators framework by considering EVs are exposed, as well as proposing new necessary EVs and suggesting new EO based indicators. The complete graph is available in the ENEON website (http://www.eneon.net/graph-ev-sdg/).
+		</gco:CharacterString>
+	</qcm:abstract>
+	<qcm:highlights>
+		<gco:CharacterString>There is a need for a common and comprehensive list of Essential Variables. Research infrastructures need to be characterized in terms of the EV they are able to produce. Policy monitoring can benefit from Earth observation.</gco:CharacterString>
+	</qcm:highlights>
+	<qcm:keywords>
+		<mri:MD_Keywords>
+			<mri:keyword>
+				<gco:CharacterString>gap analysis</gco:CharacterString>
+			</mri:keyword>
+			<mri:keyword>
+				<gco:CharacterString>policy monitoring</gco:CharacterString>
+			</mri:keyword>
+			<mri:keyword>
+				<gco:CharacterString>essential variables</gco:CharacterString>
+			</mri:keyword>
+			<mri:keyword>
+				<gco:CharacterString>earth observation</gco:CharacterString>
+			</mri:keyword>
+		</mri:MD_Keywords>
+	</qcm:keywords>
+	<qcm:category>
+		<qcm:QCM_PublicationCategoryCode codeListValue="journalArticle" codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#QCM_PublicationCategoryCode"/>
+	</qcm:category>
+</qcm:QCM_Publication>
 ----
 
 The following code shows a xml encoding example for QCM_DiscoveredIssue:
-[source]
+
+[source,xml]
 ----
-<QCM_DiscoveredIssue xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns="http://www.opengis.net/guf/1.0/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-xsi:schemaLocation="http://www.opengis.net/guf/1.0/common ../qcm.xsd">
-	<knownProblem>
-		<gco:CharacterString>These maps cannot be used for land cover change detection since the error in the original map is higher than the change detected (e.g. GLC-2000 versus GlobCover). Due  to  the  large  disagreements  between  these  land  cover products, we recommend that the user community does not, by default, use the latest product with the highest resolution, but carefully examines the sensitivity of these products within a speciﬁc application..</gco:CharacterString>
-	</knownProblem>
-	<workAround>
-		<gco:CharacterString> In the situation where the maps are used for national and regional applications, we would recommend examining the disagreement of the products in the areas  of interest and also to compare them with high resolution ground data or aerial photography. One way to do this would be to use geo-wiki.org (Fritz et al 2009), a global land cover validation tool,  which  can  be  used  to  visualize  the  global  land  cover products and the disagreement directly on top of Google Earth. By exploring the discrepancies at the level of an individual country in combination with local knowledge, the user can gain insight into which product is better in a speciﬁc region and which product is better suited for a particular application.  Crowd-sourced  data  in  the  form  of  geo-tagged photos and information collected through Web 2.0 applications like  geo-wiki  and  smart  phones  could  also  be  harnessed as  a  rich  source  of  training  and  calibration  data  for  global land  cover  algorithms. </gco:CharacterString>
-	</workAround>
-</QCM_DiscoveredIssue>
+<qcm:QCM_DiscoveredIssue 
+	xmlns:qcm="http://www.opengis.net/guf/2.0/common" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" 
+	xsi:schemaLocation="http://www.opengis.net/guf/2.0/common 
+	https://schemas.opengis.net/guf/2.0/qcm.xsd">
+	<qcm:knownProblem>
+		<gco:CharacterString>
+			These maps cannot be used for land cover change detection since the error in the original map is higher than the change detected (e.g. GLC-2000 versus GlobCover). Due to the large disagreements between these land cover products, we recommend that the user community does not, by default, use the latest product with the highest resolution, but carefully examines the sensitivity of these products within a speciﬁc application.
+		</gco:CharacterString>
+	</qcm:knownProblem>
+	<qcm:workAround>
+		<gco:CharacterString>
+			In the situation where the maps are used for national and regional applications, we would recommend examining the disagreement of the products in the areas of interest and also to compare them with high resolution ground data or aerial photography. One way to do this would be to use geo-wiki.org (Fritz et al 2009), a global land cover validation tool, which can be used to visualize the global land cover products and the disagreement directly on top of Google Earth. By exploring the discrepancies at the level of an individual country in combination with local knowledge, the user can gain insight into which product is better in a speciﬁc region and which product is better suited for a particular application. Crowd-sourced data in the form of geo-tagged photos and information collected through Web 2.0 applications like geo-wiki and smart phones could also be harnessed as a rich source of training and calibration data fo global land cover algorithms. 
+		</gco:CharacterString>
+	</qcm:workAround>
+</qcm:QCM_DiscoveredIssue>
 ----
+
+The following code shows a xml encoding example for QCM_ReproducibleUsage:
+
+[source,xml]
+----
+<qcm:QCM_ReproducibleUsage 
+	xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0" 
+	xmlns:qcm="http://www.opengis.net/guf/2.0/common" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" 
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:gcx=	"http://standards.iso.org/iso/19115/-3/gcx/1.0"
+	xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/2.0"	
+	xsi:schemaLocation="http://www.opengis.net/guf/2.0/common 
+	https://schemas.opengis.net/guf/2.0/qcm.xsd">
+	<mri:specificUsage>
+		<gco:CharacterString>Sharing style for an NDSI based snow coverage mask to extract snow surfaces from Sentinel 2 L2A images</gco:CharacterString>
+	</mri:specificUsage>
+	<mri:usageDateTime>
+		<gml:TimeInstant gml:id="usageDateTime_id">
+			<gml:timePosition>2023-06-16T13:38:00Z</gml:timePosition>
+		</gml:TimeInstant>
+	</mri:usageDateTime>
+	<mri:userDeterminedLimitations><gco:CharacterString>Water bodies may be detected as snow covered surfaces</gco:CharacterString></mri:userDeterminedLimitations>
+	<mri:userContactInfo>
+		<cit:CI_Responsibility>
+			<cit:role>
+				<cit:CI_RoleCode codeListValue="author" codeList="http://www.opengis.net/guf/2.0/resources/codeList.xml#CI_RoleCode"/>
+			</cit:role>
+			<cit:party>
+				<cit:CI_Individual>
+					<cit:name>
+						<gco:CharacterString>Olaf Banzai</gco:CharacterString>
+					</cit:name>
+					<cit:contactInfo>
+						<cit:CI_Contact>
+							<cit:address>
+								<cit:CI_Address>
+									<cit:electronicMailAddress>
+										<gco:CharacterString>olaf.banzai@mail.com</gco:CharacterString>
+									</cit:electronicMailAddress>
+								</cit:CI_Address>
+							</cit:address>
+						</cit:CI_Contact>
+					</cit:contactInfo>
+				</cit:CI_Individual>
+			</cit:party>
+		</cit:CI_Responsibility>
+	</mri:userContactInfo>
+	<qcm:codeSnippet>
+		<gco:CharacterString>{"nom":null,"desc":"SnowMask","TipusObj":"P","component":[{"calcul":"(({\"i_capa\":235,\"i_valor\":2}-{\"i_capa\":235,\"i_valor\":10})/({\"i_capa\":235,\"i_valor\":2}+{\"i_capa\":235,\"i_valor\":10}))>0.4","estiramentPaleta":{"auto":false,"valorMaxim":1.60182954451864,"valorMinim":-0.02371909222285906},"FormulaConsulta":"((v[2]-v[10])/(v[2]+v[10]))>0.4","formulaInterna":"((v[2]-v[10])/(v[2]+v[10]))>0.4"}],"metadades":null,"nItemLlegAuto":20,"ncol":4,"descColorMultiplesDe":0.01,"origen":"usuari"}</gco:CharacterString>
+	</qcm:codeSnippet>
+	<qcm:codeMediaType>
+		<gcx:MimeFileType type="application/json">application/json</gcx:MimeFileType>
+	</qcm:codeMediaType>
+	<qcm:platform>
+		<gco:CharacterString>https://github.com/joanma747/MiraMonMapBrowser</gco:CharacterString>
+	</qcm:platform>
+	<qcm:version>
+		<gco:CharacterString>6.0</gco:CharacterString>
+	</qcm:version>
+	<qcm:schema>
+		<gco:CharacterString>config-schema.json#/definitions/estil</gco:CharacterString>
+	</qcm:schema>
+	<qcm:suggestedApplication>
+		<gco:CharacterString>http://maps.ecopotential-project.eu/</gco:CharacterString>
+	</qcm:suggestedApplication>
+</qcm:QCM_ReproducibleUsage>
+----
+
 === *7.2	Requirements Class User Feedback Item*
 
 This requirements class defines the data model classes that are involved in the definition of an individual user feedback item. The GUF model makes an effort to remain as simple as possible but comprehensive enough, in order to allow for simple user interfaces that can cover different levels of expertise on geospatial data usage. The following are examples of what the GUF model allows: commenting, asking questions, providing answers (the GUF_UserComment class), rating data (GUF_Rating), citing publications (QCM_Publication), providing a quality measure (additionalQuality), documenting additional lineage information (additional LineageSteps) or emphasizing a significant event that conditions the interpretation of a dataset (GUF_SignificantEvent). 
@@ -86,140 +293,108 @@ The guf.xsd schema has been derived automatically from the OGC 15-097 UML model.
 
 The following code shows a xml encoding example for GUF_FeedbackItem
 
-[source]
-<GUF_FeedbackItem
-				xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0"
-				xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0" 
-				xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0" 
-				xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/1.0" 
-				xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" 
-				xmlns:qcm="http://www.opengis.net/guf/1.0/common" 
-				xmlns="http://www.opengis.net/guf/1.0/core"
-				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-				xmlns:xlink="http://www.w3.org/1999/xlink" 
-				xsi:schemaLocation="http://www.opengis.net/guf/1.0/core ../guf.xsd">
-	<itemIdentifier>
+[source,xml]
+----
+<guf:GUF_FeedbackItem 
+	xmlns:guf="http://www.opengis.net/guf/2.0/core" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0"
+	xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" 
+	xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/2.0" 
+	xsi:schemaLocation="http://www.opengis.net/guf/2.0/core 
+	https://schemas.opengis.net/guf/2.0/guf.xsd">
+	<guf:itemIdentifier>
 		<mcc:MD_Identifier>
 			<mcc:code>
 				<gco:CharacterString>GCL2000_feedack_item_1</gco:CharacterString>
 			</mcc:code>
 		</mcc:MD_Identifier>
-	</itemIdentifier>
-	<abstract>
-		<gco:CharacterString>Comparson with other land cover products is difficults because legends are not compatible</gco:CharacterString>
-	</abstract>
-	<contactRole>
-		<GUF_UserRoleCode codeListValue="researchEndUser" codeList="">researchEndUser</GUF_UserRoleCode>
-	</contactRole>
-	<dateInfo>
+	</guf:itemIdentifier>
+	<guf:abstract>
+		<gco:CharacterString>Comparison with other land cover products is difficult because legends are not compatible</gco:CharacterString>
+	</guf:abstract>
+	<guf:contactRole>
+		<guf:GUF_UserRoleCode codeListValue="researchEndUser" codeList="http://www.opengis.net/guf/2.0/resources/codeList.xml#CI_RoleCode#GUF_UserRoleCode"></guf:GUF_UserRoleCode>
+	</guf:contactRole>
+	<guf:dateInfo>
 		<cit:CI_Date>
-			<cit:date><gco:DateTime>2006-03-01T00:00:00Z</gco:DateTime></cit:date>
+			<cit:date>
+				<gco:DateTime>2006-03-01T00:00:00Z</gco:DateTime>
+			</cit:date>
 			<cit:dateType>
 				<cit:CI_DateTypeCode codeList="http://wis.wmo.int/2008/catalogues/draft_version_1-1/WMO_Codelists_ver1_1.xml#CI_DateTypeCode" codeListValue="creation"/>
 			</cit:dateType>
-		</cit:CI_Date>				
-	</dateInfo>
-	<citation>
-		<cit:CI_Citation>
-			<cit:title>
-				<gco:CharacterString>Towards the global monitoring of biodiversity change</gco:CharacterString>
-			</cit:title>
-			<cit:date>
-				<cit:CI_Date>
-					<cit:date>
-						<gco:DateTime>2006-03-01T00:00:00Z</gco:DateTime>
-					</cit:date>
-					<cit:dateType>
-						<cit:CI_DateTypeCode codeList="http://wis.wmo.int/2008/catalogues/draft_version_1-1/WMO_Codelists_ver1_1.xml#CI_DateTypeCode" codeListValue="creation"/>
-					</cit:dateType>
-				</cit:CI_Date>
-			</cit:date>
-			<cit:series>
-				<cit:CI_Series>
+		</cit:CI_Date>
+	</guf:dateInfo>
+	<guf:contact>
+		<guf:GUF_UserInformation>
+			<guf:userDetails>
+				<cit:CI_Individual>
 					<cit:name>
-						<gco:CharacterString>TRENDS in Ecology and Evolution</gco:CharacterString>
+						<gco:CharacterString>Henrique M. Pereira</gco:CharacterString>					
 					</cit:name>
-				</cit:CI_Series>
-			</cit:series>
-			<cit:otherCitationDetails>
-				<gco:CharacterString>Vol.21 No.3</gco:CharacterString>
-			</cit:otherCitationDetails>
-		</cit:CI_Citation>
-	</citation>
-	<contact>
-		<GUF_UserInformation>
-			<userDetails>
-				<cit:CI_Responsibility>
-					<cit:role>
-						<cit:CI_RoleCode codeList="http://wis.wmo.int/2008/catalogues/draft_version_1-1/WMO_Codelists_ver1_1.xml#CI_RoleCode" codeListValue="user"/>
-					</cit:role>
-					<cit:party>
-						<cit:CI_Individual>
-							<cit:name>
-								<gco:CharacterString>Henrique M. Pereira</gco:CharacterString>
-							</cit:name>
-						</cit:CI_Individual>
-					</cit:party>
-				</cit:CI_Responsibility>
-			</userDetails>
-			<expertiseLevel>
-				<GUF_RatingCode codeListValue="5" codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#GUF_RatingCode"></GUF_RatingCode>
-			</expertiseLevel>
-		</GUF_UserInformation>
-	</contact>
-	<userComment>
-		<GUF_UserComment>
-			<comment>
-				<gco:CharacterString>Surprisingly,  there  are  no  directly comparable sets of global land-cover data for two different
-dates. For instance, the Global Land Cover for the year 2000 (GLC 2000) based on SPOT VEGETATION (http://www-gvm.jrc.it/glc2000) is not directly comparable
-with the International Geosphere–Biosphere Programme (IGBP) Land Cover (1992–1993, http://edcdaac.usgs.gov/glcc/globdoc2_0.asp)  based  on  the  National  Oceanic
-and  Atmospheric  Administration  Advanced  Very  High Resolution Radiometer (NOAA-AVHRR). The difﬁculties arise from the use of different sensors, different land-cover
-classiﬁcation  systems  (including  different  deﬁnitions  of forest)  and  different  classiﬁcation  methods. </gco:CharacterString>
-			</comment>
-		</GUF_UserComment>
-	</userComment>
-	<target>
-		<GUF_FeedbackTarget>
-			<resourceRef xlink:href="http://www-gvm.jrc.it/glc2000">
+				</cit:CI_Individual>
+			</guf:userDetails>
+			<guf:applicationDomain>
+				<guf:GUF_ApplicationDomain>
+					<guf:domain>
+						<cit:CI_RoleCode codeListValue="use" codeList="http://wis.wmo.int/2008/catalogues/draft_version_1-1/WMO_Codelists_ver1_1.xml#CI_RoleCode"></cit:CI_RoleCode>
+					</guf:domain>
+					<guf:expertiseLevel><guf:GUF_RatingCode codeListValue="5" codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#GUF_RatingCode"></guf:GUF_RatingCode></guf:expertiseLevel>
+				</guf:GUF_ApplicationDomain>			
+			</guf:applicationDomain>
+		</guf:GUF_UserInformation>	
+	</guf:contact>
+	<guf:userComment>
+		<guf:GUF_UserComment>
+			<guf:comment>
+				<gco:CharacterString>Surprisingly, there are no directly comparable sets of global land-cover data for two different dates. For instance, the Global Land Cover for the year 2000 (GLC 2000) based on SPOT VEGETATION (https://forobs.jrc.ec.europa.eu/products/glc2000) is not directly comparable with the International Geosphere–Biosphere Programme (IGBP) Land Cover (1992–1993, https://www.usgs.gov/centers/eros/science/usgs-eros-archive-land-cover-products-global-land-cover-characterization-glcc) based on the National Oceanic and Atmospheric Administration Advanced Very High Resolution Radiometer (NOAA-AVHRR). The difficulties arise from the use of different sensors, different land-cover classiﬁcation  systems (including different definitions of forest) and  different classiﬁcation methods.</gco:CharacterString>
+			</guf:comment>
+		</guf:GUF_UserComment>
+	</guf:userComment>
+	<guf:target>
+		<guf:GUF_FeedbackTarget>
+			<guf:resourceRef>
 				<cit:CI_Citation>
-					<cit:title></cit:title>
-					<cit:identifier>
-						<mcc:MD_Identifier>
-							<mcc:code>
-								<gco:CharacterString>GLC2000</gco:CharacterString>
-							</mcc:code>
-							<mcc:codeSpace>
-								<gco:CharacterString>jrc.ec.europa.eu</gco:CharacterString>
-							</mcc:codeSpace>
-						</mcc:MD_Identifier>
-					</cit:identifier>
+					<cit:title><gco:CharacterString>Global Land Cover 2000</gco:CharacterString></cit:title>
+					<cit:onlineResource><cit:CI_OnlineResource>
+						<cit:linkage><gco:CharacterString>https://forobs.jrc.ec.europa.eu/products/glc2000/products.php</gco:CharacterString></cit:linkage>
+					</cit:CI_OnlineResource></cit:onlineResource>
 				</cit:CI_Citation>
-			</resourceRef>
-			<scope>
+			</guf:resourceRef>
+			<guf:scope>
 				<mcc:MD_Scope>
 					<mcc:level>
-						<mcc:MD_ScopeCode codeListValue="dataset" codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeLists.xml#MD_ScopeCode"/>							
+						<mcc:MD_ScopeCode codeListValue="dataset" codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeLists.xml#MD_ScopeCode"></mcc:MD_ScopeCode>
 					</mcc:level>
 				</mcc:MD_Scope>
-			</scope>
-			<role>
-				<GUF_TargetRoleCode codeListValue="primary" codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#GUF_TargetRoleCode"></GUF_TargetRoleCode>
-			</role>
-		</GUF_FeedbackTarget>
-	</target>
-	<target>
-		<GUF_FeedbackTarget>
-			<resourceRef xlink:href="http://edcdaac.usgs.gov/glcc/globdoc2_0.asp"/>
-			<scope>
+			</guf:scope>
+			<guf:role>
+				<guf:GUF_TargetRoleCode codeListValue="primary" codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#GUF_TargetRoleCode"></guf:GUF_TargetRoleCode>
+			</guf:role>
+		</guf:GUF_FeedbackTarget>
+	</guf:target>
+	<guf:target>
+		<guf:GUF_FeedbackTarget>
+			<guf:resourceRef>
+				<cit:CI_Citation>
+					<cit:title><gco:CharacterString>Global Land Cover Characterization</gco:CharacterString></cit:title>
+					<cit:onlineResource><cit:CI_OnlineResource>
+						<cit:linkage><gco:CharacterString>https://www.usgs.gov/centers/eros/science/usgs-eros-archive-land-cover-products-global-land-cover-characterization-glcc</gco:CharacterString></cit:linkage>
+					</cit:CI_OnlineResource></cit:onlineResource>
+				</cit:CI_Citation>
+			</guf:resourceRef>
+			<guf:scope>
 				<mcc:MD_Scope>
 					<mcc:level>
-						<mcc:MD_ScopeCode codeListValue="dataset" codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeLists.xml#MD_ScopeCode"/>
+						<mcc:MD_ScopeCode codeListValue="dataset" codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeLists.xml#MD_ScopeCode"></mcc:MD_ScopeCode>
 					</mcc:level>
 				</mcc:MD_Scope>
-			</scope>
-			<role>
-				<GUF_TargetRoleCode codeListValue="primary" codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#GUF_TargetRoleCode"></GUF_TargetRoleCode>
-			</role>
-		</GUF_FeedbackTarget>
-	</target>
-</GUF_FeedbackItem>
+			</guf:scope>
+			<guf:role>
+				<guf:GUF_TargetRoleCode codeListValue="primary" codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#GUF_TargetRoleCode"></guf:GUF_TargetRoleCode>
+			</guf:role>
+		</guf:GUF_FeedbackTarget>
+	</guf:target>
+</guf:GUF_FeedbackItem>
+----

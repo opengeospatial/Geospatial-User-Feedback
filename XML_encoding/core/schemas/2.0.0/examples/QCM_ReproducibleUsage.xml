@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qcm:QCM_ReproducibleUsage 
+	xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0" 
+	xmlns:qcm="http://www.opengis.net/guf/2.0/common" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" 
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:gcx=	"http://standards.iso.org/iso/19115/-3/gcx/1.0"
+	xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/2.0"	
+	xsi:schemaLocation="http://www.opengis.net/guf/2.0/common https://schemas.opengis.net/guf/2.0/qcm.xsd">
+	<mri:specificUsage>
+		<gco:CharacterString>Sharing style for an NDSI based snow coverage mask to extract snow surfaces from Sentinel 2 L2A images</gco:CharacterString>
+	</mri:specificUsage>
+	<mri:usageDateTime>
+		<gml:TimeInstant gml:id="usageDateTime_id">
+			<gml:timePosition>2023-06-16T13:38:00Z</gml:timePosition>
+		</gml:TimeInstant>
+	</mri:usageDateTime>
+	<mri:userDeterminedLimitations><gco:CharacterString>Water bodies may be detected as snow covered surfaces</gco:CharacterString></mri:userDeterminedLimitations>
+	<mri:userContactInfo>
+		<cit:CI_Responsibility>
+			<cit:role>
+				<cit:CI_RoleCode codeListValue="author" codeList="http://www.opengis.net/guf/2.0/resources/codeList.xml#CI_RoleCode"/>
+			</cit:role>
+			<cit:party>
+				<cit:CI_Individual>
+					<cit:name>
+						<gco:CharacterString>Olaf Banzai</gco:CharacterString>
+					</cit:name>
+					<cit:contactInfo>
+						<cit:CI_Contact>
+							<cit:address>
+								<cit:CI_Address>
+									<cit:electronicMailAddress>
+										<gco:CharacterString>olaf.banzai@mail.com</gco:CharacterString>
+									</cit:electronicMailAddress>
+								</cit:CI_Address>
+							</cit:address>
+						</cit:CI_Contact>
+					</cit:contactInfo>
+				</cit:CI_Individual>
+			</cit:party>
+		</cit:CI_Responsibility>
+	</mri:userContactInfo>
+	<qcm:codeSnippet>
+		<gco:CharacterString>{"nom":null,"desc":"SnowMask","TipusObj":"P","component":[{"calcul":"(({\"i_capa\":235,\"i_valor\":2}-{\"i_capa\":235,\"i_valor\":10})/({\"i_capa\":235,\"i_valor\":2}+{\"i_capa\":235,\"i_valor\":10}))>0.4","estiramentPaleta":{"auto":false,"valorMaxim":1.60182954451864,"valorMinim":-0.02371909222285906},"FormulaConsulta":"((v[2]-v[10])/(v[2]+v[10]))>0.4","formulaInterna":"((v[2]-v[10])/(v[2]+v[10]))>0.4"}],"metadades":null,"nItemLlegAuto":20,"ncol":4,"descColorMultiplesDe":0.01,"origen":"usuari"}</gco:CharacterString>
+	</qcm:codeSnippet>
+	<qcm:codeMediaType>
+		<gcx:MimeFileType type="application/json">application/json</gcx:MimeFileType>
+	</qcm:codeMediaType>
+	<qcm:platform>
+		<gco:CharacterString>https://github.com/joanma747/MiraMonMapBrowser</gco:CharacterString>
+	</qcm:platform>
+	<qcm:version>
+		<gco:CharacterString>6.0</gco:CharacterString>
+	</qcm:version>
+	<qcm:schema>
+		<gco:CharacterString>config-schema.json#/definitions/estil</gco:CharacterString>
+	</qcm:schema>
+	<qcm:suggestedApplication>
+		<gco:CharacterString>http://maps.ecopotential-project.eu/</gco:CharacterString>
+	</qcm:suggestedApplication>
+</qcm:QCM_ReproducibleUsage>

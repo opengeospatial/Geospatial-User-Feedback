@@ -1,0 +1,80 @@
+{
+	"$schema":"https://json-schema.org/draft/2020-12/schema",
+	"$id":"https://schemas.opengis.net/guf/2.0/ufc_v_2_0.schema.json",
+	"title":"User Feedback Collection",
+	"description":"User Feedback Collection v2.0 JSON schema",
+	"$defs":{
+		"UFC_FeedbackCollection":{
+			"$anchor":"UFC_FeedbackCollection",
+			"type":"object",
+			"additionalProperties": false,
+			"properties":{
+				"target":{
+					"description":"Common geospatial resource to which the collection refers",
+					"$ref":"https://raw.githubusercontent.com/joanma747/Implementation-JSON/main/ShapeChange/results/19115-4-core/geojson/IDENTITY/test/19115-4-core.json#CI_Citation"
+				},
+				"item":{
+					"description":"Feedback item",
+					"type":"array",
+					"items":{
+						"$ref":"https://schemas.opengis.net/guf/2.0/guf_v_2_0.schema.json#GUF_FeedbackItem"
+					},
+					"minItems":0
+				},
+				"pagination":{
+					"description":"Information about the page structure of the collection",
+					"$ref": "#UFC_ResponsePagination"
+				},
+				"summary":{
+					"description":"Summary of the feedback items",
+					"$ref":"https://schemas.opengis.net/guf/2.0/ufs_v_2_0.schema.json#GUF_FeedbackSummary"
+				}
+			}
+		},
+		"UFC_FeedbackResponse":{
+			"$anchor":"UFC_FeedbackResponse",
+			"type":"object",
+			"additionalProperties": false,
+			"properties":{
+				"collection":{
+					"description":"Collection of feedback items",
+					"type":"array",
+					"items":{
+						"$ref": "#UFC_FeedbackCollection"
+					},
+					"minItems":1
+				}
+			}
+		},
+		"UFC_ResponsePagination":{
+			"$anchor":"UFC_ResponsePagination",
+			"type":"object",
+			"additionalProperties": false,
+			"properties":{
+				"numberOfFeedbackItems":{
+					"description":"Number of feedback items in the collection",
+					"type":"integer"
+				},
+				"limit":{
+					"description":"Maximum feedback items per page",
+					"type":"integer"
+				},
+				"offset":{
+					"description":"Number of the first items in the complete collection that has been skipped",
+					"type":"integer"
+				},
+				"count":{
+					"description":"Number of feedback items in this page",
+					"type":"integer"
+				}
+			},
+			"required":["numberOfFeedbackItems","count"]
+		}
+	},
+	"properties":{
+		"UFC_FeedbackResponse":{
+			"$ref": "#/$defs/UFC_FeedbackResponse"
+		}
+	},
+	"required":["UFC_FeedbackResponse"]
+}	

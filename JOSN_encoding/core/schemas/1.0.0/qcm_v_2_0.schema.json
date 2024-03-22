@@ -1,0 +1,230 @@
+{
+	"$schema":"https://json-schema.org/draft/2020-12/schema",
+	"$id":"https://schemas.opengis.net/guf/2.0/qcm_v_2_0.schema.json",
+	"title":"Quality Common",
+	"description":"Quality Common v2.0 JSON schema",
+	"$defs":{
+		"QCM_DiscoveredIssue":{
+			"$anchor":"QCM_DiscoveredIssue",
+			"type":"object",
+			"additionalProperties": false, 
+			"properties": {
+				"target":{
+					"description":"Link to the actual resource the publication is about.",
+					"type":"array",
+					"items":{
+						"$ref":"https://raw.githubusercontent.com/joanma747/Implementation-JSON/main/ShapeChange/results/19115-4-core/geojson/IDENTITY/test/19115-4-core.json#CI_Citation"
+					},
+					"minItems":0
+				},
+				"knownProblem":{
+					"description":"Known issue with the target",
+					"type":"string"
+				},
+				"problemDateTime":{
+					"description":"Date and time when the problem was detected",
+				    "type": "string",
+					"format": "date-time"
+				},
+				"workAround":{
+					"description":"Possible way to work around the problem",
+					"type":"string"
+				},
+				"referenceDoc":{
+					"description":"A publication that exposes the issue and eventually suggest a solution.",
+					"type":"array",
+					"items":{
+						"$ref":"#QCM_Publication"
+					},
+					"minItems":0
+				},
+				"expectedFixDate":{
+					"description":"Date when a solution is expected to be released by the provider in the form of a fixedResource or directly as a fix in the original target resource.",
+				    "type": "string",
+					"format": "date-time"					
+				},
+				"fixedResource":{
+					"description":"A new version of the target resource where the knownProblem is no longer present.",
+					"type":"array",
+					"items":{
+						"$ref":"https://raw.githubusercontent.com/joanma747/Implementation-JSON/main/ShapeChange/results/19115-4-core/geojson/IDENTITY/test/19115-4-core.json#CI_Citation"
+					},
+					"minItems":0
+				},
+				"alternativeRosource":{
+					"description":"An alternative resource that can be used instead of the target for similar purposes but does not present the knownProblem.",
+					"type":"array",
+					"items":{
+						"$ref":"https://raw.githubusercontent.com/joanma747/Implementation-JSON/main/ShapeChange/results/19115-4-core/geojson/IDENTITY/test/19115-4-core.json#CI_Citation"
+					},
+					"minItems":0
+				}
+			},
+			"required":["knownProblem"]
+		},
+		"QCM_Publication":{
+			"$anchor":"QCM_Publication",
+			"type":"object",
+			"additionalProperties": false,
+			"allOf": [
+				{
+				  "$ref": "https://raw.githubusercontent.com/joanma747/Implementation-JSON/main/ShapeChange/results/19115-4-core/geojson/IDENTITY/test/19115-4-core.json#CI_Citation"
+				},
+				{				
+					"properties": {
+						"target":{
+							"description":"Link to the actual geospatial resource the publication is about.",
+							"type":"array",
+							"items":{
+								"$ref":"https://raw.githubusercontent.com/joanma747/Implementation-JSON/main/ShapeChange/results/19115-4-core/geojson/IDENTITY/test/19115-4-core.json#CI_Citation"
+							},
+							"minItems":0
+						},
+						"abstract":{
+							"description":"Abstract of the publication",
+							"type":"string"
+						},
+						"highlights":{
+							"description":"Highlights of the publication",
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"minItems":0
+						},
+						"keywords":{
+							"description":"Keywords of the publication",
+							"type":"array",
+							"items":{
+								"$ref":"https://raw.githubusercontent.com/joanma747/Implementation-JSON/main/ShapeChange/results/19115-4-core/geojson/IDENTITY/test/19115-4-core.json#MD_Keywords"
+							},
+							"minItems":0
+						},
+						"motivation":{
+							"description":"Purpose of the citation. Why the citation is provided in relation to the parent class or the target.",
+							"$ref":"#QCM_CitationMotivationCode"
+						},
+						"relatedResource":{
+							"description":"Other resources that are mentioned by the publication cited.",
+							"type":"array",
+							"items":{
+								"$ref":"https://raw.githubusercontent.com/joanma747/Implementation-JSON/main/ShapeChange/results/19115-4-core/geojson/IDENTITY/test/19115-4-core.json#CI_Citation"
+							},
+							"minItems":0
+						},
+						"scope":{
+							"description":"Scope of the citation (e.g. the extent the citation is covering).",
+							"$ref":"https://raw.githubusercontent.com/joanma747/Implementation-JSON/main/ShapeChange/results/19115-4-core/geojson/IDENTITY/test/19115-4-core.json#MD_Scope"
+						},
+						"category":{
+							"description":"Type of publication",
+							"$ref":"#QCM_PublicationCategoryCode"
+						}
+					},
+					"required":["category"]
+				}
+			]
+		},
+		"QCM_ReproducibleUsage":{
+			"$anchor":"QCM_ReproducibleUsage",
+			"type":"object",
+			"additionalProperties": false, 
+			"allOf": [
+				{
+				  "$ref": "https://raw.githubusercontent.com/joanma747/Implementation-JSON/main/ShapeChange/results/19115-4-core/geojson/IDENTITY/test/19115-4-core.json#MD_Usage"
+				},
+				{		
+					"properties": {
+						"codeSnippet":{
+							"description":"A fragment of code or execution sentence necessary to reproduce this usage. codeSnippet is mandatory if codeSnippetLinkage is not documented",
+							"type":"string"
+						},
+						"codeSnippetLinkage":{
+							"description":"URL to the code or execution sentence necessary to reproduce this usage. codeSnippetLinkage is mandatory if codeSnippet is not documented",
+							"$ref":"https://raw.githubusercontent.com/joanma747/Implementation-JSON/main/ShapeChange/results/19115-4-core/geojson/IDENTITY/test/19115-4-core.json#CI_OnlineResource"
+						},
+						"codeMediaType":{
+							"description":"Format of the necessary code or execution sentence to reproduce this usage",
+							"type": "string",
+							"pattern": "^[A-Za-z0-9-]+/[A-Za-z0-9-]+$",
+							"maxLength": 255
+						},
+						"platform":{
+							"description":"Platform to execute the code or execution sentence of this usage",
+							"type":"string"
+						},
+						"version":{
+							"description":"Version of the platform to execute the code or execution sentence of this usage",
+							"type":"string"
+						},
+						"schema":{
+							"description":"Schema of the code or execution sentence to reproduce this usage (only for declarative code: e.g JSON)",
+							"type":"string"
+						},
+						"suggestedApplication":{
+							"description":"Specific suggested application to open the code or execution sentence of this usage",
+							"type":"string"
+						},
+						"diagram":{
+							"description":"Descriptive diagram of this reproducible usage",
+							"type":"string"
+						},
+						"diagramLinkage":{
+							"description":"URL Link of the descriptive diagram of this reproducible usage",
+							"$ref":"https://raw.githubusercontent.com/joanma747/Implementation-JSON/main/ShapeChange/results/19115-4-core/geojson/IDENTITY/test/19115-4-core.json#CI_OnlineResource"
+						},
+						"diagramMediaType":{
+							"description":"Format of the descriptive diagram of this reproducible usage",
+							"type": "string",
+							"pattern": "^[A-Za-z0-9-]+/[A-Za-z0-9-]+$",
+							"maxLength": 255
+						}
+					}
+				}
+			]
+				
+		},
+		"QCM_CitationMotivationCode":{
+			"$anchor":"QCM_CitationMotivationCode",
+			"type":"string",
+			"enum": [
+				"compare",
+				"derive",
+				"describe",
+				"evaluate",
+				"comment",
+				"use",
+				"highlight",
+				"moderate",
+				"question",
+				"reply",
+				"link"
+			]
+		},
+		"QCM_PublicationCategoryCode":{
+			"$anchor":"QCM_PublicationCategoryCode",
+			"type":"string",
+			"enum": [
+				"bookChapter",
+				"book",
+				"report",
+				"journalArticle",
+				"magazinesNewspaper",
+				"atlasMap",
+				"applicationProgram",
+				"conferenceProceedings",
+				"multimediaContent",
+				"socialMediaComment",
+				"blogWiki",
+				"webSite",
+				"webPage",
+				"videoAudio",
+				"tutorialManual"
+			]
+		}
+	}
+}
+
+
+
+

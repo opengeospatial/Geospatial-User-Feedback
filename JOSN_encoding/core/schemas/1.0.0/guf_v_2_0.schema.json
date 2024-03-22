@@ -1,0 +1,411 @@
+{
+	"$schema":"https://json-schema.org/draft/2020-12/schema",
+	"$id":"https://schemas.opengis.net/guf/2.0/guf_v_2_0.schema.json",
+	"title":"Geospatial User Feedback",
+	"description":"Geospatial User Feedback v2.0 JSON schema",
+	"$defs":{
+		"GUF_FeedbackItem":{
+			"$anchor":"GUF_FeedbackItem",
+			"type":"object",
+			"additionalProperties": false, 
+			"properties": {
+				"itemIdentifier":{
+					"description":"Identifier for the feedback item",
+					"$ref":"https://raw.githubusercontent.com/joanma747/Implementation-JSON/main/ShapeChange/results/19115-4-core/geojson/IDENTITY/test/19115-4-core.json#MD_Identifier"
+				},
+				"abstract":{
+					"description":"Brief narrative description of this item, normally for display to a human",
+					"type":"string"
+				},
+				"purpose":{
+					"description":"Summary of the intentions with which the feedback was provided",
+					"type":"string"
+				},
+				"contactRole":{
+					"description":"User’s role in the context of this feedback item. A user may have several roles recorded in the GUF_UserInformation, but this is the one that applies for this feedback",
+					"$ref":"#GUF_UserRoleCode"
+				},
+				"dateInfo":{
+					"description":"Date when the feedback item was created, updated etc",
+					"type":"array",
+					"items":{
+						"$ref":"https://raw.githubusercontent.com/joanma747/Implementation-JSON/main/ShapeChange/results/19115-4-core/geojson/IDENTITY/test/19115-4-core.json#CI_Date"
+					},
+					"minItems":1
+				},
+				"itemsIsReplyTo":{
+					"description":"Identifiers of one or more items of feedback to which this item is a response",
+					"type":"array",
+					"items":{
+						"$ref":"https://raw.githubusercontent.com/joanma747/Implementation-JSON/main/ShapeChange/results/19115-4-core/geojson/IDENTITY/test/19115-4-core.json#MD_Identifier"
+					},
+					"minItems":0
+				},
+				"descriptiveKeywords":{
+					"description":"Keywords that can be useful to search for this item. They are selected from controlled vocabularies",
+					"type":"array",
+					"items":{
+						"$ref":"https://raw.githubusercontent.com/joanma747/Implementation-JSON/main/ShapeChange/results/19115-4-core/geojson/IDENTITY/test/19115-4-core.json#MD_Keywords"
+					},
+					"minItems":0
+				},
+				"tag":{
+					"description":"Free text word that can be useful to search for this item",
+					"type":"array",
+					"items":{
+						"type":"string"
+					},
+					"minItems":0
+				},
+				"locale":{
+					"description":"Language and character set used within the feedback item",
+					"type":"array",
+					"items":{
+						"$ref":"https://raw.githubusercontent.com/joanma747/Implementation-JSON/main/ShapeChange/results/19115-4-core/geojson/IDENTITY/test/19115-4-core.json#PT_Locale"
+					},
+					"minItems":0
+				},
+				"externalFeedback":{
+					"description":"Link to an item in an external repository that contains the feedback (not described inline)",
+					"type":"array",
+					"items":{
+						"$ref":"https://raw.githubusercontent.com/joanma747/Implementation-JSON/main/ShapeChange/results/19115-4-core/geojson/IDENTITY/test/19115-4-core.json#CI_Citation"
+					},
+					"minItems":0
+				},
+				"citation":{
+					"description":"Citation of a published resource (e.g.: a report, a peer reviewed paper) that provides an evaluation of the usage of the resource",
+					"type":"array",
+					"items":{
+						"$ref":"https://raw.githubusercontent.com/joanma747/Implementation-JSON/main/ShapeChange/results/19115-4-core/geojson/IDENTITY/test/19115-4-core.json#CI_Citation"
+					},
+					"minItems":0
+				},
+				"additionalLineageSteps":{
+					"description":"Additional lineage steps not included in the producer metadata",
+					"$ref":"https://raw.githubusercontent.com/joanma747/Implementation-JSON/main/ShapeChange/results/19115-4-core/geojson/IDENTITY/test/19115-4-core.json#LI_Lineage"
+				},
+				"additionalQuality":{
+					"description":"Structured quality assessment result",
+					"type":"array",
+					"items":{
+						"$ref":"https://iso.com/19157.schema.json#DQ_DataQuality"
+					},
+					"minItems":0
+				},
+				"rating":{
+					"description":"Rating code reflecting the satisfaction of the user with the resource used",
+					"$ref":"#GUF_Rating"
+				},
+				"usage":{
+					"description":"Structured usage report",
+					"type":"array",
+					"items":{
+						"$ref":"#GUF_UsageReport"
+					},
+					"minItems":0
+				},
+				"contact":{
+					"description":"Information about the user providing feedback",
+					"$ref":"#GUF_UserInformation"
+				},
+				"userComment":{
+					"description":"Text free user comment",
+					"$ref":"#GUF_UserComment"
+				},
+				"significantEvent":{
+					"description":"Significant natural events or sensor or platform anomalies that can affect the interpretation of the data.",
+					"type":"array",
+					"items":{
+						"$ref":"#GUF_SignificantEvent"
+					},
+					"minItems":0
+				},
+				"target":{
+					"description":"Identifies a pre-existing resource (e.g., a dataset or a metadata record) from a catalogue",
+					"type":"array",
+					"items":{
+						"$ref":"#GUF_FeedbackTarget"
+					},
+					"minItems":1
+				}
+			},
+			"required":["itemIdentifier", "abstract", "contactRole", "dateInfo", "contact", "target"]
+		},
+		"GUF_SignificantEvent":{
+			"$anchor":"GUF_SignificantEvent",
+			"type":"object",
+			"additionalProperties": false, 
+			"properties": {
+				"abstract":{
+					"description":"Brief narrative description of this event, normally for display to a human",
+					"type":"string"
+				},
+				"citation":{
+					"description":"Citation of the event (e.g.: a report describing the event, or a event identifier)",
+					"type":"array",
+					"items":{
+						"$ref":"https://raw.githubusercontent.com/joanma747/Implementation-JSON/main/ShapeChange/results/19115-4-core/geojson/IDENTITY/test/19115-4-core.json#CI_Citation"
+					},
+					"minItems":0
+				},
+				"extent":{
+					"description":"Spatio-temporal extent of the event",
+					"$ref":"https://raw.githubusercontent.com/joanma747/Implementation-JSON/main/ShapeChange/results/19115-4-core/geojson/IDENTITY/test/19115-4-core.json#EX_Extent"
+				},
+				"eventType":{
+					"description":"Type of event",
+					"$ref":"#GUF_SignificantEventTypeCode"
+				}
+			},
+			"required":["abstract","extent"]
+		},
+		"GUF_Rating":{
+			"$anchor":"GUF_Rating",
+			"type":"object",
+			"additionalProperties": false, 
+			"properties": {
+				"rating":{
+					"description":"Rating in the form of a simple numeric code that qualifies subjectively the feedback target",
+					"$ref":"#GUF_RatingCode"
+				}
+			},
+			"required":["rating"]
+		},
+		"GUF_UserComment":{
+			"$anchor":"GUF_UserComment",
+			"type":"object",
+			"additionalProperties": false, 
+			"properties": {
+				"comment":{
+					"description":"Free text",
+					"type":"string"
+				},
+				"motivation":{
+					"description":"Motivation of the comment: it can be a comment, a question, an answer or a justification (e.g. a justification for a rating)",
+					"$ref":"#GUF_MotivationCode"
+				}
+			},
+			"required":["comment"]
+		},
+		"GUF_UsageReport":{
+			"$anchor":"GUF_UsageReport",
+			"type":"object",
+			"additionalProperties": false, 
+			"properties": {
+				"reportAspect":{
+					"description":"Aspect reported",
+					"$ref":"#GUF_ReportAspectCode"
+				},
+				"usageDescription":{
+					"description":"Usage description or limitation of the target",
+					"type":"array",
+					"items":{
+						"$ref":"https://raw.githubusercontent.com/joanma747/Implementation-JSON/main/ShapeChange/results/19115-4-core/geojson/IDENTITY/test/19115-4-core.json#MD_Usage"
+					},
+					"minItems":0
+				},				
+				"discoveredIssue":{
+					"description":"Discovered issue in the target resource",
+					"type":"array",
+					"items":{
+						"$ref":"https://schemas.opengis.net/guf/2.0/qcm_schema.json#QCM_DiscoveredIssue"
+					},
+					"minItems":0
+				}
+			},
+			"required":["reportAspect"]
+		},
+		"GUF_UserInformation":{
+			"$anchor":"GUF_UserInformation",
+			"type":"object",
+			"additionalProperties": false, 
+			"properties": {
+				"userDetails":{
+					"description":"Contact details about the user and its organization",
+					"$ref":"https://raw.githubusercontent.com/joanma747/Implementation-JSON/main/ShapeChange/results/19115-4-core/geojson/IDENTITY/test/19115-4-core.json#CI_Party"
+				},
+				"description":{
+					"description":"User short description or bio",
+					"type":"string"
+				},
+				"applicationDomain":{
+					"description":"Application domain(s) a user works in",
+					"type":"array",
+					"items":{
+						"$ref":"#GUF_ApplicationDomain"
+					},
+					"minItems":1
+				},
+				"userRole":{
+					"description":"The roles the user can play",
+					"type":"array",
+					"items":{
+						"$ref":"#GUF_UserRoleCode"
+					},
+					"minItems":0
+				},
+				"externalUserID":{
+					"description":"User ID in an external system such as an ORCID",
+					"type":"array",
+					"items":{
+						"$ref":"https://raw.githubusercontent.com/joanma747/Implementation-JSON/main/ShapeChange/results/19115-4-core/geojson/IDENTITY/test/19115-4-core.json#MD_Identifier"
+					},
+					"minItems":0
+				}
+			},
+			"required":["userDetails","applicationDomain"]
+		},
+		"GUF_FeedbackTarget":{
+			"$anchor":"GUF_FeedbackTarget",
+			"type":"object",
+			"additionalProperties": false, 
+			"properties": {
+				"resourceRef":{
+					"description":"Reference to a resource (e.g. a dataset or metadata record) that is target of the feedback item or a superset of it",
+					"type":"array",
+					"items":{
+						"$ref":"https://raw.githubusercontent.com/joanma747/Implementation-JSON/main/ShapeChange/results/19115-4-core/geojson/IDENTITY/test/19115-4-core.json#CI_Citation"
+					},
+					"minItems":1
+				},
+				"metadataIdentifier":{
+					"description":"Identifier for a metadata record about the resource",
+					"type":"array",
+					"items":{
+						"$ref":"https://raw.githubusercontent.com/joanma747/Implementation-JSON/main/ShapeChange/results/19115-4-core/geojson/IDENTITY/test/19115-4-core.json#MD_Identifier"
+					},
+					"minItems":0
+				},
+				"scope":{
+					"description":"Describes a type of resource the feedback is about; typically a dataset, a metadata record, a feature...or a subsets of a dataset or resource",
+					"$ref":"https://raw.githubusercontent.com/joanma747/Implementation-JSON/main/ShapeChange/results/19115-4-core/geojson/IDENTITY/test/19115-4-core.json#MD_Scope"
+				},
+				"role":{
+					"description":"The role of the target with respect to the feedback item",
+					"$ref":"#GUF_TargetRoleCode"
+				},
+				"parent":{
+					"description":"Parent of the cited resource",
+					"$ref":"#GUF_FeedbackTarget"
+				},
+				"child":{
+					"description":"Child of the cited resource",
+					"type":"array",
+					"items":{
+						"$ref":"#GUF_FeedbackTarget"
+					},
+					"minItems":0
+				}
+			},
+			"required":["resourceRef","role"]
+		},
+		"GUF_ApplicationDomain":{
+			"$anchor":"GUF_ApplicationDomain",
+			"type":"object",
+			"additionalProperties": false, 
+			"properties": {
+				"domain":{
+					"description":"An application domain a user works in",
+					"type":"string"
+				},
+				"expertiseLevel":{
+					"description":"User’s expertise level in this particular application domain, restricted by a codelist",
+					"$ref":"#GUF_RatingCode"
+				}
+			},
+			"required":["domain","expertiseLevel"]
+		},
+		"GUF_SignificantEventTypeCode":{
+			"$anchor":"GUF_SignificantEventTypeCode",
+			"type":"string",
+			"enum": [
+				"hurricaneNatural",
+				"volcanicEruptionNatural",
+				"elNinoNatural",
+				"droughtNatural",
+				"stormNatural",
+				"wildfireNatural",
+				"floodNatural",
+				"earthquakeNatural",
+				"tsunamiNatural",
+				"ifsEvent",
+				"systemEvent",
+				"satelliteAnomaly",
+				"dropsondeAnomaly",
+				"aircraftAnomaly",
+				"buoyAnomaly",
+				"shipAnomaly",
+				"landStationAnomaly",
+				"mobileSensorAnomaly",
+				"sensorAlarm"
+			]
+		},
+		"GUF_RatingCode":{
+			"$anchor":"GUF_RatingCode",
+			"type":"string",
+			"enum": [
+				"1",
+				"2",
+				"3",
+				"4",
+				"5"
+			]
+		},
+		"GUF_MotivationCode":{
+			"$anchor":"GUF_MotivationCode",
+			"type":"string",
+			"enum": [
+				"comment",
+				"question",
+				"answer",
+				"response",
+				"justification",
+				"resolution",
+				"conclusion",
+				"moderation",
+				"annotation",
+				"acceptedAnswer"
+			]
+		},
+		"GUF_ReportAspectCode":{
+			"$anchor":"GUF_ReportAspectCode",
+			"type":"string",
+			"enum": [
+				"usage",
+				"fitnessForPurpose",
+				"limitation",
+				"alternative",
+				"problem"
+			]
+		},
+		"GUF_UserRoleCode":{
+			"$anchor":"GUF_UserRoleCode",
+			"type":"string",
+			"enum": [
+				"commercialDataProducer",
+				"commercialAddedValue",
+				"researchDataProducer",
+				"researchEndUser",
+				"decisionMaker",
+				"generalPublic"
+			]
+		},
+		"GUF_TargetRoleCode":{
+			"$anchor":"GUF_TargetRoleCode",
+			"type":"string",
+			"enum": [
+				"primary",
+				"secondary",
+				"supplementary"
+			]
+		}		
+	},
+	"properties":{
+		"additionalProperties": false, 
+		"GUF_FeedbackItem":{
+			"$ref": "#/$defs/GUF_FeedbackItem"
+		}
+	},
+	"required":["GUF_FeedbackItem"]
+}

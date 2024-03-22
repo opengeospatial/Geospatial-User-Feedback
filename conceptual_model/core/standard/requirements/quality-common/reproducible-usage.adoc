@@ -1,0 +1,10 @@
+[[req_quality-common_reproducible-usage]]
+[requirement]
+
+====
+[%metadata]
+identifier:: /req/quality-common/reproducible-usage
+part:: The implementations of a reproducible usage SHALL follow the UML model as shown in <<img_reproducible_usage>> with the properties specified in <<tbl_reproducible_usage>>. ^1^
++
+^1^ This model extends ISO 19115-1:2014 MD_Usage with elements for reproducible usage. 
+====

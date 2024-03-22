@@ -1,0 +1,8 @@
+[[req_feedback-item_ufc-schema]]
+[requirement]
+====
+[%metadata]
+identifier:: /req/feedback-item/ufc-schema
+part:: An XML Encoding of a geospatial user feedback collection SHALL use UFC_FeedbackCollection and shall validate using the geospatial user feedback collection schema ufc.xsd
+====
+

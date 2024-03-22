@@ -8,7 +8,7 @@ This section describes two requirements classes that are considered extensions o
 
 This requirements class defines the XML encoding classes that allow for encoding summary statistics of feedback items that share the same target.
 
-include::../requirements/requirement007.adoc[]
+include::../requirements/requirements_class_user_feedback_summary.adoc[]
 
 The ufs.xsd schema has been derived automatically from the OGC 15-097 UML model. No tables describing the naming of the elements and subelements are reproduced here as they are specified in the conceptual model.
 
@@ -57,7 +57,7 @@ The following code shows a xml encoding example for UFS_FeedbackSummary
 
 This requirements class defines the XML encoding classes that allow for grouping of feedback items into a feedback response and feedback collection with summary statistics. A feedback collection is a collection of a feedback items that share a common target and share the same rating code list.
 
-include::../requirements/requirement008.adoc[]
+include::../requirements/requirements_class_user_feedback_collection_extension.adoc[]
 
 The ufc.xsd schema has been derived automatically from the OGC 15-097 UML model. No tables describing the naming of the elements and subelements are reproduced here as they are specified in the conceptual model.
 

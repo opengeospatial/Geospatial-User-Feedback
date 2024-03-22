@@ -1,0 +1,50 @@
+[[sc_user_feedback_collection_extension]]
+== Requirements Class "User Feedback Collection Extension"
+
+=== Overview
+
+This requirements class defines the data model classes that allow for grouping of feedback items into a feedback response and feedback collection with summary statistics. A feedback collection is a collection of a feedback items that share a common target and share the same rating code list.
+
+//include::../requirements/requirement006.adoc[]
+include::../requirements/requirements_class_user_feedback_collection.adoc[]
+
+
+=== Feedback Collection
+
+[#img_feedback_collection_extensions,reftext='{figure-caption} {counter:figure-num}']
+.User Feedback Collection Extension classes in a UML diagram
+image::../figures/FeedbackCollectionExtensions.png[width=600,align="center"]
+
+[#tbl_feedback_response,reftext='{table-caption} {counter:table-num}']
+.UFC_FeedbackResponse data type
+[width = "100%",options="header"]
+|===
+|*Names* | *Definition*	| *Data type and values* | *Multiplicity and use*
+//[width="90%",options="header",float="center"]
+|collection |Collection of feedback items |UFC_FeedbackCollection data type (see Table 31) |One or more (mandatory)
+|===
+
+[#tbl_feedback_collection,reftext='{table-caption} {counter:table-num}']
+.UFC_FeedbackCollection data type
+[width = "100%",options="header"]
+|===
+|*Names* | *Definition*	| *Data type and values* | *Multiplicity and use*
+//[width="90%",options="header",float="center"]
+|target |Common geospatial resource to which the collection refers.  |ISO 19115-1 CI_Citation data type (ISO 19115-1:2014 B.3.2.1) |Zero or one (optional). +
+If the target of the citation is specified by another part of the data model this parameter should not be used
+|item |Feedback item |GUF_FeedbackItem data type (see Table 7)|Zero or more (optional)
+|summary |Summary of the feedback items |UFS_FeedbackSummary data type (see Table 23) |Zero or one (optional)
+|pagination |Information about the page structure of the collection |UFC_ResponsePagination (see Table 32) |Zero or one (optional)
+|===
+
+[#tbl_response_pagination,reftext='{table-caption} {counter:table-num}']
+.UFC_ResponsePagination data type
+[width = "100%",options="header"]
+|===
+|*Names* | *Definition*	| *Data type and values* | *Multiplicity and use*
+//[width="90%",options="header",float="center"]
+|numberOfFeedbackItems |Number of feedback items in the collection |Integer data type |One (mandatory)
+|limit |Maximum feedback items per page |Integer data type |Zero or one (optional). It not present, there is no limit
+|offset |Number of the first items in the complete collection that has been skipped |Integer data type |Zero or one (optional). It not present, no item was skipped
+|count |Number of feedback items in this page |Integer data type |One (mandatory)
+|===

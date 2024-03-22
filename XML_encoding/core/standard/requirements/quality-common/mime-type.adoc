@@ -1,0 +1,7 @@
+[[req_quality-common_mime-type]]
+[requirement]
+====
+[%metadata]
+identifier:: /req/quality-common/mime-type
+part:: An XML encoding of a geospatial user feedback SHALL adopt the XML MIME type of application/xml
+====

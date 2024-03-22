@@ -1,6 +1,6 @@
 == Conventions
 
-=== *5.1	Data dictionary tables*
+=== Data dictionary tables
 
 //This sections provides details and examples for any conventions used in the document. Examples of conventions are symbols, abbreviations, use of XML schema, or special notes regarding how to read the document.
 
@@ -13,8 +13,9 @@
 
 The data dictionary for this standard is specified in a series of tables. The contents of the columns in these tables are described in Table 1.
 
-[.text-center]
-*Table 1 — Contents of data dictionary tables*
+[#tbl_contents,reftext='{table-caption} {counter:table-num}']
+.Contents of data dictionary tables
+[width = "100%",options="header"]
 
 |===
 |*Column title* | *Column contents* 
@@ -50,7 +51,7 @@ In the data dictionary tables three background colors are used:
 
 Thus, elements with no background color in the dictionary tables have not changed from the first version of the conceptual model or the change is only in the description (for clarity) but not in the element itself. The use of background colors in the dictionary tables is intended to allow a reader to better identify changes from the GUF conceptual model v.1.0.
 
-=== *5.2	UML Notations*
+=== UML Notations
 
 Unified Modeling Language (UML) static structure diagrams appearing in this standard are used as described in Sub clause 5.2 of OGC Web Service Common OGC 06-121r9 [1]. Further, the following conventions hold:
 
@@ -60,6 +61,6 @@ Unified Modeling Language (UML) static structure diagrams appearing in this stan
 *	UML element names with prefix UFS (User Feedback Summary) are those defined in the http://www.opengis.net/spec/geospatial-user-feedback/2.0/req/feedback-summary requirements class of this Standard.
 *	UML element names with prefix UFC (User Feedback Collection) are those defined in the http://www.opengis.net/spec/geospatial-user-feedback/2.0/req/feedback-collection requirements class of this Standard.
 
-=== *5.3 Core and Extension Breakdown*
+=== Core and Extension Breakdown
 
 The Geospatial User Feedback standard follows the modular specification design pattern as described in OGC 08-131r3 [7]. The contributors to this standard decided that the requirements would be split into a core (quality common and geospatial user feedback item) and extensions for summary statistics and geospatial user feedback collections. In addition, other standards in the GUF series will potentially provide specific encodings of the data model provided in this document. For example, the OGC OGC Geospatial User Feedback Standard OGC 23-061 [8] XML Encoding Extension v 2.0 is initially provided for this v.2.0 of the conceptual model. A JSON encoding is expected in the near future.

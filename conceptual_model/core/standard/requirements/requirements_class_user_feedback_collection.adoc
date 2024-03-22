@@ -1,0 +1,13 @@
+[[rc_user_feedback_collection]]
+[requirements_class]
+.Requirements Class 'User Feedback Collection'
+====
+[%metadata]
+identifier:: https://www.opengis.net/spec/guf-conceptual/2.0/req/user-feedback-collection
+subject:: User Feedback Collection
+//$$
+inherit:: /req/feedback-summary/
+requirement:: /req/feedback-collection/response
+requirement:: /req/feedback-collection/collection
+requirement:: /req/feedback-collection/pagination
+====

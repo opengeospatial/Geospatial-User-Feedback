@@ -1,0 +1,8 @@
+[[req_feedback-item_guf-schema]]
+[requirement]
+====
+[%metadata]
+identifier:: /req/feedback-item/guf-schema
+part:: An XML encoding of a geospatial user feedback item SHALL use GUF_FeedbackItem and SHALL validate using the geospatial user feedback item schema guf.xsd 
+====
+

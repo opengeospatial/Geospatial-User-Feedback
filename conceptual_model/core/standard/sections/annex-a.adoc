@@ -1,4 +1,6 @@
 [appendix]
+:appendix-caption: Annex
+[[annex-ats]]
 == Conformance Class Abstract Test Suite (Normative)
 
 A GUF implementation of this standard must satisfy the following system characteristics to be conformant with this specification.

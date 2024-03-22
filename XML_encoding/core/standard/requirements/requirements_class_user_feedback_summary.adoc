@@ -1,0 +1,10 @@
+[[rc_user_feedback_summary]]
+[requirements_class]
+.Requirements Class 'Feedback Summary'
+====
+[%metadata]
+identifier:: https://www.opengis.net/spec/guf-schema/2.0/req/feedback-summary
+subject:: Feedback Summary
+inherit:: /req/feedback-item
+requirement:: /req/feedback-summary/ufs-schema
+====

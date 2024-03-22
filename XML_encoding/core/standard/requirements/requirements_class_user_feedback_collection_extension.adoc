@@ -1,0 +1,11 @@
+[[rc_user_feedback_collection]]
+[requirements_class]
+.Requirements Class 'Feedback Collection'
+====
+[%metadata]
+identifier:: https://www.opengis.net/spec/guf-schema/2.0/req/feedback-collection
+subject:: Feedback Collection
+
+inherit:: /req/feedback-collection
+requirement:: /req/feedback-collection/ufc-schema
+====

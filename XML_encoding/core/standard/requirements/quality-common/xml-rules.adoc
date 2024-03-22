@@ -1,0 +1,7 @@
+[[req_quality-common_xml-rules]]
+[requirement]
+====
+[%metadata]
+identifier:: /req/quality-common/xml-rules
+part:: An XML encoding of a geospatial user feedback SHALL comply with the encoding rules specified in ISO-19139.
+====

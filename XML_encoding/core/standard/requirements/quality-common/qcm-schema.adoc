@@ -1,0 +1,7 @@
+[[req_qcm-schema]]
+[requirement]
+====
+[%metadata]
+identifier:: /req/quality-common/qcm-schema
+part:: An XML encoding of a geospatial user feedback using QCM_Publication or QCM_DiscoveredIssue SHALL validate using the quality common schema qcm.xsd
+====

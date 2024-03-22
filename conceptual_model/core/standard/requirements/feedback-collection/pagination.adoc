@@ -1,0 +1,8 @@
+[[req_feedback-collection_pagination]]
+[requirement]
+
+====
+[%metadata]
+identifier:: /req/feedback-collection/pagination
+part:: The implementations of a response pagination SHALL follow the UML model as shown in <<img_feedback_collection_extensions>> with the properties specified in <<tbl_response_pagination>>
+====

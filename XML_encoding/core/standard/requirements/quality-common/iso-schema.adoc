@@ -1,0 +1,7 @@
+[[req_quality-common_iso-schema]]
+[requirement]
+====
+[%metadata]
+identifier:: /req/quality-common/iso-schema
+part:: An XML encoding of a geospatial user feedback SHALL validate using the schemas ISO19115-3 and ISO19157-2 provided at: http://standards.iso.org/iso/19115/-3 and http://standards.iso.org/iso/19157/-2 respectively
+====

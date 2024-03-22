@@ -1,0 +1,7 @@
+[[req_feedback-summary_ufs-schema]]
+[requirement]
+====
+[%metadata]
+identifier:: /req/feedback-summary/ufs-schema
+part:: An XML Encoding of a geospatial user feedback summary SHALL use UFS_FeedbackSummary and SHALL validate using the geospatial user feedback summary schema ufs.xsd
+====

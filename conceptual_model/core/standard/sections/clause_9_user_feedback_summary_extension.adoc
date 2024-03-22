@@ -1,0 +1,118 @@
+[[sc_user_feedback_summary_extension]]
+== Requirements Class "User Feedback Summary Extension"
+
+=== Overview
+
+This requirements class defines the data model classes that allow for encoding summary statistics of feedback items that share the same target.
+
+include::../requirements/requirements_class_user_feedback_summary.adoc[]
+
+
+=== Feedback Summary
+
+[#img_feedback_summary,reftext='{figure-caption} {counter:figure-num}']
+.UFS_FeedbackSummary data model UML diagram
+image::../figures/FeedbackSummary.png[width=600,align="center"]
+
+[#tbl_feedback_summary,reftext='{table-caption} {counter:table-num}']
+.UFS_FeedbackSummary data type
+[width = "100%",options="header"]
+|===
+|*Names* | *Definition*	| *Data type and values* | *Multiplicity and use*
+//[width="90%",options="header",float="center"]
+|target |Common geospatial resource the summary is about.  |ISO 19115-1 CI_Citation data type (ISO 19115-1:2014 B.3.2.1) |Zero or one (optional). +
+If the target of the citation is specified by another part of the data model this parameter should not be used
+|numberOfFeedbackItem |Number of Feedback items this summary is about |Integer type |One (mandatory)
+|latestItemDate |The date of the last item |CI_Date (ISO 19115-1:2014 B.3.2.6) |Zero or one (optional)
+|numberOfPrimaryTargets |Total number of primary targets |Integer type |Zero or one (optional)
+|numberOfSecondaryTargets |Total number of secondary targets |Integer type |Zero or one (optional)
+|numberOfSupplementaryTargets |Total number of supplementary targets |Integer type |Zero or one (optional)
+|averageUserExpertiseLevel |Average user expertise level |Real type |Zero or one (optional)
+|{set:cellbgcolor:#D6EAF8}minimumRating |Minimum rating received. Numeric value |Real type |One (mandatory)
+|maximumRating |Maximum rating received. Numeric value |Real type |One (mandatory)
+|{set:cellbgcolor:#D6EAF8/}averageRating |Average rating |Real type |One (mandatory)
+|numberOfRatings |Number of feedback items with a valid rating |Integer type |One (mandatory)
+|numberOfUserComments |Number of feedback items with a valid comment |Integer type |One (mandatory)
+|numberOfUsageReports |Number of populated usage reports |Integer type |One (mandatory)
+|{set:cellbgcolor:#D5F5E3}numberOfReproducibleUsageReports |Number of populated reproducible usage reports |Integer type |One (mandatory)
+|{set:cellbgcolor:#D5F5E3/}numberOfCitations |Number of populated citations |Integer type |One (mandatory)
+|numberOfAdditionalQualities |Number of populated quality elements |Integer type |One (mandatory)
+|numberOfAdditionalLineages |Number of feedback items with a valid reported lineage |Integer type |One (mandatory)
+|numberOfSignificantEvents |Number of populated significant events |Integer type |One (mandatory)
+|feedbackItemsByExpertiseLevelCount |Number of feedback items by each level of expertise  |UFS_ExpertiseLevelCount data type (see Table 24) |Zero or more (optional) ^a^
+|userByRoleCount |Number of feedback items for each user role |UFS_UserRoleCount data type (see Table 25) |Zero or more (optional) ^b^
+|byTagCount |Number of feedback items for each tag |UFS_TagCount data type (see Table 26) |Zero or more (optional) ^c^
+|byKeywordCount |Number of feedback items for each keyword |UFS_KeywordCount data type (see Table 27) |Zero or more (optional) ^d^
+|byRatingCount |Number of feedback items for each rating value |UFS_RatingCount data type (see Table 28) |Zero or more (optional) ^e^
+|ratingByExpertiseLevelCount |Number of feedback items for each rating and level of expertise |UFS_RatingExpertiseLevelCount data type (see Table 29) |Zero or more (optional) ^f^
+4+|^a^	In the case where feedbackItemsByExpertiseLevelCount occurs more than once, the expertiseLevel values shall be different for each. +
+^b^	In the case where userByRoleCount occurs more than once, its userRole values shall be different. +
+^c^	In the case where byTagCount occurs more than once, its tag values shall be different. +
+^d^	In the case where byKeywordCount occurs more than once, its keyword values shall be different. +
+^e^	In the case where byRatingCount occurs more than once, its rating values shall be different. +
+^f^	In the case where ratingByExpertiseLevelCount occurs more than once, their rating / expertiseLevel pair values shall be different.
+|===
+
+[#tbl_expertise_level_count,reftext='{table-caption} {counter:table-num}']
+.UFS_ExpertiseLevelCount data type
+[width = "100%",options="header"]
+|===
+|*Names* | *Definition*	| *Data type and values* | *Multiplicity and use*
+//[width="90%",options="header",float="center"]
+|expertiseLevel |A possible value of expertise level |GUF_RatingCode data type (see Table 20) |One (mandatory)
+|count |Number of feedback items that were populated by this expertiseLevel code |Integer data type |One (mandatory)
+|===
+
+[#tbl_user_role_count,reftext='{table-caption} {counter:table-num}']
+.UFS_UserRoleCount data type
+[width = "100%",options="header"]
+|===
+|*Names* | *Definition*	| *Data type and values* | *Multiplicity and use*
+//[width="90%",options="header",float="center"]
+|userRole |A possible value of expertise level |GUF_UserRoleCode data type (see Table 10)|One (mandatory)
+|count |Number of times that a feedback items was populated by a user acting with this userRole code |Integer data type |One (mandatory)
+|===
+
+[#tbl_tag_count,reftext='{table-caption} {counter:table-num}']
+.UFS_TagCount data type
+[width = "100%",options="header"]
+|===
+|*Names* | *Definition*	| *Data type and values* | *Multiplicity and use*
+//[width="90%",options="header",float="center"]
+|tag |A possible value of expertise level |Character String data type not empty |One (mandatory)
+|count |Number of feedback items that were populated with this tag value |Integer data type |One (mandatory)
+|===
+
+[#tbl_keyword_count,reftext='{table-caption} {counter:table-num}']
+.UFS_KeywordCount data type
+[width = "100%",options="header"]
+|===
+|*Names* | *Definition*	| *Data type and values* | *Multiplicity and use*
+//[width="90%",options="header",float="center"]
+|keyword |A possible value of expertise level |MD_Keywords data type (ISO 19115-1:2014 B.2.3.2) |One (mandatory)
+|count |Number of feedback items that were populated with this keyword |Integer data type |One (mandatory)
+|===
+
+[#tbl_rating_count,reftext='{table-caption} {counter:table-num}']
+.UFS_RatingCount data type
+[width = "100%",options="header"]
+|===
+|*Names* | *Definition*	| *Data type and values* | *Multiplicity and use*
+//[width="90%",options="header",float="center"]
+|rating |A possible value of expertise level |GUF_RatingCode (see Table 20), GUF_ThumbsCode (see Table 21), GUF_SignCode (see Table 22) or other numerical code for rating |One (mandatory)
+|count |Number of feedback items that were populated with this rating code |Integer data type |One (mandatory)
+|===
+
+[#tbl_rating_expertise_level_count,reftext='{table-caption} {counter:table-num}']
+.UFS_RatingExpertiseLevelCount data type
+[width = "100%",options="header"]
+|===
+|*Names* | *Definition*	| *Data type and values* | *Multiplicity and use*
+//[width="90%",options="header",float="center"]
+|rating |A possible value of rating  |GUF_RatingCode (see Table 20), +
+GUF_ThumbsCode (see Table 21), + 
+GUF_SignCode (see Table 22) +
+or other numerical code for rating |One (mandatory)
+|expertiseLevel |A possible value of expertise level |GUF_RatingCode data type (see Table 20)|One (mandatory)
+|count |Number of feedback items that were populated with this rating-expertiseLevel code pair |Integer data type |One (mandatory)
+|===

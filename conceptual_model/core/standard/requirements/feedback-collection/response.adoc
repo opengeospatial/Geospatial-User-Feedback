@@ -1,0 +1,8 @@
+[[req_feedback-collection_response]]
+[requirement]
+
+====
+[%metadata]
+identifier:: /req/feedback-collection/response
+part:: The implementations of a feedback response SHALL follow the UML model as shown in <<img_feedback_collection_extensions>> with the properties specified in <<tbl_feedback_response>>
+====

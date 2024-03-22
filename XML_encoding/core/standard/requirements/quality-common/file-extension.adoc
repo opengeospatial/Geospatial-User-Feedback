@@ -1,0 +1,7 @@
+[[req_quality-common_file-extension]]
+[requirement]
+====
+[%metadata]
+identifier:: /req/quality-common/file-extension
+part:: An XML encoding of a geospatial user feedback SHALL use the file extension ‘.xml’
+====

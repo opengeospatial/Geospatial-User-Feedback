@@ -1,0 +1,11 @@
+[[rc_user_feedback_item]]
+[requirements_class]
+.Requirements Class 'User Feedback Item'
+====
+[%metadata]
+identifier:: https://www.opengis.net/spec/guf-conceptual/2.0/req/user-feedback-item
+subject:: User Feedback Item
+
+inherit:: /req/quality-common
+requirement:: /req/user-feedback-item/feedback-item
+====

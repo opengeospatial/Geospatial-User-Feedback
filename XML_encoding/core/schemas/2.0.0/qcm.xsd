@@ -32,7 +32,7 @@ problems with the dataset</documentation>
 				<sequence>
 					<element name="target" type="cit:CI_Citation_PropertyType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
-							<documentation>Link to the actual resource the publication is about.</documentation>
+							<documentation>Link to the actual resource the discovered issue is about.</documentation>
 						</annotation>
 					</element>
 					<element name="knownProblem" type="gco:CharacterString_PropertyType">

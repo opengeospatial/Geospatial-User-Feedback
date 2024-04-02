@@ -42,20 +42,21 @@ See <<Clause_Critical>> for more information on critical changes and
 | Editor| ED-03|C |7.1 (Table 5) | Updated Data Type for "problemDateTime" element from "CI_Date" to "DateTime". | Consistency.
 | Editor| ED-04|C |7.1 (Table 5) | Updated Data Type for "expectedFixDate" element from "CI_Date" to "Date". | Consistency.
 | Editor| ED-05|S |7.1 (Table 5) | "fixedResource" attribute cardinality updated from "zero or one (optional)" to "zero or more (optional)".  | Completeness.
-| Editor| ED-06|S |7.1 | New requirement added. "QCM_ReproducibleUsage" as "MD_Usage" extension. | Consistency.
-| Editor| ED-07|S |7.1 (Table 6) | "QCM_ReproducibleUsage" class description. | Completeness.
-| Editor| ED-08|A |multiple | updating tables numeration. | Clarity.
-| Editor| ED-09|A |7.2 (Table 7) | Fix typo in "tag" attribute. Unification with schemas | Consistency.
-| Editor| ED-10|C |7.2 (Table 7) | Updated "additionalLineage" attribute name to "additionalLineageSteps".  | Clarity.
-| Editor| ED-11|C |7.2 (Table 8) | "userDetails" attribute Data Type changed from "CI_Responsibility" to "CI_Party".  | Consistency.
-| Editor| ED-12|S |7.2 (Table 8) | New "description" optional attribute added. | Clarity
-| Editor| ED-13|C |7.2 (Table 8) | "applicationDomain" attribute Data Type changed from "CharacterString" to "GUF_ApplicationDomain". Cardinality changed from "Zero or more (optional)" to "One or more (mandatory)". GUF v.1.0 "expertiseLevel" attribute deprecated| Consistency.
-| Editor| ED-14|S |7.2 (Table 9) | New "GUF_ApplicationDomain" Data Type added. | Completeness.
-| Editor| ED-15|A |7.2 (Table 11) | "resourceRef" attribute definition updated. | Clarity
-| Editor| ED-16|A |7.2 (Table 11) | "metadataIdentifier" attribute considerations added. | Clarity
-| Editor| ED-17|A |7.2 (Table 11) | Corrigenda. "role" attribute replaces the GUF v.1.0 "targetType" attribute. In GUF v.1 Conceptual model documentation the role attribute appeared as "targetType". Not in the UML models and XSD schemas, where "role" attribute was correctly documented. | Consistency. 
-| Editor| ED-18|A |7.2 (Table 13) | "motivation" attribute cardinality added missing information. | Consistency.
-| Editor| ED-19|C |8.1 (Table 23) | "minimumRating" and "maximumRating" attributes overwrite GUF v.1.0 "minimumPossibleRating" and "maximumPossibleRating".| Clarity.
-| Editor| ED-20|C |8.1 (Table 23) | "numberOfReproducibleUsageReports" attribute added to document the total number of populated reproducible usage reports.| Completeness.
-| Editor| ED-21|A |8.1 (Table 25) | Fix typo in "count" attribute definition.| Clarity.
+| Editor| ED-06|A |7.1 (Table 5) | Updated "target" attribute definition| Clarity.
+| Editor| ED-07|S |7.1 | New requirement added. "QCM_ReproducibleUsage" as "MD_Usage" extension. | Consistency.
+| Editor| ED-08|S |7.1 (Table 6) | "QCM_ReproducibleUsage" class description. | Completeness.
+| Editor| ED-09|A |multiple | updating tables numeration. | Clarity.
+| Editor| ED-10|A |7.2 (Table 7) | Fix typo in "tag" attribute. Unification with schemas | Consistency.
+| Editor| ED-11|C |7.2 (Table 7) | Updated "additionalLineage" attribute name to "additionalLineageSteps".  | Clarity.
+| Editor| ED-12|C |7.2 (Table 8) | "userDetails" attribute Data Type changed from "CI_Responsibility" to "CI_Party".  | Consistency.
+| Editor| ED-13|S |7.2 (Table 8) | New "description" optional attribute added. | Clarity
+| Editor| ED-14|C |7.2 (Table 8) | "applicationDomain" attribute Data Type changed from "CharacterString" to "GUF_ApplicationDomain". Cardinality changed from "Zero or more (optional)" to "One or more (mandatory)". GUF v.1.0 "expertiseLevel" attribute deprecated| Consistency.
+| Editor| ED-15|S |7.2 (Table 9) | New "GUF_ApplicationDomain" Data Type added. | Completeness.
+| Editor| ED-16|A |7.2 (Table 11) | "resourceRef" attribute definition updated. | Clarity
+| Editor| ED-17|A |7.2 (Table 11) | "metadataIdentifier" attribute considerations added. | Clarity
+| Editor| ED-18|A |7.2 (Table 11) | Corrigenda. "role" attribute replaces the GUF v.1.0 "targetType" attribute. In GUF v.1 Conceptual model documentation the role attribute appeared as "targetType". Not in the UML models and XSD schemas, where "role" attribute was correctly documented. | Consistency. 
+| Editor| ED-19|A |7.2 (Table 13) | "motivation" attribute cardinality added missing information. | Consistency.
+| Editor| ED-20|C |8.1 (Table 23) | "minimumRating" and "maximumRating" attributes overwrite GUF v.1.0 "minimumPossibleRating" and "maximumPossibleRating".| Clarity.
+| Editor| ED-21|C |8.1 (Table 23) | "numberOfReproducibleUsageReports" attribute added to document the total number of populated reproducible usage reports.| Completeness.
+| Editor| ED-22|A |8.1 (Table 25) | Fix typo in "count" attribute definition.| Clarity.
 |=======================================================================

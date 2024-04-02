@@ -106,7 +106,7 @@ image::../figures/DiscoveredIssue.png[width=600,align="center"]
 [width = "100%",options="header"]
 |===
 |*Names* |*Definition* |*Data types and values* |*Multiplicity and use*
-|target |Link to the actual resource the publication is about. |CI_Citation data type (ISO 19115-1:2014 B.3.2.1)|Zero or more (optional).
+|target |Link to the actual resource the discovered issue is about. |CI_Citation data type (ISO 19115-1:2014 B.3.2.1)|Zero or more (optional).
 If the target of the citation is specified by another part of the data model this parameter should not be used
 |knownProblem |Known issue with the target |Character String type, not empty |One (mandatory)
 |{set:cellbgcolor:#D6EAF8}problemDateTime |Date and time when the problem was detected |DateTime (ISO 19115-1:2014 B.4.2) |Zero or one (optional)

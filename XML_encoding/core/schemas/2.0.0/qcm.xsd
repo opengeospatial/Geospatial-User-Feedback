@@ -62,7 +62,7 @@ problems with the dataset</documentation>
 					</element>
 					<element name="fixedResource" type="cit:CI_Citation_PropertyType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
-							<documentation>A new version of the target resource with the knownProblem is no longer present.</documentation>
+							<documentation>A new version of the target resource where the knownProblem is no longer present.</documentation>
 						</annotation>
 					</element>
 					<element name="alternativeResource" type="cit:CI_Citation_PropertyType" minOccurs="0" maxOccurs="unbounded">

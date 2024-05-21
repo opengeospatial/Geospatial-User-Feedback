@@ -1,4 +1,3 @@
-[]
 = OGC Geospatial User Feedback Standard. Conceptual Model. v.2.0
 :doctype: standard
 :encoding: utf-8
@@ -13,6 +12,7 @@
 :published-date: 2029-03-30
 :fullname: Alaitz Zabala
 :fullname_2: Joan Masó
+:fullname_3: Oscar González
 :docsubtype: Interface
 :keywords: ogcdoc, OGC document, API, openapi, html
 :submitting-organizations: UAB-CREAF

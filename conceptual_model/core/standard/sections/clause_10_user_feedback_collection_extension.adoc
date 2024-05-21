@@ -3,7 +3,7 @@
 
 === Overview
 
-This requirements class defines the data model classes that allow for grouping of feedback items into a feedback response and feedback collection with summary statistics. A feedback collection is a collection of a feedback items that share a common target and share the same rating code list.
+This requirements class defines the data model classes that allow for grouping of feedback items into a feedback response and feedback collection with summary statistics. A feedback collection is a collection of feedback items that share a common target and share the same rating code list.
 
 //include::../requirements/requirement006.adoc[]
 include::../requirements/requirements_class_user_feedback_collection.adoc[]

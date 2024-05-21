@@ -7,7 +7,6 @@
 		"UFC_FeedbackCollection":{
 			"$anchor":"UFC_FeedbackCollection",
 			"type":"object",
-			"additionalProperties": false,
 			"properties":{
 				"target":{
 					"description":"Common geospatial resource to which the collection refers",
@@ -34,7 +33,6 @@
 		"UFC_FeedbackResponse":{
 			"$anchor":"UFC_FeedbackResponse",
 			"type":"object",
-			"additionalProperties": false,
 			"properties":{
 				"collection":{
 					"description":"Collection of feedback items",
@@ -49,7 +47,6 @@
 		"UFC_ResponsePagination":{
 			"$anchor":"UFC_ResponsePagination",
 			"type":"object",
-			"additionalProperties": false,
 			"properties":{
 				"numberOfFeedbackItems":{
 					"description":"Number of feedback items in the collection",

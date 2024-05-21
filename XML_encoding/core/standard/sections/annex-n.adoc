@@ -13,16 +13,16 @@ guf.xsd +
 ufs.xsd +
 ufc.xsd +
 
-These XML Schema Documents use and build on the ISO19115-3 and ISO19157-2 XML Schema Documents specified by ISO and that are available at http://standards.iso.org/iso, named:
+These XML Schema Documents use and build on the ISO 19115-3 and ISO 19157-2 XML Schema Documents specified by ISO and that are available at http://standards.iso.org/iso, named:
 
 19115/-3/mcc/1.0/mcc.xsd +
 19157/-2/mdq/1.0/mdq.xsd +
 19115/-3/gex/1.0/gex.xsd +
 19115/-3/mri/1.0/mri.xsd +
-19115/-3/cit/1.0/cit.xsd +
+19115/-3/cit/2.0/cit.xsd +
 19115/-3/gco/1.0/gco.xsd +
 19115/-3/mrl/1.0/mrl.xsd +
 19115/-3/lan/1.0/lan.xsd +
 19115/-3/mdb/1.0/mdb.xsd +
 
-All these XML Schema Documents contain documentation of the meaning of each element and attribute, and this documentation shall be considered normative as specified in Subclause 11.6.3 of [OGC 06-121r3].
+All these XML Schema Documents contain documentation of the meaning of each element and attribute, and this documentation shall be considered normative as specified in Subclause 11.6.3 of [1].

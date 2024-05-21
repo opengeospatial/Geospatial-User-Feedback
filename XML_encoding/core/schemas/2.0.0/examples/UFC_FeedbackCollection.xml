@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<UFC_FeedbackCollection 
+<ufc:UFC_FeedbackCollection 
 	xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" 
 	xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0" 
 	xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0" 
@@ -7,11 +7,11 @@
 	xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" 
 	xmlns:qcm="http://www.opengis.net/guf/2.0/common" 
 	xmlns:guf="http://www.opengis.net/guf/2.0/core" 
-	xmlns="http://www.opengis.net/guf/2.0/collection" 
+	xmlns:ufc="http://www.opengis.net/guf/2.0/collection" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xmlns:xlink="http://www.w3.org/1999/xlink" 
 	xsi:schemaLocation="http://www.opengis.net/guf/2.0/collection https://schemas.opengis.net/guf/2.0/ufc.xsd">
-	<item>
+	<ufc:item>
 		<guf:GUF_FeedbackItem>
 			<guf:itemIdentifier>
 				<mcc:MD_Identifier>
@@ -222,15 +222,15 @@ from the use of LCCS and its regional bottom-up approach, its global map lacks s
 				</guf:GUF_FeedbackTarget>
 			</guf:target>
 		</guf:GUF_FeedbackItem>
-	</item>
-	<pagination>
-		<UFC_ResponsePagination>
-			<numberOfFeedbackItems>
+	</ufc:item>
+	<ufc:pagination>
+		<ufc:UFC_ResponsePagination>
+			<ufc:numberOfFeedbackItems>
 				<gco:Integer>1</gco:Integer>
-			</numberOfFeedbackItems>
-			<count>
+			</ufc:numberOfFeedbackItems>
+			<ufc:count>
 				<gco:Integer>1</gco:Integer>
-			</count>
-		</UFC_ResponsePagination>
-	</pagination>
-</UFC_FeedbackCollection>
+			</ufc:count>
+		</ufc:UFC_ResponsePagination>
+	</ufc:pagination>
+</ufc:UFC_FeedbackCollection>

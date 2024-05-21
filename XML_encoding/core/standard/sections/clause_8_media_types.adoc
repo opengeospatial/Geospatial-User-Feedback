@@ -10,7 +10,7 @@ This requirements class defines the XML encoding classes that allow for encoding
 
 include::../requirements/requirements_class_user_feedback_summary.adoc[]
 
-The ufs.xsd schema has been derived automatically from the OGC 15-097 UML model. No tables describing the naming of the elements and subelements are reproduced here as they are specified in the conceptual model.
+The ufs.xsd schema has been derived automatically from the OGC 15-097 UML model [2]. No tables describing the naming of the elements and subelements are reproduced here as they are specified in the conceptual model.
 
 The following code shows a xml encoding example for UFS_FeedbackSummary
 
@@ -59,13 +59,13 @@ This requirements class defines the XML encoding classes that allow for grouping
 
 include::../requirements/requirements_class_user_feedback_collection_extension.adoc[]
 
-The ufc.xsd schema has been derived automatically from the OGC 15-097 UML model. No tables describing the naming of the elements and subelements are reproduced here as they are specified in the conceptual model.
+The ufc.xsd schema has been derived automatically from the OGC 15-097 UML model [2]. No tables describing the naming of the elements and subelements are reproduced here as they are specified in the conceptual model.
 
 The following code shows a xml encoding example for UFC_FeedbackCollection
 
 [source]
 <?xml version="1.0" encoding="UTF-8"?>
-<UFC_FeedbackCollection 
+<ufc:UFC_FeedbackCollection 
 				xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0"
 				xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0" 
 				xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0" 
@@ -73,10 +73,10 @@ The following code shows a xml encoding example for UFC_FeedbackCollection
 				xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" 
 				xmlns:qcm="http://www.opengis.net/guf/1.0/common" 
 				xmlns:guf="http://www.opengis.net/guf/1.0/core" 
-				xmlns="http://www.opengis.net/guf/1.0/collection" 
+				xmlns:ufc="http://www.opengis.net/guf/1.0/collection" 
 				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" 
 				xsi:schemaLocation="http://www.opengis.net/guf/1.0/collection ../ufc.xsd">
-	<item>
+	<ufc:item>
 		<guf:GUF_FeedbackItem>
 			<guf:itemIdentifier>
 				<mcc:MD_Identifier>
@@ -268,12 +268,12 @@ classes or a lack of information about leaf type and phenology.</gco:CharacterSt
 				</guf:GUF_FeedbackTarget>
 			</guf:target>
 		</guf:GUF_FeedbackItem>
-	</item>
-	<pagination>
-		<UFC_ResponsePagination>
-			<numberOfFeedbackItems><gco:Integer>1</gco:Integer></numberOfFeedbackItems>
-			<count><gco:Integer>1</gco:Integer></count>
-		</UFC_ResponsePagination>
-	</pagination>
-</UFC_FeedbackCollection>
+	</ufc:item>
+	<ufc:pagination>
+		<ufc:UFC_ResponsePagination>
+			<ufc:numberOfFeedbackItems><gco:Integer>1</gco:Integer></ufc:numberOfFeedbackItems>
+			<ufc:count><gco:Integer>1</gco:Integer></ufc:count>
+		</ufc:UFC_ResponsePagination>
+	</ufc:pagination>
+</ufc:UFC_FeedbackCollection>
 

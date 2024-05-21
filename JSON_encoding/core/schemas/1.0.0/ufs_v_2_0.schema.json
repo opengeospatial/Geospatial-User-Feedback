@@ -7,7 +7,6 @@
 		"UFS_FeedbackSummary":{
 			"$anchor":"UFS_FeedbackSummary",
 			"type":"object",
-			"additionalProperties": false,
 			"properties":{
 				"target":{
 					"description":"Common geospatial resource the summary is about.",
@@ -135,7 +134,6 @@
 		"UFS_ExpertiseLevelCount":{
 			"$anchor":"UFS_ExpertiseLevelCount",
 			"type":"object",
-			"additionalProperties": false,
 			"properties":{
 				"expertiseLevel":{
 					"description":"A possible value of expertise level",
@@ -151,7 +149,6 @@
 		"UFS_KeywordCount":{
 			"$anchor":"UFS_KeywordCount",
 			"type":"object",
-			"additionalProperties": false,
 			"properties":{
 				"keyword":{
 					"description":"A possible value of expertise level",
@@ -167,7 +164,6 @@
 		"UFS_RatingCount":{
 			"$anchor":"UFS_RatingCount",
 			"type":"object",
-			"additionalProperties": false,
 			"properties":{
 				"rating":{
 					"description":"A possible value of expertise level",
@@ -183,7 +179,6 @@
 		"UFS_RatingExpertiseLevelCount":{
 			"$anchor":"UFS_RatingExpertiseLevelCount",
 			"type":"object",
-			"additionalProperties": false,
 			"properties":{
 				"rating":{
 					"description":"A possible value of rating",
@@ -203,7 +198,6 @@
 		"UFS_TagCount":{
 			"$anchor":"UFS_TagCount",
 			"type":"object",
-			"additionalProperties": false,
 			"properties":{
 				"tag":{
 					"description":"A possible value of expertise level",
@@ -219,7 +213,6 @@
 		"UFS_UserRoleCount":{
 			"$anchor":"UFS_UserRoleCount",
 			"type":"object",
-			"additionalProperties": false,
 			"properties":{
 				"userRole":{
 					"description":"A possible value of expertise level",

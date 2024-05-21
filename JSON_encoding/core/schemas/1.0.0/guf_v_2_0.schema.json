@@ -7,7 +7,6 @@
 		"GUF_FeedbackItem":{
 			"$anchor":"GUF_FeedbackItem",
 			"type":"object",
-			"additionalProperties": false, 
 			"properties": {
 				"itemIdentifier":{
 					"description":"Identifier for the feedback item",
@@ -135,7 +134,6 @@
 		"GUF_SignificantEvent":{
 			"$anchor":"GUF_SignificantEvent",
 			"type":"object",
-			"additionalProperties": false, 
 			"properties": {
 				"abstract":{
 					"description":"Brief narrative description of this event, normally for display to a human",
@@ -163,7 +161,6 @@
 		"GUF_Rating":{
 			"$anchor":"GUF_Rating",
 			"type":"object",
-			"additionalProperties": false, 
 			"properties": {
 				"rating":{
 					"description":"Rating in the form of a simple numeric code that qualifies subjectively the feedback target",
@@ -175,7 +172,6 @@
 		"GUF_UserComment":{
 			"$anchor":"GUF_UserComment",
 			"type":"object",
-			"additionalProperties": false, 
 			"properties": {
 				"comment":{
 					"description":"Free text",
@@ -191,7 +187,6 @@
 		"GUF_UsageReport":{
 			"$anchor":"GUF_UsageReport",
 			"type":"object",
-			"additionalProperties": false, 
 			"properties": {
 				"reportAspect":{
 					"description":"Aspect reported",
@@ -219,7 +214,6 @@
 		"GUF_UserInformation":{
 			"$anchor":"GUF_UserInformation",
 			"type":"object",
-			"additionalProperties": false, 
 			"properties": {
 				"userDetails":{
 					"description":"Contact details about the user and its organization",
@@ -259,7 +253,6 @@
 		"GUF_FeedbackTarget":{
 			"$anchor":"GUF_FeedbackTarget",
 			"type":"object",
-			"additionalProperties": false, 
 			"properties": {
 				"resourceRef":{
 					"description":"Reference to a resource (e.g. a dataset or metadata record) that is target of the feedback item or a superset of it",
@@ -303,7 +296,6 @@
 		"GUF_ApplicationDomain":{
 			"$anchor":"GUF_ApplicationDomain",
 			"type":"object",
-			"additionalProperties": false, 
 			"properties": {
 				"domain":{
 					"description":"An application domain a user works in",

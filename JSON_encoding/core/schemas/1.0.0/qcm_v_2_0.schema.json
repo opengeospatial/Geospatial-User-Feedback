@@ -7,7 +7,6 @@
 		"QCM_DiscoveredIssue":{
 			"$anchor":"QCM_DiscoveredIssue",
 			"type":"object",
-			"additionalProperties": false, 
 			"properties": {
 				"target":{
 					"description":"Link to the actual resource the publication is about.",
@@ -65,7 +64,6 @@
 		"QCM_Publication":{
 			"$anchor":"QCM_Publication",
 			"type":"object",
-			"additionalProperties": false,
 			"allOf": [
 				{
 				  "$ref": "https://raw.githubusercontent.com/joanma747/Implementation-JSON/main/ShapeChange/results/19115-4-core/geojson/IDENTITY/test/19115-4-core.json#CI_Citation"
@@ -128,7 +126,6 @@
 		"QCM_ReproducibleUsage":{
 			"$anchor":"QCM_ReproducibleUsage",
 			"type":"object",
-			"additionalProperties": false, 
 			"allOf": [
 				{
 				  "$ref": "https://raw.githubusercontent.com/joanma747/Implementation-JSON/main/ShapeChange/results/19115-4-core/geojson/IDENTITY/test/19115-4-core.json#MD_Usage"

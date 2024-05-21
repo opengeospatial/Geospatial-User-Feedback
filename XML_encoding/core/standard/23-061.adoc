@@ -4,17 +4,18 @@
 :lang: en
 :status: draft
 :committee: technical
-:draft: 3.0
-:external-id: http://www.opengis.net/doc/{doc-type}/{standard}/{m.n}
-:docnumber: YY-999
+:draft: 2.0
+:external-id: http://www.opengis.net/doc/IS/guf-xml/2.0
+:docnumber: 23-061
 :received-date: 2029-03-30
 :issued-date: 2029-03-30
 :published-date: 2029-03-30
-:fullname: Editor One
-:fullname_2: Editor Two
+:fullname: Alaitz Zabala
+:fullname_2: Joan Masó
+:fullname_3: Oscar González
 :docsubtype: Interface
 :keywords: ogcdoc, OGC document, API, openapi, html
-:submitting-organizations: Organization One; Organization Two
+:submitting-organizations: UAB-CREAF
 :mn-document-class: ogc
 :mn-output-extensions: xml,html,doc,pdf
 :local-cache-only:

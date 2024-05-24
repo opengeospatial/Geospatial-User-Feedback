@@ -33,6 +33,7 @@ This standard can be used in combination with [2]. In the future, other encoding
 
 //Keywords inserted here by Metanorma
 
+
 == Preface
 
 [NOTE]
@@ -63,6 +64,12 @@ NOTE: The security measures discussed in the following sections only provide var
 
 // Submitting organizations inserted here by Metanorma
 
+The following organizations submitted this Document to the Open Geospatial Consortium Inc.
+
+UAB-CREAF +
+Aston University +
+Fraunhofer Institute
+
 == Submitters
 
 All questions regarding this submission should be directed to the editor or the submitters:
@@ -71,6 +78,8 @@ All questions regarding this submission should be directed to the editor or the 
 |*Name* |*Affiliation*
 // | Name	Company
 |Joan Masó | UAB-CREAF
+| Alaitz Zabala | UAB-CREAF
+| Oscar González | UAB-CREAF
 |Lucy Bastin | Aston University
 |Simon Thum	| Fraunhofer Institute
 |Daniel Nust | 52 North

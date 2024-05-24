@@ -6,5 +6,5 @@
 |Date |Release |Editor | Primary clauses modified |Description
 |2023-06-07 |0.1 |Alaitz Zabala |All | GUF XML implementation v.1.0 transcribed to metanorma 
 |2023-11-24 |0.2 |Alaitz Zabala |All | First version of GUF XML implementation 2.0
-|||||
+|2024-05-23 |0.3 |Alaitz Zabala & Oscar González |all |Reviewed version to present to OGC GUF SWG
 |===

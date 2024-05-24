@@ -23,6 +23,7 @@ All questions regarding this document should be directed to the contacts provide
 [width="80%",options="header"]
 |====================
 |Name |Organization
-|Joan Masó | CREAF
-|Alait Zabala| Universitat Autònoma de Barcelona
+|Joan Masó | UAB-CREAF
+|Alaitz Zabala| UAB-CREAF
+|Oscar González| UAB-CREAF
 |====================

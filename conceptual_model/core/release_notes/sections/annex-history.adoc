@@ -5,4 +5,5 @@
 |===
 |Date |Release |Editor | Primary clauses modified |Description
 |2023-11-22 |0.1 |Alaitz Zabala & Oscar González |all |initial version
+|2024-05-23 |0.2 |Alaitz Zabala & Oscar González |all |Reviewed version to present to OGC GUF SWG
 |===

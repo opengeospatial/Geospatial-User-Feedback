@@ -220,11 +220,9 @@ A numeric is a codelist that has a correspondence to a numeric code. This allows
 
 GUF_RatingCode is intended for implementing a 5 star rating system. This can be used for target resources or for user expertiseLevel. E.g. this is currently used in amazon.com and many other websites.
 
-[#tbl_significant_event_TypeCode_cl,reftext='{table-caption} {counter:table-num}']
-.GUF_SignificantEventTypeCode code list
+[#tbl_rating_code_numeric_code_type,reftext='{table-caption} {counter:table-num}']
+.GUF_RatingCode numeric code type
 [width = "100%",options="header"]
-[.text-center]
-*Table 20 — GUF_RatingCode numeric code type*
 |===
 |*Number* |*Code* |*Definition*
 //[width="90%",options="header",float="center"]

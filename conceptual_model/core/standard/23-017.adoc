@@ -42,7 +42,13 @@ include::sections/clause_5_conventions.adoc[]
 
 include::sections/clause_6_informative_text.adoc[]
 
-include::sections/clause_7_normative_text.adoc[]
+include::sections/clause_7_quality_common.adoc[]
+
+include::sections/clause_8_user_feedback_item.adoc[]
+
+include::sections/clause_9_user_feedback_summary_extension.adoc[]
+
+include::sections/clause_10_user_feedback_collection_extension.adoc[]
 
 //include::sections/clause_8_media_types.adoc[]
 

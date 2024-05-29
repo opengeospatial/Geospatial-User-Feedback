@@ -1,7 +1,7 @@
 = Release Notes for OGC Geospatial User Feedback Standard. Conceptual Model. v.2.0
 :doctype: release-notes
 :language: en
-:status: swg-draft
+:status: draft
 :committee: technical
 :draft: 2.0
 :external-id: http://www.opengis.net/doc/RN/guf-conceptual/2.0

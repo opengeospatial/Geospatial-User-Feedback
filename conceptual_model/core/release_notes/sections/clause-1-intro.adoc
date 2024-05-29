@@ -4,7 +4,7 @@
 
 //short scope of the standard and the general nature of changes
 
-This OGC™ Standard defines a data model for encoding user feedback about geospatial datasets or metadata records describing datasets. It reuses and extends the v.1.0 of the GUF conceptual model (OGC 15-097r1) as well as ISO 19115-1:2024 data model. A set of information classes is defined.
+This OGC™ Standard defines a data model for encoding user feedback about geospatial datasets or metadata records describing datasets. It reuses and extends the v.1.0 of the GUF conceptual model (<<OGC15-097r1>>) as well as ISO 19115-1:2024 data model. A set of information classes is defined.
 
 This OGC® Standard is applicable to metadata catalogue servers and clients that want to exchange geospatial user feedback information.
 

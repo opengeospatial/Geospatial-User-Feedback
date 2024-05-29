@@ -2,6 +2,7 @@
 == Revision History
 
 [width="90%",options="header"]
+.Revision History
 |===
 |Date |Release |Editor | Primary clauses modified |Description
 |2023-11-22 |0.1 |Alaitz Zabala & Oscar González |all |initial version

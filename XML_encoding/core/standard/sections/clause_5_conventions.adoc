@@ -4,6 +4,7 @@
 
 The following namespaces are used in this document. The prefix abbreviations used constitute conventions used here, but are not normative. The namespaces to which the prefixes refer to are normative.
 
+.Namespaces
 |===
 | *Prefix* | *Namespace URI* | *Description* |
 | xsd | http://www.w3.org/2001/XMLSchema | XML Schema namespace |

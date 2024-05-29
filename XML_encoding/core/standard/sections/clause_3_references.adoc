@@ -1,12 +1,13 @@
 [bibliography]
-== References
+== Normative References
 
 The following normative documents contain provisions that, through reference in this text, constitute provisions of this document. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. For undated references, the latest edition of the normative document referred to applies.
 
-* [OGC 15-097r1], _OGC Geospatial User Feedback Standard: Conceptual Model v.1.0_
+* [[[OGC15-097r1, OGC 15-097r1]]], _OGC Geospatial User Feedback Standard: Conceptual Model v.1.0_
 
-* [ISO 19139:2007], _Geographic information -- Metadata -- XML schema implementation_
+* [[[ISO-TS19139, ISO/TS 19139:2007]]], _Geographic information -- Metadata -- XML schema implementation_
 
-* [ISO 19115-3], _Geographic information -- Metadata -- Part 3: XML schemas_ +
+* [[[ISO19115-3, ISO 19115-3:2023]]], _Geographic information -- Metadata -- Part 3: XML schemas_ +
 
-* [ISO 19157-2], _Geographic information -- Data quality-- Part 2: XML schemas_ 
+* [[[ISO-TS19157-2, ISO/TS 19157-2:2016]]], _Geographic information -- Data quality-- Part 2: XML schemas_ 
+

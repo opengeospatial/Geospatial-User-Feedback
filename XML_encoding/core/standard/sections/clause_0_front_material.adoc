@@ -74,6 +74,7 @@ Fraunhofer Institute
 
 All questions regarding this submission should be directed to the editor or the submitters:
 
+.Submitters
 |===
 |*Name* |*Affiliation*
 // | Name	Company

@@ -12,11 +12,13 @@ include::../requirements/requirements_class_user_feedback_item.adoc[]
 
 [#img_feedback_item_1,reftext='{figure-caption} {counter:figure-num}']
 .GUF_FeedbackItem (fragment), GUF_UserInformation and GUF_FeedbackTarget in UML
-image::../figures/FeedbackItem_1.png[width=600,align="center"]
+//image::../figures/FeedbackItem_1.png[width=600,align="center"]
+image::figures/FeedbackItem_1.png[width=600,align="center"]
 
 [#img_feedback_item_2,reftext='{figure-caption} {counter:figure-num}']
 .GUF_FeedbackItem (fragment), description in UML
-image::../figures/FeedbackItem_2.png[width=600,align="center"]
+//image::../figures/FeedbackItem_2.png[width=600,align="center"]
+image::figures/FeedbackItem_2.png[width=600,align="center"]
 
 [#tbl_feedback_item,reftext='{table-caption} {counter:table-num}']
 .GUF_FeedbackItem data type

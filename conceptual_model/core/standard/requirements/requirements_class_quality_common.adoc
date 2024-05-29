@@ -6,6 +6,7 @@
 identifier:: https://www.opengis.net/spec/guf-conceptual/2.0/req/quality-common
 subject:: Quality Common
 inherit:: ISO19115-1:2014 and ISO19157:2013 data models
+
 requirement:: /req/quality-common/citation-of-publications
 requirement:: /req/quality-common/discovered-issue
 requirement:: /req/quality-common/reproducible-usage

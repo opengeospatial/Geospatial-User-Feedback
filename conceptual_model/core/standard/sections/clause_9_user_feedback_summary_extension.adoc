@@ -12,7 +12,8 @@ include::../requirements/requirements_class_user_feedback_summary.adoc[]
 
 [#img_feedback_summary,reftext='{figure-caption} {counter:figure-num}']
 .UFS_FeedbackSummary data model UML diagram
-image::../figures/FeedbackSummary.png[width=600,align="center"]
+//image::../figures/FeedbackSummary.png[width=600,align="center"]
+image::figures/FeedbackSummary.png[width=600,align="center"]
 
 [#tbl_feedback_summary,reftext='{table-caption} {counter:table-num}']
 .UFS_FeedbackSummary data type

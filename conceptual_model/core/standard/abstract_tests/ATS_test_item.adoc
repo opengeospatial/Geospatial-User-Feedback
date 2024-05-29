@@ -1,5 +1,5 @@
-[[ats_core_http]]
-[abstract_test]
+[[ats_core_http_3]]
+[abstract_test_3]
 ====
 [%metadata]
 label:: /conf/feedback-item/item

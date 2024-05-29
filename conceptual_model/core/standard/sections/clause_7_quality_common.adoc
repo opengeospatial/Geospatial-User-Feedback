@@ -15,7 +15,8 @@ include::../requirements/quality-common/citation-of-publications.adoc[]
 
 [#img_publication,reftext='{figure-caption} {counter:figure-num}']
 .QCM_Publication in UML
-image::../figures/Publication.png[width=600,align="center"]
+//image::../figures/Publication.png[width=600,align="center"]
+image::figures/Publication.png[width=600,align="center"]
 
 
 [#tbl_publication_elements,reftext='{table-caption} {counter:table-num}']
@@ -99,7 +100,8 @@ include::../requirements/quality-common/discovered-issue.adoc[]
 
 [#img_discovered_issue,reftext='{figure-caption} {counter:figure-num}']
 .QCM_DiscoveredIssue in UML
-image::../figures/DiscoveredIssue.png[width=600,align="center"]
+//image::../figures/DiscoveredIssue.png[width=600,align="center"]
+image::figures/DiscoveredIssue.png[width=600,align="center"]
 
 [#tbl_discovered_issue,reftext='{table-caption} {counter:table-num}']
 .QCM_DiscoveredIssue data type
@@ -124,7 +126,8 @@ include::../requirements/quality-common/reproducible-usage.adoc[]
 
 [#img_reproducible_usage,reftext='{figure-caption} {counter:figure-num}']
 .QCM_ReproducibleUsage in UML
-image::../figures/ReproducibleUsage.png[width=600,align="center"]
+//image::../figures/ReproducibleUsage.png[width=600,align="center"]
+image::figures/ReproducibleUsage.png[width=600,align="center"]
 
 [#tbl_reproducible_usage,reftext='{table-caption} {counter:table-num}']
 .QCM_ReproducibleUsage extension elements

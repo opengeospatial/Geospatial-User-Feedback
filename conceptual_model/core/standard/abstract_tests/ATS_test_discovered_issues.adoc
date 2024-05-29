@@ -1,5 +1,5 @@
-[[ats_core_http]]
-[abstract_test]
+[[ats_core_http_2]]
+[abstract_test_2]
 ====
 [%metadata]
 label:: /conf/ quality-common/discovered-issues

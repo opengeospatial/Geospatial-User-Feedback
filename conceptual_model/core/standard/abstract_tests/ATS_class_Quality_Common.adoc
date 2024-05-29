@@ -1,5 +1,5 @@
-[[ats_example1]]
-[conformance_class_example1]
+[[ats_example3]]
+[conformance_class_example3]
 ====
 [%metadata]
 label:: http://www.opengis.net/spec/geospatial-user-feedback/1.0/conf/quality-common

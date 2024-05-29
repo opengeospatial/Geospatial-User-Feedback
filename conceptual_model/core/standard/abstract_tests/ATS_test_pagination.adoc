@@ -1,5 +1,5 @@
-[[ats_core_http]]
-[abstract_test]
+[[ats_core_http_4]]
+[abstract_test_4]
 ====
 [%metadata]
 label:: /conf/feedback-collection/pagination

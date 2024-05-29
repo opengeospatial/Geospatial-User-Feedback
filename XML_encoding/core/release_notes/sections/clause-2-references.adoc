@@ -3,7 +3,9 @@
 
 The following normative documents are new or updated references in the standard to which these Release Notes apply.
 
-* [OGC 15-098r1:2016], _OGC Geospatial User Feedback Standard: XML Encoding Extension v.1.0_
+* [[[OGC15-098r1, OGC 15-098r1:2016]]], _OGC Geospatial User Feedback Standard: XML Encoding Extension v.1.0_
+
+* [[[OGC06-121r9, OGC 06-121r9]]], _OGC Web Services Common Standard_
 
 // * [[[Smith81,Identification of Common Molecular Subsequences]]],
 // _Identification of Common Molecular Subsequences_.

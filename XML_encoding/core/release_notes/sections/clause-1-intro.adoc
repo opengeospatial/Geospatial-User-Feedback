@@ -19,8 +19,8 @@ Version 2.0 contains no breaking changes to previous versions, but does contain 
 
 All questions regarding this document should be directed to the contacts provided below or the referenced standard editor(s).
 
-.Contacts
 [width="80%",options="header"]
+.Contacts
 |====================
 |Name |Organization
 |Joan Masó | UAB-CREAF

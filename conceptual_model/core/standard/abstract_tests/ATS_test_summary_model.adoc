@@ -1,5 +1,5 @@
-[[ats_core_http]]
-[abstract_test]
+[[ats_core_http_6]]
+[abstract_test_6]
 ====
 [%metadata]
 label:: /conf/feedback-summary/summary-model

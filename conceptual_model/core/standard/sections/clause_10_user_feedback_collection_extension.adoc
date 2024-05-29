@@ -13,7 +13,8 @@ include::../requirements/requirements_class_user_feedback_collection.adoc[]
 
 [#img_feedback_collection_extensions,reftext='{figure-caption} {counter:figure-num}']
 .User Feedback Collection Extension classes in a UML diagram
-image::../figures/FeedbackCollectionExtensions.png[width=600,align="center"]
+//image::../figures/FeedbackCollectionExtensions.png[width=600,align="center"]
+image::figures/FeedbackCollectionExtensions.png[width=600,align="center"]
 
 [#tbl_feedback_response,reftext='{table-caption} {counter:table-num}']
 .UFC_FeedbackResponse data type

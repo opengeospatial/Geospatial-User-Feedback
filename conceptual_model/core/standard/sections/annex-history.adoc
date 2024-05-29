@@ -2,6 +2,7 @@
 == Revision History
 
 [width="90%",options="header"]
+.Revision History
 |===
 |Date |Release |Author |Paragraph modified |Description
 |2023-06-07 |0.1 |Alaitz Zabala |All | GUF conceptual model v.1.0 transcribed to metanorma 

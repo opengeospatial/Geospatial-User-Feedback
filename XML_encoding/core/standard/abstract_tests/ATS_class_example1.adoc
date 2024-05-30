@@ -47,7 +47,8 @@ Test passes if a file system is used and the encoded instances are files with â€
 [conformance_class_example1]
 ====
 [%metadata]
-Test id:: */conf/quality-common/file-extension*
+//Test id:: */conf/quality-common/file-extension*
+Test id:: */conf/quality-common/encoding-rules*
 Test Purpose:: include::./requirement003.adoc[]
 Test method:: Validate the encoding rules followed +
 Test passes if the encoded instances follow ISO-19139 conformance classes.
@@ -56,7 +57,7 @@ Test passes if the encoded instances follow ISO-19139 conformance classes.
 
 ==== A.1.4	ISO XML schema
 
-[[ats_example3]]
+[[ats_example4]]
 [conformance_class_example1]
 ====
 [%metadata]
@@ -70,7 +71,7 @@ Test passes if encoded instances validates under the ISO XML schemas for ISO1911
 
 ==== A.1.5	Quality common XML schema
 
-[[ats_example3]]
+[[ats_example5]]
 [conformance_class_example1]
 ====
 [%metadata]

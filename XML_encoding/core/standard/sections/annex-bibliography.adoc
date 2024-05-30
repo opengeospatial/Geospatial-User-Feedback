@@ -34,3 +34,5 @@ Springer LNCS is widely used in technical and computer science journals and othe
 [6] ShapeChange. Processing application schemas for geographic information. Website: http://shapechange.net/
 
 [7] ISO 19157:2013, Geographic information -- Data quality
+
+[8] OGC 15-097r1, OGC Geospatial User Feedback Standard: Conceptual Model v.1.0

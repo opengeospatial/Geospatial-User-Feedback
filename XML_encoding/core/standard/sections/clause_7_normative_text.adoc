@@ -12,7 +12,7 @@ This requirements class defines the XML encoding for data model classes that are
 
 include::../requirements/requirements_class_quality_common.adoc[]
 
-The qcm.xsd schema has been derived automatically from the OGC 15-097 UML model [2]. No tables describing the naming of the elements and subelements are reproduced here due to they will be the same specified in the conceptual model.
+The qcm.xsd schema has been derived automatically from the OGC 15-097 UML model [8]. No tables describing the naming of the elements and subelements are reproduced here due to they will be the same specified in the conceptual model.
 
 The following code shows a xml encoding example for QCM_Publication
 

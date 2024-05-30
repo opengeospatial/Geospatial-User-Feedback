@@ -1,5 +1,5 @@
 [obligation=informative]
-== Geospatial User Feedback
+=== Geospatial User Feedback
 
 In addition to metadata provided by the original data provider describing geospatial resources, many users report that they come to trust data based on information about studies performed by their peers. An important element of that trust constitutes not only linking datasets with relevant citations in the scholarly literature, but also a desire for less formal feedback mechanisms such as user comments. As user feedback is a key driver for providers to improve their data products, some data providers have also expressed their desire for a standard such as GUF. (Note that ISO 19115 defines a ‘Citation’ class, but currently this is mainly used to specify a mechanism for citing a dataset, not for linking to external publications about the dataset.). In ISO 19115, the MD_Usage class is a small attempt to address this need, but it appears not to be a suitable or successful means to record user feedback information.
 

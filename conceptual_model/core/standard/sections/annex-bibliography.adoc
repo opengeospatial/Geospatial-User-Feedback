@@ -16,4 +16,4 @@
 
 [7] OGC 15-097r1, OGC Geospatial User Feedback Standard: Conceptual Model v.1.0
 
-[8] OGC 23-061 OGC Geospatial User Feedback Standard: XML Implementation v.2.0
+[8] OGC 23-061, OGC Geospatial User Feedback Standard: XML Implementation v.2.0

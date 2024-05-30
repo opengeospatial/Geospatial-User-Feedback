@@ -7,7 +7,7 @@ The following normative documents are new or updated references in the standard 
 * [[[OGC15-097r1, OGC 15-097r1]]], _OGC Geospatial User Feedback Standard: Conceptual Model v.1.0_
 
 //[[[OGC 06-121r9]]]
-* [[[OGC6-121r9, OGC 06-121r9]]], _OGC Web Service Common Implementation Specification
+* [[[OGC06-121r9, OGC 06-121r9]]], _OGC Web Service Common Implementation Specification
 
 // * [[[Smith81,Identification of Common Molecular Subsequences]]],
 // _Identification of Common Molecular Subsequences_.

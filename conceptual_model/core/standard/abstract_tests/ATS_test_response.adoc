@@ -1,9 +1,11 @@
 [[ats_core_http_5]]
-[abstract_test_5]
+[abstract_test]
 ====
 [%metadata]
-label:: /conf/feedback-collection/response
-subject:: /req/feedback-collection/response
+identifier:: /conf/feedback-collection/response
+target:: /req/feedback-collection/response
+// label:: /conf/feedback-collection/response
+// subject:: /req/feedback-collection/response
 test-purpose:: The class UFC_FeedbackResponse that follows the UML model in Figure 6 with the properties specified in Table 28 shall be used when a grouping of feedback items is needed as a response to a feedback catalogue request. +
 Dependencies: /req/feedback-summary/
 

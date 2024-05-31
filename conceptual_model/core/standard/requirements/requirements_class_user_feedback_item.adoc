@@ -1,6 +1,6 @@
 [[rc_user_feedback_item]]
 [requirements_class]
-.Requirements Class 'User Feedback Item'
+//.Requirements Class 'User Feedback Item'
 ====
 [%metadata]
 identifier:: https://www.opengis.net/spec/guf-conceptual/2.0/req/user-feedback-item

@@ -1,9 +1,11 @@
 [[ats_core_http_4]]
-[abstract_test_4]
+[abstract_test]
 ====
 [%metadata]
-label:: /conf/feedback-collection/pagination
-subject:: /req/feedback-collection/pagination
+identifier:: /conf/feedback-collection/pagination
+target:: /req/feedback-collection/pagination
+// label:: /conf/feedback-collection/pagination
+// subject:: /req/feedback-collection/pagination
 test-purpose:: The class UFC_ResponsePagination that follows the UML model in Figure 6 with the properties specified in Table 30 shall be used when pagination of a catalogue response is needed. +
 Dependencies: /req/feedback-summary/
 

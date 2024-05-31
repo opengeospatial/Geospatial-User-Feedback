@@ -1,9 +1,11 @@
 [[ats_core_http_3]]
-[abstract_test_3]
+[abstract_test]
 ====
 [%metadata]
-label:: /conf/feedback-item/item
-subject:: /req/feedback-item/item
+identifier:: /conf/feedback-item/item
+target:: /req/feedback-item/item
+// label:: /conf/feedback-item/item
+// subject:: /req/feedback-item/item
 test-purpose:: The class GUF_FeedbackItem that follows the UML model in Figure 3 and Figure 4 with the properties specified in Table 6, and other tables referenced in Table 6, shall be used when describing feedback items relating to geospatial resources. +
 Dependency: /req/quality-common
 

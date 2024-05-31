@@ -1,9 +1,12 @@
 [[ats_core_http_2]]
-[abstract_test_2]
+[abstract_test]
 ====
 [%metadata]
-label:: /conf/ quality-common/discovered-issues
-subject:: /req/quality-common/discovered-issues
+identifier:: /conf/ quality-common/discovered-issues
+target:: /req/quality-common/discovered-issues
+
+// label:: /conf/ quality-common/discovered-issues
+// subject:: /req/quality-common/discovered-issues
 test-purpose:: The class QCM_DiscoveredIssue that follows the UML model in Figure 2 with the properties specified in Table 5 shall be used when describing discovered issues in geospatial resources.
 
 [.component,class=test method]

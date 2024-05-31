@@ -1,6 +1,6 @@
 [[rc_user_feedback_summary]]
 [requirements_class]
-.Requirements Class 'Feedback Summary'
+//.Requirements Class 'Feedback Summary'
 ====
 [%metadata]
 identifier:: https://www.opengis.net/spec/guf-conceptual/2.0/req/feedback-summary

@@ -1,9 +1,11 @@
 [[ats_core_http_6]]
-[abstract_test_6]
+[abstract_test]
 ====
 [%metadata]
-label:: /conf/feedback-summary/summary-model
-subject:: /req/feedback-summary/summary-model
+identifier:: /conf/feedback-summary/summary-model
+target:: /req/feedback-summary/summary-model
+// label:: /conf/feedback-summary/summary-model
+// subject:: /req/feedback-summary/summary-model
 test-purpose:: The class UFS_FeedbackSummary that follows the UML model in Figure 5 with the properties specified in Table 21 shall be used when a grouping of feedback items is needed. +
 Dependency: /req/feedback-item
 

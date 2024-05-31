@@ -1,10 +1,13 @@
 [[ats_example3]]
-[conformance_class_example3]
+//[conformance_class_example3]
+[conformance_class]
 ====
 [%metadata]
-label:: http://www.opengis.net/spec/geospatial-user-feedback/1.0/conf/quality-common
-subject:: Requirements Class "Quality Common"
-classification:: Target Type:Web API
+identifier:: http://www.opengis.net/spec/guf-conceptual/2.0/conf/quality-common
+target:: https://www.opengis.net/spec/guf-conceptual/2.0/req/quality-common
+// label:: http://www.opengis.net/spec/guf-conceptual/2.0/conf/quality-common
+// subject:: Requirements Class "Quality Common"
+// classification:: Target Type:Web API
 ====
 
 ==== Publications

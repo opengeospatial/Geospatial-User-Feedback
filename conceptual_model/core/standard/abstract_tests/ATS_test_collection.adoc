@@ -1,9 +1,12 @@
 [[ats_core_http_1]]
-[abstract_test_1]
+[abstract_test]
 ====
 [%metadata]
-label:: /conf/feedback-collection/collection
-subject:: /req/feedback-collection/collection
+identifier:: /conf/feedback-collection/collection
+target:: /req/feedback-collection/collection
+
+// label:: /conf/feedback-collection/collection
+// subject:: /req/feedback-collection/collection
 test-purpose:: The class UFC_FeedbackCollection that follows the UML model in Figure 6 with the properties specified in Table 29 shall be used when a grouping of feedback items is needed. +
 Dependencies: /req/feedback-summary/
 

@@ -1,6 +1,6 @@
 [[rc_quality_common]]
 [requirements_class]
-.Requirements Class 'Quality Common'
+//.Requirements Class 'Quality Common'
 ====
 [%metadata]
 identifier:: https://www.opengis.net/spec/guf-conceptual/2.0/req/quality-common

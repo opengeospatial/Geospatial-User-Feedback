@@ -51,7 +51,8 @@ NOTE: The security measures discussed in the following sections only provide var
 
 //The following organizations submitted this Document to the Open Geospatial Consortium Inc.
 
-:submitting-organizations: UAB-CREAF; Aston University; Fraunhofer Institute
+:submitting-organizations: UAB-CREAF; Aston University
+//; Fraunhofer Institute; 52 North
 
 == Submitters
 
@@ -66,8 +67,8 @@ All questions regarding this submission should be directed to the editor or the 
 | Alaitz Zabala | UAB-CREAF
 | Oscar González | UAB-CREAF
 |Lucy Bastin | Aston University
-|Simon Thum	| Fraunhofer Institute
-|Daniel Nust | 52 North
+// |Simon Thum	| Fraunhofer Institute
+// |Daniel Nust | 52 North
 |===
 
 //== Contributors

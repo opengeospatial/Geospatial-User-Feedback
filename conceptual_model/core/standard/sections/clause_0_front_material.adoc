@@ -26,7 +26,7 @@ This standard is designed to be used combination with an encoding standard. An X
 
 //The following are keywords to be used by search engines and document catalogues.
 
-:keywords:ogcdoc, ogc documents, user feedback, metadata, fitness-for-use, geospatial
+:keywords: ogcdoc, ogc documents, user feedback, metadata, fitness-for-use, geospatial
 
 //== Security considerations
 
@@ -39,7 +39,8 @@ This standard is designed to be used combination with an encoding standard. An X
 
 //The following organizations submitted this Document to the Open Geospatial Consortium Inc.
 
-:submitting-organizations: UAB-CREAF; Aston University; Fraunhofer Institute
+:submitting-organizations: UAB-CREAF; Aston University 
+//; Fraunhofer Institute
 
 [.preface]
 == Submitters
@@ -54,7 +55,7 @@ All questions regarding this submission should be directed to the editor or the 
 | Alaitz Zabala | UAB-CREAF
 | Oscar González | UAB-CREAF
 | Lucy Bastin | Aston University
-| Simon Thum | Fraunhofer Institute
+// | Simon Thum | Fraunhofer Institute
 |===
 
 //== Contributors

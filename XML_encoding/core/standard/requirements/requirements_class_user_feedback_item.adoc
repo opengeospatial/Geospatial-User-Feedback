@@ -5,7 +5,7 @@
 [%metadata]
 identifier:: https://www.opengis.net/spec/guf-schema/2.0/req/user-feedback-item
 subject:: Feedback Item
-inherit:: /req/quality-common
-requirement:: /req/feedback-item/guf-schema
+requirement:: /req/quality-common
+inherit:: /req/feedback-item/guf-schema
 
 ====

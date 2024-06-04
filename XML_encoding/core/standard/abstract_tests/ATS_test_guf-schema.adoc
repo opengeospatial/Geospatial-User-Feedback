@@ -1,0 +1,21 @@
+[[ats_fb_item_xml_schema]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/feedback-item/guf-schema
+target:: /req/feedback-item/guf-schema
+test-purpose:: An XML encoding of a geospatial user feedback item shall use GUF_FeedbackItem and shall validate using the geospatial user feedback item schema guf.xsd
+indirect-dependency:: https://www.opengis.net/spec/guf-schema/2.0/req/user-feedback-item
+
+
+[.component,class=test-method]
+
+[.component,class=step]
+--
+Validate the XML against the right XML schema
+--
+[.component,class=step]
+--
+Test passes if XML elements of the data type GUF_FeedbackItem conform to the http://www.opengis.net/spec/geospatial-user-feedback/1.0/conf/feedback-item and validate against the quality common schema with the XML namespace http://www.opengis.net/guf/1.0/core and encoded in the guf.xsd
+--
+====

@@ -1,0 +1,22 @@
+[[ats_qc_xml_schema]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/quality-common/qcm-schema
+target:: /req/quality-common/qcm-schema
+test-purpose:: An XML encoding of a geospatial user feedback using QCM_Publication or QCM_DiscoveredIssue shall validate using the quality common schema qcm.xsd
+
+indirect-dependency:: https://www.opengis.net/spec/guf-schema/2.0/req/quality-common
+
+
+[.component,class=test-method]
+
+[.component,class=step]
+--
+Validate the XML against the right XML schema
+--
+[.component,class=step]
+--
+Test passes if XML elements of the data type QCM_Publication and QCM_DiscoveredIssue conform to the http://www.opengis.net/spec/geospatial-user-feedback/1.0/conf/quality-common and validate against the quality common schema with the XML namespace http://www.opengis.net/guf/1.0/common and encoded in the qcm.xsd
+--
+====

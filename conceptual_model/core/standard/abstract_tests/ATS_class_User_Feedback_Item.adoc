@@ -4,16 +4,12 @@
 ====
 [%metadata]
 identifier:: http://www.opengis.net/spec/guf-conceptual/2.0/conf/feedback-item
-target:: https://www.opengis.net/spec/guf-conceptual/2.0/req/user-feedback-item
+target:: https://www.opengis.net/spec/guf-conceptual/2.0/req/feedback-item
 // label:: http://www.opengis.net/spec/guf-conceptual/2.0/conf/feedback-item
-// subject:: Requirements Class "User Feedback-item"
-// classification:: Target Type:Web API
+subject:: Conformance Class "User Feedback-item"
+classification:: Target Type:Web API
+conformance-test:: /conf/feedback-item/item
 ====
-
-==== Feedback item
-
-include::./ATS_test_item.adoc[]
-
 
 
 

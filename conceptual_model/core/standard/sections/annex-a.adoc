@@ -9,20 +9,46 @@ A GUF implementation of this standard must satisfy the following system characte
 //Ensure that there is a conformance class for each requirements class and a test for each requirement (identified by requirement name and number)
 
 === Conformance class: Quality Common
-
 include::../abstract_tests/ATS_class_Quality_Common.adoc[]
+
+==== Publications
+include::../abstract_tests/ATS_test_citation_of_publications.adoc[]
+
+==== Discovered Issues
+include::../abstract_tests/ATS_test_discovered_issues.adoc[]
+
+==== Reproducible Usage
+include::../abstract_tests/ATS_test_reproducible_usage.adoc[]
+
 
 === Conformance class: User Feedback-item
 
 include::../abstract_tests/ATS_class_User_Feedback_Item.adoc[]
 
+==== Feedback Item
+include::../abstract_tests/ATS_test_item.adoc[]
+
+
 === Conformance class: Feedback-summary
 
 include::../abstract_tests/ATS_class_Feedback_summary.adoc[]
 
+==== Feedback Summary
+include::../abstract_tests/ATS_test_summary_model.adoc[]
+
+
 === Conformance class: Feedback-collection
 
 include::../abstract_tests/ATS_class_Feedback_collection.adoc[]
+
+==== Feedback collection response
+include::../abstract_tests/ATS_test_response.adoc[]
+
+==== Feedback collection
+include::../abstract_tests/ATS_test_collection.adoc[]
+
+==== Feedback collection response pagination
+include::../abstract_tests/ATS_test_pagination.adoc[]
 
 
 

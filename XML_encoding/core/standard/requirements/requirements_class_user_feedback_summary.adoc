@@ -5,6 +5,6 @@
 [%metadata]
 identifier:: https://www.opengis.net/spec/guf-schema/2.0/req/feedback-summary
 subject:: Feedback Summary
-inherit:: /req/feedback-item
-requirement:: /req/feedback-summary/ufs-schema
+requirement:: /req/feedback-item
+inherit:: /req/feedback-summary/ufs-schema
 ====

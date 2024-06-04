@@ -1,0 +1,10 @@
+[conformance_class]
+====
+[%metadata]
+identifier:: https://www.opengis.net/spec/guf-schema/2.0/conf/user-feedback-item
+target:: https://www.opengis.net/spec/guf-schema/2.0/req/user-feedback-item
+
+subject:: Conformance Class "Feedback Item"
+conformance-test:: /conf/feedback-item/guf-schema
+
+====

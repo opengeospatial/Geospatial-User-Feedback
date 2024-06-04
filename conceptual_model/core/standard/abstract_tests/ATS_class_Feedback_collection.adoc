@@ -4,20 +4,10 @@
 ====
 [%metadata]
 identifier:: http://www.opengis.net/spec/guf-conceptual/2.0/conf/feedback-collection
-target::  https://www.opengis.net/spec/guf-conceptual/2.0/req/user-feedback-collection
+target:: https://www.opengis.net/spec/guf-conceptual/2.0/req/feedback-collection
 //label:: http://www.opengis.net/spec/guf-conceptual/2.0/conf/feedback-collection
-//subject:: Requirements Class "Feedback collection"
-//classification:: Target Type:Web API
+subject:: Conformance Class "Feedback collection"
+classification:: Target Type:Web API
+conformance-test:: /conf/feedback-collection/response
 ====
 
-==== Feedback collection response
-
-include::./ATS_test_response.adoc[]
-
-==== Feedback collection
-
-include::./ATS_test_collection.adoc[]
-
-==== Feedback collection response pagination
-
-include::./ATS_test_pagination.adoc[]

@@ -1,0 +1,22 @@
+[[ats_iso_xml_schema]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/quality-common/iso-schema
+target:: /req/quality-common/iso-schema
+test-purpose::  An XML encoding of a geospatial user feedback shall validate using the schemas ISO19115-3 and ISO19157-2 provided at: http://standards.iso.org/iso/19115/-3 and http://standards.iso.org/iso/19157/-2 respectively
+
+indirect-dependency:: ISO 19115-3 and ISO 19157-2
+
+
+[.component,class=test-method]
+
+[.component,class=step]
+--
+Validate the XML against the right XML schema
+--
+[.component,class=step]
+--
+Test passes if encoded instances validates under the ISO XML schemas for ISO19115-1 and ISO19157-1 that are provided by ISO19115-3 and ISO19157-2 respectively.
+--
+====

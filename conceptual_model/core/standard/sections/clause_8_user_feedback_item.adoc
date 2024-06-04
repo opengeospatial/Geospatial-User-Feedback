@@ -10,6 +10,8 @@ include::../requirements/requirements_class_user_feedback_item.adoc[]
 
 === Feedback Item
 
+include::../requirements/feedback-item/feedback-item.adoc[]
+
 [#img_feedback_item_1,reftext='{figure-caption} {counter:figure-num}']
 .GUF_FeedbackItem (fragment), GUF_UserInformation and GUF_FeedbackTarget in UML
 //image::../figures/FeedbackItem_1.png[width=600,align="center"]

@@ -1,13 +1,13 @@
 [[rc_quality_common]]
 [requirements_class]
-//.Requirements Class 'Quality Common'
+.Requirements Class 'Quality Common'
 ====
 [%metadata]
 identifier:: https://www.opengis.net/spec/guf-conceptual/2.0/req/quality-common
 subject:: Quality Common
-inherit:: ISO19115-1:2014 and ISO19157:2013 data models
 
-requirement:: /req/quality-common/citation-of-publications
-requirement:: /req/quality-common/discovered-issue
-requirement:: /req/quality-common/reproducible-usage
+requirement:: ISO19115-1 and ISO19157 data models
+inherit:: /req/quality-common/citation-of-publications
+inherit:: /req/quality-common/discovered-issue
+inherit:: /req/quality-common/reproducible-usage
 ====

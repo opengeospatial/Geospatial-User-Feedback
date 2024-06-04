@@ -1,0 +1,20 @@
+[[ats_iso_xml_rules]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/quality-common/xml-rules
+target:: /req/quality-common/xml-rules
+test-purpose:: An XML encoding of a geospatial user feedback shall comply with the encoding rules specified in ISO-19139.
+Dependencies: ISO 19139
+
+[.component,class=test-method]
+
+[.component,class=step]
+--
+Validate the encoding rules followed
+--
+[.component,class=step]
+--
+Test passes if the encoded instances follow ISO-19139 conformance classes.
+--
+====

@@ -2,7 +2,7 @@
 :doctype: standard
 :encoding: utf-8
 :lang: en
-:status: draft
+//:status: draft
 :committee: technical
 :draft: 2.0
 :external-id: http://www.opengis.net/doc/IS/guf-xml/2.0

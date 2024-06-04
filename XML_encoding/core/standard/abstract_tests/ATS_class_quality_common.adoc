@@ -1,0 +1,14 @@
+[conformance_class]
+====
+[%metadata]
+identifier:: https://www.opengis.net/spec/guf-schema/2.0/conf/quality-common
+target:: https://www.opengis.net/spec/guf-schema/2.0/req/quality-common
+
+subject:: Conformance Class "Quality Common"
+//classification:: Target Type:Web API
+conformance-test:: /conf/quality-common/file-extension
+conformance-test:: /conf/quality-common/iso-schema
+conformance-test:: /conf/quality-common/mime-type
+conformance-test:: /conf/quality-common/qcm-schema
+conformance-test:: /conf/quality-common/xml-rules
+====

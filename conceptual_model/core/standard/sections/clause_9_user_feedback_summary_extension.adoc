@@ -10,6 +10,8 @@ include::../requirements/requirements_class_user_feedback_summary.adoc[]
 
 === Feedback Summary
 
+include::../requirements/feedback-summary/summary-model.adoc[]
+
 [#img_feedback_summary,reftext='{figure-caption} {counter:figure-num}']
 .UFS_FeedbackSummary data model UML diagram
 //image::../figures/FeedbackSummary.png[width=600,align="center"]

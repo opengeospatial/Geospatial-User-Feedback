@@ -4,5 +4,5 @@
 ====
 [%metadata]
 identifier:: /req/feedback-collection/collection
-part:: The implementations of a feedback collection SHALL follow the UML model as shown in <<img_feedback_collection_extensions>> with the properties specified in <<tbl_feedback_collection>>
+part:: The implementations of a feedback collection SHALL follow the UML model as shown in <<img_feedback_collection_extensions>> with the properties specified in <<tbl_feedback_collection>>.
 ====

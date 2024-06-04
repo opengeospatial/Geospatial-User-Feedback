@@ -2,7 +2,7 @@
 :doctype: standard
 :encoding: utf-8
 :lang: en
-:status: draft
+//:status: 
 :committee: technical
 :draft: 2.0
 :external-id: http://www.opengis.net/doc/IS/guf-conceptual/2.0

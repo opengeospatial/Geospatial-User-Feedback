@@ -1,11 +1,12 @@
 [[rc_user_feedback_summary]]
 [requirements_class]
-//.Requirements Class 'Feedback Summary'
+.Requirements Class 'Feedback Summary'
 ====
 [%metadata]
 identifier:: https://www.opengis.net/spec/guf-conceptual/2.0/req/feedback-summary
 subject:: Feedback Summary
 
-inherit:: /req/feedback-item
-requirement:: /req/feedback-summary/summary-model
+//inherit:: /req/feedback-item/item
+requirement:: /req/user-feedback-item/item
+inherit:: /req/feedback-summary/summary-model
 ====

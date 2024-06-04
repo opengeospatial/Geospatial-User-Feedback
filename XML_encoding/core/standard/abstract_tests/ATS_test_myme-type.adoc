@@ -1,0 +1,19 @@
+[[ats_qc_mime_type]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/quality-common/mime-type
+target:: /req/quality-common/mime-type
+test-purpose:: An XML encoding of a geospatial user feedback shall adopt the XML MIME type of application/xml
+
+[.component,class=test-method]
+
+[.component,class=step]
+--
+Validate the MIME type
+--
+[.component,class=step]
+--
+Test passes if the encoded instances have the associated MIME type application/xml.
+--
+====

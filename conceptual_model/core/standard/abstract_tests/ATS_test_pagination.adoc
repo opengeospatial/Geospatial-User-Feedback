@@ -6,11 +6,11 @@ identifier:: /conf/feedback-collection/pagination
 target:: /req/feedback-collection/pagination
 // label:: /conf/feedback-collection/pagination
 // subject:: /req/feedback-collection/pagination
-test-purpose:: The class UFC_ResponsePagination that follows the UML model in Figure 6 with the properties specified in Table 30 shall be used when pagination of a catalogue response is needed. +
-Dependencies: /req/feedback-summary/
+test-purpose:: The class UFC_ResponsePagination that follows the UML model in <<img_feedback_collection_extensions>> with the properties specified in <<tbl_response_pagination>> shall be used when pagination of a catalogue response is needed.
+indirect-dependency:: https://www.opengis.net/spec/guf-conceptual/2.0/req/feedback-summary
 
-[.component,class=test method]
-=====
+[.component,class=test-method]
+
 [.component,class=step]
 --
 Validate the requirements of feedback collection responses with pagination.
@@ -18,7 +18,6 @@ Validate the requirements of feedback collection responses with pagination.
 
 [.component,class=step]
 --
-Test passes if feedback collection response instances that were requested with a pagination mechanism point to the UFC_ResponsePagination data type and follow the data model specified in Table 30.
+Test passes if feedback collection response instances that were requested with a pagination mechanism point to the UFC_ResponsePagination data type and follow the data model specified in <<tbl_response_pagination>>.
 --
-=====
 ====

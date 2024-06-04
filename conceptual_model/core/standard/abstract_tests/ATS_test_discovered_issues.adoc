@@ -2,15 +2,15 @@
 [abstract_test]
 ====
 [%metadata]
-identifier:: /conf/ quality-common/discovered-issues
-target:: /req/quality-common/discovered-issues
+identifier:: /conf/quality-common/discovered-issue
+target:: /req/quality-common/discovered-issue
 
 // label:: /conf/ quality-common/discovered-issues
 // subject:: /req/quality-common/discovered-issues
-test-purpose:: The class QCM_DiscoveredIssue that follows the UML model in Figure 2 with the properties specified in Table 5 shall be used when describing discovered issues in geospatial resources.
+test-purpose:: The class QCM_DiscoveredIssue that follows the UML model in <<img_discovered_issue>> with the properties specified in <<tbl_discovered_issue>> shall be used when describing discovered issues in geospatial resources.
 
-[.component,class=test method]
-=====
+[.component,class=test-method]
+
 [.component,class=step]
 --
 Validate the requirements of discovered issues.
@@ -18,7 +18,6 @@ Validate the requirements of discovered issues.
 
 [.component,class=step]
 --
-Test passes if discovered issues instances point to the QCM_DiscoveredIssue data type and follow the data model specified in Table 5.
+Test passes if discovered issues instances point to the QCM_DiscoveredIssue data type and follow the data model specified in <<tbl_discovered_issue>>.
 --
-=====
 ====

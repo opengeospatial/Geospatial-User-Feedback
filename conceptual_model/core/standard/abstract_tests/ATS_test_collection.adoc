@@ -7,11 +7,11 @@ target:: /req/feedback-collection/collection
 
 // label:: /conf/feedback-collection/collection
 // subject:: /req/feedback-collection/collection
-test-purpose:: The class UFC_FeedbackCollection that follows the UML model in Figure 6 with the properties specified in Table 29 shall be used when a grouping of feedback items is needed. +
-Dependencies: /req/feedback-summary/
+test-purpose:: The class UFC_FeedbackCollection that follows the UML model in <<img_feedback_collection_extensions>> with the properties specified in <<tbl_feedback_collection>> shall be used when a grouping of feedback items is needed.
+indirect-dependency:: https://www.opengis.net/spec/guf-conceptual/2.0/req/feedback-summary
 
-[.component,class=test method]
-=====
+[.component,class=test-method]
+
 [.component,class=step]
 --
 Validate the requirements of feedback collections
@@ -19,7 +19,6 @@ Validate the requirements of feedback collections
 
 [.component,class=step]
 --
-Test passes if feedback collection instances point to the UFC_FeedbackCollection data type and follow the data model specified in Table 29 and its dependencies.
+Test passes if feedback collection instances point to the UFC_FeedbackCollection data type and follow the data model specified in <<tbl_feedback_collection>> and its dependencies.
 --
-=====
 ====

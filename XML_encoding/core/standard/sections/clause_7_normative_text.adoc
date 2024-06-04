@@ -11,6 +11,12 @@ This requirements class defines the XML encoding for data model classes that are
 
 
 include::../requirements/requirements_class_quality_common.adoc[]
+include::../requirements/quality-common/mime-type.adoc[]
+include::../requirements/quality-common/file-extension.adoc[]
+include::../requirements/quality-common/xml-rules.adoc[]
+include::../requirements/quality-common/iso-schema.adoc[]
+include::../requirements/quality-common/qcm-schema.adoc[]
+
 
 The qcm.xsd schema has been derived automatically from the OGC 15-097 UML model [8]. No tables describing the naming of the elements and subelements are reproduced here due to they will be the same specified in the conceptual model.
 
@@ -278,6 +284,8 @@ This requirements class defines the data model classes that are involved in the 
 Each one of the previous examples is considered an “item” of feedback. Geospatial User Every item is set into a context by a combination of target, citations and scope. Feedback can be provided both about data or metadata.
 
 include::../requirements/requirements_class_user_feedback_item.adoc[]
+include::../requirements/feedback-item/guf-schema.adoc[]
+
 
 The guf.xsd schema has been derived automatically from the OGC 15-097 UML model. No tables describing the naming of the elements and subelements are reproduced here due to they will be the same specified in the conceptual model.
 

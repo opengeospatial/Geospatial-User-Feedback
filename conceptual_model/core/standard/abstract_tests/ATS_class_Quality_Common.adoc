@@ -6,15 +6,9 @@
 identifier:: http://www.opengis.net/spec/guf-conceptual/2.0/conf/quality-common
 target:: https://www.opengis.net/spec/guf-conceptual/2.0/req/quality-common
 // label:: http://www.opengis.net/spec/guf-conceptual/2.0/conf/quality-common
-// subject:: Requirements Class "Quality Common"
-// classification:: Target Type:Web API
+subject:: Conformance Class "Quality Common"
+classification:: Target Type:Web API
+conformance-test:: /conf/quality-common/citation-of-publications
+conformance-test:: /conf/quality-common/discovered-issue
+conformance-test:: /conf/quality-common/reproducible-usage
 ====
-
-==== Publications
-
-include::./ATS_test_citation_of_publications.adoc[]
-
-==== Discovered Issues
-
-include::./ATS_test_discovered_issues.adoc[]
-

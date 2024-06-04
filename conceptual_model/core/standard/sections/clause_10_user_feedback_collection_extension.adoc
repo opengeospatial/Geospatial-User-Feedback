@@ -16,6 +16,8 @@ include::../requirements/requirements_class_user_feedback_collection.adoc[]
 //image::../figures/FeedbackCollectionExtensions.png[width=600,align="center"]
 image::figures/FeedbackCollectionExtensions.png[width=600,align="center"]
 
+include::../requirements/feedback-collection/response.adoc[]
+
 [#tbl_feedback_response,reftext='{table-caption} {counter:table-num}']
 .UFC_FeedbackResponse data type
 [width = "100%",options="header"]
@@ -24,6 +26,8 @@ image::figures/FeedbackCollectionExtensions.png[width=600,align="center"]
 //[width="90%",options="header",float="center"]
 |collection |Collection of feedback items |UFC_FeedbackCollection data type (see Table 31) |One or more (mandatory)
 |===
+
+include::../requirements/feedback-collection/collection.adoc[]
 
 [#tbl_feedback_collection,reftext='{table-caption} {counter:table-num}']
 .UFC_FeedbackCollection data type
@@ -37,6 +41,8 @@ If the target of the citation is specified by another part of the data model thi
 |summary |Summary of the feedback items |UFS_FeedbackSummary data type (see Table 23) |Zero or one (optional)
 |pagination |Information about the page structure of the collection |UFC_ResponsePagination (see Table 32) |Zero or one (optional)
 |===
+
+include::../requirements/feedback-collection/pagination.adoc[]
 
 [#tbl_response_pagination,reftext='{table-caption} {counter:table-num}']
 .UFC_ResponsePagination data type

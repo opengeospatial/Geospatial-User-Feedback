@@ -4,13 +4,11 @@
 ====
 [%metadata]
 identifier:: http://www.opengis.net/spec/guf-conceptual/2.0/conf/feedback-summary
-target::  https://www.opengis.net/spec/guf-conceptual/2.0/req/feedback-summary
+target:: https://www.opengis.net/spec/guf-conceptual/2.0/req/feedback-summary
 // label:: http://www.opengis.net/spec/guf-conceptual/2.0/conf/feedback-summary
-// subject:: Requirements Class "Feedback summary"
-// classification:: Target Type:Web API
+subject:: Conformance Class "Feedback summary"
+classification:: Target Type:Web API
+
+conformance-test:: /conf/feedback-summary/summary-model
 ====
-
-==== Feedback summary
-
-include::./ATS_test_summary_model.adoc[]
 

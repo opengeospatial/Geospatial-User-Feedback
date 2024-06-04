@@ -4,6 +4,6 @@
 ====
 [%metadata]
 identifier:: /req/feedback-summary/summary-model
-part:: The implementations of a feedback summary SHALL follow the UML model as shown in <<img_feedback_summary>> with the properties specified in <<tbl_feedback_summary>>
+part:: The implementations of a feedback summary SHALL follow the UML model as shown in <<img_feedback_summary>> with the properties specified in <<tbl_feedback_summary>>.
 ====
 

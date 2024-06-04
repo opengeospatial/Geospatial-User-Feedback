@@ -1,0 +1,21 @@
+[[ats_core_http_7]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/quality-common/reproducible-usage
+target:: /req/quality-common/reproducible-usage
+
+test-purpose:: The class QCM_ReproducibleUsage that follows the UML model in <<img_reproducible_usage>> with the properties specified in <<tbl_reproducible_usage>> shall be used when describing reproducible usage in geospatial resources.
+
+[.component,class=test-method]
+
+[.component,class=step]
+--
+Validate the requirements of reproducible usage.
+--
+
+[.component,class=step]
+--
+Test passes if reproducible usage instances point to the QCM_ReproducibleUsage data type and follow the data model specified in <<tbl_reproducible_usage>>.
+--
+====

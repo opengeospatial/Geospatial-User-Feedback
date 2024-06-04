@@ -1,10 +1,37 @@
-[appendix]
+[appendix,obligation=normative]
+[[annex-ats]]
 == Conformance Class Abstract Test Suite (Normative)
+=== Introduction
 
-[NOTE]
-Ensure that there is a conformance class for each requirements class and a test for each requirement (identified by requirement name and number)
+A GUF XML implementation of this standard must satisfy the following system characteristics to be conformant with this specification.
 
-=== Conformance Class A
+//[NOTE]
+//Ensure that there is a conformance class for each requirements class and a test for each requirement (identified by requirement name and number)
 
-//include::abstract_tests/ATS_class_example1.adoc[]
-include::../abstract_tests/ATS_class_example1.adoc[]
+=== Conformance class: Quality Common
+include::../abstract_tests/ATS_class_quality_common.adoc[]
+==== MIME type
+include::../abstract_tests/ATS_test_myme-type.adoc[]
+==== File extension
+include::../abstract_tests/ATS_test_file_extension.adoc[]
+==== ISO XML rules
+include::../abstract_tests/ATS_test_xml-rules.adoc[]
+==== ISO XML schema
+include::../abstract_tests/ATS_test_iso-schema.adoc[]
+==== Quality common XML schema
+include::../abstract_tests/ATS_test_qcm-schema.adoc[]
+
+=== Conformance class: User Feedback-item
+include::../abstract_tests/ATS_class_user_feedback_item.adoc[]
+==== Feedback item XML schema
+include::../abstract_tests/ATS_test_guf-schema.adoc[]
+
+=== Conformance class: Feedback-summary
+include::../abstract_tests/ATS_class_user_feedback_summary.adoc[]
+==== Feedback summary XML schema
+include::../abstract_tests/ATS_test_ufs-schema.adoc[]
+
+=== Conformance class: Feedback-collection
+include::../abstract_tests/ATS_class_user_feedback_collection_extension.adoc[]
+==== Feedback collection XML schema
+include::../abstract_tests/ATS_test_ufc-schema.adoc[]

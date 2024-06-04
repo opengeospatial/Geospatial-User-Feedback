@@ -4,14 +4,14 @@
 [%metadata]
 identifier:: /conf/feedback-item/item
 target:: /req/feedback-item/item
+
 // label:: /conf/feedback-item/item
 // subject:: /req/feedback-item/item
-test-purpose:: The class GUF_FeedbackItem that follows the UML model in Figure 3 and Figure 4 with the properties specified in Table 6, and other tables referenced in Table 6, shall be used when describing feedback items relating to geospatial resources. +
-Dependency: /req/quality-common
+test-purpose:: The class GUF_FeedbackItem that follows the UML model in <<img_feedback_item_1>> and <<img_feedback_item_2>> with the properties specified in <<tbl_feedback_item>>, and other tables referenced in <<tbl_feedback_item>>, shall be used when describing feedback items relating to geospatial resources.
+indirect-dependency:: https://www.opengis.net/spec/guf-conceptual/2.0/req/quality-common
 
+[.component,class=test-method]
 
-[.component,class=test method]
-=====
 [.component,class=step]
 --
 Validate the requirements of feedback items
@@ -19,7 +19,6 @@ Validate the requirements of feedback items
 
 [.component,class=step]
 --
-Test passes if feedback item instances point to the GUF_FeedbackItem data type and follow the data model specified in Table 6 and its dependencies.
+Test passes if feedback item instances point to the GUF_FeedbackItem data type and follow the data model specified in <<tbl_feedback_item>> and its dependencies.
 --
-=====
 ====

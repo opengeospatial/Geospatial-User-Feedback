@@ -1,0 +1,19 @@
+[[ats_file_extension]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/quality-common/file-extension
+target:: /req/quality-common/file-extension
+test-purpose:: An XML encoding of a geospatial user feedback shall use the file extension ‘.xml’
+
+[.component,class=test-method]
+
+[.component,class=step]
+--
+Validate the file extension
+--
+[.component,class=step]
+--
+Test passes if a file system is used and the encoded instances are files with ‘.xml’ file extension
+--
+====

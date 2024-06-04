@@ -5,10 +5,10 @@
 [%metadata]
 identifier:: https://www.opengis.net/spec/guf-schema/2.0/req/quality-common
 subject:: Quality Common
-inherit:: ISO 19115-3, ISO 19157-2 and ISO 19139 schemas
-requirement:: /req/quality-common/mime-type
-requirement:: /req/quality-common/file-extension
-requirement:: /req/quality-common/xmlrules
-requirement:: /req/quality-common/iso-schema
-requirement:: /req/quality-common/qcm-schema
+requirement:: ISO 19115-3, ISO 19157-2 and ISO 19139 schemas
+inherit:: /req/quality-common/mime-type
+inherit:: /req/quality-common/file-extension
+inherit:: /req/quality-common/xmlrules
+inherit:: /req/quality-common/iso-schema
+inherit:: /req/quality-common/qcm-schema
 ====

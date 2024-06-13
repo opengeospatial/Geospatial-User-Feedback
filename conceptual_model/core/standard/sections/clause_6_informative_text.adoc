@@ -1,14 +1,24 @@
 [obligation=informative]
 === Geospatial User Feedback
 
-In addition to metadata provided by the original data provider describing geospatial resources, many users report that they come to trust data based on information about studies performed by their peers. An important element of that trust constitutes not only linking datasets with relevant citations in the scholarly literature, but also a desire for less formal feedback mechanisms such as user comments. As user feedback is a key driver for providers to improve their data products, some data providers have also expressed their desire for a standard such as GUF. (Note that ISO 19115 defines a ‘Citation’ class, but currently this is mainly used to specify a mechanism for citing a dataset, not for linking to external publications about the dataset.). In ISO 19115, the MD_Usage class is a small attempt to address this need, but it appears not to be a suitable or successful means to record user feedback information.
+In addition to metadata provided by the original data provider describing geospatial resources, many users report that they trust data based on information about studies performed by their peers. An important element of that trust constitutes not only linking datasets with relevant citations in the scholarly literature, but also a desire for less formal feedback mechanisms such as user comments. As user feedback is a key driver for providers to improve their data products, some data providers have also expressed their desire for a standard such as GUF. (Note that ISO 19115 defines a ‘Citation’ class, but currently this is mainly used to specify a mechanism for citing a dataset, not for linking to external publications about the dataset.). In ISO 19115-1:2014 - Geographic information -- Metadata, the MD_Usage class is an attempt to address this need, but it appears not to be a suitable or successful means to record user feedback information.
 
 The purpose of providing user feedback is to inform other users and data providers about use cases and experiences using a given geospatial resource. The goal is to collect requirements for data that providers can incorporate into objective quality measures for their products, allowing providers to meet the real needs of users and potentially to find new markets for their data.
 
-The GUF model makes an effort to remain as simple as possible but comprehensive enough, in order to allow for simple user interfaces that can cover different levels of expertise on geospatial data usage. The following are examples of what the GUF model allows: commenting, asking questions, providing answers (the GUF_UserComment class), rating data (GUF_Rating), citing publications (QCM_Publication), providing a quality measure (additionalQuality), documenting additional lineage information (additionalLineageSteps), describing the usage (GUF_UsageReport or GUF_ReproducibleUsage) or emphasizing a significant event that conditions the interpretation of a dataset (GUF_SignificantEvent). Each one of the previous examples is considered an “item” of feedback as in the first version of the GUF conceptual model [7]. Feedback items can be arranged in collections and a summary description of the collection is also modeled. Geospatial User Feedback can be provided both about data or metadata.
+In order to allow for simple user interfaces that can cover different levels of expertise on geospatial data usage, the GUF model is designed to be as simple as possible but comprehensive enough. Following are examples of what the GUF model allows: 
+
+* Commenting, asking questions, providing answers (the GUF_UserComment class)
+* Rating data (GUF_Rating)
+* Citing publications (QCM_Publication)
+* Providing a quality measure (additionalQuality) 
+* Documenting additional lineage information (additionalLineageSteps)
+* Describing the usage (GUF_UsageReport or GUF_ReproducibleUsage) or
+* Emphasizing a significant event that conditions the interpretation of a dataset (GUF_SignificantEvent). 
+
+As in the first version of the GUF conceptual model [7], each one of the previous examples is considered an “item” of feedback. Feedback items can be arranged in collections and a summary description of the collection is also modeled. Geospatial User Feedback can be provided for both data or metadata.
 
 === Quality Common
 
-This standard reuses elements of the geospatial metadata work and standard defined and maintained by ISO TC 211. This forms the basis of a data model class list that is common and useful for both quality metadata and user feedback metadata. Some classes have been added to meet the requirements for expressing user feedback.
+The GUF Standard reuses elements of the geospatial metadata work and standard [ISO19115-1]. This forms the basis of a data model class list that is common and useful for both quality metadata and user feedback metadata. Some classes have been added to meet the requirements for expressing user feedback.
 
 //=== Clauses not containing normative material sub-clause 2

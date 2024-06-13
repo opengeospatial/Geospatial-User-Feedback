@@ -11,7 +11,7 @@
 
 //All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.
 
-The data dictionary for this standard is specified in a series of tables. The contents of the columns in these tables are described in Table 1.
+The data dictionary for the GUF Conceptual Model is specified in a series of tables. The contents of the columns in these tables are described in <<tbl_contents>>.
 
 [#tbl_contents,reftext='{table-caption} {counter:table-num}']
 .Contents of data dictionary tables
@@ -19,8 +19,8 @@ The data dictionary for this standard is specified in a series of tables. The co
 |===
 |*Column title* | *Column contents* 
 |Name 
-(left column) |The name is the UML model attribute or association role name. +
-The name capitalization rules used are specified in Subclause 11.6.2 of OGC 06-121r9 [1]. Some names in the tables may appear to contain spaces, but no names contain spaces.
+(left column) |_"name"_ is the UML model attribute or association role name. +
+The _name_ capitalization rules used are specified in Subclause 11.6.2 of OGC 06-121r9 [1]. Some _names_ in the tables may appear to contain spaces, but no _names_ contain spaces.
 |Definition 
 (second column) | Specifies the definition of this parameter (omitting unnecessary words such as “a”, “the”, and “is”). If the parameter value is the identifier of something, not a description or definition, the definition of this parameter should read something like “Identifier of ...”.
 | Data type and value (third column) or Data type 
@@ -33,14 +33,14 @@ The optional second item in the third column of each table should indicate the s
 or Multiplicity (if are no second items are included in rows of table) 
 |Normally contains two items: +
 The first item specifies the multiplicity and optionality of this parameter in this data structure, either “One (mandatory)”, “One or more (mandatory)”, “Zero or one (optional)”, or “Zero or more (optional)”. +
-The second item in the right column of each table specify how any multiplicity other than “One (mandatory)” is used. If that parameter is optional, under what condition(s) shall that parameter be included or not included?  If that parameter can be repeated, for what is that parameter repeated? 
+The second item in the right column of each table specifies how any multiplicity other than “One (mandatory)” is used. If that parameter is optional, under what condition(s) shall that parameter be included or not included?  If that parameter can be repeated, for what is that parameter repeated? 
 |===
 
 When the data type used in the third column of such a table, is an enumeration or code list in which all the values are listed, together with the meaning of each value. When this information is extensive, these values and meanings are specified in a separate table that is referenced in the third column of the table row.
 
 The data type of many parameters, in the third table column, is specified as “Character String type, not empty”.
 
-The contents of these data dictionary tables are normative, including any table footnotes.
+The content of these data dictionary tables are normative, including any table footnotes.
 
 In the data dictionary tables three background colors are used:
 
@@ -62,4 +62,4 @@ Unified Modeling Language (UML) static structure diagrams appearing in this stan
 
 === Core and Extension Breakdown
 
-The Geospatial User Feedback standard follows the modular specification design pattern as described in OGC 08-131r3 [6]. The contributors to this standard decided that the requirements would be split into a core (quality common and geospatial user feedback item) and extensions for summary statistics and geospatial user feedback collections. In addition, other standards in the GUF series will potentially provide specific encodings of the data model provided in this document. For example, the OGC OGC Geospatial User Feedback Standard OGC 23-061 [8] XML Encoding Extension v 2.0 is initially provided for this v.2.0 of the conceptual model. A JSON encoding is expected in the near future.
+The OGC Geospatial User Feedback (GUF) Standard follows the modular specification design pattern as described in OGC 08-131r3 [6]. The contributors to the GUF Standard decided that the requirements would be split into a core (quality common and geospatial user feedback item) and extensions for summary statistics and geospatial user feedback collections. In addition, other standards in the GUF series will potentially provide specific encodings of the data model specified in this document. For example, the OGC Geospatial User Feedback Standard OGC 23-061 [8] XML Encoding Extension v 2.0 is initially provided for this v.2.0 of the conceptual model. A JSON encoding is expected in the near future.

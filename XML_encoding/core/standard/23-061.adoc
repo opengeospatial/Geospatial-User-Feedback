@@ -1,4 +1,4 @@
-= OGC Geospatial User Feedback Standard. XML Encoding Extension. v.2.0
+= OGC Geospatial User Feedback Standard: XML Encoding Extension. v.2.0
 :doctype: standard
 :encoding: utf-8
 :lang: en

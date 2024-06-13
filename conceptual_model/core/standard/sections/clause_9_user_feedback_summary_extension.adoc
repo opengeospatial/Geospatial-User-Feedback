@@ -3,7 +3,7 @@
 
 === Overview
 
-This requirements class defines the data model classes that allow for encoding summary statistics of feedback items that share the same target.
+The User Feedback Summary Extensions requirements class defines the data model classes that support encoding summary statistics of feedback items that share the same target.
 
 include::../requirements/requirements_class_user_feedback_summary.adoc[]
 

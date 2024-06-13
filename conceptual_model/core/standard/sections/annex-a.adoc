@@ -1,9 +1,9 @@
 [appendix,obligation=normative]
 [[annex-ats]]
-== Conformance Class Abstract Test Suite (Normative)
+== Abstract Test Suite (Normative)
 === Introduction
 
-A GUF implementation of this standard must satisfy the following system characteristics to be conformant with this specification.
+A conformant implementation of this Standard must satisfy the following system characteristics.
 
 //[NOTE]
 //Ensure that there is a conformance class for each requirements class and a test for each requirement (identified by requirement name and number)

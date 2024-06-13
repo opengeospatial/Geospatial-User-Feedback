@@ -3,7 +3,7 @@
 
 === Overview
 
-This requirements class defines the data model classes that are involved in the definition of an individual user feedback item. A feedback item is the container of the actual feedback. Every item is set into a context by a combination of target, citations and scope.
+The User Feedback Item requirements class defines the data model classes that are involved in the definition of an individual user feedback item. A feedback item is the container of the actual feedback. Every item is set into a context by a combination of target, citations and scope.
 
 include::../requirements/requirements_class_user_feedback_item.adoc[]
 
@@ -46,7 +46,7 @@ image::figures/FeedbackItem_2.png[width=600,align="center"]
 |{set:cellbgcolor:#D6EAF8}additionalLineageSteps | Additional lineage steps not included in the producer metadata | LI_Lineage data type (ISO 19115-1:2014 B.2.5) |  Zero or one (optional) ^b^
 |{set:cellbgcolor:#D6EAF8/}significantEvent | Significant natural events or sensor or platform anomalies that can affect the interpretation of the data. | GUF_SignificantEvent (see Table 18) |  Zero or more (optional) ^b^
 |target | Identifies a pre-existing resource (e.g., a dataset or a metadata record) from a catalogue. | GUF_FeedbackTarget (see Table 11)|  One or more (mandatory)
-4+| ^a^ The idea is for a single user to be able to embody more than one role, but only one in each item. Thus, a data producer employee may comment and normally speak freely as an end user, but may, for example, issue a metadata override on behalf of the data provider if s/he explicitly chooses that role. S/he would only be allowed to choose roles from his/her user information, and maybe there could be additional restrictions. So users seeking reliable but "semi-official" metadata could look for overrides issued by the provider in that role. +
+4+| ^a^ The idea is for a single user to be able to embody more than one role, but only one role in each item. Thus, a data producer employee may comment and normally speak freely as an end user, but may, for example, issue a metadata override on behalf of the data provider if s/he explicitly chooses that role. S/he would only be allowed to choose roles from his/her user information, and maybe there could be additional restrictions. So users seeking reliable but "semi-official" metadata could look for overrides issued by the provider in that role. +
 ^b^ 	If none of these elements are populated, the item does not provide feedback and should be considered empty.
 |===
 
@@ -91,16 +91,16 @@ image::figures/FeedbackItem_2.png[width=600,align="center"]
 [width = "100%",options="header"]
 |===	
 |*Name* | *Definition*	| *Data type and values* | *Multiplicity and use*
-|resourceRef ^a^ | Reference to a resource (e.g. a dataset or metadata record) that is target of the feedback item or a superset of it ^b^ |CI_Citation data type (ISO 19115-1:2014 B.3.2.1) | One or more (mandatory) ^c^
+|resourceRef ^a^ | Reference to a resource (e.g. a dataset or metadata record) that is the target of the feedback item or a superset of it ^b^ |CI_Citation data type (ISO 19115-1:2014 B.3.2.1) | One or more (mandatory) ^c^
 |metadataIdentifier ^f^ |Identifier for a metadata record about the resource |MD_Identifier data type (ISO 19115-1:2014 B.3.3.3) |Zero or more (optional)
-|scope |Describes a type of resource the feedback is about; typically a dataset, a metadata record, a feature... or a subsets of a dataset or resource. |MD_scope data type (ISO 19115-1:2014 B.3.3.1) |Zero or one (optional) ^b^
+|scope |Describes a type of resource the feedback is about, typically a dataset, a metadata record, a feature... or a subset of a dataset or resource. |MD_scope data type (ISO 19115-1:2014 B.3.3.1) |Zero or one (optional) ^b^
 |role |The role of the target with respect to the feedback item ^g^ |GUF_TargetRoleCode code (see Table 12) | One (mandatory)
 |parent |Parent of the cited resource ^d^ |GUF_FeedbackTarget data type (see this table) |Zero or one (optional) 
 |child |Child of the cited resource ^e^ |GUF_FeedbackTarget data type (see this table) |Zero or more (optional)
 4+| ^a^	Do not confuse this data type with itemIsReplyTo in GUF_FeedbackItem. In the case where a feedback item replies to another feedback item, this is indicated in itemIsReplyTo. It is expected that the targets of both items are identical including the same resourceRef. +
 ^b^	If the reference cites a superset of the feedback target, use ‘scope’ to define the right subset of the resource referenced. +
-^c^	If more than one is provided they shall point to the same resource. If you have more than one resource, use more than one GUF_FeedbackTarget elements. +
-^d^	This may be used to present feedback to users grouped by the parent resources: for example, a user evaluating the quality of a single remotely-sensed image tile may also wish to see feedback on the global set of tiles, or all feedback relating to the entire data collection campaign. +
+^c^	If more than one is provided they shall point to the same resource. If there is more than one resource, use more than one GUF_FeedbackTarget elements. +
+^d^	This may be used to present feedback to users grouped by the parent resources. For example, a user evaluating the quality of a single remotely-sensed image tile may also wish to see feedback on the global set of tiles, or all feedback relating to the entire data collection campaign. +
 ^e^	If the target is a collection, this can be used to mention its members. +
 ^f^ If the resource is a metadata record, this element should not be populated; use resourceRef/citation/identifier instead. +
 ^g^ Corrigenda: in GUF v.1 Conceptual model documentation the role attribute appeared as "targetType". Not in the UML models and XSD schemas, where "role" attribute was correctly documented.
@@ -113,7 +113,7 @@ image::figures/FeedbackItem_2.png[width=600,align="center"]
 |*Name* | *Definition*
 |primary | Identifies a pre-existing resource that is the subject of the feedback item, i.e. points to the resources the feedback is about.
 |secondary | Referenced resources, implying that the feedback item might be relevant to the referenced resource.
-|supplementary | Identifiers to additional references, e.g., another region in another dataset with similar problems. It is used to formally model references that somehow are related to the feedback item at hand, but does not imply that the feedback is relevant for the referenced subject. (An exemplary resource reference should be of this code; such feedback would not typically be shown with the resource).
+|supplementary | Identifiers to additional references, e.g., another region in another dataset with similar problems. It is used to formally model references that somehow are related to the feedback item at hand but does not imply that the feedback is relevant for the referenced subject. (An exemplary resource reference should be of this code; such feedback would not typically be shown with the resource).
 |===	
 
 [#tbl_user_comment_dt,reftext='{table-caption} {counter:table-num}']
@@ -130,16 +130,16 @@ image::figures/FeedbackItem_2.png[width=600,align="center"]
 [width = "100%",options="header"]
 |===	
 |*Name* | *Definition*
-|comment|Isolated comment or a part of a discussion (a sequence of interrelated comments) 
-|question |Question about a feedback target that awaits an answer 
-|answer |Answer (possibly one of several, possibly incorrect) to a previous “question” formulated in a previous feedback item (use itemIsReplyTo to refer to a previous question or comment) 
-|acceptedAnswer|The answer that has been accepted as best to a previous question formulated in a previous feedback item (use itemIsReplyTo to refer to a previous question or comment) 
-|response|Response or a reaction of the producer or other responsible party to another feedback item (e.g: a “comment” or a “discovered issue” of a usage problem) (use itemIsReplyTo to refer to the item that motivated the response) 
-|justification | Justification or explanation clarifying the reasoning in another part of the feedback item e.g.: a rating 
-|resolution|Resolution declaring a discussion thread (a sequence of interrelated questions, answers and comments) closed (use itemIsReplyTo to refer to the last question, answer or comment)
-|moderation |Reason why another feedback item has been moderated or censored 
-|annotation | Tag on a feature present in the data that incorporate information that can be later useful for others
-|conclusion | The final or summary nature of a particular comment
+|comment|Isolated comment or a part of a discussion (a sequence of interrelated comments). 
+|question |Question about a feedback target that awaits an answer. 
+|answer |Answer (possibly one of several, possibly incorrect) to a previous “question” formulated in a previous feedback item (use itemIsReplyTo to refer to a previous question or comment).
+|acceptedAnswer|The answer that has been accepted as best to a previous question formulated in a previous feedback item (use itemIsReplyTo to refer to a previous question or comment).
+|response|Response or a reaction of the producer or other responsible party to another feedback item (e.g., a “comment” or a “discovered issue” of a usage problem) (use itemIsReplyTo to refer to the item that motivated the response). 
+|justification | Justification or explanation clarifying the reasoning in another part of the feedback item e.g.: a rating.
+|resolution|Resolution declaring a discussion thread (a sequence of interrelated questions, answers, and comments) closed (use itemIsReplyTo to refer to the last question, answer, or comment)
+|moderation |Reason why another feedback item has been moderated or censored.
+|annotation | Tag on a feature present in the data that incorporate information that can be later useful for others.
+|conclusion | The final or summary nature of a particular comment.
 |===	
 
 [#tbl_usage_report_dt,reftext='{table-caption} {counter:table-num}']
@@ -159,11 +159,11 @@ image::figures/FeedbackItem_2.png[width=600,align="center"]
 |===	
 |*Name* | *Definition*
 //[width="90%",options="header",float="center"]
-|usage |Description of a usage of the target resource. At least one MD_Usage should be populated 
-|fitnessForPurpose |Description of a usage of the target resource that was appropriated for the intended purpose. At least one MD_Usage should be populated 
-|limitation |Description of a limitation of the target resource. At least one userDeterminedLimitations in MD_Usage should be populated 
-|alternative |Alternative route that helps to avoid a problem or a limitation. At least workAround or alternativeResource in one QCM_DiscoveredIssue should be populated 
-|problem |A report of a problem or an issue. At least one QCM_DiscoveredIssue should be populated |
+|usage |Description of the usage of the target resource. At least one MD_Usage should be populated.
+|fitnessForPurpose |Description of a usage of the target resource that was appropriated for the intended purpose. At least one MD_Usage should be populated.
+|limitation |Description of a limitation of the target resource. At least one userDeterminedLimitations in MD_Usage should be populated.
+|alternative |Alternative route that helps to avoid a problem or a limitation. At least workAround or alternativeResource in one QCM_DiscoveredIssue should be populated.
+|problem |A report of a problem or an issue. At least one QCM_DiscoveredIssue should be populated. |
 |===	
 
 
@@ -184,8 +184,8 @@ image::figures/FeedbackItem_2.png[width=600,align="center"]
 |*Names* | *Definition*	| *Data type and values* | *Multiplicity and use*
 //[width="90%",options="header",float="center"]
 |abstract |Brief narrative description of this event, normally for display to a human. |Character String type, not empty |One (mandatory)
-|citation |Citation of the event (e.g.: a report describing the event, or a event identifier) |CI_Citation data type (ISO 19115-1:2014 B.3.2.1) |Zero or more (optional)
-|extent |Spatio-temporal extent of the event |EX_Extent data type (ISO 19115-1:2014 B.3.1.1) |One (mandatory)
+|citation |Citation of the event (e.g.: a report describing the event, or an event identifier) |CI_Citation data type (ISO 19115-1:2014 B.3.2.1) |Zero or more (optional)
+|extent |Spatiotemporal extent of the event |EX_Extent data type (ISO 19115-1:2014 B.3.1.1) |One (mandatory)
 |eventType |Type of event |GUF_SignificantEventTypeCode (see Table 19) |Zero or one (optional)
 |===
 
@@ -208,7 +208,7 @@ image::figures/FeedbackItem_2.png[width=600,align="center"]
 |systemEvent |Acquisition or distribution system event (e.g. a problem etc)
 |satelliteAnomaly |Abnormal data in a satellite system (e.g. a sensor glitch)
 |dropsondeAnomaly |Abnormal data from a dropsonde
-|aircraftAnomaly |Abnormal data from a airborne system (e.g. a sensor glitch)
+|aircraftAnomaly |Abnormal data from an airborne system (e.g. a sensor glitch)
 |buoyAnomaly |Abnormal data from a buoy
 |shipAnomaly |Abnormal data from a ship sensing system (e.g. a sensor glitch)
 |landStationAnomaly |Abnormal data from a land station (e.g. a sensor glitch)
@@ -216,13 +216,13 @@ image::figures/FeedbackItem_2.png[width=600,align="center"]
 |sensorAlarm |Abnormal acquisition above or below normal parameters.
 |===
 
-NOTE: This codelist is based on the CHARMe project, which focused primarily on hazards and climatic analysis. (https://software.ecmwf.int/wiki/display/CHAR/Significant+Events). Here, as in other parts of the data model, the codelist approach allows further domain-specific entities to be described and modeled.
+NOTE: This codelist is based on the CHARMe project [https://cordis.europa.eu/project/id/312641], which focused primarily on hazards and climatic analysis. Here, as in other parts of the data model, the codelist approach allows further domain-specific entities to be described and modeled.
 
 === *Numeric Codelist for rating*
 
 A numeric is a codelist that has a correspondence to a numeric code. This allows for item sorting and numerical calculations such as totals and averages based on the numeric code. Table 20, Table 21 and Table 22 are examples of numeric codelists that can be used for rating.
 
-GUF_RatingCode is intended for implementing a 5 star rating system. This can be used for target resources or for user expertiseLevel. E.g. this is currently used in amazon.com and many other websites.
+GUF_RatingCode is intended for implementing a 5 star rating system. This can be used for target resources or for user expertiseLevel. For example, this approach is currently used in amazon.com and many other websites.
 
 [#tbl_rating_code_numeric_code_type,reftext='{table-caption} {counter:table-num}']
 .GUF_RatingCode numeric code type
@@ -237,7 +237,7 @@ GUF_RatingCode is intended for implementing a 5 star rating system. This can be 
 |5 |fiveStars | Excellent
 |===
 
-GUF_ThumbsCode is intended for implementing an “I like” system. GUF_ThumbsCode is expected to be used to give feedback on another feedback item, e.g. to rate the comment of another user about a target resource. E.g. this is currently used in facebook.com “I like” and many other websites.
+GUF_ThumbsCode is intended for implementing an “I like” system. GUF_ThumbsCode is expected to be used to give feedback on another feedback item, for example rating the comment of another user about a target resource. This is currently used in facebook.com “I like” and many other websites.
 
 [#tbl_thumbs_code_nc,reftext='{table-caption} {counter:table-num}']
 .GUF_ThumbsCode numeric code type

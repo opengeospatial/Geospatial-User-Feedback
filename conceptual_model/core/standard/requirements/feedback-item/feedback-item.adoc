@@ -4,5 +4,5 @@
 ====
 [%metadata]
 identifier:: /req/feedback-item/item
-part:: The implementations of a feedback item SHALL follow the UML model as shown in <<img_feedback_item_1>> and <<img_feedback_item_1>> with the properties specified in <<tbl_feedback_item>>.
+part:: The implementations of a feedback item SHALL follow the UML model as shown in <<img_feedback_item_1>> and <<img_feedback_item_2>> with the properties specified in <<tbl_feedback_item>>.
 ====

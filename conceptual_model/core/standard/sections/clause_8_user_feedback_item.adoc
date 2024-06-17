@@ -91,7 +91,7 @@ image::figures/FeedbackItem_2.png[width=600,align="center"]
 [width = "100%",options="header"]
 |===	
 |*Name* | *Definition*	| *Data type and values* | *Multiplicity and use*
-|resourceRef ^a^ | Reference to a resource (e.g. a dataset or metadata record) that is the target of the feedback item or a superset of it ^b^ |CI_Citation data type (ISO 19115-1:2014 B.3.2.1) | One or more (mandatory) ^c^
+|resourceRef ^a^ | Reference to a resource (e.g. a dataset or metadata record) that is the target of the feedback item or a superset of the item ^b^ |CI_Citation data type (ISO 19115-1:2014 B.3.2.1) | One or more (mandatory) ^c^
 |metadataIdentifier ^f^ |Identifier for a metadata record about the resource |MD_Identifier data type (ISO 19115-1:2014 B.3.3.3) |Zero or more (optional)
 |scope |Describes a type of resource the feedback is about, typically a dataset, a metadata record, a feature... or a subset of a dataset or resource. |MD_scope data type (ISO 19115-1:2014 B.3.3.1) |Zero or one (optional) ^b^
 |role |The role of the target with respect to the feedback item ^g^ |GUF_TargetRoleCode code (see Table 12) | One (mandatory)

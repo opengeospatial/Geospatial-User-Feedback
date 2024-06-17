@@ -20,20 +20,24 @@ The data dictionary for the GUF Conceptual Model is specified in a series of tab
 |*Column title* | *Column contents* 
 |Name 
 (left column) |_"name"_ is the UML model attribute or association role name. +
-The _name_ capitalization rules used are specified in Subclause 11.6.2 of OGC 06-121r9 [1]. Some _names_ in the tables may appear to contain spaces, but no _names_ contain spaces.
+The _name_ capitalization rules used are specified in Subclause 11.6.2 of OGC 06-121r9 [1]. Some _names_ in the tables may appear to contain spaces, but no _names_ contain spaces. + 
+Examples: "target", "itemIdentifier"
 |Definition 
-(second column) | Specifies the definition of this parameter (omitting unnecessary words such as “a”, “the”, and “is”). If the parameter value is the identifier of something, not a description or definition, the definition of this parameter should read something like “Identifier of ...”.
+(second column) | Specifies the definition of this element (omitting unnecessary words such as “a”, “the”, and “is”). If the element aims to contain the identifier of something, not a description or definition, the definition of this element should read something like “Identifier of ...”. +
+Examples: "Link to the actual geospatial resource the publication is about.", "Identifier for the feedback item"
 | Data type and value (third column) or Data type 
 (if
  no second items are included in rows of table)
 | Normally contains two items: +
-The first item is often the data type used for this parameter, using data types appropriate in a UML model, in which this parameter is a named attribute of a UML class. Alternately, the first item can identify the data structure (or class) referenced by this association, and references a separate table used to specify the contents of that class (or data structure). +
-The optional second item in the third column of each table should indicate the source of values for this parameter, the alternative values, or other value information, unless the values are quite clear from other listed information.
+The first item is often the data type used for this element, using data types appropriate in a UML model, in which this element is a named attribute of a UML class. Alternately, the first item can identify the data structure (or class) referenced by this association, and references a separate table used to specify the contents of that class (or data structure). +
+The optional second item in the third column of each table should indicate the source of values for this element, the alternative values, or other value information, unless the values are quite clear from other listed information. +
+Examples: "ISO 19115-1 CI_Citation data type (ISO 19115-1:2014 B.3.2.1)", "MD_Identifier (ISO 19115-1:2014 B.3.3.3)"
 |Multiplicity and use (right or fourth column)
 or Multiplicity (if are no second items are included in rows of table) 
 |Normally contains two items: +
-The first item specifies the multiplicity and optionality of this parameter in this data structure, either “One (mandatory)”, “One or more (mandatory)”, “Zero or one (optional)”, or “Zero or more (optional)”. +
-The second item in the right column of each table specifies how any multiplicity other than “One (mandatory)” is used. If that parameter is optional, under what condition(s) shall that parameter be included or not included?  If that parameter can be repeated, for what is that parameter repeated? 
+The first item specifies the multiplicity and optionality of this element in this data structure, either “One (mandatory)”, “One or more (mandatory)”, “Zero or one (optional)”, or “Zero or more (optional)”. +
+The second item in the right column of each table specifies how any multiplicity other than “One (mandatory)” is used. If that element is optional, under what condition(s) shall that element be included or not included?  If that element can be repeated, for what is that parameter repeated? +
+Example: "Zero or more (optional). If the target of the citation is specified by another part of the data model this parameter should not be used.", "One (mandatory)" 
 |===
 
 When the data type used in the third column of such a table, is an enumeration or code list in which all the values are listed, together with the meaning of each value. When this information is extensive, these values and meanings are specified in a separate table that is referenced in the third column of the table row.

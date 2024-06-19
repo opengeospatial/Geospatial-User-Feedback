@@ -1,5 +1,5 @@
 [[sc_user_feedback_collection_extension]]
-== Requirements Class "User Feedback Collection Extension"
+== Requirements Class "Feedback-Collection"
 
 === Overview
 
@@ -9,7 +9,7 @@ The User Feedback Collection Extension requirements class defines the data model
 include::../requirements/requirements_class_user_feedback_collection.adoc[]
 
 
-=== Feedback Collection
+=== Feedback-Collection
 
 [#img_feedback_collection_extensions,reftext='{figure-caption} {counter:figure-num}']
 .User Feedback Collection Extension classes in a UML diagram

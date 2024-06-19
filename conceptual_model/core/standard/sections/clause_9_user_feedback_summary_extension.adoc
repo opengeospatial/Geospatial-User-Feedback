@@ -1,14 +1,14 @@
 [[sc_user_feedback_summary_extension]]
-== Requirements Class "User Feedback Summary Extension"
+== Requirements Class "Feedback-Summary"
 
 === Overview
 
-The User Feedback Summary Extensions requirements class defines the data model classes that support encoding summary statistics of feedback items that share the same target.
+The Feedback-Summary requirements class defines the data model classes that support encoding summary statistics of feedback items that share the same target.
 
 include::../requirements/requirements_class_user_feedback_summary.adoc[]
 
 
-=== Feedback Summary
+=== Feedback-Summary
 
 include::../requirements/feedback-summary/summary-model.adoc[]
 

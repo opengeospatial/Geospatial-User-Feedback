@@ -1,8 +1,8 @@
 [obligation=informative]
 == *Geospatial User Feedback XML encoding*
 
-The encoding rules for creating a XML encoding from a UML model documented in ISO 19139 [4] were used to elaborate the XML schemas described here. These encoding rules are coded in the ShapeChange [6] application. ShapeChange was used to automatically transform the UML model coming from the OGC 15-097 Geospatial User Feedback Conceptual Model [8] into the XML schemas that are complementing this standard. Since the conversion is automatic, this document will not provide tables describing the semantics of each element and the reader should refer to the conceptual model for details.
+The XML schemas described here were developed using the encoding rules for creating an XML encoding from a UML model, as documented in ISO 19139 [4]. These encoding rules are coded in the ShapeChange [6] application. ShapeChange is a Java tool that takes application schemas constructed according to ISO 19109 from a UML model and derives implementation representations. ShapeChange was used to automatically transform the OGC 23-017 Geospatial User Feedback Conceptual Model [2] UML model into the XML schemas that are conformant with the encoding rules defined in this Standard. Since the conversion is automatic, this document does not provide tables describing the semantics of each element and the reader should refer to the conceptual model for details.
 
-This encoding is intended for applications where the use of producer’s metadata encoded in ISO 19115-1:2014 [3] is common. This way it we pave the terrain for extending the current ISO 19115-1:2014 metadata editors and catalogues to support this model. It also aims for an easy integration of the producer metadata and the user feedback in client applications.
+This encoding is intended for applications where the use of producer’s metadata encoded according to ISO 19115-1:2014 [3] is common. In this way, there is a path for extending the current ISO 19115-1:2014 metadata editors and catalogues to support this model. This encoding also aims for an easy integration of the producer metadata and the user feedback in client applications.
 
 

@@ -1,17 +1,17 @@
 == Conformance
-This standard defines 4 conformance classes. 
+The GUF XML Standard defines four requierements and four related conformance classes. 
 
 Requirements for some standardization targets types are considered:
 
-* Requirement Quality Common: [http://www.opengis.net/spec/geospatial-user-feedback-xml/1.0/req/quality-common] has a single conformance class, Quality Common: [http://www.opengis.net/spec/geospatial-user-feedback-xml/1.0/conf/quality-common]. This conformance class targets clients and services implementing quality or user feedback models.
+* Requirements Class Quality-Common: [http://www.opengis.net/spec/geospatial-user-feedback-xml/1.0/req/quality-common] has a single conformance class, Quality Common: [http://www.opengis.net/spec/geospatial-user-feedback-xml/1.0/conf/quality-common]. This requirements class targets clients and services implementing quality or user feedback models.
 
-* Requirement Feedback-item: [http://www.opengis.net/spec/geospatial-user-feedback-xml/1.0/req/feedback-item] has a single pertaining conformance class, Feedback-item [http://www.opengis.net/spec/geospatial-user-feedback-xml/1.0/conf/ feedback-item]. This conformance class targets clients and services implementing user feedback models.
+* Requirements Class Feedback-Item: [http://www.opengis.net/spec/geospatial-user-feedback-xml/1.0/req/feedback-item] has a single pertaining conformance class, Feedback-item [http://www.opengis.net/spec/geospatial-user-feedback-xml/1.0/conf/ feedback-item]. This requirements class targets clients and services implementing user feedback models.
 
-* Requirement Feedback-summary: [http://www.opengis.net/spec/geospatial-user-feedback-xml/1.0/req/feedback-summary] has a single conformance class, Feedback-summary:, [http://www.opengis.net/spec/geospatial-user-feedback-xml/1.0/conf/ feedback-summary]. This conformance class targets clients and services implementing user feedback models.
+* Requirements Class Feedback-Summary: [http://www.opengis.net/spec/geospatial-user-feedback-xml/1.0/req/feedback-summary] has a single conformance class, Feedback-summary: [http://www.opengis.net/spec/geospatial-user-feedback-xml/1.0/conf/ feedback-summary]. This requirements class targets clients and services implementing user feedback models.
 
-* Requirement Feedback-collection: [http://www.opengis.net/spec/geospatial-user-feedback-xml/1.0/req/feedback-collection] has a single pertaining conformance class, Feedback-collection, [http://www.opengis.net/spec/geospatial-user-feedback-xml/1.0/conf/ feedback-collection]. This conformance class targets clients and services implementing user feedback models.
+* Requirements Class Feedback-Collection: [http://www.opengis.net/spec/geospatial-user-feedback-xml/1.0/req/feedback-collection] has a single pertaining conformance class, Feedback-collection, [http://www.opengis.net/spec/geospatial-user-feedback-xml/1.0/conf/ feedback-collection]. This requirements class targets clients and services implementing user feedback models.
 
-Conformance with this standard shall be checked using all the relevant tests specified in Annex A (normative) of this document. The framework, concepts, and methodology for testing, and the criteria to be achieved to claim conformance are specified in the OGC Compliance Testing Policies and Procedures and the OGC Compliance Testing web sitefootnote:[www.opengeospatial.org/cite].
+Conformance with this Standard shall be checked using all the relevant tests specified in Annex A, Abstract Test Suite (normative) of this document. The framework, concepts, and methodology for testing, and the criteria to be achieved to claim conformance are specified in the OGC Compliance Testing Policies and Procedures and the OGC Compliance Testing web sitefootnote:[www.opengeospatial.org/cite].
 
 All requirements-classes and conformance-classes described in this document are owned by the standard(s) identified.
 

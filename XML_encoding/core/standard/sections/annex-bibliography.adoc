@@ -23,7 +23,7 @@ Springer LNCS is widely used in technical and computer science journals and othe
 
 [1] OGC 06-121r3, OGC Web Service Common Specification
 
-[2] OGC 23-061, OGC Geospatial User Feedback Standard: Conceptual Model v 2.0
+[2] OGC 23-017, OGC Geospatial User Feedback Standard: Conceptual Model v 2.0
 
 [3] ISO 19115-1:2014, Geographic information -- Metadata -- Part 1: Fundamentals
 
@@ -35,4 +35,4 @@ Springer LNCS is widely used in technical and computer science journals and othe
 
 [7] ISO 19157:2013, Geographic information -- Data quality
 
-[8] OGC 15-097r1, OGC Geospatial User Feedback Standard: Conceptual Model v.1.0
+[8] OGC 23-097r1, OGC Geospatial User Feedback Standard: Conceptual Model v.1.0

@@ -1,10 +1,10 @@
 [[rc_user_feedback_item]]
 [requirements_class]
-.Requirements Class 'User Feedback Item'
+.Requirements Class 'Feedback-Item'
 ====
 [%metadata]
 identifier:: https://www.opengis.net/spec/guf-conceptual/2.0/req/feedback-item
-subject:: User Feedback Item
+subject:: Feedback-Item
 
 // inherit:: /req/quality-common/citation-of-publications
 // inherit:: /req/quality-common/discovered-issue

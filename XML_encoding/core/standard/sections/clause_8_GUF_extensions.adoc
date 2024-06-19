@@ -1,22 +1,23 @@
 :source-highlighter: highlight.js
 
-== 8.	*Geospatial User feedback model. Extensions*
+== *Geospatial User feedback model. Extensions*
 
-This section describes two requirements classes that are considered extensions of the XML encoding core: the User Feedback Summary and the User Feedback Collection.
+This section describes two requirements classes that are considered extensions of the XML encoding core: Feedback-Summary and the Feedback-Collection.
 
-=== *8.1	Requirements Class User Feedback Summary Extension*
+=== *Requirements Class Feedback-Summary*
 
-This requirements class defines the XML encoding classes that allow for encoding summary statistics of feedback items that share the same target.
+The Feedback-Summary requirements class defines the XML encoding classes that allow for encoding summary statistics of feedback items that share the same target.
 
 include::../requirements/requirements_class_user_feedback_summary.adoc[]
 include::../requirements/feedback-summary/ufs-schema.adoc[]
 
 
-The ufs.xsd schema has been derived automatically from the OGC 15-097 UML model [8]. No tables describing the naming of the elements and subelements are reproduced here as they are specified in the conceptual model.
+The ufs.xsd schema is automatically derived from the OGC 15-097 UML model [8]. No tables describing the naming of the elements and sub-elements are reproduced here as they are specified in the conceptual model.
 
 The following code shows a xml encoding example for UFS_FeedbackSummary
 
 [source,xml]
+----
 <UFS_FeedbackSummary
 				xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0"
 				xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0" 
@@ -53,20 +54,21 @@ The following code shows a xml encoding example for UFS_FeedbackSummary
 	<numberOfAdditionalLineages><gco:Integer>0</gco:Integer></numberOfAdditionalLineages>
 	<numberOfSignificantEvents><gco:Integer>0</gco:Integer></numberOfSignificantEvents>
 </UFS_FeedbackSummary>
+----
 
+=== *Requirements Class Feedback-Collection*
 
-=== *8.2	Requirements Class User Feedback Collection Extension*
-
-This requirements class defines the XML encoding classes that allow for grouping of feedback items into a feedback response and feedback collection with summary statistics. A feedback collection is a collection of a feedback items that share a common target and share the same rating code list.
+The Feedback-Collection requirements class defines the XML encoding classes that support for grouping of feedback items into a feedback response and feedback collection with summary statistics. A feedback collection is a collection of feedback items that share a common target and share the same rating code list.
 
 include::../requirements/requirements_class_user_feedback_collection_extension.adoc[]
 include::../requirements/feedback-collection/ufc-schema.adoc[]
 
-The ufc.xsd schema has been derived automatically from the OGC 15-097 UML model [2]. No tables describing the naming of the elements and subelements are reproduced here as they are specified in the conceptual model.
+The ufc.xsd schema is automatically derived from the OGC 23-017 UML model [2]. No tables describing the naming of the elements and sub-elements are reproduced here as they are specified in the conceptual model.
 
 The following code shows a xml encoding example for UFC_FeedbackCollection
 
-[source]
+[source,xml]
+----
 <?xml version="1.0" encoding="UTF-8"?>
 <ufc:UFC_FeedbackCollection 
 				xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0"
@@ -279,4 +281,4 @@ classes or a lack of information about leaf type and phenology.</gco:CharacterSt
 		</ufc:UFC_ResponsePagination>
 	</ufc:pagination>
 </ufc:UFC_FeedbackCollection>
-
+----

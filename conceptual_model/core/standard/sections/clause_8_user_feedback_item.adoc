@@ -1,14 +1,14 @@
 [[sc_user_feedback_item]]
-== Requirements Class "User Feedback Item"
+== Requirements Class "Feedback-Item"
 
 === Overview
 
-The User Feedback Item requirements class defines the data model classes that are involved in the definition of an individual user feedback item. A feedback item is the container of the actual feedback. Every item is set into a context by a combination of target, citations and scope.
+The Feedback-Item requirements class defines the data model classes that are involved in the definition of an individual user feedback item. A feedback item is the container of the actual feedback. Every item is set into a context by a combination of target, citations and scope.
 
 include::../requirements/requirements_class_user_feedback_item.adoc[]
 
 
-=== Feedback Item
+=== Feedback-Item
 
 include::../requirements/feedback-item/feedback-item.adoc[]
 

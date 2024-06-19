@@ -1,15 +1,23 @@
 == Scope
-[NOTE]
-====
-This OGC™ Standard defines an XML encoding for encoding user feedback about geospatial datasets or metadata records describing datasets. This standard reuses and extends the ISO 19115-1:2014 model [3] and follows the ISO 19139 [4] encoding rules. The XML encoding is based on the Geospatial User Feedback Conceptual Model Standard [2].
 
-This OGC® Standard is applicable to metadata catalogue servers and clients that want to exchange geospatial user feedback information.
+The OGC Geospatial User Feedback Standard: XML Encoding Extension version 2.0 (a.k.a. "this Standard") defines an XML encoding for encoding user feedback about geospatial datasets or metadata records describing datasets. This Standard reuses and extends the ISO 19115-1:2014 model [3] and follows the ISO 19139 [4] encoding rules. The XML encoding is based on the Geospatial User Feedback Conceptual Model Standard version 2.0 [2].
 
-This OGC® Standard is defined to allow implementation of catalogue clients that are able to complement the discovery of geospatial datasets. Catalogue clients present query results, commonly based on summaries of detailed metadata records created and maintained by the producers. With this standard, the metadata responses can also provide user feedback summaries and detailed user feedback reports. Clients using this standard can provide a user interface to support provision of additional comments or inquiries about datasets or to complement the producer metadata by presenting additional user feedback information about the data.
+This Standard is applicable to metadata catalogue servers and clients that want to exchange geospatial user feedback information.
 
-Geospatial User Feedback as used in this standard encompasses: user comments, questions and answers, user reports of dataset problems and proposed solutions to those problems, ratings, usage reports, citations of related datasets or publications describing usage, quality reports, relevant additional provenance information, significant events related to the use or interpretation of a dataset.
+This Standard is defined to allow implementation of catalogue clients that are able to complement the discovery of geospatial datasets. Catalogue clients present query results, commonly based on summaries of detailed metadata records created and maintained by the producers. With the GUF Standard, the metadata responses can also provide user feedback summaries and detailed user feedback reports. Clients implementing the GUF Standard can provide a user interface to support provision of additional comments or inquiries about datasets or to complement the producer metadata by presenting additional user feedback information about the data.
+
+Geospatial User Feedback as defined in this Standard encompasses: 
+
+* User comments
+* Questions and answers
+* User reports of dataset problems and proposed solutions to those problems
+* Ratings
+* Usage reports
+* Citations of related datasets or publications describing usage
+* Quality reports
+* Relevant additional provenance information
+* Significant events related to the use or interpretation of a dataset.
 
 This standard does not define any query language to request or send user feedback to/from metadata catalogues.
 
 
-====

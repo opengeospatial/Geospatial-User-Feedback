@@ -24,7 +24,7 @@ include::../requirements/feedback-collection/response.adoc[]
 |===
 |*Names* | *Definition*	| *Data type and values* | *Multiplicity and use*
 //[width="90%",options="header",float="center"]
-|collection |Collection of feedback items |UFC_FeedbackCollection data type (see Table 31) |One or more (mandatory)
+|collection |Collection of feedback items |UFC_FeedbackCollection data type (see <<tbl_feedback_collection>>) |One or more (mandatory)
 |===
 
 include::../requirements/feedback-collection/collection.adoc[]
@@ -37,9 +37,9 @@ include::../requirements/feedback-collection/collection.adoc[]
 //[width="90%",options="header",float="center"]
 |target |Common geospatial resource to which the collection refers.  |ISO 19115-1 CI_Citation data type (ISO 19115-1:2014 B.3.2.1) |Zero or one (optional). +
 If the target of the citation is specified by another part of the data model this parameter should not be used
-|item |Feedback item |GUF_FeedbackItem data type (see Table 7)|Zero or more (optional)
-|summary |Summary of the feedback items |UFS_FeedbackSummary data type (see Table 23) |Zero or one (optional)
-|pagination |Information about the page structure of the collection |UFC_ResponsePagination (see Table 32) |Zero or one (optional)
+|item |Feedback item |GUF_FeedbackItem data type (see <<tbl_feedback_item>>)|Zero or more (optional)
+|summary |Summary of the feedback items |UFS_FeedbackSummary data type (see <<tbl_feedback_summary>>) |Zero or one (optional)
+|pagination |Information about the page structure of the collection |UFC_ResponsePagination (see <<tbl_response_pagination>>) |Zero or one (optional)
 |===
 
 include::../requirements/feedback-collection/pagination.adoc[]

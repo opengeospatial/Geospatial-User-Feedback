@@ -43,11 +43,11 @@ If the target of the citation is specified by another part of the data model thi
 |abstract |Abstract of the publication ^a^ |Character String type, not empty |Zero or one (optional)
 |{set:cellbgcolor:#D5F5E3}highlights |Highlights of the publication |Character String type, not empty |Zero or more (optional)
 |keywords|Keywords of the publication| MD_Keyword (ISO 19115-1:2014 B.2.3.2)|Zero or more (optional)
-|{set:cellbgcolor:#D5F5E3/}motivation |Purpose of the citation. Why the citation is provided in relation to the parent class or the target. |QCM_CitationMotivationCode type. See Table 3 |Zero or one (optional)
+|{set:cellbgcolor:#D5F5E3/}motivation |Purpose of the citation. Why the citation is provided in relation to the parent class or the target. |QCM_CitationMotivationCode type. See <<tbl_citation_motivation_code>> |Zero or one (optional)
 |relatedResource |Other resources that are mentioned by the publication cited. |ISO 19115-1 CI_Citation data type. |Zero or more (optional)
 |scope |Scope of the citation (e.g. the extent the citation is covering). |ISO 19115-1 DQ_Scope data type |Zero or one (optional). +
 Default value is the whole target
-|category |Type of publication |QCM_PublicationCategoryCode type. See Table 4 |One (mandatory)
+|category |Type of publication |QCM_PublicationCategoryCode type. See <<tbl_publication_category_code>> |One (mandatory)
 4+| ^a^ The need for including an abstract in CI_Citation was also acknowledged by ISO 19157:2013, which defines a StandAloneQualityReport having a summary and a CI_Citation as parameters
 |===
 
@@ -113,7 +113,7 @@ If the target of the citation is specified by another part of the data model thi
 |knownProblem |Known issue with the target |Character String type, not empty |One (mandatory)
 |{set:cellbgcolor:#D6EAF8}problemDateTime |Date and time when the problem was detected |DateTime (ISO 19115-1:2014 B.4.2) |Zero or one (optional)
 |{set:cellbgcolor:#D6EAF8/}workAround |Possible way to work around the problem |Character String type, not empty |Zero or one (optional)
-|referenceDoc |A publication that exposes the issue and eventually suggest a solution. |QCM_Publication. (See Table 2) |Zero or more (optional)
+|referenceDoc |A publication that exposes the issue and eventually suggest a solution. |QCM_Publication. (See <<tbl_publication>>) |Zero or more (optional)
 |{set:cellbgcolor:#D6EAF8}expectedFixDate |Date when a solution is expected to be released by the provider in the form of a fixedResource or directly as a fix in the original target resource. |Date (ISO 19115-1:2014 B.4.2) |Zero or one (optional)
 |fixedResource |A new version of the target resource where the knownProblem is no longer present. |CI_Citation data type (ISO 19115-1:2014 B.3.2.1) | Zero or more (optional) |{set:cellbgcolor:#D6EAF8/}alternativeResource |An alternative resource that can be used instead of the target for similar purposes but does not present the knownProblem. |CI_Citation data type (ISO 19115-1:2014 B.3.2.1)|Zero or more (optional)
 |===

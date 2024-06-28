@@ -30,8 +30,8 @@ image::figures/FeedbackItem_2.png[width=600,align="center"]
 |itemIdentifier | Identifier for the feedback item. | MD_Identifier data type (ISO 19115-1:2014 B.3.3.3) |  One (mandatory)
 |abstract | Brief narrative description of this item, normally for display to a human. | Character String type, not empty |  One (mandatory)
 |purpose | Summary of the intentions with which the feedback was provided | Character String type, not empty |  Zero or one (optional)
-|contact | Information about the user providing feedback | GUF_UserInformation data type (see Table 8) |  One (mandatory)
-|contactRole | User's role in the context of this feedback item. A user may have several roles recorded in the GUF_UserInformation, but this is the one that applies for this feedback ^a^. | GUF_UserRoleCode (see Table 10) |  One (mandatory)
+|contact | Information about the user providing feedback | GUF_UserInformation data type (<<tbl_user_information_dt>>) |  One (mandatory)
+|contactRole | User's role in the context of this feedback item. A user may have several roles recorded in the GUF_UserInformation, but this is the one that applies for this feedback ^a^. | GUF_UserRoleCode (see <<tbl_user_role_code_cl>>) |  One (mandatory)
 |dateInfo | Date when the feedback item was created, updated etc. | CI_Date (ISO 19115-1:2014 B.3.2.6) |  One or more (mandatory)
 |itemIsReplyTo | Identifiers of one or more items of feedback to which this item is a response.  | MD_Identifier data type (ISO 19115-1:2014 B.3.3.3) |  Zero or more (optional). Populate only if the feedback item is responding to another feedback item (e.g. an answer to a previous comment). 
 |descriptiveKeywords | Keywords that can be useful to search for this item. They are selected from controlled vocabularies | MD_Keywords data type (ISO 19115-1:2014 B.2.3.2) |  Zero or more (optional)
@@ -39,13 +39,13 @@ image::figures/FeedbackItem_2.png[width=600,align="center"]
 |locale | Language and character set used within the feedback item | PT_Locale data type (ISO 19115-1:2014 B.3.4.3) |  Zero or more (optional)
 |externalFeedback | Link to an item in an external repository that contains the feedback (not described inline). | CI_Citation data type (ISO 19115-1:2014 B.3.2.1) |  Zero or one (optional) ^b^
 |additionalQuality | Structured quality assessment result | DQ_DataQuality data type (ISO 19157:2013 C.2.1.1) |  Zero or more (optional) ^b^
-|userComment | Text free user comment | GUF_UserComment data type (see Table 13) | Zero or one (optional) ^b^
-|usage | Structured usage report | GUF_UsageReport (see Table 15) |  Zero or more (optional) ^b^
-|rating | Rating code reflecting the satisfaction of the user with the resource used | GUF_Rating (see Table 17) |  Zero or one (optional) ^b^
-|citation | Citation of a published resource (e.g.: a report, a peer reviewed paper) that provides an evaluation of the usage of the resource | CI_Citation data type (ISO 19115-1:2014 B.3.2.1) or, preferably, QCM_Publication data type (see Table 2)|  Zero or more (optional) ^b^
+|userComment | Text free user comment | GUF_UserComment data type (see <<tbl_user_comment_dt>>) | Zero or one (optional) ^b^
+|usage | Structured usage report | GUF_UsageReport (see <<tbl_usage_report_dt>>) |  Zero or more (optional) ^b^
+|rating | Rating code reflecting the satisfaction of the user with the resource used | GUF_Rating (see <<tbl_rating_dt>>) |  Zero or one (optional) ^b^
+|citation | Citation of a published resource (e.g.: a report, a peer reviewed paper) that provides an evaluation of the usage of the resource | CI_Citation data type (ISO 19115-1:2014 B.3.2.1) or, preferably, QCM_Publication data type (see <<tbl_publication_elements>>)|  Zero or more (optional) ^b^
 |{set:cellbgcolor:#D6EAF8}additionalLineageSteps | Additional lineage steps not included in the producer metadata | LI_Lineage data type (ISO 19115-1:2014 B.2.5) |  Zero or one (optional) ^b^
-|{set:cellbgcolor:#D6EAF8/}significantEvent | Significant natural events or sensor or platform anomalies that can affect the interpretation of the data. | GUF_SignificantEvent (see Table 18) |  Zero or more (optional) ^b^
-|target | Identifies a pre-existing resource (e.g., a dataset or a metadata record) from a catalogue. | GUF_FeedbackTarget (see Table 11)|  One or more (mandatory)
+|{set:cellbgcolor:#D6EAF8/}significantEvent | Significant natural events or sensor or platform anomalies that can affect the interpretation of the data. | GUF_SignificantEvent (see <<tbl_significant_event_dt>>) |  Zero or more (optional) ^b^
+|target | Identifies a pre-existing resource (e.g., a dataset or a metadata record) from a catalogue. | GUF_FeedbackTarget (see <<tbl_feedback_target_dt>>)|  One or more (mandatory)
 4+| ^a^ The idea is for a single user to be able to embody more than one role, but only one role in each item. Thus, a data producer employee may comment and normally speak freely as an end user, but may, for example, issue a metadata override on behalf of the data provider if s/he explicitly chooses that role. S/he would only be allowed to choose roles from his/her user information, and maybe there could be additional restrictions. So users seeking reliable but "semi-official" metadata could look for overrides issued by the provider in that role. +
 ^b^ 	If none of these elements are populated, the item does not provide feedback and should be considered empty.
 |===
@@ -58,7 +58,7 @@ image::figures/FeedbackItem_2.png[width=600,align="center"]
 |{set:cellbgcolor:#D6EAF8}userDetails | Contact details about the user and its organization| CI_Party data type (ISO 19115-1:2014 B.3.2.3)| One (mandatory)
 |{set:cellbgcolor:#D5F5E3}description | User short description or bio | Character string, not empty | Zero or one (optional)
 |{set:cellbgcolor:#D6EAF8}applicationDomain |Application domain(s) a user works in | GUF_ApplicationDomain element |One or more (mandatory)
-|{set:cellbgcolor:#D6EAF8/}userRole |The roles the user can play |GUF_UserRoleCode code list (see Table 10) |Zero or more (optional)
+|{set:cellbgcolor:#D6EAF8/}userRole |The roles the user can play |GUF_UserRoleCode code list (see <<tbl_user_role_code_cl>>) |Zero or more (optional)
 | externalUserID| User ID in an external system such as an ORCID| MD_Identifier data type (ISO 19115-1:2014 B.3.3.3)| Zero or more (optional)
 |===	
 
@@ -68,7 +68,7 @@ image::figures/FeedbackItem_2.png[width=600,align="center"]
 |===
 |*Name* | *Definition*	| *Data type and values* | *Multiplicity and use*
 |{set:cellbgcolor:#D5F5E3}domain|An application domain a user works in| Character string, not empty| One (mandatory)
-|expertiseLevel|User's expertise level in this particular application domain, restricted by a codelist|GUF_RatingCode (see Table 20)| One (mandatory)
+|expertiseLevel|User's expertise level in this particular application domain, restricted by a codelist|GUF_RatingCode (see <<tbl_rating_code_numeric_code_type>>)| One (mandatory)
 |===
 {set:cellbgcolor:#D5F5E3/}
 
@@ -94,7 +94,7 @@ image::figures/FeedbackItem_2.png[width=600,align="center"]
 |resourceRef ^a^ | Reference to a resource (e.g. a dataset or metadata record) that is the target of the feedback item or a superset of the item ^b^ |CI_Citation data type (ISO 19115-1:2014 B.3.2.1) | One or more (mandatory) ^c^
 |metadataIdentifier ^f^ |Identifier for a metadata record about the resource |MD_Identifier data type (ISO 19115-1:2014 B.3.3.3) |Zero or more (optional)
 |scope |Describes a type of resource the feedback is about, typically a dataset, a metadata record, a feature... or a subset of a dataset or resource. |MD_scope data type (ISO 19115-1:2014 B.3.3.1) |Zero or one (optional) ^b^
-|role |The role of the target with respect to the feedback item ^g^ |GUF_TargetRoleCode code (see Table 12) | One (mandatory)
+|role |The role of the target with respect to the feedback item ^g^ |GUF_TargetRoleCode code (see <<tbl_target_role_code_cl>>) | One (mandatory)
 |parent |Parent of the cited resource ^d^ |GUF_FeedbackTarget data type (see this table) |Zero or one (optional) 
 |child |Child of the cited resource ^e^ |GUF_FeedbackTarget data type (see this table) |Zero or more (optional)
 4+| ^a^	Do not confuse this data type with itemIsReplyTo in GUF_FeedbackItem. In the case where a feedback item replies to another feedback item, this is indicated in itemIsReplyTo. It is expected that the targets of both items are identical including the same resourceRef. +
@@ -122,7 +122,7 @@ image::figures/FeedbackItem_2.png[width=600,align="center"]
 |===
 |*Name* | *Definition*	| *Data type and values* | *Multiplicity and use*
 |comment |Free text |Character String type, not empty |One (mandatory)
-|motivation |Motivation of the comment: it can be a comment, a question, an answer or a justification (e.g. a justification for a rating) |GUF_MotivationCode code list (see Table 14) | Zero or one (optional)
+|motivation |Motivation of the comment: it can be a comment, a question, an answer or a justification (e.g. a justification for a rating) |GUF_MotivationCode code list (see <<tbl_motivation_code_cl>>) | Zero or one (optional)
 |===
 
 [#tbl_motivation_code_cl,reftext='{table-caption} {counter:table-num}']
@@ -148,9 +148,9 @@ image::figures/FeedbackItem_2.png[width=600,align="center"]
 |===
 |*Name* | *Definition*	| *Data type and values* | *Multiplicity and use*
 //[width="90%",options="header",float="center"]
-|reportAspect| Aspect reported|GUF_ReportAspectCode code list (see Table 16) |One (mandatory)
+|reportAspect| Aspect reported|GUF_ReportAspectCode code list (see <<tbl_report_aspect_code_cl>>) |One (mandatory)
 |usageDescription |Usage description or limitation of the target |MD_Usage code list (ISO 19115-1:2014 B.2.3.6) |Zero or more (optional)
-|discoveredIssue | Discovered issue in the target resource| QCM_DiscoveredIssue data type (see Table 5)| Zero or more (optional)
+|discoveredIssue | Discovered issue in the target resource| QCM_DiscoveredIssue data type (see <<tbl_discovered_issue>>)| Zero or more (optional)
 |===
 
 [#tbl_report_aspect_code_cl,reftext='{table-caption} {counter:table-num}']
@@ -173,7 +173,7 @@ image::figures/FeedbackItem_2.png[width=600,align="center"]
 |===
 |*Names* | *Definition*	| *Data type and values* | *Multiplicity and use*
 //[width="90%",options="header",float="center"]
-| rating| Rating in the form of a simple numeric code that qualifies subjectively the feedback target| GUF_RatingCode (see Table 20), GUF_ThumbsCode (see Table 21), GUF_SignCode (see Table 22) or other numerical code for rating| One (mandatory)
+| rating| Rating in the form of a simple numeric code that qualifies subjectively the feedback target| GUF_RatingCode (see <<tbl_rating_code_numeric_code_type>>), GUF_ThumbsCode (see <<tbl_thumbs_code_nc>>), GUF_SignCode (see <<tbl_sign_code_nc>>) or other numerical code for rating| One (mandatory)
 |===
 
 
@@ -186,7 +186,7 @@ image::figures/FeedbackItem_2.png[width=600,align="center"]
 |abstract |Brief narrative description of this event, normally for display to a human. |Character String type, not empty |One (mandatory)
 |citation |Citation of the event (e.g.: a report describing the event, or an event identifier) |CI_Citation data type (ISO 19115-1:2014 B.3.2.1) |Zero or more (optional)
 |extent |Spatiotemporal extent of the event |EX_Extent data type (ISO 19115-1:2014 B.3.1.1) |One (mandatory)
-|eventType |Type of event |GUF_SignificantEventTypeCode (see Table 19) |Zero or one (optional)
+|eventType |Type of event |GUF_SignificantEventTypeCode (see <<tbl_significant_event_TypeCode_cl>>) |Zero or one (optional)
 |===
 
 [#tbl_significant_event_TypeCode_cl,reftext='{table-caption} {counter:table-num}']
@@ -220,7 +220,7 @@ NOTE: This codelist is based on the CHARMe project [https://cordis.europa.eu/pro
 
 === *Numeric Codelist for rating*
 
-A numeric is a codelist that has a correspondence to a numeric code. This allows for item sorting and numerical calculations such as totals and averages based on the numeric code. Table 20, Table 21 and Table 22 are examples of numeric codelists that can be used for rating.
+A numeric is a codelist that has a correspondence to a numeric code. This allows for item sorting and numerical calculations such as totals and averages based on the numeric code. <<tbl_rating_code_numeric_code_type>>, <<tbl_thumbs_code_nc>> and <<tbl_sign_code_nc>> are examples of numeric codelists that can be used for rating.
 
 GUF_RatingCode is intended for implementing a 5 star rating system. This can be used for target resources or for user expertiseLevel. For example, this approach is currently used in amazon.com and many other websites.
 

@@ -42,12 +42,12 @@ If the target of the citation is specified by another part of the data model thi
 |numberOfAdditionalQualities |Number of populated quality elements |Integer type |One (mandatory)
 |numberOfAdditionalLineages |Number of feedback items with a valid reported lineage |Integer type |One (mandatory)
 |numberOfSignificantEvents |Number of populated significant events |Integer type |One (mandatory)
-|feedbackItemsByExpertiseLevelCount |Number of feedback items by each level of expertise  |UFS_ExpertiseLevelCount data type (see Table 24) |Zero or more (optional) ^a^
-|userByRoleCount |Number of feedback items for each user role |UFS_UserRoleCount data type (see Table 25) |Zero or more (optional) ^b^
-|byTagCount |Number of feedback items for each tag |UFS_TagCount data type (see Table 26) |Zero or more (optional) ^c^
-|byKeywordCount |Number of feedback items for each keyword |UFS_KeywordCount data type (see Table 27) |Zero or more (optional) ^d^
-|byRatingCount |Number of feedback items for each rating value |UFS_RatingCount data type (see Table 28) |Zero or more (optional) ^e^
-|ratingByExpertiseLevelCount |Number of feedback items for each rating and level of expertise |UFS_RatingExpertiseLevelCount data type (see Table 29) |Zero or more (optional) ^f^
+|feedbackItemsByExpertiseLevelCount |Number of feedback items by each level of expertise  |UFS_ExpertiseLevelCount data type (see <<tbl_expertise_level_count>>) |Zero or more (optional) ^a^
+|userByRoleCount |Number of feedback items for each user role |UFS_UserRoleCount data type (see <<tbl_user_role_count>>) |Zero or more (optional) ^b^
+|byTagCount |Number of feedback items for each tag |UFS_TagCount data type (see <<tbl_tag_count>>) |Zero or more (optional) ^c^
+|byKeywordCount |Number of feedback items for each keyword |UFS_KeywordCount data type (see <<tbl_keyword_count>>) |Zero or more (optional) ^d^
+|byRatingCount |Number of feedback items for each rating value |UFS_RatingCount data type (see <<tbl_rating_count>>) |Zero or more (optional) ^e^
+|ratingByExpertiseLevelCount |Number of feedback items for each rating and level of expertise |UFS_RatingExpertiseLevelCount data type (see <<tbl_rating_expertise_level_count>>) |Zero or more (optional) ^f^
 4+|^a^	In the case where feedbackItemsByExpertiseLevelCount occurs more than once, the expertiseLevel values shall be different for each. +
 ^b^	In the case where userByRoleCount occurs more than once, its userRole values shall be different. +
 ^c^	In the case where byTagCount occurs more than once, its tag values shall be different. +
@@ -62,7 +62,7 @@ If the target of the citation is specified by another part of the data model thi
 |===
 |*Names* | *Definition*	| *Data type and values* | *Multiplicity and use*
 //[width="90%",options="header",float="center"]
-|expertiseLevel |A possible value of expertise level |GUF_RatingCode data type (see Table 20) |One (mandatory)
+|expertiseLevel |A possible value of expertise level |GUF_RatingCode data type (see <<tbl_rating_code_numeric_code_type>>) |One (mandatory)
 |count |Number of feedback items that were populated by this expertiseLevel code |Integer data type |One (mandatory)
 |===
 
@@ -72,7 +72,7 @@ If the target of the citation is specified by another part of the data model thi
 |===
 |*Names* | *Definition*	| *Data type and values* | *Multiplicity and use*
 //[width="90%",options="header",float="center"]
-|userRole |A possible value of expertise level |GUF_UserRoleCode data type (see Table 10)|One (mandatory)
+|userRole |A possible value of expertise level |GUF_UserRoleCode data type (see <<tbl_user_role_code_cl>>)|One (mandatory)
 |count |Number of times that a feedback items was populated by a user acting with this userRole code |Integer data type |One (mandatory)
 |===
 
@@ -102,7 +102,7 @@ If the target of the citation is specified by another part of the data model thi
 |===
 |*Names* | *Definition*	| *Data type and values* | *Multiplicity and use*
 //[width="90%",options="header",float="center"]
-|rating |A possible value of expertise level |GUF_RatingCode (see Table 20), GUF_ThumbsCode (see Table 21), GUF_SignCode (see Table 22) or other numerical code for rating |One (mandatory)
+|rating |A possible value of expertise level |GUF_RatingCode (see <<tbl_rating_code_numeric_code_type>>), GUF_ThumbsCode (see <<tbl_thumbs_code_nc>>), GUF_SignCode (see <<tbl_sign_code_nc>>) or other numerical code for rating |One (mandatory)
 |count |Number of feedback items that were populated with this rating code |Integer data type |One (mandatory)
 |===
 
@@ -112,10 +112,10 @@ If the target of the citation is specified by another part of the data model thi
 |===
 |*Names* | *Definition*	| *Data type and values* | *Multiplicity and use*
 //[width="90%",options="header",float="center"]
-|rating |A possible value of rating  |GUF_RatingCode (see Table 20), +
-GUF_ThumbsCode (see Table 21), + 
-GUF_SignCode (see Table 22) +
+|rating |A possible value of rating  |GUF_RatingCode (see <<tbl_rating_code_numeric_code_type>>), +
+GUF_ThumbsCode (see <<tbl_thumbs_code_nc>>), + 
+GUF_SignCode (see <<tbl_sign_code_nc>>) +
 or other numerical code for rating |One (mandatory)
-|expertiseLevel |A possible value of expertise level |GUF_RatingCode data type (see Table 20)|One (mandatory)
+|expertiseLevel |A possible value of expertise level |GUF_RatingCode data type (see <<tbl_rating_code_numeric_code_type>>)|One (mandatory)
 |count |Number of feedback items that were populated with this rating-expertiseLevel code pair |Integer data type |One (mandatory)
 |===

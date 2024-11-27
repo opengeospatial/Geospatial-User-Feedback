@@ -4,7 +4,9 @@
 The following normative documents are new or updated references in the standard to which these Release Notes apply.
 
 //[[[OGC 15-097r1:2016]]]
-* [[[OGC15-097r1, OGC 23-017]]], _OGC Geospatial User Feedback Standard: Conceptual Model v.2.0_
+* [[[OGC15-097r1, OGC 15-097r1]]], _OGC Geospatial User Feedback Standard: Conceptual Model v.1.0_
+
+* [[[OGC23-017, OGC 23-017]]], _OGC Geospatial User Feedback Standard: Conceptual Model v.2.0_
 
 //[[[OGC 06-121r9]]]
 * [[[OGC06-121r9, OGC 06-121r9]]], _OGC Web Service Common Implementation Specification

@@ -19,7 +19,7 @@ To conform to this OGC Model, a software implementation may choose to implement:
 //* Any one of the conformance levels specified in Annex A (normative).
 //* Any one of the Distributed Computing Platform profiles specified in Annexes TBD through TBD (normative).
 
-a)	Any encoding extension associated with this Standard. Initially an XML encoding following the ISO19139 encoding rules is provided in a separate part (OGC 23-061, , OGC Geospatial User Feedback Standard: XML Implementation v.2.0).
+a)	Any encoding extension associated with this Standard. Initially an XML encoding following the ISO19139 encoding rules is provided in a separate part (OGC 23-061, OGC Geospatial User Feedback Standard: XML Implementation v.2.0).
 
 b) A JSON encoding will be also provided as a separate part.
 

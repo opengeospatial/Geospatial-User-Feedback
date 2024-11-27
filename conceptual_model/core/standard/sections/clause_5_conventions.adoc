@@ -40,7 +40,7 @@ The second item in the right column of each table specifies how any multiplicity
 Example: "Zero or more (optional). If the target of the citation is specified by another part of the data model this parameter should not be used.", "One (mandatory)" 
 |===
 
-When the data type used in the third column of such a table, is an enumeration or code list in which all the values are listed, together with the meaning of each value. When this information is extensive, these values and meanings are specified in a separate table that is referenced in the third column of the table row.
+When the data type in the third column is an enumeration or a code list, and the list of possible values is too extensive, the values and their meanings are detailed in a separate table. This separate table is then referenced in the third column of the original table row.
 
 The data type of many parameters, in the third table column, is specified as “Character String type, not empty”.
 

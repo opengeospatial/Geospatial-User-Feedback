@@ -20,11 +20,11 @@ As it is still an optional element, no compatibility problems are expected.
 
 === ED-07: New QCM_ReproducibleUsage requirement added.
 
-GUF v.2.0 adds the possibility of describing the specific usage in a reproducible way (introducing a code snippet or a linkage to a script) of a resource by a user. This is due to the addition of a new requirement "QCM_ReproducibleUsage" as an "MD_Usage" extension.
+GUF v.2.0 defines a MD_USAGE extension for describing the specific usage in a reproducible way (introducing a code snippet or a linkage to a script) of a resource by a user. This is a new "MD_Usage" requirement "QCM_ReproducibleUsage".
 
 === ED-08: New class QCM_ReproducibleUsage.
 
-Adding the "QCM_ReproducibleUsage" requirement allows describing the MD_Usage extension class "QCM_ReproducibleUsage," which contains the following attributes to describe usage (Table 6 of the documentation):
+The new "QCM_ReproducibleUsage" requirement supports the following attributes to describe usage (Table 6 of the documentation):
 
 * codeSnippet: A fragment of code or execution sentence necessary to reproduce this usage. codeSnippet is mandatory if codeSnippetLinkage is not documented.
 * codeSnippetLinkage: URL to the code or execution sentence necessary to reproduce this usage. codeSnippetLinkage is mandatory if codeSnippet is not documented.
@@ -39,14 +39,14 @@ Adding the "QCM_ReproducibleUsage" requirement allows describing the MD_Usage ex
 
 === ED-13: New attributes in GUF_UserInformation Data Type.
 
-Information about users now include a new optional element named "description" that allows to document a user short description or bio.
+Information about users includes a new optional element named "description" that supports documenting a user's short description or bio.
 
 
 === ED-15: New "GUF_ApplicationDomain" Data Type added.
 
-In GUF v.1.0, the GUF_UserInformation Class had two attributes named "applicationDomain" (CharacterString [0..*]) and "expertiseLevel (GUF_RatingCode)." This configuration causes several application domains may be described, but only one expertise level can be defined, moreover without specifying to which of the application domains it corresponds (as is likely that the expertise level is not the same for all the application domains).
+In GUF v.1.0, the GUF_UserInformation Class had two attributes named "applicationDomain" (CharacterString [0..*]) and "expertiseLevel (GUF_RatingCode)." This configuration causes several application domains to may be described, but only one expertise level can be defined. Moreover without specifying to which of the application domains it corresponds (as is likely that the expertise level is not the same for all the application domains).
 
-To fix this issue, in this new release, the original "expertiseLevel" attribute has been deprecated, and the "applicationDomain" attribute type is now GUF_ApplicationDomain Data Type and has a [1..*] cardinality. This data type allows documenting several "domains" (Character String) and the "expertiseLevel" (GUF_RatingCode) corresponding to each of them.
+To fix this issue, in GUF 2.0 the original "expertiseLevel" attribute has been deprecated, and the "applicationDomain" attribute type is now GUF_ApplicationDomain Data Type and has a [1..*] cardinality. This data type allows documenting several "domains" (Character String) and the "expertiseLevel" (GUF_RatingCode) corresponding to each of them.
 
 Related to ED-14 critical change.
 

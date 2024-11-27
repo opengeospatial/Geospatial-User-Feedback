@@ -42,9 +42,9 @@ include::sections/clause_5_conventions.adoc[]
 
 include::sections/clause_6_informative_text.adoc[]
 
-include::sections/clause_7_normative_text.adoc[]
+include::sections/clause_7_GUF_core.adoc[]
 
-include::sections/clause_8_media_types.adoc[]
+include::sections/clause_8_GUF_extensions.adoc[]
 
 include::sections/annex-a.adoc[]
 

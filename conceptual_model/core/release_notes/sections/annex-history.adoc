@@ -8,4 +8,5 @@
 |2023-11-22 |0.1 |Alaitz Zabala & Oscar González |all |initial version
 |2024-05-23 |0.2 |Alaitz Zabala & Oscar González |all |Reviewed version to present to OGC GUF SWG
 |2024-11-27 |0.3 |Carl Reed |all | text minor revisions
+|2025-01-22 |0.4 |Alaitz Zabala & Oscar González |all | Reviewed to fit OAB comments
 |===

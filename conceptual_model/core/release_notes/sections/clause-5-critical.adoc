@@ -7,7 +7,7 @@ The changes described below are critical as they involve changes in the XML enco
 
 === ED-03: "problemDateTime" Element Data Type Changes
 
-In GUF version 1.0, Table 5 in section 7.1 describes the QCM_DiscoveredIssue Data Type which is used to report issues found while using a certain resource.
+In GUF version 1.0, Table 5 in section 6.3 describes the QCM_DiscoveredIssue Data Type which is used to report issues found while using a certain resource.
 
 QCM_DiscoveredIssue contains an element named "problemDateTime" designed to define the date and time a problem is detected by a user of that resource.
 
@@ -17,7 +17,7 @@ In GUF v.1.0, "problemDateTime" was defined as a CI_Date element, requiring user
 
 Similar to ED-03.
 
-In GUF version 1.0, Table 5 in section 7.1 describes the QCM_DiscoveredIssue Data Type and is used to report issues found while using a certain resource.
+In GUF version 1.0, Table 5 in section 6.3 describes the QCM_DiscoveredIssue Data Type and is used to report issues found while using a certain resource.
 
 QCM_DiscoveredIssue contains an element named "expectedFixDate" designed to define the date when a solution is expected to be released by the provider in the form of a "fixedResource" or directly as a fix in the original target resource.
 

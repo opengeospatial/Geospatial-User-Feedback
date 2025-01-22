@@ -4,15 +4,13 @@
 
 //short scope of the standard and the general nature of changes
 
-This OGC™ Standard defines a data model for encoding user feedback about geospatial datasets or metadata records describing datasets. It reuses and extends the v.1.0 of the GUF conceptual model (<<OGC15-097r1>>) as well as ISO 19115-1:2024 data model. A set of information classes is defined.
-
-This OGC® Standard is applicable to metadata catalogue servers and clients that want to exchange geospatial user feedback information.
-
-This OGC® Standard is defined to allow implementation of catalogue clients that are able to complement the discovery of geospatial datasets. Catalogue clients present query results, commonly based on summaries of detailed metadata records created and maintained by the producers. Implementation of this standard allows clients to present user feedback summaries and detailed user feedback reports. Clients implementing this standard can provide a user interface to capture use input and comments for datasets or to complement the producer metadata by presenting user feedback information about the data or its metadata.
+The GUF v2.0 OGC™ Standard defines a data model for encoding user feedback about geospatial datasets or metadata records describing datasets. It reuses and extends the v.1.0 of the GUF conceptual model (<<OGC15-097r1>>) as well as ISO 19115-1:2024 data model and it is applicable to metadata catalogue servers and clients that want to exchange geospatial user feedback information.
 
 Geospatial User Feedback as used in this standard encompasses: user comments, questions and answers, user reports of dataset problems and proposed solutions to those problems, ratings, usage reports, reproducible usage reports, citations of related datasets or publications describing usage, quality reports, relevant additional provenance information, significant events related to the use or interpretation of a dataset.
 
-Version 2.0 contains no breaking changes to previous versions, but does contain additions, clarifications as well as some new elements. Changes are summarized in this document.
+This document lists, classifies, and explains the new features of version 2.0 compared to version 1.0 of the GUF standard and their implications. Among these changes, the definition of the new requirement and the new QCM_ReproducibleUsage class stand out, as they enable the description of the specific use of a resource in a reproducible way for other users. It also describes critical and substantial changes due to the definition of new data types, name changes, or changes in cardinality in elements previously existing in version 1.0, as well as administrative changes to resolve minor errors or improve some definitions.
+
+Although most of the changes are additions or error fixes, even small changes to an XML document can lead to validation errors if older applications are using previous versions of the XML schemas. For this reason, we chose not to label the XML encoding as v1.1, but rather as v2.0. While the conceptual model could still be considered v1.1 (since no significant changes were made to the original concepts), this could lead to confusion with the versioning of the XML encoding. Ultimately, we decided to synchronize the version numbers and designate both as v2.0.
 
 
 === Document contributor contact points

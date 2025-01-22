@@ -3,6 +3,7 @@
 
 //=== <short name for the change>
 //<details of the change>
+The changes described below are critical as they involve changes in the XML encoding that will result in validation errors in documents based on version 1.0 of the GUF.
 
 === ED-03: "problemDateTime" Element Data Type Changes
 
@@ -52,7 +53,7 @@ To clarify the meaning of these elements, GUF v.2.0 overwrites "minimumPossibleR
 
 === ED-21: UFS_FeedbackSummary New "numberOfReproducibleUsageReports" Element
 
-GUF v.2.0 adds a new element "numberOfReproducibleUsageReports" to UFS_FeedbackSummary Data Type. This element is mandatory, and is used to document the total number of populated reproducible usage reports for a particular resource.
+As GUF v.2.0 adds the QCM_ReproducibleUsage class to the model (see ED-07 and ED-08) it is relevant to add a new element "numberOfReproducibleUsageReports" to UFS_FeedbackSummary Data Type. This element is mandatory, and is used to document the total number of populated reproducible usage reports for a particular resource.
 
 //If no critical changes are present, use the phrase below.
 //There are no critical changes in this release.

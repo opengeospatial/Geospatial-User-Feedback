@@ -22,6 +22,8 @@ As it is still an optional element, no compatibility problems are expected.
 
 GUF v.2.0 defines a MD_USAGE extension for describing the specific usage in a reproducible way (introducing a code snippet or a linkage to a script) of a resource by a user. This is a new "MD_Usage" requirement "QCM_ReproducibleUsage".
 
+As describing usage is optional, no compatibility issues are expected with previous versions.
+
 === ED-08: New class QCM_ReproducibleUsage.
 
 The new "QCM_ReproducibleUsage" requirement supports the following attributes to describe usage (Table 6 of the documentation):
@@ -37,10 +39,13 @@ The new "QCM_ReproducibleUsage" requirement supports the following attributes to
 * diagramLinkage: URL Link of the descriptive diagram of this reproducible usage.
 * diagramMediaType: Format of the descriptive diagram of this reproducible usage (Mime Type).
 
+As describing usage is optional, no compatibility issues are expected with previous versions.
+
 === ED-13: New attributes in GUF_UserInformation Data Type.
 
 Information about users includes a new optional element named "description" that supports documenting a user's short description or bio.
 
+As it is an optional element, no compatibility issues are expected.
 
 === ED-15: New "GUF_ApplicationDomain" Data Type added.
 
@@ -49,6 +54,8 @@ In GUF v.1.0, the GUF_UserInformation Class had two attributes named "applicatio
 To fix this issue, in GUF 2.0 the original "expertiseLevel" attribute has been deprecated, and the "applicationDomain" attribute type is now GUF_ApplicationDomain Data Type and has a [1..*] cardinality. This data type allows documenting several "domains" (Character String) and the "expertiseLevel" (GUF_RatingCode) corresponding to each of them.
 
 Related to ED-14 critical change.
+
+This change may cause compatibility issues with GUF elements encoded following previous versions.
 
 //If no substantive changes are present, use the phrase below.
 //There are no substantive changes in this release.

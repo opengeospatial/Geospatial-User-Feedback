@@ -5,7 +5,7 @@
 :committee: technical
 :draft: 2.0
 :external-id: http://www.opengis.net/doc/RN/guf-conceptual/2.0
-:docnumber: 24-023
+:docnumber: 24-023r1
 :received-date: 2029-03-30
 :issued-date: 2029-03-30
 :published-date: 2029-03-30

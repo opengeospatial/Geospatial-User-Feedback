@@ -27,7 +27,7 @@ OGC API - Feedback uses elements of ISO 19115 to define certain properties. Sinc
 ======================================================================
 
 [[schema_json_feedback]] $$TODO canviar link a github
-.link:https://github.com/grumets/nimmbus/tree/master/OGC_API/satandard/openapi/schemas/ogcapi_feedback-item.yaml[Schema for a feedback item encoded as GeoJSON (ogcapi_feedback-item.yaml)]
+.link:https://github.com/opengeospatial/Geospatial-User-Feedback/tree/main/OGC_API/standard/openapi/schemas/ogcapi_feedback-item.yaml[Schema for a feedback item encoded as GeoJSON (ogcapi_feedback-item.yaml)]
 [source,JSON]
 ----
 include::../openapi/schemas/ogcapi_feedback-item.yaml[]
@@ -79,7 +79,7 @@ OGC API - Feedback uses elements of ISO 19115 to define certain properties. Sinc
 ======================================================================
 
 [[schema_json_fb-summary]] $$TODO canviar link a github
-.link:https://github.com/grumets/nimmbus/tree/master/OGC_API/satandard/openapi/schemas/ogcapi_feedback-summary.yaml[Schema for a feedback summary encoded as GeoJSON (ogcapi_feedback-summary.yaml)]
+.link:https://github.com/opengeospatial/Geospatial-User-Feedback/tree/main/OGC_API/standard/openapi/schemas/ogcapi_feedback-summary.yaml[Schema for a feedback summary encoded as GeoJSON (ogcapi_feedback-summary.yaml)]
 [source,JSON]
 ----
 include::../openapi/schemas/ogcapi_feedback-summary.yaml[]

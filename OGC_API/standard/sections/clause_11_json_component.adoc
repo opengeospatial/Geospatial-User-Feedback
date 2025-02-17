@@ -26,7 +26,7 @@ include::../requirements/json/fb-item-content.adoc[]
 OGC API - Feedback uses elements of ISO 19115 to define certain properties. Since ISO 19115 does not yet have an official JSON implementation, all references to this ISO in the feedback item JSON schema are made as '19115-4-core.json'.
 ======================================================================
 
-[[schema_json_feedback]] $$TODO canviar link a github
+[[schema_json_feedback]]
 .link:https://github.com/opengeospatial/Geospatial-User-Feedback/tree/main/OGC_API/standard/openapi/schemas/ogcapi_feedback-item.yaml[Schema for a feedback item encoded as GeoJSON (ogcapi_feedback-item.yaml)]
 [source,JSON]
 ----
@@ -78,7 +78,7 @@ include::../requirements/json/fb-summary-content.adoc[]
 OGC API - Feedback uses elements of ISO 19115 to define certain properties. Since ISO 19115 does not yet have an official JSON implementation, all references to this ISO in the feedback item JSON schema are made as '19115-4-core.json'.
 ======================================================================
 
-[[schema_json_fb-summary]] $$TODO canviar link a github
+[[schema_json_fb-summary]]
 .link:https://github.com/opengeospatial/Geospatial-User-Feedback/tree/main/OGC_API/standard/openapi/schemas/ogcapi_feedback-summary.yaml[Schema for a feedback summary encoded as GeoJSON (ogcapi_feedback-summary.yaml)]
 [source,JSON]
 ----

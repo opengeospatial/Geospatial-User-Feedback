@@ -1,0 +1,12 @@
+[[req_json_fb-summary-response]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/json/fb-summary-response
+part:: 200-responses of the server SHALL support the following media type:
++
+* `application/geo+json` for resources that include record content.
+
+part:: The `geometry` member SHALL be present and SHALL null.
+====

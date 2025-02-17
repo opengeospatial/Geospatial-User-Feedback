@@ -1,0 +1,9 @@
+[[req_fb-query-parameters_type]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/feedback-query-parameters/type
+part:: A searchable endpoint SHALL support `ids` parameter as defined in the https://fix.me/[OGC API - Records] Standard.
+part:: All references to the term "record" or "local resource" in the https://fix.me/[OGC API - Records] Standard SHALL be replaced by the term "feedback" as the context may indicate.
+====

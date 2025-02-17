@@ -151,7 +151,7 @@
 			"type":"object",
 			"properties":{
 				"keyword":{
-					"description":"A possible value of expertise level",
+					"description":"A possible value of keyword",
 					"$ref":"https://raw.githubusercontent.com/joanma747/Implementation-JSON/main/ShapeChange/results/19115-4-core/geojson/IDENTITY/test/19115-4-core.json#MD_Keywords"
 				},
 				"count":{
@@ -166,7 +166,7 @@
 			"type":"object",
 			"properties":{
 				"rating":{
-					"description":"A possible value of expertise level",
+					"description":"A possible value of rating",
 					"$ref":"https://schemas.opengis.net/guf/2.0/guf_v_2_0.schema.json#GUF_RatingCode"
 				},
 				"count":{
@@ -200,7 +200,7 @@
 			"type":"object",
 			"properties":{
 				"tag":{
-					"description":"A possible value of expertise level",
+					"description":"A possible value of tag",
 					"type":"string"
 				},
 				"count":{
@@ -215,7 +215,7 @@
 			"type":"object",
 			"properties":{
 				"userRole":{
-					"description":"A possible value of expertise level",
+					"description":"A possible value of user role",
 					"$ref":"https://schemas.opengis.net/guf/2.0/guf_v_2_0.schema.json#GUF_UserRoleCode"
 				},
 				"count":{

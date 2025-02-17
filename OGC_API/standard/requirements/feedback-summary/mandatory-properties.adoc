@@ -1,0 +1,9 @@
+[[req_feedback-summary_mandatory-properties]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/feedback-summary/mandatory-properties
+part:: A feedback summary SHALL include all the mandatory properties listed in <<tbl_feedback_summary>>.
+====
+

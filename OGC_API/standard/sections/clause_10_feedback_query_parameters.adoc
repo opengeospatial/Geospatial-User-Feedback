@@ -1,0 +1,72 @@
+[[feedback-query-parameters]]
+== Requirements Class "Feedback Query Parameters" (Component)
+
+=== Overview
+
+include::../requirements/requirements_class_query_params.adoc[]
+
+
+The Feedback Query Parameters requirements class defines a minimum set of query parameters that should be implemented at a searchable feedback catalog endpoint.
+
+The parameters are inherited from https://docs.ogc.org/DRAFTS/20-004.html,[OGC API - Records], although externalIds behavior has been expanded and is defined in this Standard. Moreover, the parameter type has been deprecated due to in a feedback catalog all elements are of the same type. 
+
+[#tbl_feedback_query_params,reftext='{table-caption} {counter:table-num}']
+.Feedback Query Parameters
+[cols="15,85",options="header"]
+|===
+|Parameter name |Description
+|https://docs.opengeospatial.org/is/17-069r4/17-069r4.html#parameter_bbox[bbox] |A bounding box. If the spatial extent of the feedback intersects the specified bounding box, then the feedback shall be presented in the response document.
+|https://docs.opengeospatial.org/is/17-069r4/17-069r4.html#parameter_datetime[datetime] |A time instance or time period. If the temporal extent of the feedback intersects the specified date/time value, then the feedback shall be presented in the response document.
+|https://docs.opengeospatial.org/is/17-069r4/17-069r4.html#parameter_limit[limit] |The number of feedback to be presented in a response document.
+|https://docs.ogc.org/DRAFTS/20-004.html#core-query-parameters-q[q] |A comma-separated list of search terms. If any server-chosen text field in the feedback contains 1 or more of the terms listed, then this feedback shall appear in the response set.
+|https://fix.me[ids] |An equality predicate consisting of a comma-separated list of feedback identifiers. Only feedback with the specified identifiers shall appear in the response set.
+|externalIds |An equality predicate consisting of a list of external resource identifiers. The behavior of externalIds list is different when applied to _items_ or _stats_ endpoint. In the case of _stats_ endpoint, three different delimiters (",","\|" and "^") can be used to list externalIds. The properties of these delimiters are explained in <<query-parameters-externalIds, externalIds>> section. Only feedbacks related to the specified external identifiers SHALL appear in the response set.
+|https://docs.ogc.org/DRAFTS/20-004.html#additional-query-parameters[_prop_=_value_] |Equality predicates with any queryable not already listed in this table.
+|===
+
+[[query-parameters]]
+==== Query parameters
+
+[[query-parameters-bbox]]
+===== Parameter bbox
+include::../requirements/feedback-query-params/query_params_bbox.adoc[]
+
+[[query-parameters-datetime]]
+===== Parameter datetime
+include::../requirements/feedback-query-params/query_params_datetime.adoc[]
+
+[[query-parameters-limit]]
+===== Parameter limit
+include::../requirements/feedback-query-params/query_params_limit.adoc[]
+
+[[query-parameters-q]]
+===== Parameter q
+include::../requirements/feedback-query-params/query_params_q.adoc[]
+
+[[query-parameters-ids]]
+===== Parameter ids
+
+include::../requirements/feedback-query-params/query_params_ids.adoc[]
+
+[[query-parameters-externalIds]]
+===== Parameter externalIds
+
+include::../requirements/feedback-query-params/query_params_externalIds_def.adoc[]
+
+include::../requirements/feedback-query-params/query_params_externalIds.adoc[]
+
+In a _feedback item_, externalIds refers to the identifier of the resource we are providing feedback on (the <<tbl_feedback_item,_target_>>). A single feedback item can point to several externalIds.
+
+_externalIds_ query parameter MAY contain a list of resource ids. This list can use different delimiters depending on the endpoint:
+
+[#tbl_externalIds,reftext='{table-caption} {counter:table-num}']
+.Feedback Query Parameters
+[cols="30,10,60",options="header"]
+|===
+|Endpoint |Delimiters accepted |Response
+|/collections/{collectionsId}/items |"," | Only Feedback items with one or more of the specified external identifiers on the list SHALL appear in the response.
+.3+|/collections/{collectionsId}/stats 
+|"," | Returns a single summary of those feedback items pointing to each one of the externalIds indicated on the list.
+a| "\|" | Returns a single summary of those feedback items pointing at the same time to all the externalIds indicated on the list (feedback with multiple target).
+|"^" | Returns n feedback summaries, one for each externalIds indicated on the list.
+|===

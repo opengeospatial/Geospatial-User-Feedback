@@ -180,7 +180,7 @@
 				<sequence>
 					<element name="keyword" type="mri:MD_Keywords_PropertyType">
 						<annotation>
-							<documentation>A possible value of expertise level</documentation>
+							<documentation>A possible value of keyword</documentation>
 						</annotation>
 					</element>
 					<element name="count" type="gco:Integer_PropertyType">
@@ -206,7 +206,7 @@
 				<sequence>
 					<element name="rating" type="guf:GUF_RatingCode_PropertyType">
 						<annotation>
-							<documentation>A possible value of expertise level</documentation>
+							<documentation>A possible value of rating</documentation>
 						</annotation>
 					</element>
 					<element name="count" type="gco:Integer_PropertyType">
@@ -263,7 +263,7 @@
 				<sequence>
 					<element name="tag" type="gco:CharacterString_PropertyType">
 						<annotation>
-							<documentation>A possible value of expertise level</documentation>
+							<documentation>A possible value of tag</documentation>
 						</annotation>
 					</element>
 					<element name="count" type="gco:Integer_PropertyType">
@@ -289,7 +289,7 @@
 				<sequence>
 					<element name="userRole" type="guf:GUF_UserRoleCode_PropertyType">
 						<annotation>
-							<documentation>A possible value of expertise level</documentation>
+							<documentation>A possible value of user role</documentation>
 						</annotation>
 					</element>
 					<element name="count" type="gco:Integer_PropertyType">

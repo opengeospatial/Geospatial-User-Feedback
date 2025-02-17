@@ -1,0 +1,8 @@
+[[req_feedback-item_feedback-item]]
+[requirement]
+
+====
+[%metadata]
+identifier:: /req/feedback-item/item
+part:: Each feedback item in a response SHALL contain all the mandatory properties listed in <<tbl_feedback_item>>.
+====

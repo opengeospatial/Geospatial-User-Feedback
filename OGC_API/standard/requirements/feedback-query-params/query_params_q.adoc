@@ -1,0 +1,9 @@
+[[req_fb-query-parameters_q]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/feedback-query-parameters/q
+part:: A searchable endpoint SHALL support a `q` parameter as defined in the https://docs.ogc.org/DRAFTS/20-004.html#core-query-parameters-q[OGC API - Records] Standard.
+part:: All references to the term "record" or "local resource" in the https://docs.ogc.org/DRAFTS/20-004.html#core-query-parameters-q[OGC API - Records] Standard SHALL be replaced by the term "feedback" as the context may indicate.
+====

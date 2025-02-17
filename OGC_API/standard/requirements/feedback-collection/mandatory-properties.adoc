@@ -1,0 +1,8 @@
+[[req_feedback-collection_mandatory-properties-collection]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/feedback-collection/mandatory-properties
+part:: A feedback catalog SHALL include all the mandatory properties listed in <<collection-properties-table>>.
+====

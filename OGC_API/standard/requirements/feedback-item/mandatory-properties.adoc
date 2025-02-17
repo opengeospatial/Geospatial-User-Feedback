@@ -1,0 +1,9 @@
+[[req_fb_mandatory-properties]]
+
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/feedback-item/mandatory-properties
+part:: Each feedback item in a response SHALL contain all the mandatory properties listed in <<tbl_feedback_item>>.
+====

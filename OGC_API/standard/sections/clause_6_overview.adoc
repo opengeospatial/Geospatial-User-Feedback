@@ -1,0 +1,112 @@
+[[overview]]
+== Overview
+
+=== Role of Feedback
+
+In addition to metadata provided by the original data provider describing geospatial resources, many users report that they trust data based on information about studies conducted by their peers. An important element of that trust is not only linking datasets with relevant citations in the scholarly literature but also the desire for less formal feedback mechanisms, such as user comments. As user feedback became a key driver for providers, a standardized way to provide it became necessary.
+
+The purpose of providing user feedback is to inform other users and data providers about use cases and experiences with a given geospatial resource (whether data or metadata). The goal is to collect requirements for resources that providers can incorporate into objective quality measures for their products, allowing them to meet the real needs of users and potentially discover new markets for their resources.
+
+To enable simple user interfaces that accommodate different levels of expertise in geospatial data usage, the geospatial feedback element is designed to be as simple as possible while still being comprehensive enough. The following are examples of what the model allows:
+
+    * Commenting, asking questions, and providing answers.
+    * Rating data.
+    * Citing publications.
+    * Providing a quality measure.
+    * Documenting additional lineage information.
+    * Describing usage.
+    * Highlighting a significant event that affects the interpretation of a dataset.
+
+To facilitate the interpretation of a group of feedback elements related to a resource, the need for a feedback summary became evident. The description of the feedback summary includes metrics and statistics on all the feedback elements in a feedback catalog or a subset of it, helping users and producers quickly assess a resource.
+
+=== Role of OGC API - Records
+
+https://docs.ogc.org/DRAFTS/20-004.html[OGC API - Records] is a specification within the Open Geospatial Consortium (OGC) APIs that provides a standard way to manage geospatial records in web formats. It is designed to allow organizations to expose, search, and query metadata records via RESTful APIs.
+
+Among its key features are metadata management (allowing the creation, updating, deletion, and querying of geospatial metadata records) and search and retrieval methods.
+
+https://docs.ogc.org/DRAFTS/20-004.html[OGC API - Records] defines a generic structure for record catalogs and record items, giving flexibility to producers to publish metadata associated with their resources.
+
+As feedback can be considered a specific type of metadata produced by users, the flexibility offered by https://docs.ogc.org/DRAFTS/20-004.html[OGC API - Records] can be used to define a specific type of record catalog and a specific type of record item: the feedback catalog and the feedback item.
+
+=== Feedback API
+
+The OGC API - Feedback defines a <<feedback-item,feedback item>> as the atomic unit of information in a <<feedback-collection,feedback catalog>>.
+
+A <<feedback-collection,feedback catalog>> is a collection of feedback items and is defined as a https://docs.ogc.org/DRAFTS/20-004.html,[**record catalog**] (view https://docs.ogc.org/DRAFTS/20-004.html[OGC API - Records]) that conforms to the OGC API - Feedback specifications and **only** contains feedback items.
+
+A <<feedback-item,feedback item>> provides a description (metadata) of a resource based on a user experience. The <<fb-item-encoding,feedback schema>> defined in this Standard includes a set of properties (such as comments, ratings, etc.) that can be used by any user of a certain resource to describe its experience.
+
+A <<user-feedback-summary,feedback summary>> provides an aggregation of information about feedback items contained in a feedback collection, which includes aggregated metrics and key insights from user comments and reports regarding a specific resource. 
+
+An implementation of the Feedback API Standard enables retrieving a subset of feedbacks from a feedback catalog using a logically connected set of predicates that may include spatial and/or temporal predicates.
+
+<<fb_API_1>> summarizes the access paths and relation types defined in this Standard.
+
+[#fb_API_1,reftext='{table-caption} {counter:table-num}']
+.Feedback API Paths
+[cols="40,20,40",options="header"]
+|===
+| Path Template| Relation| Resource
+3+| *Common*
+|/| | Landing page
+|/conformance| conformance| Conformance Classes
+|/collections | data| Metadata describing the the feedback catalogs available from this API implementation instance 
+|/collections/{collectionsId} | collections| Metadata describing a feedback catalog which has the unique identifier {collectionsId}
+3+| *Feedback Catalog Features*
+|/collections/{collectionsId}/items| items| Search results based on querying the service for feedback records satisfying 0..n query parameters.
+|/collections/{collectionsId}/items/{itemsId}|item|Feedback element which has the unique identifier {itemsId}
+|/collections/{collectionsId}/stats|summary| Feedback summary of the the feedback items (or a subset of them) contained in feedback collection
+|===
+
+Where:
+* {collectionsId} = An identifier for a specific feedback catalog.
+* {itemsId} = An identifier for a specific feedback within a feedback collection.
+
+=== Components
+
+This Standard defines the following components that may be used to deploy a feedback catalog:
+
+1. The core schema of a feedback item.
+2. The definition of a feedback collection resource that groups and describes a set of related feedback items (i.e. a feedback catalog).
+3. The definition of a feedback summary that aggregates information about a set of feedback items in a feedback collection.
+4. The definition of a core set of query parameters for searchable feedback catalogs.
+
+Using these components a feedback catalog can be deployed as:
+
+* A set of web-accessible feedback records that can be crawled by a search engine crawler, using (for example) a web browser, or by using automated tools.
+* A searchable feedback catalog with feedback items accessible through an API endpoint.
+
+[[Feedback_schema]]
+==== Feedback item schema
+
+The core set of feedback properties that may be used to point a resource include the itemIdentifier, abstract, contact, contactRole, dateInfo and target. A complete definition of a feedback can be found in clause <<fb_item_props, Feedback properties>>.
+
+The choice of which properties to include is based in the Geospatial User Feedback (GUF) conceptual model [7].
+
+Although this Standard does not mandate any particular encoding for a feedback item or a feedback catalog, it does define a conformance class for <<fb-item-encoding,JSON encoding>>.
+
+Other encodings are allowed but are not described in this Standard.
+
+=== Feedback collection (catalog)
+
+A <<feedback-collection,feedback collection>> (or a feedback catalog) is an object that groups and describes a set of related <<feedback-item, feedback items>>. The catalog is the primary access point from which a deployed set of feedbacks can be accessed. Having found a catalog a client can, by following the appropriate hypermedia controls contained therein, navigate to the feedbacks of the collection.
+
+Depending on the deployment pattern, the catalog may provide a link to each individual feedback of the collection or a link to a search access point for retrieving subsets of feedbacks.
+
+The core set of properties that may be used to describe a feedback catalog are the same properties used to describe a catalog in https://docs.ogc.org/DRAFTS/20-004.html[OGC API - Records] but it SHALL be specified the property **"conformsTo"** indicating that the catalog content (the feedback items) conforms to the OGC API - Feedback.
+
+==== Feedback Summary schema
+
+The core set of a feedback summary that may be used resume a feedback collection include numberOfFeedbackItem, minimumRating, maximumRating, averageRating, numberOfRatings, numberOfUserComments, numberOfUsageReports, numberOfReproducibleUsageReports, numberOfCitations, numberOfAdditionalQualities, numberOfAdditionalLineages and  numberOfSignificantEvents. A complete definition of a feedback summary can be found in the <<user-feedback-summary,Feedback Summary>>.
+
+The choice of which properties to include in the set of core properties is based in the Geospatial User Feedback (GUF) conceptual model [7].
+
+Although this Standard does not mandate any particular encoding for a feedback summary, it does define a conformance class for <<fb-summary-encoding,JSON encodings>>.
+
+Other encodings are allowed but are not described in this Standard.
+
+==== Query parameters
+
+A set of <<feedback-query-parameters,query parameters>>, based on the https://docs.ogc.org/DRAFTS/20-004.html[OGC API - Records], can be applied to a searchable feedback catalog endpoint. The complete list of parameters an its use is defined in <<feedback-query-parameters,Feedback Query Parameters>> section 
+

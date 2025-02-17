@@ -1,0 +1,12 @@
+== Scope
+
+The OGC Feedback API Standard specifies two requirements classes for deploying descriptive information provided by users (feedback) about resources.
+
+On one hand, this standard defines the information content of a feedback item. A feedback item is the atomic unit of information within a feedback catalog. It contains metadata provided by users about a specific resource in a data or metadata catalog. A feedback item may include user comments, questions and answers, reports of dataset issues and proposed solutions, ratings, usage reports, reproducible usage reports, citations of related datasets or publications describing usage, quality reports, relevant additional provenance information, and significant events related to the use or interpretation of a dataset.
+
+On the other hand, since feedback items can be grouped into feedback catalogs, this standard also specifies the "stats" endpoint, which is dedicated to retrieving summary information about the feedback items contained in a feedback catalog.
+
+The Feedback API Standard describes how feedback catalogs can be crawled or searched. Crawling a feedback collection involves following embedded links from one feedback item in a catalog to the next. Searching a collection of feedback items involves specifying query predicates that define a subset of feedback items.
+
+Finally, the Feedback API Standard outlines how feedback items can be created, modified, and deleted.
+

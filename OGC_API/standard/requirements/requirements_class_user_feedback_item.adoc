@@ -1,0 +1,16 @@
+[[rc_user_feedback_item]]
+
+[cols="1,4",width="90%"]
+|===
+2+|*Requirements Class*
+2+|http://www.opengis.net/spec/ogcapi-feedback-2/2.0/req/feedback-item
+|Target type |Document model
+|===
+
+[requirements_class]
+====
+[%metadata]
+identifier:: http://www.opengis.net/spec/ogcapi-feedback-2/2.0/req/feedback-item
+subject:: Document model
+requirement:: /req/feedback-item/feedback-item
+====

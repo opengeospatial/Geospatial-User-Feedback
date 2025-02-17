@@ -1,0 +1,9 @@
+[[req_fb-query-parameters_bbox]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/feedback-query-params/query_params_bbox
+part:: A searchable endpoint SHALL support the Bounding Box Search (`bbox`) parameter as defined in the https://docs.opengeospatial.org/is/17-069r4/17-069r4.html#_parameter_bbox[OGC API - Records] Standard.
+part:: All references to the term "record" or "local resource" in the https://docs.opengeospatial.org/is/17-069r4/17-069r4.html#_parameter_bbox[OGC API - Records] Standard SHALL be replaced by the term "feedback" as the context may indicate.
+====

@@ -1,0 +1,16 @@
+[[rc_user_feedback_summary]]
+
+[cols="1,4",width="90%"]
+|===
+2+|*Requirements Class*
+2+|https://www.opengis.net/spec/guf-conceptual/2.0/req/feedback-summary
+|Target type |Document model
+|===
+
+[requirements_class]
+====
+[%metadata]
+identifier:: https://www.opengis.net/spec/guf-conceptual/2.0/req/feedback-summary
+subject:: Document model
+requirement:: /req/feedback-summary/summary-model
+====

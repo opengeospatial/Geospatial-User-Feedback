@@ -1,0 +1,9 @@
+[[req_quality-common_citation-of-publications]]
+[requirement]
+====
+[%metadata]
+identifier:: /req/quality-common/citation-of-publications
+part:: The implementations of a citation of a publication SHALL follow the UML model as shown in <<img_publication>> with the properties specified in <<tbl_publication_elements>>, <<tbl_citation_motivation_code>> and <<tbl_publication_category_code>>. ^1^
++
+^1^ This model extends ISO 19115-1:2014 CI_Citation with elements for publications.
+====

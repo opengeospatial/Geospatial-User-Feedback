@@ -1,0 +1,199 @@
+---
+"$schema": https://json-schema.org/draft/2020-12/schema
+"$id": https://schemas.opengis.net/guf/2.0/ufs_v_2_0.schema.json
+title: User Feedback Summary
+description: User Feedback Summary v2.0 JSON schema
+"$defs":
+  UFS_FeedbackSummary:
+    "$anchor": UFS_FeedbackSummary
+    type: object
+    properties:
+      target:
+        description: Common geospatial resource the summary is about.
+        "$ref": 19115-4-core.json#CI_Citation
+      numberOfFeedbackItems:
+        description: Number of Feedback items this summary is about
+        type: integer
+      latestItemDate:
+        description: The date of the last item
+        "$ref": 19115-4-core.json#CI_Date
+      numberOfPrimaryTargets:
+        description: Total number of primary targets
+        type: integer
+      numberOfSecondaryTargets:
+        description: Total number of secondary targets
+        type: integer
+      numberOfSupplementaryTargets:
+        description: Total number of supplementary targets
+        type: integer
+      averageUserExpertiseLevel:
+        description: Average user expertise level
+        type: number
+      minimumRating:
+        description: Minimum rating received. Numeric value
+        type: number
+      maximumRating:
+        description: Maximum rating received. Numeric value
+        type: number
+      averageRating:
+        description: Average rating
+        type: number
+      numberOfRatings:
+        description: Number of feedback items with a valid rating
+        type: integer
+      numberOfUserComments:
+        description: Number of feedback items with a valid comment
+        type: integer
+      numberOfUsageReports:
+        description: Number of populated usage reports
+        type: integer
+      numberOfReproducibleUsageReports:
+        description: Number of populated reproducible usage reports
+        type: integer
+      numberOfCitatons:
+        description: Number of populated citations
+        type: integer
+      numberOfAdditionalQualities:
+        description: Number of populated quality elements
+        type: integer
+      numberOfAdditionalLineages:
+        description: Number of feedback items with a valid reported lineage
+        type: integer
+      numberOfSignificantEvents:
+        description: Number of populated significant events
+        type: integer
+      feedbackItemsByExpertiseLevelCount:
+        description: Number of feedback items by each level of expertise
+        type: array
+        items:
+          "$ref": "#UFS_ExpertiseLevelCount"
+        minItems: 0
+      userByRoleCount:
+        description: Number of feedback items for each user role
+        type: array
+        items:
+          "$ref": "#UFS_UserRoleCount"
+        minItems: 0
+      byKeywordCount:
+        description: Number of feedback items for each keyword
+        type: array
+        items:
+          "$ref": "#UFS_KeywordCount"
+        minItems: 0
+      byRatingCount:
+        description: Number of feedback items for each rating value
+        type: array
+        items:
+          "$ref": "#UFS_RatingCount"
+        minItems: 0
+      ratingByExpertiseLevelCount:
+        description: Number of feedback items for each rating and level of expertise
+        type: array
+        items:
+          "$ref": UFS_RatingExpertiseLevelCount
+        minItems: 0
+      byTagCount:
+        description: Number of feedback items for each tag
+        type: array
+        items:
+          "$ref": UFS_TagCount
+        minItems: 0
+    required:
+    - numberOfFeedbackItems
+    - minimumRating
+    - maximumRating
+    - averageRating
+    - numberOfRatings
+    - numberOfUserComments
+    - numberOfUsageReports
+    - numberOfReproducibleUsageReports
+    - numberOfCitations
+    - numberOfAdditionalQualities
+    - numberOfAdditionalLineages
+    - numberOfSignificantEvents
+  UFS_ExpertiseLevelCount:
+    "$anchor": UFS_ExpertiseLevelCount
+    type: object
+    properties:
+      expertiseLevel:
+        description: A possible value of expertise level
+        "$ref": https://schemas.opengis.net/gufspec/ogcapi-feedback-2/2.0/fb_v_2_0.schema.json#GUF_RatingCode
+      count:
+        description: Number of feedback items that were populated by this expertiseLevel
+          code
+        type: integer
+    required:
+    - expertiseLevel
+    - count
+  UFS_KeywordCount:
+    "$anchor": UFS_KeywordCount
+    type: object
+    properties:
+      keyword:
+        description: A possible value of keyword
+        "$ref": 19115-4-core.json#MD_Keywords
+      count:
+        description: Number of feedback items that were populated with this keyword
+        type: integer
+    required:
+    - keyword
+    - count
+  UFS_RatingCount:
+    "$anchor": UFS_RatingCount
+    type: object
+    properties:
+      rating:
+        description: A possible value of rating
+        "$ref": https://schemas.opengis.net/gufspec/ogcapi-feedback-2/2.0/fb_v_2_0.schema.json#GUF_RatingCode
+      count:
+        description: Number of feedback items that were populated with this rating
+          code
+        type: integer
+    required:
+    - rating
+    - count
+  UFS_RatingExpertiseLevelCount:
+    "$anchor": UFS_RatingExpertiseLevelCount
+    type: object
+    properties:
+      rating:
+        description: A possible value of rating
+        "$ref": https://schemas.opengis.net/gufspec/ogcapi-feedback-2/2.0/fb_v_2_0.schema.json#GUF_RatingCode
+      expertiseLevel:
+        description: A possible value of expertise level
+        "$ref": https://schemas.opengis.net/gufspec/ogcapi-feedback-2/2.0/fb_v_2_0.schema.json#GUF_RatingCode
+      count:
+        description: Number of feedback items that were populated with this rating-expertiseLevel
+          code pair
+        type: integer
+    required:
+    - rating
+    - expertiseLevel
+    - count
+  UFS_TagCount:
+    "$anchor": UFS_TagCount
+    type: object
+    properties:
+      tag:
+        description: A possible value of tag
+        type: string
+      count:
+        description: Number of feedback items that were populated with this tag value
+        type: integer
+    required:
+    - tag
+    - count
+  UFS_UserRoleCount:
+    "$anchor": UFS_UserRoleCount
+    type: object
+    properties:
+      userRole:
+        description: A possible value of user role
+        "$ref": https://schemas.opengis.net/gufspec/ogcapi-feedback-2/2.0/fb_v_2_0.schema.json#GUF_UserRoleCode
+      count:
+        description: Number of times that a feedback items was populated by a user
+          acting with this userRole code
+        type: integer
+    required:
+    - userRole
+    - count

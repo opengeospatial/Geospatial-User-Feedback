@@ -1,0 +1,19 @@
+== Terms, definitions and abbreviated terms
+
+=== Terms and Definitions
+
+This document uses the terms defined in Sub-clause 5.3 of OGC 06-121r9 [1], which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word "`shall`" (not "`must`") is the verb form used to indicate a requirement to be strictly followed to conform to this standard. It also uses definitions from the second version of the conceptual model OGC OGC 23-017 [7].
+
+For the purposes of this document, the following additional terms and definitions apply.
+
+==== feedback catalog; feedback collection
+
+a collection of related feedbacks
+
+==== feedback item; feedback
+
+atomic unit of information in a feedback catalog, used by users of a particular resource to share their usage experience (ratings, comments, etc.) with others.
+
+==== feedback summary
+
+An aggregation of information about feedback items contained in a feedback collection, which includes aggregated metrics and key insights from user comments and reports regarding a specific resource.

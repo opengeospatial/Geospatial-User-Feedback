@@ -1,0 +1,40 @@
+== Conventions
+
+This section provides details and examples for any conventions used in the document. Examples of conventions are symbols, abbreviations, use of schema, or special notes regarding how to read the document.
+
+=== Identifiers
+The normative provisions in this Standard are denoted by the URI
+
+http://www.opengis.net/spec/ogcapi-feedback-2/2.0
+
+All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.
+
+
+=== Link relations
+
+To express relationships between resources, <<rfc8288,RFC 8288 (Web Linking)>> is used.
+
+The following <<link-relations,registered link relation types [IANA]>> are used in this document.
+
+* **alternate**: Refers to a substitute for this context.
+
+* **collection**: The target IRI points to a resource which represents the feedback collection resource for the context IRI.
+
+* **item**: The target IRI points to a feedback resource that is a member of the feedback collection represented by the context IRI.
+
+* **next**: Indicates that the link's context is a part of a series, and that the next in the series is the link target.
+
+* **prev**: Indicates that the link's context is a part of a series, and that the previous in the series is the link target.
+
+* **self**: Conveys an identifier for the link's context.
+
+In addition the following link relation types are used for which no applicable registered link relation type could be identified.
+
+* **items**: Refers to a resource that is comprised of members of the feedback collection represented by the link's context.
+
+* **conformance**: Refers to a resource that identifies the specifications that the link's context conforms to.
+
+Each resource representation includes an array of links. Implementations are free to add additional links for all resources provided by the API.
+
+===  Use of HTTPS
+For simplicity, this OGC Standard only refers to the HTTP protocol. This is not meant to exclude the use of HTTPS. This is simply a shorthand notation for “HTTP or HTTPS”. In fact, most servers are expected to use HTTPS and not HTTP.

@@ -1,0 +1,18 @@
+[[rc_json]]
+
+[requirements_class]
+====
+[%metadata]
+identifier:: https://www.opengis.net/spec/guf-conceptual/2.0/req/json
+subject:: Document encoding
+inherit:: <<rfc8259,IETF RFC 8259: The JavaScript Object Notation (JSON) Data Interchange Format>>
+inherit:: <<jschema,JSON Schema>>
+inherit:: <<rfc7946,GeoJSON>>
+requirement:: /req/json/fb-catalog-content
+requirement:: /req/json/fb-collection-response
+requirement:: /req/json/fb-conformance
+requirement:: /req/json/fb-item-content
+requirement:: /req/json/fb-item-response
+requirement:: /req/json/fb-summary-content
+requirement:: /req/json/fb-summary-response
+====

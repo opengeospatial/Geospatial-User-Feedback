@@ -1,0 +1,51 @@
+[[feedback-item]]
+== Requirements Class "Feedback Item" (Component)
+
+=== Overview
+
+include::../requirements/requirements_class_user_feedback_item.adoc[]
+
+The Feedback item requirements class defines the data model classes that are involved in the definition of an individual user _feedback item_. A _feedback item_ is the container of the actual feedback. Every item is set into a context by a combination of _target_, _citations_ and _scope_.
+
+The Feedback Item requirements Class defines the requirements for a _feedback element_, which is the atomic unit of information of a _feedback catalog_.
+
+Although this Standard does not mandate any particular encoding for a feedback item or a feedback catalog, a JSON encoding is defined.
+
+Other encodings are allowed but are not described in this Standard.
+
+[[fb_item_props]]
+=== Properties
+
+<<tbl_feedback_item>> define the set of properties that may be included in a feedback item.
+
+[#tbl_feedback_item,reftext='{table-caption} {counter:table-num}']
+.Feedback Item
+[cols="20,20,40,20",options="header"]
+|===
+|Property | Requirement | Description |GeoJSON key
+|itemIdentifier | **required** | Identifier for the feedback item. | GUF_FeedbackItem.properties.itemIdentifier
+|abstract | **required** | Brief narrative description of this item, normally for display to a human. | GUF_FeedbackItem.properties.abstract
+|purpose | optional| Summary of the intentions with which the feedback was provided. | GUF_FeedbackItem.properties.purpose
+|contact | *required*| Information about the user providing feedback. | GUF_FeedbackItem.properties.contact
+|contactRole| **required** | User's role in the context of this feedback item.| GUF_FeedbackItem.properties.contactRole
+|dateInfo | **required** | Date when the feedback item was created, updated etc. | GUF_FeedbackItem.properties.dateInfo
+|itemIsReplyTo | optional | Identifiers of one or more items of feedback to which this item is a response. | GUF_FeedbackItem.properties.itemIsReplyTo
+|descriptiveKeywords | optional | Keywords that can be useful to search for this item. They are selected from controlled vocabularies.| GUF_FeedbackItem.properties.descriptiveKeywords
+|tag | optional | Free text word that can be useful to search for this item.| GUF_FeedbackItem.properties.tag
+|locale | optional | Language and character set used within the feedback item.| GUF_FeedbackItem.properties.locale
+|externalFeedback | optional | Link to an item in an external repository that contains the feedback (not described inline). | GUF_FeedbackItem.properties.externalFeedback
+|additionalQuality | optional | Structured quality assessment result.| GUF_FeedbackItem.properties.additionalQuality
+|userComment | optional | Text free user comment.| GUF_FeedbackItem.properties.userComment
+|usage | optional | Structured usage report.| GUF_FeedbackItem.properties.usage
+|rating | optional | Rating code reflecting the satisfaction of the user with the resource used.| GUF_FeedbackItem.properties.rating
+|citation | optional | Citation of a published resource (e.g.: a report, a peer reviewed paper) that provides an evaluation of the usage of the resource.| GUF_FeedbackItem.properties.citation
+|additionalLineageSteps | optional | Additional lineage steps not included in the producer metadata.| GUF_FeedbackItem.properties.additionalLineageSteps
+|significantEvent | optional | Significant natural events or sensor or platform anomalies that can affect the interpretation of the data. | GUF_FeedbackItem.properties.significantEvent
+|target | **required** | Identifies a pre-existing resource (e.g., a dataset or a metadata record) from a catalogue. | GUF_FeedbackItem.properties.target
+|===
+
+include::../requirements/feedback-item/mandatory-properties.adoc[]
+
+=== Feedback encoding
+
+This Standard defines a requirement class for JSON encoding of a _feedback item_. See <<fb-item-encoding,Encodings>>.

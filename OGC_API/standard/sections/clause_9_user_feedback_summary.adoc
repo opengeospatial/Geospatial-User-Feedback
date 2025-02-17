@@ -1,0 +1,50 @@
+[[user-feedback-summary]]
+== Requirements Class "Feedback Summary" (Component)
+
+=== Overview
+include::../requirements/requirements_class_user_feedback_summary.adoc[]
+
+The Feedback-Summary requirements class defines the requirements for a _feedback summary_.
+
+A _feedback summary_ is an object that provides aggregated information about a set of <<feedback_item, feedbacks>> in a <<feedback_collection,feedback catalog>> that share the same _target_.
+
+Although this Standard does not mandate any particular encoding for a feedback summary, a JSON encoding is defined.
+
+Other encodings are allowed but are not described in this Standard.
+
+[[fb_summary_props]]
+=== Properties
+
+<<tbl_feedback_summary>> define the set of properties that may be included in a feedback summary.
+
+[#tbl_feedback_summary,reftext='{table-caption} {counter:table-num}']
+.Feedback Summary
+[cols="20,20,40,20",options="header"]
+|===
+|Property | Requirement | Description |GeoJSON key
+|target | optional |Common geospatial resource the summary is about.  | UFS_FeedbackSummary.properties.target
+|numberOfFeedbackItem | **required** |Number of Feedback items this summary is about | UFS_FeedbackSummary.properties.numberOfFeedbackItem
+|latestItemDate | optional |The date of the last item | UFS_FeedbackSummary.properties.latestItemDate
+|numberOfPrimaryTargets | optional |Total number of primary targets | UFS_FeedbackSummary.properties.numberOfPrimaryTargets
+|numberOfSecondaryTargets | optional |Total number of secondary targets | UFS_FeedbackSummary.properties.numberOfSecondaryTargets 
+|numberOfSupplementaryTargets | optional |Total number of supplementary targets | UFS_FeedbackSummary.properties.numberOfSupplementaryTargets
+|averageUserExpertiseLevel | optional |Average user expertise level | UFS_FeedbackSummary.properties.averageUserExpertiseLevel
+|minimumRating | **required** |Minimum rating received | UFS_FeedbackSummary.properties.minimumRating
+|maximumRating | **required** |Maximum rating received | UFS_FeedbackSummary.properties.maximumRating
+|averageRating | **required** |Average rating | UFS_FeedbackSummary.properties.averageRating
+|numberOfRatings | **required** |Number of feedback items with a valid rating | UFS_FeedbackSummary.properties.numberOfRatings
+|numberOfUserComments | **required** |Number of feedback items with a valid comment | UFS_FeedbackSummary.properties.numberOfUserComments
+|numberOfUsageReports | **required** |Number of populated usage reports | UFS_FeedbackSummary.properties.numberOfUsageReports
+|numberOfReproducibleUsageReports | **required** |Number of populated reproducible usage reports | UFS_FeedbackSummary.properties.numberOfReproducibleUsageReports
+|numberOfCitations | **required** |Number of populated citations | UFS_FeedbackSummary.properties.numberOfCitations
+|numberOfAdditionalQualities | **required** |Number of populated quality elements | UFS_FeedbackSummary.properties.numberOfAdditionalQualities
+|numberOfAdditionalLineages | **required** |Number of feedback items with a valid reported lineage | UFS_FeedbackSummary.properties.numberOfAdditionalLineages
+|numberOfSignificantEvents | **required** |Number of populated significant events | UFS_FeedbackSummary.properties.numberOfSignificantEvents
+|feedbackItemsByExpertiseLevelCount | optional |Number of feedback items by each level of expertise | UFS_FeedbackSummary.properties.feedbackItemsByExpertiseLevelCount
+|===
+
+include::../requirements/feedback-summary/mandatory-properties.adoc[]
+
+=== Feedback Summary encoding
+
+This Standard defines a requirement class for JSON encoding of a _feedback summary_. See <<fb-summary-encoding,Encodings>>.

@@ -1,0 +1,12 @@
+[[req_fb-query-parameters_datetime]]
+
+
+
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/feedback-query-params/datetime
+part:: A searchable endpoint SHALL support a Temporal Searching (`datetime`) parameter as defined in the https://docs.ogc.org/DRAFTS/20-004.html#clause-record-core-query-parameters[OGC API - Records] Standard.
+part:: All references to the term "record" or "local resource" in the https://docs.ogc.org/DRAFTS/20-004.html#clause-record-core-query-parameters[OGC API - Records] Standard SHALL be replaced by the term "feedback" as the context may indicate.
+====

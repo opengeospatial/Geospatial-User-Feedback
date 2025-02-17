@@ -1,0 +1,8 @@
+[[req_json_fb-conformance]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/json/fb-conformance
+part:: The `conformsTo` array SHALL contain the value `http://www.opengis.net/spec/ogcapi-feedback-2/2.0/conf/json`.
+====

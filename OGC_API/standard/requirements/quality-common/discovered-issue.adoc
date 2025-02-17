@@ -1,0 +1,10 @@
+[[req_quality-common_discovered-issue]]
+[requirement]
+
+====
+[%metadata]
+identifier:: /req/quality-common/discovered-issue
+part:: The implementations of a discovered issue SHALL follow the UML model as shown in <<img_discovered_issue>> with the properties specified in <<tbl_discovered_issue>>. 
+====
+
+

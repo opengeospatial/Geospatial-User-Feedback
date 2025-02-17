@@ -1,0 +1,10 @@
+[[req_json_fb-collection-response]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/json/fb-collection-response
+part:: 200-responses of the server SHALL support the following media type:
++
+* `application/ogc-fb-catalog+json` for feedback catalog or feedback record collection resources.
+====

@@ -1,0 +1,8 @@
+[[req_json_fb-catalog-content]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/json/feedback-catalog-content
+part:: The schema of all responses with the media type `application/ogc-fb-catalog+json` SHALL validate against the OpenAPI 3.0 schema document https://schemas.opengis.net/ogcapi/feedback/part1/2.0/openapi/schemas/ogcapi_feedback-catalog.schema.json[`ogcapi_feedback-catalog.schema.json`].
+====

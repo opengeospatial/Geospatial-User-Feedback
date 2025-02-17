@@ -1,0 +1,86 @@
+[[json-component]]
+== Requirements Class "JSON" (Component)
+
+=== Overview
+
+include::../requirements/requirements_class_json.adoc[]
+
+include::../requirements/json/fb-conformance.adoc[]
+
+[[fb-item-encoding]]
+=== Feedback encoding
+
+https://datatracker.ietf.org/doc/html/rfc7946[GeoJSON] is a commonly used format based on JSON that is simple to understand and well supported by tools and software libraries. Since most Web developers are comfortable with using a JSON-based format, supporting GeoJSON is recommended. 
+
+The following requirements apply when:
+
+. The API endpoint advertises conformance to the JSON Conformance Class.
+. The client negotiates that the content of the server's response be https://datatracker.ietf.org/doc/html/rfc7946[GeoJSON].
+
+include::../requirements/json/fb-item-response.adoc[]
+
+include::../requirements/json/fb-item-content.adoc[]
+
+[NOTE]
+======================================================================
+OGC API - Feedback uses elements of ISO 19115 to define certain properties. Since ISO 19115 does not yet have an official JSON implementation, all references to this ISO in the feedback item JSON schema are made as '19115-4-core.json'.
+======================================================================
+
+[[schema_json_feedback]] $$TODO canviar link a github
+.link:https://github.com/grumets/nimmbus/tree/master/OGC_API/satandard/openapi/schemas/ogcapi_feedback-item.yaml[Schema for a feedback item encoded as GeoJSON (ogcapi_feedback-item.yaml)]
+[source,JSON]
+----
+include::../openapi/schemas/ogcapi_feedback-item.yaml[]
+----
+
+[[fb-collection-encoding]]
+=== Feedback Collection encoding
+
+https://datatracker.ietf.org/doc/html/rfc8259[JSON] is an open standard file format and data interchange format that uses human-readable text to store and transmit data objects consisting of attribute–value pairs and arrays (or other serializable values).  JSON is a commonly used data encoding with diverse uses in electronic data interchange, including that of web applications with servers.
+
+The following requirements apply when:
+
+. The API endpoint advertises conformance to the JSON Conformance Class
+. The client negotiates that the content of the server's response be JSON.
+
+include::../requirements/json/fb-catalog-response.adoc[]
+
+include::../requirements/json/fb-catalog-content.adoc[]
+
+[NOTE]
+======================================================================
+The schema for the feedback catalog is a specific implementation of the record collection defined in https://docs.ogc.org/DRAFTS/20-004.html#\_clause-core-record\_[OGC API - RecordsStandard].
+
+While https://docs.ogc.org/DRAFTS/20-004.html#\_clause-core-record\_[OGC API - RecordsStandard] defines the property conformsTo as optional, OGC API - Feedback
+considers it as required and its value is fixed as "http://www.opengis.net/spec/ogcapi-feedback-2/2.0/conf/feedback" to indicate that all elements in the catalog follows the <<feedback_item, feedback item>> requirements.
+======================================================================
+
+.Schema for a catalog record encoded as GeoJSON
+link:https://github.com/opengeospatial/ogcapi-records/blob/master/core/openapi/schemas/recordGeoJSON.yaml[]
+
+
+[[fb-summary-encoding]]
+=== Feedback Summary encoding
+
+https://datatracker.ietf.org/doc/html/rfc7946[GeoJSON] is a commonly used format based on JSON that is simple to understand and well supported by tools and software libraries. Since most Web developers are comfortable with using a JSON-based format, supporting GeoJSON is recommended. 
+
+The following requirements apply when:
+
+. The API endpoint advertises conformance to the JSON Conformance Class.
+. The client negotiates that the content of the server's response be https://datatracker.ietf.org/doc/html/rfc7946[GeoJSON].
+
+include::../requirements/json/fb-summary-response.adoc[]
+
+include::../requirements/json/fb-summary-content.adoc[]
+
+[NOTE]
+======================================================================
+OGC API - Feedback uses elements of ISO 19115 to define certain properties. Since ISO 19115 does not yet have an official JSON implementation, all references to this ISO in the feedback item JSON schema are made as '19115-4-core.json'.
+======================================================================
+
+[[schema_json_fb-summary]] $$TODO canviar link a github
+.link:https://github.com/grumets/nimmbus/tree/master/OGC_API/satandard/openapi/schemas/ogcapi_feedback-summary.yaml[Schema for a feedback summary encoded as GeoJSON (ogcapi_feedback-summary.yaml)]
+[source,JSON]
+----
+include::../openapi/schemas/ogcapi_feedback-summary.yaml[]
+----

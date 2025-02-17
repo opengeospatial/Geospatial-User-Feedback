@@ -1,0 +1,109 @@
+[[abstract]]
+[big]*i.     Abstract*
+{set:bgcolor:#D5F5E3}
+
+The OGC API standards family includes a set of resources that enable anyone to provide or use geospatial information. These APIs primarily describe the publication and access to data (features), although they may also reference metadata (records).
+
+This document takes a step further by defining the OGC API - Feedback, which builds upon the concept of OGC API - Records. While OGC API - Records is designed to describe metadata associated with resources from the producer's perspective, OGC API - Feedback establishes a standardized way to provide feedback on any catalog element, whether it be data or metadata. This mechanism focuses on users, allowing them to comment, rate, describe usage, report errors or deficiencies, link related documentation, etc. Moreover, it enables the generation of statistics on these evaluations, which can inform user interactions.
+
+Thus, in OGC API - Feedback, the feedback element is the atomic unit of information within a catalog, just as a record is in OGC API - Records. This feedback element must be described conforming to the specifications of this document.
+
+Accordingly, we define the following set of components for OGC API - Feedback:
+
+* a feedback item
+* a feedback catalog (a collection of feedback items)
+* a common set of query parameters
+* the requirements and characteristics for implementing a Feedback API
+
+Since the very nature of feedback is based on user contributions, OGC API - Feedback allows not only the GET method for queries but also adopts from OGC API - Features the capabilities for creating and modifying resources using the POST, PUT, PATCH, and DELETE methods.
+
+The following tables lists the endpoints of the OGC API - Feedback that allow a collection of feedback to be searched or to interact with:
+
+[#fm_1,reftext='{table-caption} {counter:table-num}']
+.Overview of resources and links to the document sections
+[cols="32,25,10,33",options="header"]
+|===
+|Resource |Path |HTTP method |Document reference
+|Landing page |`/` |GET |<<_api_landing_page,7.2 API landing page>>
+|Conformance declaration |`/conformance` |GET |<<_declaration_of_conformance_classes,7.4 Declaration of conformance classes>>
+|Feature collections |`/collections` |GET |<<_collections_,7.13 Feedback collections>>
+|Feature collection |`/collections/{collectionId}` |GET |<<_collection_, 7.14 Feedback collection>>
+|Features |`/collections/{collectionId}/items` |GET |<<_items_,7.15 Feedback>>
+|Feature |`/collections/{collectionId}/items/{itemId}` |GET |<<_item_,7.16 Feedback>>
+|Feature |`/collections/{collectionId}/stats` |GET |<<_summary_,7.16 Feedbacks summary>>
+|===
+
+//$$ TODO: en aquesta taula cal modificar els links a les seccions que toqui
+
+[#fm_2,reftext='{table-caption} {counter:table-num}']
+.Other supported HTTP methods by resource
+[cols="32,10,10,10,10",options="header"]
+|===
+|Resource endpoint 4+| HTTP method
+| | POST | PUT | PATCH | DELETE
+|`/collections/{collectionId}/items`| create |n/a |n/a |n/a
+|`/collections/{collectionId}/items/{itemId}`| n/a|replace, create | update| delete
+|===
+
+
+
+
+[[keywords]]
+[big]*ii.    Keywords*
+
+The following are keywords to be used by search engines and document catalogues.
+
+ogcdoc, ogc documents, API, OGC API, user feedback, feedback summary, metadata
+
+[[preface]]
+[big]*iii.   Preface*
+
+*OGC Declaration*
+
+Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.
+
+_Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation._
+
+//== Security considerations
+
+//No security considerations have been made for this Standard.
+
+
+//== Submitting organizations
+
+// Submitting organizations inserted here by Metanorma
+
+//The following organizations submitted this Document to the Open Geospatial Consortium Inc.
+
+:submitting-organizations: UAB-CREAF;
+//; Fraunhofer Institute
+
+[[submitting_organizations]]
+[big]*iv.    Submitting organizations*
+
+* UAB-CREAF
+
+The following organizations submitted this Document to the Open Geospatial Consortium (OGC):
+
+
+[[submitters]]
+[big]*v.     Submitters*
+
+All questions regarding this submission should be directed to the editors or the submitters:
+
+[%unnumbered]
+.Submitters
+|===
+|*Name* |*Affiliation*
+| Joan Masó | UAB-CREAF
+| Alaitz Zabala | UAB-CREAF
+| Oscar González-Guerrero | UAB-CREAF
+|===
+
+//== Contributors
+
+//This clause is optional.
+
+//Additional contributors to this Standard include the following:
+
+//Individual name(s), Organization

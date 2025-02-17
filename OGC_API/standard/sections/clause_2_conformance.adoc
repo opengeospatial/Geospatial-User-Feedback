@@ -1,0 +1,66 @@
+== Conformance
+
+=== Overview
+
+Conformance with this Standard shall be checked using the tests specified in <<annex-ats,Annex A>> (normative) of this document. The framework, concepts, and methodology for testing, and the criteria to claim conformance, are specified in the OGC Compliance Testing Policies and Procedures and the OGC Compliance Testing web site.
+
+The standardization target of the conformance classes:
+
+* <<feedback-item,Feedback Item>>
+* <<feedback-collection,Feedback Collection>>
+* <<user-feedback-summary,Feedback Summary>>
+
+is "Document model"
+
+The standardization target of the conformance class:
+
+* <<feedback-query-parameters,Feedback Query Parameters>>
+
+is "Web APIs".
+
+The standardization target of the conformance class:
+
+* <<json-component,JSON>>
+
+is "Document encoding".
+
+The Conformance Classes implemented in an API are advertised through the /conformance path on the landing page. Each Conformance Class has an associated Requirements Class. The Requirements Classes define the functional requirements which will be tested through the associated Conformance Test.
+
+
+=== Components
+
+This standard also identifies five (5) requirements classes for common components:
+
+* <<feedback-item,Feedback Item>>
+* <<feedback-collection,Feedback Collection>>
+* <<user-feedback-summary,Feedback Summary>>
+* <<feedback-query-parameters,Feedback Query Parameters>>
+* <<json-component,JSON>>
+
+These components are not intended to be implemented independently but rather implemented as components of a feedback catalog.
+
+The <<feedback-item,Feedback Item>> conformance class defines the schema requirements for a feedback record, which consists of properties used to share user assessments and experiences about a resource via a feedback catalog.
+
+The <<feedback-collection,Feedback Collection>> conformance class defines requirements for the metadata used to describe a collection of related feedbacks referred to as a feedback catalog in this Standard.
+
+The <<feedback-query-parameters,Feedback Query Parameters>> conformance class defines a minimum set of query parameters that a feedback catalog should provide.
+
+The <<json-component,JSON>>conformance class defines the requirements for a JSON representation of a feedback catalog object and a GeoJSON (see RFC 7946) representation of a standard feedback record.
+
+=== Conformance testing
+
+Conformance with this Standard shall be checked using all the relevant tests specified in <<annex-ats,Annex A>> of this document. The framework, concepts, and methodology for testing, and the criteria to be achieved to claim conformance are specified in the OGC Compliance Testing Policies and Procedures and the OGC Compliance Testing web site.
+
+[#cnf1,reftext='{table-caption} {counter:table-num}']
+.Component Conformance class URIs
+[cols="30,70",options="header"]
+|===
+| Conformance class| URI
+| Feedback Item | http://www.opengis.net/spec/ogcapi-feedback-2/2.0/conf/feedback
+| Feedback Collection | http://www.opengis.net/spec/ogcapi-feedback-2/2.0/conf/feedback-collection
+| Feedback Summary | http://www.opengis.net/spec/ogcapi-feedback-2/2.0/conf/feedback-summary
+| Feedback Query Parameters | http://www.opengis.net/spec/ogcapi-feedback-2/2.0/conf/feedback-query-params
+| JSON | http://www.opengis.net/spec/ogcapi-feedback-2/2.0/conf/json
+|===
+
+

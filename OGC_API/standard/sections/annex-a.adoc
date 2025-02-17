@@ -1,0 +1,42 @@
+[appendix,obligation=normative]
+[[annex-ats]]
+== Abstract Test Suite (Normative)
+=== Introduction
+
+A conformant implementation of this Standard must satisfy the following system characteristics.
+
+//[NOTE]
+//Ensure that there is a conformance class for each requirements class and a test for each requirement (identified by requirement name and number)
+
+=== Conformance class: Feedback item
+
+// include::../abstract_tests/ATS_class_User_Feedback_Item.adoc[]
+
+==== Feedback Item
+// include::../abstract_tests/ATS_test_item.adoc[]
+
+
+=== Conformance class: Feedback Summary
+
+//include::../abstract_tests/ATS_class_Feedback_summary.adoc[]
+
+==== Feedback Summary
+//include::../abstract_tests/ATS_test_summary_model.adoc[]
+
+
+=== Conformance class: Feedback Collection
+
+//include::../abstract_tests/ATS_class_Feedback_collection.adoc[]
+
+==== Feedback Collection response
+//include::../abstract_tests/ATS_test_response.adoc[]
+
+==== Feedback Collection
+// include::../abstract_tests/ATS_test_collection.adoc[]
+
+==== Feedback Collection response pagination
+//include::../abstract_tests/ATS_test_pagination.adoc[]
+
+
+
+

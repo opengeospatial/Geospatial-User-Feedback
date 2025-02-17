@@ -20,17 +20,17 @@ Since the very nature of feedback is based on user contributions, OGC API - Feed
 The following tables lists the endpoints of the OGC API - Feedback that allow a collection of feedback to be searched or to interact with:
 
 [#fm_1,reftext='{table-caption} {counter:table-num}']
-.Overview of resources and links to the document sections
+.Overview of resources endpoints and responses
 [cols="32,25,10,33",options="header"]
 |===
-|Resource |Path |HTTP method |Document reference
-|Landing page |`/` |GET |<<_api_landing_page,7.2 API landing page>>
-|Conformance declaration |`/conformance` |GET |<<_declaration_of_conformance_classes,7.4 Declaration of conformance classes>>
-|Feature collections |`/collections` |GET |<<_collections_,7.13 Feedback collections>>
-|Feature collection |`/collections/{collectionId}` |GET |<<_collection_, 7.14 Feedback collection>>
-|Features |`/collections/{collectionId}/items` |GET |<<_items_,7.15 Feedback>>
-|Feature |`/collections/{collectionId}/items/{itemId}` |GET |<<_item_,7.16 Feedback>>
-|Feature |`/collections/{collectionId}/stats` |GET |<<_summary_,7.16 Feedbacks summary>>
+|Resource |Path |HTTP method |Response
+|Landing page |`/` |GET | API landing page
+|Conformance declaration |`/conformance` |GET | Declaration of conformance classes
+|Feature collections |`/collections` |GET | Feedback collections
+|Feature collection |`/collections/{collectionId}` |GET | Feedback collection
+|Features |`/collections/{collectionId}/items` |GET |Feedbacks
+|Feature |`/collections/{collectionId}/items/{itemId}` |GET |Feedback
+|Feature |`/collections/{collectionId}/stats` |GET |Feedbacks summary
 |===
 
 //$$ TODO: en aquesta taula cal modificar els links a les seccions que toqui

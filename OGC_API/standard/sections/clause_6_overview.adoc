@@ -27,15 +27,15 @@ Among its key features are metadata management (allowing the creation, updating,
 
 https://docs.ogc.org/DRAFTS/20-004.html[OGC API - Records] defines a generic structure for record catalogs and record items, giving flexibility to producers to publish metadata associated with their resources.
 
-As feedback can be considered a specific type of metadata produced by users, the flexibility offered by https://docs.ogc.org/DRAFTS/20-004.html[OGC API - Records] can be used to define a specific type of record catalog and a specific type of record item: the feedback catalog and the feedback item.
+As feedback can be considered a specific type of metadata produced by users, the flexibility offered by https://docs.ogc.org/DRAFTS/20-004.html[OGC API - Records] can be used to define a specific type of record collection and a specific type of record item: the feedback catalog and the feedback item.
 
 === Feedback API
 
-The OGC API - Feedback defines a <<feedback-item,feedback item>> as the atomic unit of information in a <<feedback-collection,feedback catalog>>.
-
-A <<feedback-collection,feedback catalog>> is a collection of feedback items and is defined as a https://docs.ogc.org/DRAFTS/20-004.html,[**record catalog**] (view https://docs.ogc.org/DRAFTS/20-004.html[OGC API - Records]) that conforms to the OGC API - Feedback specifications and **only** contains feedback items.
+The OGC API - Feedback defines a <<feedback-item,feedback item>> as the atomic unit of information in a <<feedback-collection,feedback collection>>.
 
 A <<feedback-item,feedback item>> provides a description (metadata) of a resource based on a user experience. The <<fb-item-encoding,feedback schema>> defined in this Standard includes a set of properties (such as comments, ratings, etc.) that can be used by any user of a certain resource to describe its experience.
+
+A <<feedback-collection,feedback collection>> is a collection of feedback items and is defined as a https://docs.ogc.org/DRAFTS/20-004.html,[**record catalog**] (view https://docs.ogc.org/DRAFTS/20-004.html[OGC API - Records]) that conforms to the OGC API - Feedback specifications and **only** contains feedback items.
 
 A <<user-feedback-summary,feedback summary>> provides an aggregation of information about feedback items contained in a feedback collection, which includes aggregated metrics and key insights from user comments and reports regarding a specific resource. 
 

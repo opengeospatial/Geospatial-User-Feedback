@@ -5,11 +5,11 @@
 
 include::../requirements/requirements_class_user_feedback_item.adoc[]
 
-The Feedback item requirements class defines the data model classes that are involved in the definition of an individual user _feedback item_. A _feedback item_ is the container of the actual feedback. Every item is set into a context by a combination of _target_, _citations_ and _scope_.
+The Feedback item requirements class defines the data model classes that are involved in the definition of an individual user _feedback item_. A _feedback item_ is the container of the actual feedback. Every item is set into a context by a  _target_.
 
-The Feedback Item requirements Class defines the requirements for a _feedback element_, which is the atomic unit of information of a _feedback catalog_.
+The Feedback Item requirements Class defines the requirements for a _feedback element_, which is the atomic unit of information of a _feedback collection_.
 
-Although this Standard does not mandate any particular encoding for a feedback item or a feedback catalog, a JSON encoding is defined.
+Although this Standard does not mandate any particular encoding for a feedback item or a feedback collection, a JSON encoding is defined.
 
 Other encodings are allowed but are not described in this Standard.
 

@@ -66,7 +66,7 @@ _externalIds_ query parameter MAY contain a list of resource ids. This list can 
 |Endpoint |Delimiters accepted |Response
 |/collections/{collectionsId}/items |"," | Only Feedback items with one or more of the specified external identifiers on the list SHALL appear in the response.
 .3+|/collections/{collectionsId}/stats 
-|"," | Returns a single summary of those feedback items pointing to each one of the externalIds indicated on the list.
-a| "\|" | Returns a single summary of those feedback items pointing at the same time to all the externalIds indicated on the list (feedback with multiple target).
-|"^" | Returns n feedback summaries, one for each externalIds indicated on the list.
+|"," | Returns n feedback summaries, one for each externalIds indicated on the list.
+a| "\|" | Returns a single summary of those feedback items pointing to each one of the externalIds indicated on the list.
+|"^" | Returns a single summary of those feedback items pointing at the same time to all the externalIds indicated on the list (feedback with multiple target).
 |===

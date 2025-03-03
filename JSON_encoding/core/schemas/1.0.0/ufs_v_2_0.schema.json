@@ -116,7 +116,7 @@
 					"description":"Number of feedback items for each rating and level of expertise",
 					"type":"array",
 					"items":{
-						"$ref":"UFS_RatingExpertiseLevelCount"
+						"$ref":"#UFS_RatingExpertiseLevelCount"
 					},
 					"minItems":0
 				},
@@ -124,7 +124,7 @@
 					"description":"Number of feedback items for each tag",
 					"type":"array",
 					"items":{
-						"$ref":"UFS_TagCount"
+						"$ref":"#UFS_TagCount"
 					},
 					"minItems":0
 				}

@@ -2,20 +2,20 @@
 [big]*i.     Abstract*
 {set:bgcolor:#D5F5E3}
 
-The OGC API standards family includes a set of resources that enable anyone to provide or use geospatial information. These APIs primarily describe the publication and access to data (features), although they may also reference metadata (records).
+The OGC API standards family includes a set of resources that enable anyone to provide or use geospatial information. These APIs primarily describe the publication and access to data (e.g. features), although they may also reference metadata (i.e. records).
 
-This document takes a step further by defining the OGC API - Feedback, which builds upon the concept of OGC API - Records. While OGC API - Records is designed to describe metadata associated with resources from the producer's perspective, OGC API - Feedback establishes a standardized way to provide feedback on any catalog element, whether it be data or metadata. This mechanism focuses on users, allowing them to comment, rate, describe usage, report errors or deficiencies, link related documentation, etc. Moreover, it enables the generation of statistics on these evaluations, which can inform user interactions.
+This document takes a step further by defining the OGC API - Feedback, which builds upon the concept of OGC API - Records. OGC API - Records is designed catalogue records. Commonly these records contain metadata associated with resources created by the producer created from the producer's point of view. Instead, OGC API - Feedback specifies how to provide user feedback on any catalog element, whether data or metadata. This mechanism focuses on data and metadata users, allowing them to comment, rate, describe their usage, report errors or deficiencies they have found, link the data or metadata to related documentation, or report on bits of knowledge they have produced and want to share, etc. Moreover, it enables the reporting of statistics on these evaluations, which can inform other user.
 
-Thus, in OGC API - Feedback, the feedback element is the atomic unit of information within a catalog, just as a record is in OGC API - Records. This feedback element must be described conforming to the specifications of this document.
+Thus, in OGC API - Feedback, the feedback element is the atomic unit of information within a catalog (a.k.a. the item), just as a record is in OGC API - Records. This feedback element must be described conforming to this standard document.
 
-Accordingly, we define the following set of components for OGC API - Feedback:
-
+Accordingly, this standard defines the following set of components for OGC API - Feedback:
 * a feedback item
 * a feedback catalog (a collection of feedback items)
+* a feedback statistic
 * a common set of query parameters
 * the requirements and characteristics for implementing a Feedback API
 
-Since the very nature of feedback is based on user contributions, OGC API - Feedback allows not only the GET method for queries but also adopts from OGC API - Features the capabilities for creating and modifying resources using the POST, PUT, PATCH, and DELETE methods.
+Since the very nature of feedback is based on user contributions, OGC API - Feedback allows not only the GET method for queries but also adopts from OGC API - Features the capabilities for creating, modifying and deleting feedback items  using the POST, PUT, PATCH, and DELETE methods.
 
 The following tables lists the endpoints of the OGC API - Feedback that allow a collection of feedback to be searched or to interact with:
 
@@ -23,14 +23,14 @@ The following tables lists the endpoints of the OGC API - Feedback that allow a 
 .Overview of resources endpoints and responses
 [cols="32,25,10,33",options="header"]
 |===
-|Resource |Path |HTTP method |Response
-|Landing page |`/` |GET | API landing page
-|Conformance declaration |`/conformance` |GET | Declaration of conformance classes
-|Feature collections |`/collections` |GET | Feedback collections
-|Feature collection |`/collections/{collectionId}` |GET | Feedback collection
-|Features |`/collections/{collectionId}/items` |GET |Feedbacks
-|Feature |`/collections/{collectionId}/items/{itemId}` |GET |Feedback
-|Feature |`/collections/{collectionId}/stats` |GET |Feedbacks summary
+|Resource |Path |HTTP method |Document reference
+|Landing page |`/` |GET | https://docs.ogc.org/is/17-069r3/17-069r3.html#_api_landing_page[API landing page]
+|Conformance declaration |`/conformance` |GET | https://docs.ogc.org/is/20-004r1/20-004r1.html#conformance_class[Declaration of conformance]
+|Feedback collections |`/collections` |GET | Feedback collections
+|Feedback collection |`/collections/{collectionId}` |GET | Feedback collection
+|Feedback items |`/collections/{collectionId}/items` |GET |Feedbacks
+|Feedback |`/collections/{collectionId}/items/{itemId}` |GET |Feedback
+|Feedback summary |`/collections/{collectionId}/stats` |GET |Feedbacks summary
 |===
 
 //$$ TODO: en aquesta taula cal modificar els links a les seccions que toqui

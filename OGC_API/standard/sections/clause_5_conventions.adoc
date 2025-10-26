@@ -18,9 +18,11 @@ The following <<link-relations,registered link relation types [IANA]>> are used 
 
 * **alternate**: Refers to a substitute for this context.
 
-* **collection**: The target IRI points to a resource which represents the feedback collection resource for the context IRI.
+* **collection**: The target IRI points to a resource which represents the user feedback collection resource for the context IRI.
 
-* **item**: The target IRI points to a feedback resource that is a member of the feedback collection represented by the context IRI.
+////
+* **item**: The target IRI points to a feedback resource that is a member of the user feedback collection represented by the context IRI.
+////
 
 * **next**: Indicates that the link's context is a part of a series, and that the next in the series is the link target.
 
@@ -28,11 +30,19 @@ The following <<link-relations,registered link relation types [IANA]>> are used 
 
 * **self**: Conveys an identifier for the link's context.
 
+////
 In addition the following link relation types are used for which no applicable registered link relation type could be identified.
 
 * **items**: Refers to a resource that is comprised of members of the feedback collection represented by the link's context.
+ ////
 
-* **conformance**: Refers to a resource that identifies the specifications that the link's context conforms to.
+Used in combination with OGC API - Features Part 1: Core or OGC API - Common Part 1: Core, other link relation types will be used, including:
+
+* **http://www.opengis.net/def/rel/ogc/1.0/conformance**: The target IRI refers to a resource that identifies the specifications that the link’s context conforms to.
+
+The following link relation types are specified in the Two Dimensional Tile Matrix Set and Tileset Metadata standard and can be used here:
+
+* **http://www.opengis.net/def/rel/ogc/1.0/geodata**: The target IRI points to a geospatial resource (e.g. a single collection). (Use http://www.opengis.net/def/rel/ogc/1.0/data to point to a list of geospatial resources)
 
 Each resource representation includes an array of links. Implementations are free to add additional links for all resources provided by the API.
 

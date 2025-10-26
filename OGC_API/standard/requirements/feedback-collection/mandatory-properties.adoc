@@ -4,5 +4,5 @@
 ====
 [%metadata]
 identifier:: /req/feedback-collection/mandatory-properties
-part:: A feedback catalog SHALL include all the mandatory properties listed in <<collection-properties-table>>.
+part:: A user feedback collection SHALL include all the mandatory properties listed in <<collection-properties-table>>.
 ====

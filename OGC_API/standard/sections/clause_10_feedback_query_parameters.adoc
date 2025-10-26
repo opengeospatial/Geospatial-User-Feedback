@@ -6,9 +6,9 @@
 include::../requirements/requirements_class_query_params.adoc[]
 
 
-The Feedback Query Parameters requirements class defines a minimum set of query parameters that should be implemented at a searchable feedback catalog endpoint.
+The Feedback Query Parameters requirements class defines a minimum set of query parameters that should be implemented at a searchable feedback collection endpoint.
 
-The parameters are inherited from https://docs.ogc.org/DRAFTS/20-004.html,[OGC API - Records], although externalIds behavior has been expanded and is defined in this Standard. Moreover, the parameter type has been deprecated due to in a feedback catalog all elements are of the same type. 
+The parameters are inherited from https://docs.ogc.org/DRAFTS/20-004.html,[OGC API - Records], although externalIds behavior has been expanded and is defined in this Standard. Moreover, the parameter type has been deprecated due to in a feedback collection all elements are of the same type. 
 
 [#tbl_feedback_query_params,reftext='{table-caption} {counter:table-num}']
 .Feedback Query Parameters

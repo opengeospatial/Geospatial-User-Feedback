@@ -4,18 +4,18 @@
 
 The OGC API standards family includes a set of resources that enable anyone to provide or use geospatial information. These APIs primarily describe the publication and access to data (e.g. features), although they may also reference metadata (i.e. records).
 
-This document takes a step further by defining the OGC API - Feedback, which builds upon the concept of OGC API - Records. OGC API - Records is designed catalogue records. Commonly these records contain metadata associated with resources created by the producer created from the producer's point of view. Instead, OGC API - Feedback specifies how to provide user feedback on any catalog element, whether data or metadata. This mechanism focuses on data and metadata users, allowing them to comment, rate, describe their usage, report errors or deficiencies they have found, link the data or metadata to related documentation, or report on bits of knowledge they have produced and want to share, etc. Moreover, it enables the reporting of statistics on these evaluations, which can inform other user.
+This Standard takes a step further by defining the OGC API - Feedback, which builds upon the concept of OGC API - Records. OGC API - Records is designed to catalogue records. Commonly these records contain metadata associated with resources created by the producer and created from the producer's point of view. Instead, OGC API - Feedback specifies how to provide user feedback on any catalog entry, whether a geospatial collection or a metadata record in a OGC API Records collection. This mechanism focuses on the users perspective, allowing them to comment, rate, describe their usage, report errors or deficiencies they have found, link the data or metadata to related documentation, or report on bits of knowledge they have produced and want to share, etc. Moreover, it enables the reporting of statistics on these evaluations, which can inform other user.
 
-Thus, in OGC API - Feedback, the feedback element is the atomic unit of information within a catalog (a.k.a. the item), just as a record is in OGC API - Records. This feedback element must be described conforming to this standard document.
+Thus, in OGC API - Feedback, a feedback element is the atomic unit of information within a collection (a.k.a. an item), just as a record is in OGC API - Records. Feedback elements must be accessed conforming to this Standard.
 
-Accordingly, this standard defines the following set of components for OGC API - Feedback:
+Accordingly, this Standard defines the following set of components for OGC API - Feedback:
 * a feedback item
-* a feedback catalog (a collection of feedback items)
+* a feedback collection (that acts as a feedback catalog)
 * a feedback statistic
 * a common set of query parameters
-* the requirements and characteristics for implementing a Feedback API
+* the requirements and characteristics for implementing a feedback API
 
-Since the very nature of feedback is based on user contributions, OGC API - Feedback allows not only the GET method for queries but also adopts from OGC API - Features the capabilities for creating, modifying and deleting feedback items  using the POST, PUT, PATCH, and DELETE methods.
+Since the very nature of feedback is based on user contributions, OGC API - Feedback allows not only the HTTP GET method for queries, but also adopts from OGC API - Features - Part 4 the capabilities for creating, modifying and deleting feedback items using HTTP POST, PUT, PATCH, and DELETE methods.
 
 The following tables lists the endpoints of the OGC API - Feedback that allow a collection of feedback to be searched or to interact with:
 
@@ -45,7 +45,7 @@ The following tables lists the endpoints of the OGC API - Feedback that allow a 
 |`/collections/{collectionId}/items/{itemId}`| n/a|replace, create | update| delete
 |===
 
-
+Note that statistics can not be modified and they are expected to be generated automatically by the server.
 
 
 [[keywords]]
@@ -53,7 +53,7 @@ The following tables lists the endpoints of the OGC API - Feedback that allow a 
 
 The following are keywords to be used by search engines and document catalogues.
 
-ogcdoc, ogc documents, API, OGC API, user feedback, feedback summary, metadata
+ogcdoc, ogc documents, API, OGC API, user feedback, feedback summary, metadata, record
 
 [[preface]]
 [big]*iii.   Preface*
@@ -66,8 +66,20 @@ _Recipients of this document are requested to submit, with their comments, notif
 
 //== Security considerations
 
-//No security considerations have been made for this Standard.
+See OGC API - Features - Part 1: Core, Clause 11.
 
+See OGC API - Features - Part 4: Create, Replace, Update and Delete, Clause 11.
+
+In addition the exposed in OGC API - Features - Part 1 and See OGC API - Features - Part 4, a common OGC API - Feedbacks expects the contributions of many different uses, making the management of the privileges different from a common OGC API - Features. These are the common rules for the management of feedback:
+
+Users making modifications to resources need to:
+* Every user that was able to authenticate, has privileges to create new feedback.
+* Common authenticated users are authorized to modify or delete only the records that they have created.
+* Some special users, acting as a moderators, will have privileges to modify or delete only the records that any other user generated.
+
+The API definition must reflect this in the resource paths and their available methods.
+
+The service provider should do all in his hands to ensure that the feedback records can be trusted and to not contain false, damaging or irrelevant information. Active moderators (human or AI) should review the records and remove any records that has been demonstrated wrong. Users that reiterated in including wrong information should get their privileges revoked and their authentication rights deactivated and eventually all their contributed feedbacks that can not be proven right removed.
 
 //== Submitting organizations
 

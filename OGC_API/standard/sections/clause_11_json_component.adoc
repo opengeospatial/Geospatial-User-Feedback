@@ -49,13 +49,13 @@ include::../requirements/json/fb-catalog-content.adoc[]
 
 [NOTE]
 ======================================================================
-The schema for the feedback catalog is a specific implementation of the record collection defined in https://docs.ogc.org/DRAFTS/20-004.html#\_clause-core-record\_[OGC API - RecordsStandard].
+The schema for the feedback collection is a specific implementation of the record collection defined in https://docs.ogc.org/DRAFTS/20-004.html#\_clause-core-record\_[OGC API - RecordsStandard].
 
 While https://docs.ogc.org/DRAFTS/20-004.html#\_clause-core-record\_[OGC API - RecordsStandard] defines the property conformsTo as optional, OGC API - Feedback
-considers it as required and its value is fixed as "http://www.opengis.net/spec/ogcapi-feedback-2/2.0/conf/feedback" to indicate that all elements in the catalog follows the <<feedback_item, feedback item>> requirements.
+considers it as required and its value is fixed as "http://www.opengis.net/spec/ogcapi-feedback-2/2.0/conf/feedback" to indicate that all elements in the collection follows the <<feedback_item, feedback item>> requirements.
 ======================================================================
 
-.Schema for a catalog record encoded as GeoJSON
+.Schema for a collection record encoded as GeoJSON
 link:https://github.com/opengeospatial/ogcapi-records/blob/master/core/openapi/schemas/recordGeoJSON.yaml[]
 
 

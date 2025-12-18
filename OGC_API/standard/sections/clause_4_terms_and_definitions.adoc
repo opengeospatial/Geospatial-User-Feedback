@@ -1,6 +1,4 @@
-== Terms, definitions and abbreviated terms
-
-=== Terms and Definitions
+== TERMS AND DEFINITIONS
 
 This document uses the terms defined in Sub-clause 5.3 of OGC 06-121r9 [1], which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word "`shall`" (not "`must`") is the verb form used to indicate a requirement to be strictly followed to conform to this standard. It also uses definitions from the second version of the conceptual model OGC OGC 23-017 [7].
 
@@ -16,7 +14,7 @@ unit of information provided by a user about related resources as a result of it
 
 in the context of OGC the APIs is an atomic unit of information in a feedback collection, used by users of a particular resource to share their usage experience (ratings, comments, etc.) with others.
 
-==== user feedback summary
+==== user's feedback summary
 statistical summary of a feedback collection (OGC 15-097r1:2016 [7], 4.11)
 
 in the context of OGC the APIs is statistical summary of user feedback items contained in a user feedback collection, which includes aggregated metrics and key insights from feedback items about a specific resource (e.g. a collection of geospatial data or a record in an OGC API records collection).

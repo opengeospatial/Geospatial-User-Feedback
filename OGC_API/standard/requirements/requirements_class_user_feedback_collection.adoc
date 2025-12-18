@@ -12,6 +12,6 @@
 [%metadata]
 identifier:: https://www.opengis.net/spec/guf-conceptual/2.0/req/feedback-collection
 subject:: Document model
-inherit:: https://docs.ogc.org/DRAFTS/20-004.html#clause-record-collection
+inherit:: http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-collection
 requirement:: /req/feedback-collection/mandatory-properties-collection
 ====

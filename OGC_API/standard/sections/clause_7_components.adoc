@@ -1,0 +1,248 @@
+[[components]]
+== COMPONENTS
+
+=== Overview
+
+This clause specifies the requirements classes that define the components to be used to define a User Feedback Collection.
+
+A User Feedback Collection is a specific case of a Records Collection and, therefore, shall comply with all specifications of the https://docs.ogc.org/is/20-004r1/20-004r1.html[OGC API – Records], taking into account the particular characteristics of the elements described in this section.
+
+In this section, only the elements that differentiate the OGC API – Geospatial User Feedback from the https://docs.ogc.org/is/20-004r1/20-004r1.html[OGC API – Records] are described.
+
+[[feedback-item]]
+=== Requirements Class "User Feedback Item" (Component)
+
+==== Overview
+
+include::../requirements/requirements_class_user_feedback_item.adoc[]
+
+The User Feedback Item requirements class defines the data model classes that are involved in the definition of an individual _User Feedback item_. A _User Feedback Item_ is the container of the actual feedback. Every item is set into a context by a  _target_.
+
+The User Feedback Item requirements Class defines the requirements for a _User Feedback Item_, which is the atomic unit of information of a _User Feedback Collection_.
+
+Although this Standard does not mandate any particular encoding for a User Feedback Item or a User Feedback Collection, a JSON encoding is defined.
+
+Other encodings are allowed but are not described in this Standard.
+
+[[fb_item_props]]
+==== Properties
+
+<<tbl_feedback_item>> define the set of properties that may be included in a User Feedback Item.
+
+[#tbl_feedback_item,reftext='{table-caption} {counter:table-num}']
+.User Feedback Item
+[cols="20,20,40,20",options="header"]
+|===
+|Property | Requirement | Description |GeoJSON key
+|itemIdentifier | **required** | Identifier for the feedback item. | GUF_FeedbackItem.properties.itemIdentifier
+|abstract | **required** | Brief narrative description of this item, normally for display to a human. | GUF_FeedbackItem.properties.abstract
+|purpose | optional| Summary of the intentions with which the feedback was provided. | GUF_FeedbackItem.properties.purpose
+|contact | **required** | Information about the user providing feedback. | GUF_FeedbackItem.properties.contact
+|contactRole| **required** | User's role in the context of this feedback item.| GUF_FeedbackItem.properties.contactRole
+|dateInfo | **required** | Date when the feedback item was created, updated etc. | GUF_FeedbackItem.properties.dateInfo
+|itemIsReplyTo | optional | Identifiers of one or more items of feedback to which this item is a response. | GUF_FeedbackItem.properties.itemIsReplyTo
+|descriptiveKeywords | optional | Keywords that can be useful to search for this item. They are selected from controlled vocabularies.| GUF_FeedbackItem.properties.descriptiveKeywords
+|tag | optional | Free text word that can be useful to search for this item.| GUF_FeedbackItem.properties.tag
+|locale | optional | Language and character set used within the feedback item.| GUF_FeedbackItem.properties.locale
+|externalFeedback | optional | Link to an item in an external repository that contains the feedback (not described inline). | GUF_FeedbackItem.properties.externalFeedback
+|additionalQuality | optional | Structured quality assessment result.| GUF_FeedbackItem.properties.additionalQuality
+|userComment | optional | Text free user comment.| GUF_FeedbackItem.properties.userComment
+|usage | optional | Structured usage report.| GUF_FeedbackItem.properties.usage
+|rating | optional | Rating code reflecting the satisfaction of the user with the resource used.| GUF_FeedbackItem.properties.rating
+|citation | optional | Citation of a published resource (e.g.: a report, a peer reviewed paper) that provides an evaluation of the usage of the resource.| GUF_FeedbackItem.properties.citation
+|additionalLineageSteps | optional | Additional lineage steps not included in the producer metadata.| GUF_FeedbackItem.properties.additionalLineageSteps
+|significantEvent | optional | Significant natural events or sensor or platform anomalies that can affect the interpretation of the data. | GUF_FeedbackItem.properties.significantEvent
+|target | **required** | Identifies a pre-existing resource (e.g., a dataset or a metadata record) from a catalogue. | GUF_FeedbackItem.properties.target
+|===
+
+include::../requirements/feedback-item/mandatory-properties.adoc[]
+
+==== User Feedback Item encoding
+
+This Standard defines a requirement class for JSON encoding of a _User Feedback Item_. See <<fb-item-encoding,Encodings>>.
+
+
+[[feedback-collection]]
+=== Requirements Class "User Feedback Collection" (Component)
+
+==== Overview
+
+The User Feedback Collection requirements class is a specific implementation of the record collection defined in the https://docs.ogc.org/is/20-004r1/20-004r1.html#clause-record-collection[OGC API - Records Standard] (Section 7.3) where the conformsTo property takes the value "http://www.opengis.net/spec/ogcapi-feedback-2/2.0/conf/feedback" to indicate that all elements in the collection follow the <<feedback_item, User Feedback Item>> requirements.
+
+A _User Feedback Collection_ is an object that provides information about, and access to, a set of related <<feedback_item, User Feedback Items>>. Such a collection of User Feedbacks Items forms a user feedback catalog.
+
+
+[[user-feedback-summary]]
+=== Requirements Class "User's Feedback Summary" (Component)
+
+==== Overview
+include::../requirements/requirements_class_user_feedback_summary.adoc[]
+
+The User's Feedback Summary requirements class defines the requirements for a _User's Feedback Summary_.
+
+A _User's Feedback Summary_ is an object that provides aggregated information about a set of <<feedback_item, User Feedback Items>> in a <<feedback_collection,User Feedback Collection>> that share the same _target_.
+
+Although this Standard does not mandate any particular encoding for a feedback summary, a JSON encoding is defined.
+
+Other encodings are allowed but are not described in this Standard.
+
+[[fb_summary_props]]
+==== Properties
+
+<<tbl_feedback_summary>> define the set of properties that may be included in a User's Feedback Summary.
+
+[#tbl_feedback_summary,reftext='{table-caption} {counter:table-num}']
+.User's Feedback Summary
+[cols="20,20,40,20",options="header"]
+|===
+|Property | Requirement | Description |GeoJSON key
+|target | optional |Common geospatial resource the summary is about.  | UFS_FeedbackSummary.properties.target
+|numberOfFeedbackItem | **required** |Number of Feedback items this summary is about | UFS_FeedbackSummary.properties.numberOfFeedbackItem
+|latestItemDate | optional |The date of the last item | UFS_FeedbackSummary.properties.latestItemDate
+|numberOfPrimaryTargets | optional |Total number of primary targets | UFS_FeedbackSummary.properties.numberOfPrimaryTargets
+|numberOfSecondaryTargets | optional |Total number of secondary targets | UFS_FeedbackSummary.properties.numberOfSecondaryTargets 
+|numberOfSupplementaryTargets | optional |Total number of supplementary targets | UFS_FeedbackSummary.properties.numberOfSupplementaryTargets
+|averageUserExpertiseLevel | optional |Average user expertise level | UFS_FeedbackSummary.properties.averageUserExpertiseLevel
+|minimumRating | **required** |Minimum rating received | UFS_FeedbackSummary.properties.minimumRating
+|maximumRating | **required** |Maximum rating received | UFS_FeedbackSummary.properties.maximumRating
+|averageRating | **required** |Average rating | UFS_FeedbackSummary.properties.averageRating
+|numberOfRatings | **required** |Number of feedback items with a valid rating | UFS_FeedbackSummary.properties.numberOfRatings
+|numberOfUserComments | **required** |Number of feedback items with a valid comment | UFS_FeedbackSummary.properties.numberOfUserComments
+|numberOfUsageReports | **required** |Number of populated usage reports | UFS_FeedbackSummary.properties.numberOfUsageReports
+|numberOfReproducibleUsageReports | **required** |Number of populated reproducible usage reports | UFS_FeedbackSummary.properties.numberOfReproducibleUsageReports
+|numberOfCitations | **required** |Number of populated citations | UFS_FeedbackSummary.properties.numberOfCitations
+|numberOfAdditionalQualities | **required** |Number of populated quality elements | UFS_FeedbackSummary.properties.numberOfAdditionalQualities
+|numberOfAdditionalLineages | **required** |Number of feedback items with a valid reported lineage | UFS_FeedbackSummary.properties.numberOfAdditionalLineages
+|numberOfSignificantEvents | **required** |Number of populated significant events | UFS_FeedbackSummary.properties.numberOfSignificantEvents
+|feedbackItemsByExpertiseLevelCount | optional |Number of feedback items by each level of expertise | UFS_FeedbackSummary.properties.feedbackItemsByExpertiseLevelCount
+|===
+
+include::../requirements/feedback-summary/mandatory-properties.adoc[]
+
+==== Feedback Summary encoding
+
+This Standard defines a requirement class for JSON encoding of a _User's Feedback Summary_. See <<fb-summary-encoding,Encodings>>.
+
+
+[[feedback-query-parameters]]
+=== Requirements Class "User Feedback Query Parameters" (Component)
+
+==== Overview
+
+The User Feedback Query Parameters requirements class is a specific implementation of the Record Core Query Parameters defined in the https://docs.ogc.org/is/20-004r1/20-004r1.html#clause-record-core-query-parameters[OGC API - Records Standard] (Section 7.4). It inherits all existing query parameters and extends the _externalIds_ query parameter behavior, and deprecates the _type_ parameter, since all elements in a User Feedback Collection are of the same type. 
+
+[[query-parameters]]
+==== Query parameters
+
+[[query-parameters-externalIds]]
+===== Parameter externalIds
+
+include::../requirements/feedback-query-params/query_params_externalIds_def.adoc[]
+
+include::../requirements/feedback-query-params/query_params_externalIds.adoc[]
+
+In a _User Feedback Item_, externalIds refers to the identifier of the resource we are providing feedback on (the <<tbl_feedback_item,_target_>>). A single User Feedback Item can point to several externalIds.
+
+_externalIds_ query parameter MAY contain a list of resource ids. This list can use different delimiters depending on the endpoint:
+
+[#tbl_externalIds,reftext='{table-caption} {counter:table-num}']
+.Accepted delimiters for the externalIds User Feedback Query parameter per endpoint
+[cols="30,10,60",options="header"]
+|===
+|Endpoint |Delimiters accepted |Response
+|/collections/{collectionsId}/items |"," | Only Feedback items with one or more of the specified external identifiers on the list SHALL appear in the response.
+.3+|/collections/{collectionsId}/stats 
+|"," | Returns n feedback summaries, one for each externalIds indicated on the list.
+a| "\|" | Returns a single summary of those feedback items pointing to each one of the externalIds indicated on the list.
+|"^" | Returns a single summary of those feedback items pointing at the same time to all the externalIds indicated on the list (feedback with multiple target).
+|===
+
+
+=== Encoding
+
+[[json-component]]
+==== Requirements Class "JSON" (Component)
+
+===== Overview
+
+include::../requirements/requirements_class_json.adoc[]
+
+include::../requirements/json/fb-conformance.adoc[]
+
+[[fb-item-encoding]]
+===== User Feedback Item encoding
+
+https://datatracker.ietf.org/doc/html/rfc7946[GeoJSON] is a commonly used format based on JSON that is simple to understand and well supported by tools and software libraries. Since most Web developers are comfortable with using a JSON-based format, supporting GeoJSON is recommended. 
+
+The following requirements apply when:
+
+. The API endpoint advertises conformance to the JSON Conformance Class.
+. The client negotiates that the content of the server's response be https://datatracker.ietf.org/doc/html/rfc7946[GeoJSON].
+
+include::../requirements/json/fb-item-response.adoc[]
+
+include::../requirements/json/fb-item-content.adoc[]
+
+[NOTE]
+======================================================================
+OGC API - Feedback uses elements of ISO 19115 to define certain properties. Since ISO 19115 does not yet have an official JSON implementation, all references to this ISO in the feedback item JSON schema are made as '19115-4-core.json'.
+======================================================================
+
+[[schema_json_feedback]]
+.link:https://github.com/opengeospatial/Geospatial-User-Feedback/tree/main/OGC_API/standard/openapi/schemas/ogcapi_feedback-item.yaml[Schema for a feedback item encoded as GeoJSON (ogcapi_feedback-item.yaml)]
+[source,JSON]
+----
+include::../openapi/schemas/ogcapi_feedback-item.yaml[]
+----
+
+[[fb-collection-encoding]]
+===== User Feedback Collection encoding
+
+https://datatracker.ietf.org/doc/html/rfc8259[JSON] is an open standard file format and data interchange format that uses human-readable text to store and transmit data objects consisting of attribute–value pairs and arrays (or other serializable values).  JSON is a commonly used data encoding with diverse uses in electronic data interchange, including that of web applications with servers.
+
+The following requirements apply when:
+
+. The API endpoint advertises conformance to the JSON Conformance Class
+. The client negotiates that the content of the server's response be JSON.
+
+include::../requirements/json/fb-catalog-response.adoc[]
+
+include::../requirements/json/fb-catalog-content.adoc[]
+
+[NOTE]
+======================================================================
+The schema for the feedback collection is a specific implementation of the record collection defined in https://docs.ogc.org/DRAFTS/20-004.html#\_clause-core-record\_[OGC API - RecordsStandard].
+
+While https://docs.ogc.org/DRAFTS/20-004.html#\_clause-core-record\_[OGC API - RecordsStandard] defines the property conformsTo as optional, OGC API - Feedback
+considers it as required and its value is fixed as "http://www.opengis.net/spec/ogcapi-feedback-2/2.0/conf/feedback" to indicate that all elements in the collection follows the <<feedback_item, feedback item>> requirements.
+======================================================================
+
+.Schema for a collection record encoded as GeoJSON
+link:https://github.com/opengeospatial/ogcapi-records/blob/master/core/openapi/schemas/recordGeoJSON.yaml[]
+
+
+[[fb-summary-encoding]]
+===== User's Feedback Summary encoding
+
+https://datatracker.ietf.org/doc/html/rfc7946[GeoJSON] is a commonly used format based on JSON that is simple to understand and well supported by tools and software libraries. Since most Web developers are comfortable with using a JSON-based format, supporting GeoJSON is recommended. 
+
+The following requirements apply when:
+
+. The API endpoint advertises conformance to the JSON Conformance Class.
+. The client negotiates that the content of the server's response be https://datatracker.ietf.org/doc/html/rfc7946[GeoJSON].
+
+include::../requirements/json/fb-summary-response.adoc[]
+
+include::../requirements/json/fb-summary-content.adoc[]
+
+[NOTE]
+======================================================================
+OGC API - Feedback uses elements of ISO 19115 to define certain properties. Since ISO 19115 does not yet have an official JSON implementation, all references to this ISO in the feedback item JSON schema are made as '19115-4-core.json'.
+======================================================================
+
+[[schema_json_fb-summary]]
+.link:https://github.com/opengeospatial/Geospatial-User-Feedback/tree/main/OGC_API/standard/openapi/schemas/ogcapi_feedback-summary.yaml[Schema for a feedback summary encoded as GeoJSON (ogcapi_feedback-summary.yaml)]
+[source,JSON]
+----
+include::../openapi/schemas/ogcapi_feedback-summary.yaml[]
+----

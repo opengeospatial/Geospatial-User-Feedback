@@ -1,14 +1,16 @@
-== Conventions
+== CONVENTIONS
 
 This section provides details and examples for any conventions used in the document. Examples of conventions are symbols, abbreviations, use of schema, or special notes regarding how to read the document.
 
 === Identifiers
 The normative provisions in this Standard are denoted by the URI
 
-http://www.opengis.net/spec/ogcapi-feedback-2/2.0
+http://www.opengis.net/spec/ogcapi-geospatial-user-feedback-2/2.0
 
 All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.
 
+===  Use of HTTPS
+For simplicity, this OGC Standard only refers to the HTTP protocol. This is not meant to exclude the use of HTTPS. This is simply a shorthand notation for “HTTP or HTTPS”. In fact, most servers are expected to use HTTPS and not HTTP.
 
 === Link relations
 
@@ -20,21 +22,11 @@ The following <<link-relations,registered link relation types [IANA]>> are used 
 
 * **collection**: The target IRI points to a resource which represents the user feedback collection resource for the context IRI.
 
-////
-* **item**: The target IRI points to a feedback resource that is a member of the user feedback collection represented by the context IRI.
-////
-
 * **next**: Indicates that the link's context is a part of a series, and that the next in the series is the link target.
 
 * **prev**: Indicates that the link's context is a part of a series, and that the previous in the series is the link target.
 
 * **self**: Conveys an identifier for the link's context.
-
-////
-In addition the following link relation types are used for which no applicable registered link relation type could be identified.
-
-* **items**: Refers to a resource that is comprised of members of the feedback collection represented by the link's context.
- ////
 
 Used in combination with OGC API - Features Part 1: Core or OGC API - Common Part 1: Core, other link relation types will be used, including:
 
@@ -46,5 +38,6 @@ The following link relation types are specified in the Two Dimensional Tile Matr
 
 Each resource representation includes an array of links. Implementations are free to add additional links for all resources provided by the API.
 
-===  Use of HTTPS
-For simplicity, this OGC Standard only refers to the HTTP protocol. This is not meant to exclude the use of HTTPS. This is simply a shorthand notation for “HTTP or HTTPS”. In fact, most servers are expected to use HTTPS and not HTTP.
+=== Schemas
+
+OpenAPI 3.0 Schema objects are used throughout this Standard to define the structure of resources. These schema are typically represented using YAML encoding. This convention is for the ease of the user. It does not prohibit the use of another schema language or encoding. Nor does it indicate that OpenAPI 3.0 Schema objects are required. Implementations should use a schema language and encoding appropriate for the format of the resource. Note that for property values in JSON for which null is not explicitly supported/required, server implementations are recommended to drop the property (as opposed to specifying the property with a value of null).

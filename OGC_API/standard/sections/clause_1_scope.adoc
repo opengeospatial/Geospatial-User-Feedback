@@ -1,12 +1,10 @@
-== Scope
+== SCOPE
 
-The OGC Feedback API Standard specifies requirements classes for manage descriptive information provided by users (user feedback) about resources.
+The OGC Geospatial User Feedback API Standard, based on OGC API - Records, specifies requirements classes for manage descriptive information provided by users (user feedback) about resources.
 
 On one hand, this standard defines the information content of a user feedback item. A feedback item is the atomic unit of information within a user feedback collection (the equivalment to a user feedback catalogue). It contains metadata provided by users about a specific goespatial resource (a.k.a. collection) or a metadata record. A user feedback item may include user comments, questions and answers, reports of dataset issues and proposed solutions, ratings, usage reports, reproducible usage reports, citations of related datasets or publications describing usage, quality reports, relevant additional provenance information, and significant events related to the use or interpretation of a dataset.
 
 On the other hand, since user feedback items can be grouped into feedback collections, this standard also specifies the "stats" endpoint, which is dedicated to retrieving summary information about the user feedback items contained in a user feedback collection.
 
-The Feedback API Standard describes how user feedback collection can be crawled or searched. Crawling a user feedback collection involves following embedded links from one user feedback item in a collection to the next. Searching a collection of user feedback items involves specifying query predicates that define a subset of user feedback items.
-
-Finally, this Feedback API Standard outlines how user feedback items can be created, modified, and deleted.
+The Geospatial User Feedback API Standard uses and extends OGC API - Records to describe how user feedback collection can be crawled or searched. Crawling a user feedback collection involves following embedded links from one user feedback item in a collection to the next. Searching a collection of user feedback items involves specifying query predicates that define a subset of user feedback items.
 

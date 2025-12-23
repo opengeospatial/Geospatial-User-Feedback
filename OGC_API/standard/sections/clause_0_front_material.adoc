@@ -17,9 +17,9 @@ This standard defines
 * a common set of query parameters
 * the requirements and characteristics for implementing a user feedback API following OGC API - Feedback.
 
-Since the very nature of feedback is based on user contributions, OGC API - Feedback allows not only the HTTP GET method for queries, but also adopts from OGC API - Features - Part 4 the capabilities for creating, modifying and deleting feedback items using HTTP POST, PUT and DELETE methods.
+Since the very nature of feedback is based on user contributions, OGC API - Feedback allows not only the HTTP GET method for queries, but also adopts from OGC API - Features - Part 4 the capabilities for creating, modifying and deleting feedback items using HTTP POST, PUT, PATCH, and DELETE methods.
 
-The following tables lists the endpoints of the OGC API - Feedback that allow a collection of user feedbacks to be searched or to be interacted with:
+The following tables lists the endpoints of the OGC API - Feedback that allow a collection of feedbacks to be searched or to be interacted with:
 
 [#fm_1,reftext='{table-caption} {counter:table-num}']
 .Overview of resources endpoints and responses
@@ -35,14 +35,16 @@ The following tables lists the endpoints of the OGC API - Feedback that allow a 
 |Feedback summary |`/collections/{collectionId}/stats` |GET |summary of user feedbacks 
 |===
 
+//$$ TODO: en aquesta taula cal modificar els links a les seccions que toqui
+
 [#fm_2,reftext='{table-caption} {counter:table-num}']
 .Additional supported HTTP methods by resource
-[cols="32,10,10,10",options="header"]
+[cols="32,10,10,10,10",options="header"]
 |===
-|Resource endpoint 3+| HTTP method
-| | POST | PUT | DELETE
-|`/collections/{collectionId}/items`| create |n/a |n/a
-|`/collections/{collectionId}/items/{itemId}`| n/a|replace, create | delete
+|Resource endpoint 4+| HTTP method
+| | POST | PUT | PATCH | DELETE
+|`/collections/{collectionId}/items`| create |n/a |n/a |n/a |n/a
+|`/collections/{collectionId}/items/{itemId}`| n/a|replace, create|update |update (partial)| delete
 |===
 
 Note that statistics cannot be created/modified/deleted and they are expected to be generated automatically by the server.
@@ -70,14 +72,14 @@ See OGC API - Features - Part 1: Core, Clause 11.
 
 See OGC API - Features - Part 4: Create, Replace, Update and Delete, Clause 11.
 
-In addition to what is defined in OGC API – Features – Part 1 and OGC API – Features – Part 4, a common OGC API – Geospatial User Feedback service expects contributions from many different users, which makes privilege management different from that of a typical OGC API – Features implementation. These are the common rules for managing feedback:
+In addition the exposed in OGC API - Features - Part 1 and See OGC API - Features - Part 4, a common OGC API - Feedbacks expects the contributions of many different uses, making the management of the privileges different from a common OGC API - Features. These are the common rules for the management of feedback:
 
-Users making modifications to resources shall comply with the following:
-* Any user who is able to authenticate has the privilege to create new feedback.
-* Authenticated users are authorized to modify or delete only the records they have created.
-* Some special users, acting as moderators, have the privilege to modify or delete records created by any user.
+Users making modifications to resources need to:
+* Every user that was able to authenticate, has privileges to create new feedback.
+* Common authenticated users are authorized to modify or delete only the records that they have created.
+* Some special users, acting as a moderators, will have privileges to modify or delete only the records that any other user generated.
 
-The API definition shall reflect these rules in the resource paths and their available methods.
+The API definition must reflect this in the resource paths and their available methods.
 
 The service provider should make every reasonable effort to ensure that feedback records are trustworthy and do not contain false, harmful, or irrelevant information. Active moderators (human or AI) should review the records and remove any that have been proven to be incorrect. Users who repeatedly include incorrect information should have their privileges revoked, their authentication rights deactivated, and, eventually, all their contributed feedback that cannot be proven correct removed.
 

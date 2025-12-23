@@ -8,33 +8,33 @@ A conformant implementation of this Standard must satisfy the following system c
 //[NOTE]
 //Ensure that there is a conformance class for each requirements class and a test for each requirement (identified by requirement name and number)
 
-=== Conformance class: User Feedback item
+=== Conformance class: Feedback item
 
 // include::../abstract_tests/ATS_class_User_Feedback_Item.adoc[]
 
-==== User Feedback Item
+==== Feedback Item
 // include::../abstract_tests/ATS_test_item.adoc[]
 
 
-=== Conformance class: User Feedback Summary
+=== Conformance class: Feedback Summary
 
 //include::../abstract_tests/ATS_class_Feedback_summary.adoc[]
 
-==== User Feedback Summary
+==== Feedback Summary
 //include::../abstract_tests/ATS_test_summary_model.adoc[]
 
 
-=== Conformance class: User Feedback Collection
+=== Conformance class: Feedback Collection
 
 //include::../abstract_tests/ATS_class_Feedback_collection.adoc[]
 
-==== User Feedback Collection response
+==== Feedback Collection response
 //include::../abstract_tests/ATS_test_response.adoc[]
 
-==== User Feedback Collection
+==== Feedback Collection
 // include::../abstract_tests/ATS_test_collection.adoc[]
 
-==== User Feedback Collection response pagination
+==== Feedback Collection response pagination
 //include::../abstract_tests/ATS_test_pagination.adoc[]
 
 

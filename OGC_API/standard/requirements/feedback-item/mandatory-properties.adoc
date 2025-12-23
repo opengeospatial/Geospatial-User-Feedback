@@ -5,5 +5,6 @@
 ====
 [%metadata]
 identifier:: /req/feedback-item/mandatory-properties
-part:: Each feedback item in a response SHALL contain all the mandatory properties listed in <<tbl_feedback_item>>.
+part:: Each record that describes user feedback (a feedback item) in a response SHALL follow the GUF_FeedbackItem and its child classes defined by the GUF conceptual model standard. The equivalences between some of the GUF_FeedbackItem properties and the properties of the catalog record and the properties related to the resource are defined in <<tbl_record_feedback_item>>. The GUF_FeedbackItem and its child classes have some elements that use formal vocabularies their possible values are also include in the GUF conceptual model.
+part:: Each record that describes user feedback (a feedback item) SHALL have property "conformsTo" with the value "http://www.opengis.net/spec/ogcapi-feedback-2/2.0/conf/feedback" except if all record in the collection conforms to the the same value (see requirements for the collection).
 ====

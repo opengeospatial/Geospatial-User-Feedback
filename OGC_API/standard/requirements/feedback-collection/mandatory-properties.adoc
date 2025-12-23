@@ -4,5 +4,5 @@
 ====
 [%metadata]
 identifier:: /req/feedback-collection/mandatory-properties
-part:: A user feedback collection SHALL include all the mandatory properties listed in <<collection-properties-table>>.
+part:: In the case where all the records of a catalog are user feedbacks (to prevent unnecessary duplication) the conformsTo property of the catalog SHALL have an element "conformsTo" with the value "http://www.opengis.net/spec/ogcapi-feedback-2/2.0/conf/feedback".
 ====

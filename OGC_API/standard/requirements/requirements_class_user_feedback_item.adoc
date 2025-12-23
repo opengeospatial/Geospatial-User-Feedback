@@ -1,16 +1,18 @@
 [[rc_user_feedback_item]]
 
-[cols="1,4",width="90%"]
-|===
-2+|*Requirements Class*
-2+|http://www.opengis.net/spec/ogcapi-feedback-2/2.0/req/feedback-item
-|Target type |Document model
-|===
+// [cols="1,4",width="90%"]
+// |===
+// 2+|*Requirements Class*
+// 2+|http://www.opengis.net/spec/ogcapi-feedback-2/2.0/req/feedback-item
+// |Target type |Document model
+// |===
 
 [requirements_class]
 ====
 [%metadata]
 identifier:: http://www.opengis.net/spec/ogcapi-feedback-2/2.0/req/feedback-item
 subject:: Document model
+inherit:: http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-core
+inherit:: http://www.opengis.net/spec/geospatial-user-feedback/1.0/req/feedback-item/item
 requirement:: /req/feedback-item/feedback-item
 ====

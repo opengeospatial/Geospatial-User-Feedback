@@ -10,7 +10,7 @@ The standardization target of the conformance classes:
 * <<feedback-collection,User Feedback Collection>>
 * <<user-feedback-summary,User's Feedback Summary>>
 
-is "Document model"
+is "Document model".
 
 The standardization target of the conformance class:
 

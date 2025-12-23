@@ -16,9 +16,9 @@ In this section, only the elements that differentiate the OGC API – Geospatial
 
 include::../requirements/requirements_class_user_feedback_item.adoc[]
 
-The User Feedback Item requirements class defines the data model classes that are involved in the definition of an individual _User Feedback item_. A _User Feedback Item_ is the container of the actual feedback. Every item is set into a context by a  _target_.
+The User Feedback Item requirements class defines how the GUF conceptual model is combined with the record data model described in section 7.2 of https://docs.ogc.org/is/20-004r1/20-004r1.html[OGC API – Records]. A _User Feedback Item_ is the container of the actual feedback.
 
-The User Feedback Item requirements Class defines the requirements for a _User Feedback Item_, which is the atomic unit of information of a _User Feedback Collection_.
+The User Feedback Item requirements Class defines the requirements for a _User Feedback Item_, which is the atomic unit of information of a _User Feedback Collection_. It follows the instructions described in recommendation /rec/record-core/extensions in section 7.2.3 of https://docs.ogc.org/is/20-004r1/20-004r1.html[OGC API – Records].
 
 Although this Standard does not mandate any particular encoding for a User Feedback Item or a User Feedback Collection, a JSON encoding is defined.
 
@@ -26,33 +26,49 @@ Other encodings are allowed but are not described in this Standard.
 
 [[fb_item_props]]
 ==== Properties
+The properties of a record that contains user feedback uses the GUF conceptual model for the feedback Item as described in section 7.2 of OGC Geospatial User Feedback Standard: Conceptual Model. The following table maps the properties defined in OGC API - Records section 7.2 with the GUF Feedback item. 
 
-<<tbl_feedback_item>> define the set of properties that may be included in a User Feedback Item.
+[#tbl_record_feedback_item,reftext='{table-caption} {counter:table-num}']
+.User Feedback Item
+[cols="25,45,35",options="header"]
+|===
+|Property in records |Description |Property in feedback item
+|id |A unique record identifier assigned by the server |GUF_FeedbackItem.itemIdentifier.code
+|created |The date this record was created in the server |GUF_FeedbackItem.dateInfo.Data when GUF_FeedbackItem.dateInfo.dateType=="creation"
+|updated |The most recent date on which the record was changed |GUF_FeedbackItem.dateInfo.Data when GUF_FeedbackItem.dateInfo.dateType=="revision"
+|language |The language used for textual values (i.e., titles, descriptions, etc.) of this record |GUF_FeedbackItem.locale
+|conformsTo |The extensions/conformance classes used in this record |"http://www.opengis.net/spec/ogcapi-feedback-2/2.0/conf/feedback"
+|externalIds |One or more identifiers, assigned by an external entity, for the resource described by this record |GUF_FeedbackItem.metadataIdentifier.code
+|===
+
+NOTE: The properties that https://docs.ogc.org/is/20-004r1/20-004r1.html[OGC API – Records] defines in table 9 for describing geospatial resources does not apply to this Standard because the objective of the GUF is not to describe the data but to provide additional information in addition to the metadata that the provider commonly facilitates. The only property that is useful for us it the externalIds, necessary to link tot the target of the feedback item.
+
+The <<tbl_feedback_item>> provides an informative list of all properties that may be included in a User Feedback Item.
 
 [#tbl_feedback_item,reftext='{table-caption} {counter:table-num}']
 .User Feedback Item
-[cols="20,20,40,20",options="header"]
+[cols="20,20,40",options="header"]
 |===
-|Property | Requirement | Description |GeoJSON key
-|itemIdentifier | **required** | Identifier for the feedback item. | GUF_FeedbackItem.properties.itemIdentifier
-|abstract | **required** | Brief narrative description of this item, normally for display to a human. | GUF_FeedbackItem.properties.abstract
-|purpose | optional| Summary of the intentions with which the feedback was provided. | GUF_FeedbackItem.properties.purpose
-|contact | **required** | Information about the user providing feedback. | GUF_FeedbackItem.properties.contact
-|contactRole| **required** | User's role in the context of this feedback item.| GUF_FeedbackItem.properties.contactRole
-|dateInfo | **required** | Date when the feedback item was created, updated etc. | GUF_FeedbackItem.properties.dateInfo
-|itemIsReplyTo | optional | Identifiers of one or more items of feedback to which this item is a response. | GUF_FeedbackItem.properties.itemIsReplyTo
-|descriptiveKeywords | optional | Keywords that can be useful to search for this item. They are selected from controlled vocabularies.| GUF_FeedbackItem.properties.descriptiveKeywords
-|tag | optional | Free text word that can be useful to search for this item.| GUF_FeedbackItem.properties.tag
-|locale | optional | Language and character set used within the feedback item.| GUF_FeedbackItem.properties.locale
-|externalFeedback | optional | Link to an item in an external repository that contains the feedback (not described inline). | GUF_FeedbackItem.properties.externalFeedback
-|additionalQuality | optional | Structured quality assessment result.| GUF_FeedbackItem.properties.additionalQuality
-|userComment | optional | Text free user comment.| GUF_FeedbackItem.properties.userComment
-|usage | optional | Structured usage report.| GUF_FeedbackItem.properties.usage
-|rating | optional | Rating code reflecting the satisfaction of the user with the resource used.| GUF_FeedbackItem.properties.rating
-|citation | optional | Citation of a published resource (e.g.: a report, a peer reviewed paper) that provides an evaluation of the usage of the resource.| GUF_FeedbackItem.properties.citation
-|additionalLineageSteps | optional | Additional lineage steps not included in the producer metadata.| GUF_FeedbackItem.properties.additionalLineageSteps
-|significantEvent | optional | Significant natural events or sensor or platform anomalies that can affect the interpretation of the data. | GUF_FeedbackItem.properties.significantEvent
-|target | **required** | Identifies a pre-existing resource (e.g., a dataset or a metadata record) from a catalogue. | GUF_FeedbackItem.properties.target
+|Property | Requirement | Description
+|itemIdentifier | **required** | Identifier for the feedback item
+|abstract | **required** | Brief narrative description of this item, normally for display to a human
+|purpose | optional| Summary of the intentions with which the feedback was provided
+|contact | **required** | Information about the user providing feedback
+|contactRole| **required** | User's role in the context of this feedback item
+|dateInfo | **required** | Date when the feedback item was created, updated etc
+|itemIsReplyTo | optional | Identifiers of one or more items of feedback to which this item is a response
+|descriptiveKeywords | optional | Keywords that can be useful to search for this item. They are selected from controlled vocabularies
+|tag | optional | Free text word that can be useful to search for this item
+|locale | optional | Language and character set used within the feedback item
+|externalFeedback | optional | Link to an item in an external repository that contains the feedback (not described inline)
+|additionalQuality | optional | Structured quality assessment result
+|userComment | optional | Text free user comment
+|usage | optional | Structured usage report
+|rating | optional | Rating code reflecting the satisfaction of the user with the resource used
+|citation | optional | Citation of a published resource (e.g.: a report, a peer reviewed paper) that provides an evaluation of the usage of the resource
+|additionalLineageSteps | optional | Additional lineage steps not included in the producer metadata
+|significantEvent | optional | Significant natural events or sensor or platform anomalies that can affect the interpretation of the data
+|target | **required** | Identifies a pre-existing resource (e.g., a dataset or a metadata record) from a catalogue
 |===
 
 include::../requirements/feedback-item/mandatory-properties.adoc[]
@@ -67,10 +83,15 @@ This Standard defines a requirement class for JSON encoding of a _User Feedback 
 
 ==== Overview
 
-The User Feedback Collection requirements class is a specific implementation of the record collection defined in the https://docs.ogc.org/is/20-004r1/20-004r1.html#clause-record-collection[OGC API - Records Standard] (Section 7.3) where the conformsTo property takes the value "http://www.opengis.net/spec/ogcapi-feedback-2/2.0/conf/feedback" to indicate that all elements in the collection follow the <<feedback_item, User Feedback Item>> requirements.
+include::../requirements/requirements_class_user_feedback_collection.adoc[]
 
-A _User Feedback Collection_ is an object that provides information about, and access to, a set of related <<feedback_item, User Feedback Items>>. Such a collection of User Feedbacks Items forms a user feedback catalog.
+The User Feedback Collection requirements class is a specific implementation of the record collection defined in the https://docs.ogc.org/is/20-004r1/20-004r1.html#clause-record-collection[OGC API - Records Standard] (Section 7.3) that is applicable to collections that contains user feedback (a.k.a. feedback catalog) where a conformsTo property takes the value "http://www.opengis.net/spec/ogcapi-feedback-2/2.0/conf/feedback" to indicate that all elements in the collection follow the <<feedback_item, User Feedback Item>> requirements.
 
+include::../requirements/feedback-collection/mandatory-properties.adoc[]
+
+A _User Feedback Collection_ is an object that provides information about, and access to, a set of related <<feedback_item, User Feedback Items>>. Such a collection of User Feedbacks Items forms a user feedback catalog. 
+
+NOTE: The Geospatial User Feedback conceptual model also defines a Feedback Collections requirements class in section 8.2. This requirements class defines a mechanism similar to the OGC API - Records for record collections. However the OGC API - feedback has specified a dependency to the later disregarding the former.
 
 [[user-feedback-summary]]
 === Requirements Class "User's Feedback Summary" (Component)

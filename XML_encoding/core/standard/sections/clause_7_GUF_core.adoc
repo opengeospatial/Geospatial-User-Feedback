@@ -157,7 +157,7 @@ The following code shows a xml encoding example for QCM_Publication
 	</cit:onlineResource>
 	<qcm:abstract>
 		<gco:CharacterString>
-	In recent years, researchers of different communities have increased their efforts in formalizing a set of measurements regularly collected for analysing changes in Drivers, States, Impacts and Responses of a given discipline. In some cases, different actors have converged in a minimum set of Essential Variables (EVs), such as for Climate, Biodiversity or Oceans. The definition of such EVs is an ongoing evolution and in extension (e.g. EVs for water) although some communities have not even started (e.g. agriculture and energy). This paper characterizes the Earth Observation (EO) networks and creates a graph representation of their relations. Secondly, this graph is enriched with the EVs produced by each network creating a knowledge base. Finally, an effort has been done to identify links between EVs and Sustainable Development Goals (SDG) indicators in a way that they indirectly connect the EO. An analysis to detect gaps in EO variables due to a lack of observational networks is performed. Several suggestions for improving SDG indicators framework by considering EVs are exposed, as well as proposing new necessary EVs and suggesting new EO based indicators. The complete graph is available in the ENEON website (http://www.eneon.net/graph-ev-sdg/).
+			In recent years, researchers of different communities have increased their efforts in formalizing a set of measurements regularly collected for analysing changes in Drivers, States, Impacts and Responses of a given discipline. In some cases, different actors have converged in a minimum set of Essential Variables (EVs), such as for Climate, Biodiversity or Oceans. The definition of such EVs is an ongoing evolution and in extension (e.g. EVs for water) although some communities have not even started (e.g. agriculture and energy). This paper characterizes the Earth Observation (EO) networks and creates a graph representation of their relations. Secondly, this graph is enriched with the EVs produced by each network creating a knowledge base. Finally, an effort has been done to identify links between EVs and Sustainable Development Goals (SDG) indicators in a way that they indirectly connect the EO. An analysis to detect gaps in EO variables due to a lack of observational networks is performed. Several suggestions for improving SDG indicators framework by considering EVs are exposed, as well as proposing new necessary EVs and suggesting new EO based indicators. The complete graph is available in the ENEON website (http://www.eneon.net/graph-ev-sdg/).
 		</gco:CharacterString>
 	</qcm:abstract>
 	<qcm:highlights>
@@ -280,13 +280,14 @@ The following code shows a xml encoding example for QCM_ReproducibleUsage:
 === *Requirements Class Feedback-Item*
 
 The Feedback-Item requirements class defines the data model classes that are involved in the definition of an individual user feedback item. A key design goal for the GUF to remain as simple as possible but comprehensive enough. This is, in order to allow for simple user interfaces that can cover different levels of expertise on geospatial data usage. The following are examples of what the GUF model allows: 
-* Commenting
-* Asking questions
-* Providing answers (the GUF_UserComment class)
-* Rating data (GUF_Rating)
-* Citing publications (QCM_Publication)
-* Providing a quality measure (additionalQuality)
-* Documenting additional lineage information (additional LineageSteps) or 
+
+* Commenting;
+* Asking questions;
+* Providing answers (the GUF_UserComment class);
+* Rating data (GUF_Rating);
+* Citing publications (QCM_Publication);
+* Providing a quality measure (additionalQuality);
+* Documenting additional lineage information (additional LineageSteps); or 
 * Emphasizing a significant event that conditions the interpretation of a dataset (GUF_SignificantEvent). 
 
 Each one of the previous examples is considered an “item” of feedback. Geospatial User Every item is set into a context by a combination of target, citations and scope. Feedback can be provided both about data or metadata.

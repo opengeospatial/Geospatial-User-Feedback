@@ -3,7 +3,7 @@
 
 === Overview
 
-The Feedback-Item requirements class defines the data model classes that are involved in the definition of an individual user feedback item. A feedback item is the container of the actual feedback. Every item is set into a context by a combination of target, citations and scope.
+The Feedback-Item requirements class defines the data model classes that are involved in the definition of an individual user feedback item. A feedback item is the container of the actual feedback. Every item is set into a context by a combination of target, citations, and scope.
 
 include::../requirements/requirements_class_user_feedback_item.adoc[]
 
@@ -42,7 +42,7 @@ image::figures/FeedbackItem_2.png[width=600,align="center"]
 |userComment | Text free user comment | GUF_UserComment data type (see <<tbl_user_comment_dt>>) | Zero or one (optional) ^b^
 |usage | Structured usage report | GUF_UsageReport (see <<tbl_usage_report_dt>>) |  Zero or more (optional) ^b^
 |rating | Rating code reflecting the satisfaction of the user with the resource used | GUF_Rating (see <<tbl_rating_dt>>) |  Zero or one (optional) ^b^
-|citation | Citation of a published resource (e.g.: a report, a peer reviewed paper) that provides an evaluation of the usage of the resource | CI_Citation data type (ISO 19115-1:2014 B.3.2.1) or, preferably, QCM_Publication data type (see <<tbl_publication_elements>>)|  Zero or more (optional) ^b^
+|citation | Citation of a published resource (e.g., a report, a peer reviewed paper) that provides an evaluation of the usage of the resource | CI_Citation data type (ISO 19115-1:2014 B.3.2.1) or, preferably, QCM_Publication data type (see <<tbl_publication_elements>>)|  Zero or more (optional) ^b^
 |{set:cellbgcolor:#D6EAF8}additionalLineageSteps | Additional lineage steps not included in the producer metadata | LI_Lineage data type (ISO 19115-1:2014 B.2.5) |  Zero or one (optional) ^b^
 |{set:cellbgcolor:#D6EAF8/}significantEvent | Significant natural events or sensor or platform anomalies that can affect the interpretation of the data. | GUF_SignificantEvent (see <<tbl_significant_event_dt>>) |  Zero or more (optional) ^b^
 |target | Identifies a pre-existing resource (e.g., a dataset or a metadata record) from a catalogue. | GUF_FeedbackTarget (see <<tbl_feedback_target_dt>>)|  One or more (mandatory)
@@ -91,7 +91,7 @@ image::figures/FeedbackItem_2.png[width=600,align="center"]
 [width = "100%",options="header"]
 |===	
 |*Name* | *Definition*	| *Data type and values* | *Multiplicity and use*
-|resourceRef ^a^ | Reference to a resource (e.g. a dataset or metadata record) that is the target of the feedback item or a superset of the item ^b^ |CI_Citation data type (ISO 19115-1:2014 B.3.2.1) | One or more (mandatory) ^c^
+|resourceRef ^a^ | Reference to a resource (e.g., a dataset or metadata record) that is the target of the feedback item or a superset of the item ^b^ |CI_Citation data type (ISO 19115-1:2014 B.3.2.1) | One or more (mandatory) ^c^
 |metadataIdentifier ^f^ |Identifier for a metadata record about the resource |MD_Identifier data type (ISO 19115-1:2014 B.3.3.3) |Zero or more (optional)
 |scope |Describes a type of resource the feedback is about, typically a dataset, a metadata record, a feature... or a subset of a dataset or resource. |MD_scope data type (ISO 19115-1:2014 B.3.3.1) |Zero or one (optional) ^b^
 |role |The role of the target with respect to the feedback item ^g^ |GUF_TargetRoleCode code (see <<tbl_target_role_code_cl>>) | One (mandatory)
@@ -111,7 +111,7 @@ image::figures/FeedbackItem_2.png[width=600,align="center"]
 [width = "100%",options="header"]
 |===	
 |*Name* | *Definition*
-|primary | Identifies a pre-existing resource that is the subject of the feedback item, i.e. points to the resources the feedback is about.
+|primary | Identifies a pre-existing resource that is the subject of the feedback item, i.e., points to the resources the feedback is about.
 |secondary | Referenced resources, implying that the feedback item might be relevant to the referenced resource.
 |supplementary | Identifiers to additional references, e.g., another region in another dataset with similar problems. It is used to formally model references that somehow are related to the feedback item at hand but does not imply that the feedback is relevant for the referenced subject. (An exemplary resource reference should be of this code; such feedback would not typically be shown with the resource).
 |===	
@@ -122,7 +122,7 @@ image::figures/FeedbackItem_2.png[width=600,align="center"]
 |===
 |*Name* | *Definition*	| *Data type and values* | *Multiplicity and use*
 |comment |Free text |Character String type, not empty |One (mandatory)
-|motivation |Motivation of the comment: it can be a comment, a question, an answer or a justification (e.g. a justification for a rating) |GUF_MotivationCode code list (see <<tbl_motivation_code_cl>>) | Zero or one (optional)
+|motivation |Motivation of the comment: it can be a comment, a question, an answer or a justification (e.g., a justification for a rating) |GUF_MotivationCode code list (see <<tbl_motivation_code_cl>>) | Zero or one (optional)
 |===
 
 [#tbl_motivation_code_cl,reftext='{table-caption} {counter:table-num}']
@@ -135,7 +135,7 @@ image::figures/FeedbackItem_2.png[width=600,align="center"]
 |answer |Answer (possibly one of several, possibly incorrect) to a previous “question” formulated in a previous feedback item (use itemIsReplyTo to refer to a previous question or comment).
 |acceptedAnswer|The answer that has been accepted as best to a previous question formulated in a previous feedback item (use itemIsReplyTo to refer to a previous question or comment).
 |response|Response or a reaction of the producer or other responsible party to another feedback item (e.g., a “comment” or a “discovered issue” of a usage problem) (use itemIsReplyTo to refer to the item that motivated the response). 
-|justification | Justification or explanation clarifying the reasoning in another part of the feedback item e.g.: a rating.
+|justification | Justification or explanation clarifying the reasoning in another part of the feedback item e.g., a rating.
 |resolution|Resolution declaring a discussion thread (a sequence of interrelated questions, answers, and comments) closed (use itemIsReplyTo to refer to the last question, answer, or comment)
 |moderation |Reason why another feedback item has been moderated or censored.
 |annotation | Tag on a feature present in the data that incorporate information that can be later useful for others.
@@ -184,7 +184,7 @@ image::figures/FeedbackItem_2.png[width=600,align="center"]
 |*Names* | *Definition*	| *Data type and values* | *Multiplicity and use*
 //[width="90%",options="header",float="center"]
 |abstract |Brief narrative description of this event, normally for display to a human. |Character String type, not empty |One (mandatory)
-|citation |Citation of the event (e.g.: a report describing the event, or an event identifier) |CI_Citation data type (ISO 19115-1:2014 B.3.2.1) |Zero or more (optional)
+|citation |Citation of the event (e.g., a report describing the event, or an event identifier) |CI_Citation data type (ISO 19115-1:2014 B.3.2.1) |Zero or more (optional)
 |extent |Spatiotemporal extent of the event |EX_Extent data type (ISO 19115-1:2014 B.3.1.1) |One (mandatory)
 |eventType |Type of event |GUF_SignificantEventTypeCode (see <<tbl_significant_event_TypeCode_cl>>) |Zero or one (optional)
 |===
@@ -204,15 +204,15 @@ image::figures/FeedbackItem_2.png[width=600,align="center"]
 |floodNatural |Remarkable Flood natural event
 |earthquakeNatural |Remarkable Earthquake natural event
 |tsunamiNatural |Remarkable Tsunami natural event
-|ifsEvent |Integrated Forecast System event (e.g. a problem)
-|systemEvent |Acquisition or distribution system event (e.g. a problem etc)
-|satelliteAnomaly |Abnormal data in a satellite system (e.g. a sensor glitch)
+|ifsEvent |Integrated Forecast System event (e.g., a problem)
+|systemEvent |Acquisition or distribution system event (e.g., a problem etc)
+|satelliteAnomaly |Abnormal data in a satellite system (e.g., a sensor glitch)
 |dropsondeAnomaly |Abnormal data from a dropsonde
-|aircraftAnomaly |Abnormal data from an airborne system (e.g. a sensor glitch)
+|aircraftAnomaly |Abnormal data from an airborne system (e.g., a sensor glitch)
 |buoyAnomaly |Abnormal data from a buoy
-|shipAnomaly |Abnormal data from a ship sensing system (e.g. a sensor glitch)
-|landStationAnomaly |Abnormal data from a land station (e.g. a sensor glitch)
-|mobileSensorAnomaly |Abnormal data from a mobile sensor anomaly (e.g. a sensor glitch)
+|shipAnomaly |Abnormal data from a ship sensing system (e.g., a sensor glitch)
+|landStationAnomaly |Abnormal data from a land station (e.g., a sensor glitch)
+|mobileSensorAnomaly |Abnormal data from a mobile sensor anomaly (e.g., a sensor glitch)
 |sensorAlarm |Abnormal acquisition above or below normal parameters.
 |===
 

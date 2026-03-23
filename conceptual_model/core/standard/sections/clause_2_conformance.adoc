@@ -1,8 +1,7 @@
 == Conformance
 This Standard defines four requirements classes and four related conformance classes.
 
-Requirements for standardization targets are considered: 
-
+Requirements for standardization targets are considered.
 
 *   Requirements Class Quality-Common   [http://www.opengis.net/spec/geospatial-user-feedback/2.0/req/quality-common] has a single conformance class, Quality Common: [http://www.opengis.net/spec/geospatial-user-feedback/2.0/conf/quality-common]. This class targets clients and services implementing quality or user feedback models.
 
@@ -14,7 +13,7 @@ Requirements for standardization targets are considered:
 
 Conformance with this Standard shall be checked using all the relevant tests specified in Annex A (normative) of this document. The framework, concepts, and methodology for testing, and the criteria to be achieved to claim conformance are specified in the OGC Compliance Testing Policies and Procedures and the OGC Compliance Testing web site  footnote:[www.opengeospatial.org/cite].
 
-To conform to this OGC Model, a software implementation may choose to implement:
+To conform to this OGC Model, a software implementation may choose to implement the following.
 
 //* Any one of the conformance levels specified in Annex A (normative).
 //* Any one of the Distributed Computing Platform profiles specified in Annexes TBD through TBD (normative).

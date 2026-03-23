@@ -2,18 +2,18 @@
 [[Bibliography]]
 == Bibliography
 
-[1] OGC 06-121r9, OGC Web Service Common Implementation Specification
+* [[[OGC06-121r9,OGC 06-121r9]]] _OGC Web Service Common Implementation Specification_
 
-[2] ISO 24619:2011, Language resource management -- Persistent identification and sustainable access
+* [[[ISO24619:2011,ISO 24619:2011]]] _Language resource management -- Persistent identification and sustainable access_
 
-[3] ISO 19157:2013, Geographic information -- Data quality
+* [[[ISO19157:2013,ISO 19157:2013]]] _Geographic information -- Data quality_
 
-[4] ISO 19115-1:2014, Geographic information -- Metadata -- Part 1: Fundamentals
+* [[[ISO19115-1:2014,ISO 19115-1:2014]]] _Geographic information -- Metadata -- Part 1: Fundamentals_
 
-[5] ISO 9000:2005,  Quality management systems -- Fundamentals and vocabulary
+* [[[ISO9000:2005,ISO 9000:2005]]] _Quality management systems -- Fundamentals and vocabulary_
 
-[6] OGC 08-131r3, OGC Specification Model –- A Standard for Modular Specification
+* [[[OGC08-131r3,OGC 08-131r3]]] _OGC Specification Model –- A Standard for Modular Specification_
 
-[7] OGC 15-097r1, OGC Geospatial User Feedback Standard: Conceptual Model v.1.0
+* [[[OGC15-097r1,OGC 15-097r1]]] _OGC Geospatial User Feedback Standard: Conceptual Model v.1.0_
 
-[8] OGC 15-098r1, OGC Geospatial User Feedback Standard: XML Implementation v.1.0
+* [[[OGC15-098r1,OGC 15-098r1]]] _OGC Geospatial User Feedback Standard: XML Implementation v.1.0_

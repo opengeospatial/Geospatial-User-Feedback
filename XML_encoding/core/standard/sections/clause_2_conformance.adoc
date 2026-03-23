@@ -1,7 +1,7 @@
 == Conformance
-The GUF XML Standard defines four requierements and four related conformance classes. 
+The GUF XML Standard defines four requirements and four related conformance classes. 
 
-Requirements for some standardization targets types are considered:
+Requirements for some standardization targets types are considered.
 
 * Requirements Class Quality-Common: [http://www.opengis.net/spec/geospatial-user-feedback-xml/1.0/req/quality-common] has a single conformance class, Quality Common: [http://www.opengis.net/spec/geospatial-user-feedback-xml/1.0/conf/quality-common]. This requirements class targets clients and services implementing quality or user feedback models.
 

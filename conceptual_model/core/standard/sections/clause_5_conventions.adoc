@@ -42,14 +42,14 @@ Example: "Zero or more (optional). If the target of the citation is specified by
 
 When the data type in the third column is an enumeration or a code list, and the list of possible values is too extensive, the values and their meanings are detailed in a separate table. This separate table is then referenced in the third column of the original table row.
 
-The data type of many parameters, in the third table column, is specified as “Character String type, not empty”.
+The data type of many parameters, in the third table column, is specified as “Character String type, not empty.”
 
 The content of these data dictionary tables are normative, including any table footnotes.
 
 In the data dictionary tables three background colors are used:
 
-* grey is used when the class is an extension on a previous one, so those are the inherited elements, defined in the original class (e.g. in CI_CItation which us extended by QCM_Publication)
-* green is used to identify elements that have been added from the first version of the GUF conceptual model defined in OGC 15-097r1 [7].
+* grey is used when the class is an extension on a previous one, so those are the inherited elements, defined in the original class (e.g. in CI_CItation which us extended by QCM_Publication);
+* green is used to identify elements that have been added from the first version of the GUF conceptual model defined in OGC 15-097r1 [7]; and
 * blue is used to identify elements that have changed from the first version of the GUF conceptual model defined in OGC 15-097r1 [7].
 
 Thus, elements with no background color in the dictionary tables have not changed from the first version of the conceptual model or the change is only in the description (for clarity) but not in the element itself. The use of background colors in the dictionary tables is intended to allow a reader to better identify changes from the GUF conceptual model v.1.0.
@@ -58,12 +58,12 @@ Thus, elements with no background color in the dictionary tables have not change
 
 Unified Modeling Language (UML) static structure diagrams appearing in this standard are used as described in Sub clause 5.2 of OGC Web Service Common OGC 06-121r9 [1]. Further, the following conventions hold:
 
-*	UML elements in white color come from ISO 19115-1:2014 [5] or ISO 19157:2013 [3].
-*   UML element names with prefix QCM (Quality Common Metadata) are those defined in the http://www.opengis.net/spec/geospatial-user-feedback/2.0/req/quality-common requirements class of this Standard.
-*	UML element names with prefix GUF (Geospatial User Feedback) are those defined in the http://www.opengis.net/spec/geospatial-user-feedback/2.0/req/feedback-item requirements class of this Standard.
-*	UML element names with prefix UFS (User Feedback Summary) are those defined in the http://www.opengis.net/spec/geospatial-user-feedback/2.0/req/feedback-summary requirements class of this Standard.
+*	UML elements in white color come from ISO 19115-1:2014 [5] or ISO 19157:2013 [3];
+*   UML element names with prefix QCM (Quality Common Metadata) are those defined in the http://www.opengis.net/spec/geospatial-user-feedback/2.0/req/quality-common requirements class of this Standard;
+*	UML element names with prefix GUF (Geospatial User Feedback) are those defined in the http://www.opengis.net/spec/geospatial-user-feedback/2.0/req/feedback-item requirements class of this Standard;
+*	UML element names with prefix UFS (User Feedback Summary) are those defined in the http://www.opengis.net/spec/geospatial-user-feedback/2.0/req/feedback-summary requirements class of this Standard; and
 *	UML element names with prefix UFC (User Feedback Collection) are those defined in the http://www.opengis.net/spec/geospatial-user-feedback/2.0/req/feedback-collection requirements class of this Standard.
 
 === Core and Extension Breakdown
 
-The OGC Geospatial User Feedback (GUF) Standard follows the modular specification design pattern as described in OGC 08-131r3 [6]. The contributors to the GUF Standard decided that the requirements would be split into a core (quality common and geospatial user feedback item) and extensions for summary statistics and geospatial user feedback collections. In addition, other standards in the GUF series will potentially provide specific encodings of the data model specified in this document. For example, the OGC Geospatial User Feedback Standard OGC 23-061 [8] XML Encoding Extension v 2.0 is initially provided for this v.2.0 of the conceptual model. A JSON encoding is expected in the near future.
+The OGC Geospatial User Feedback (GUF) Standard follows the modular specification design pattern as described in OGC 08-131r3 [6]. The contributors to the GUF Standard decided that the requirements would be split into a core (quality common and geospatial user feedback item) and extensions for summary statistics and geospatial user feedback collections. In addition, other standards in the GUF series will provide specific encodings of the data model specified in this document. For example, the OGC Geospatial User Feedback Standard OGC 23-061 [8] XML Encoding Extension v 2.0 is initially provided for this v.2.0 of the conceptual model. A JSON encoding is expected in the near future.

@@ -83,8 +83,8 @@ Default value is the whole target
 |atlasMap | Atlas or a map in printed or digital form
 |applicationProgram | Application program or a piece of software
 |conferenceProceedings | Conference proceeding available in a book or in Internet
-|multimediaContent | A multimedia data package conceived to be distributed as a digital publication in a physical support (e.g. CD, DVD, Blue Ray, Flash Drive, etc) or available in Internet (such as an interactive encyclopedia of old maps)
-|socialMediaComment | Social media comment or entry. E.g. a tweet
+|multimediaContent | A multimedia data package conceived to be distributed as a digital publication in a physical support (e.g., CD, DVD, Blue Ray, Flash Drive, etc) or available in Internet (such as an interactive encyclopedia of old maps)
+|socialMediaComment | Social media comment or entry, e.g., a tweet
 |blogWiki | Blog post or a wiki entry
 |webSite | Complete web site
 |webPage | web page
@@ -146,7 +146,7 @@ image::figures/ReproducibleUsage.png[width=600,align="center"]
 |codeMediaType |Format of the necessary code or execution sentence to reproduce this usage| Mime file type | Zero or one (optional)
 |platform |Platform to execute the code or execution sentence of this usage | Character String type, not empty |Zero or one (optional)
 |version |Version of the platform to execute the code or execution sentence of this usage | Character String type, not empty|Zero or one (optional)
-|schema |Schema of the code or execution sentence to reproduce this usage (only for declarative code: e.g JSON) | Character String type, not empty|Zero or one (optional)
+|schema |Schema of the code or execution sentence to reproduce this usage (only for declarative code: e.g., JSON) | Character String type, not empty|Zero or one (optional)
 |suggestedApplication |Specific suggested application to open the code or execution sentence of this usage | Character String type, not empty|Zero or one (optional)
 |diagram |Descriptive diagram of this reproducible usage ^a^ | Character String type, not empty|Zero or one (optional)
 |diagramLinkage | URL Link of the descriptive diagram of this reproducible usage ^a^| CI_OnlineResource (ISO 19115-1:2014 B.3.2.8)|Zero or one (optional)

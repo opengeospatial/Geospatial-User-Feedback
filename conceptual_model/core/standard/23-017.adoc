@@ -2,13 +2,13 @@
 :doctype: standard
 :encoding: utf-8
 :lang: en
-//:status: 
+:status: approved
 :committee: technical
 :draft: 2.0
 :external-id: http://www.opengis.net/doc/IS/guf-conceptual/2.0
 :docnumber: 23-017
-:received-date: 2029-03-30
-:issued-date: 2029-03-30
+:received-date: 2025-02-25
+:issued-date: 2025-10-13
 :published-date: 2029-03-30
 :fullname: Alaitz Zabala
 :fullname_2: Joan Masó

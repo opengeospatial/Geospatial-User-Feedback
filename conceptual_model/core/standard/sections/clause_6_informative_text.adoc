@@ -7,12 +7,12 @@ The purpose of providing user feedback is to inform other users and data provide
 
 In order to allow for simple user interfaces that can cover different levels of expertise on geospatial data usage, the GUF model is designed to be as simple as possible but comprehensive enough. Following are examples of what the GUF model allows: 
 
-* Commenting, asking questions, providing answers (the GUF_UserComment class)
-* Rating data (GUF_Rating)
-* Citing publications (QCM_Publication)
-* Providing a quality measure (additionalQuality) 
-* Documenting additional lineage information (additionalLineageSteps)
-* Describing the usage (GUF_UsageReport or GUF_ReproducibleUsage) or
+* Commenting, asking questions, providing answers (the GUF_UserComment class);
+* Rating data (GUF_Rating);
+* Citing publications (QCM_Publication);
+* Providing a quality measure (additionalQuality) ;
+* Documenting additional lineage information (additionalLineageSteps);
+* Describing the usage (GUF_UsageReport or GUF_ReproducibleUsage); or
 * Emphasizing a significant event that conditions the interpretation of a dataset (GUF_SignificantEvent). 
 
 As in the first version of the GUF conceptual model [7], each one of the previous examples is considered an “item” of feedback. Feedback items can be arranged in collections and a summary description of the collection is also modeled. Geospatial User Feedback can be provided for both data or metadata.

@@ -2,13 +2,13 @@
 :doctype: standard
 :encoding: utf-8
 :lang: en
-//:status: draft
+:status: approved
 :committee: technical
 :draft: 2.0
 :external-id: http://www.opengis.net/doc/IS/guf-xml/2.0
 :docnumber: 23-061
-:received-date: 2029-03-30
-:issued-date: 2029-03-30
+:received-date: 2025-02-25
+:issued-date: 2025-10-13
 :published-date: 2029-03-30
 :fullname: Alaitz Zabala
 :fullname_2: Joan Masó
@@ -51,6 +51,8 @@ include::sections/annex-a.adoc[]
 include::sections/annex-n.adoc[]
 
 include::sections/annex-history.adoc[]
+
+include::sections/annex-bibliography.adoc[]
 
 //add or remove annexes after "A" as necessary
 

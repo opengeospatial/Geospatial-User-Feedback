@@ -42,16 +42,7 @@ include::sections/clause_5_conventions.adoc[]
 
 include::sections/clause_6_overview.adoc[]
 
-include::sections/clause_7_user_feedback_item.adoc[]
-
-include::sections/clause_8_user_feedback_collection.adoc[]
-
-include::sections/clause_9_user_feedback_summary.adoc[]
-
-include::sections/clause_10_feedback_query_parameters.adoc[]
-
-include::sections/clause_11_json_component.adoc[]
-
+include::sections/clause_7_components.adoc[]
 
 //include::sections/clause_8_media_types.adoc[]
 

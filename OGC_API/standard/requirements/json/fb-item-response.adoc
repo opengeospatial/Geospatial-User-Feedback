@@ -4,9 +4,5 @@
 ====
 [%metadata]
 identifier:: /req/json/fb-item-response
-part:: 200-responses of the server SHALL support the following media type:
-+
-* `application/geo+json` for resources that include record content.
-
-part:: The `geometry` member SHALL be present and SHALL null.
+part:: The `geometry` member SHALL be present and SHALL be generally be null, or if the user feedback has a geographical scope, SHALL contain that scope.
 ====

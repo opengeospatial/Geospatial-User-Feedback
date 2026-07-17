@@ -1,17 +1,11 @@
 [[rc_user_feedback_collection]]
 
-// [cols="1,4",width="90%"]
-// |===
-// 2+|*Requirements Class*
-// 2+|https://www.opengis.net/spec/guf-conceptual/2.0/req/feedback-collection
-// |Target type |Document model
-// |===
-
 [requirements_class]
 ====
 [%metadata]
-identifier:: https://www.opengis.net/spec/guf-conceptual/2.0/req/feedback-collection
+identifier:: https://www.opengis.net/spec/ogcapi-feedback-1/1.0/req/feedback-collection
 subject:: Document model
 inherit:: http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-collection
+inherit:: https://www.opengis.net/spec/guf-conceptual/2.0/req/feedback-collection
 requirement:: /req/feedback-collection/mandatory-properties-collection
 ====

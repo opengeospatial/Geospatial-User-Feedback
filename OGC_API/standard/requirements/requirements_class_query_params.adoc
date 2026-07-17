@@ -10,7 +10,7 @@
 [requirements_class]
 ====
 [%metadata]
-identifier:: https://www.opengis.net/spec/guf-conceptual/2.0/req/feedback-query-params
+identifier:: https://www.opengis.net/spec/ogcapi-feedback-1/1.0/req/feedback-query-params
 subject:: Document model
 inherit:: https://docs.ogc.org/DRAFTS/20-004.html#clause-record-core-query-parameters
 requirement:: /req/feedback-query-params/query_params_bbox
